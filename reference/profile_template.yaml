@@ -16,17 +16,23 @@ role_context: ""
 
 # 关注话题
 # priority: high（必选）| medium（有则采）| low（偶尔看看）
-# keywords: 中英文混合，具体的产品名/技术名/行业术语，不要泛词
-#   - 中文关键词 → 自动分发给微博/小红书/B站搜索
-#   - 英文关键词 → 自动分发给 Twitter/Reddit 搜索
-#   - 所有关键词 → 自动生成 Google site: 搜索查询
+# keywords 分 cn 和 en 两组：
+#   - cn: 中文关键词 → 分发给微博/小红书/B站搜索 + 中文 Google 搜索
+#   - en: 英文关键词 → 分发给 Twitter/Reddit 搜索 + 英文 Google 搜索
+# 同一个概念应在 cn 和 en 中各写一遍（如"大模型" + "large language model"）
+# 品牌名/产品名（如 OpenAI、Cursor）中英文通用，两边都写
 topics: []
   # - name: "话题名称"
   #   priority: high
   #   keywords:
-  #     - "中文关键词1"
-  #     - "English keyword"
-  #     - "产品名/技术名"
+  #     cn:
+  #       - "中文关键词1"
+  #       - "中文关键词2"
+  #       - "品牌名"
+  #     en:
+  #       - "English keyword 1"
+  #       - "English keyword 2"
+  #       - "brand name"
 
 # 不感兴趣的话题（采集和筛选时排除）
 exclude_topics: []

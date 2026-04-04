@@ -133,15 +133,13 @@ def load_profile(root: Path) -> dict:
     return result
 
 
-def build_date_range(date_str: str, window: int) -> tuple[str, str, str, str]:
-    """Returns (start_cn, end_cn, start_iso, end_iso)."""
+def build_date_range(date_str: str, window: int) -> tuple[str, str]:
+    """Returns (start_iso, end_iso)."""
     end = datetime.strptime(date_str, "%Y-%m-%d")
     start = end - timedelta(days=window - 1)
-    start_cn = f"{start.year}年{start.month}月{start.day}日"
-    end_cn = f"{end.year}年{end.month}月{end.day}日"
     start_iso = start.strftime("%Y-%m-%d")
     end_iso = end.strftime("%Y-%m-%d")
-    return start_cn, end_cn, start_iso, end_iso
+    return start_iso, end_iso
 
 
 def _is_cn(text: str) -> bool:
@@ -149,11 +147,22 @@ def _is_cn(text: str) -> bool:
     return any("\u4e00" <= c <= "\u9fff" for c in text)
 
 
-def _split_keywords(keywords: list[str]) -> tuple[list[str], list[str]]:
-    """将关键词分为中文和英文两组。"""
+def _split_keywords(keywords) -> tuple[list[str], list[str]]:
+    """
+    将关键词分为中文和英文两组。
+    支持两种格式：
+    - 新格式 dict: {"cn": [...], "en": [...]}
+    - 旧格式 list: ["中文", "English", ...] （按语言自动分）
+    """
+    if isinstance(keywords, dict):
+        cn_kws = keywords.get("cn", []) or []
+        en_kws = keywords.get("en", []) or []
+        return cn_kws, en_kws
+
+    # 旧格式：扁平列表，按语言自动分
     cn_kws = []
     en_kws = []
-    for kw in keywords:
+    for kw in (keywords or []):
         if _is_cn(kw):
             cn_kws.append(kw)
         else:
@@ -165,10 +174,12 @@ def generate_platform_queries(
     profile: dict, date_str: str, window: int
 ) -> list[tuple[str, str, str]]:
     """
-    生成平台原生搜索用的纯关键词查询（不带日期）。
+    生成平台原生搜索用的纯关键词查询（不带日期），按 cn/en 分组。
     返回 (priority, topic_name, keyword) 元组列表。
+    priority 带语言前缀：如 "high-cn", "high-en", "medium-cn" 等。
     """
-    queries: list[tuple[str, str, str]] = []
+    cn_queries: list[tuple[str, str, str]] = []
+    en_queries: list[tuple[str, str, str]] = []
 
     topics = profile.get("topics", [])
     priority_order = {"high": 0, "medium": 1, "low": 2}
@@ -185,38 +196,49 @@ def generate_platform_queries(
 
         cn_kws, en_kws = _split_keywords(keywords)
 
-        # 1) topic 名称本身作为搜索词
-        queries.append((priority, name, name))
+        # topic 名称：按语言判断放哪边
+        if _is_cn(name):
+            cn_queries.append((priority, name, name))
+        else:
+            en_queries.append((priority, name, name))
 
-        # 2) 中文关键词（给微博/小红书/B站）
+        # 中文关键词（给微博/小红书/B站）
         kw_limit = {"high": len(cn_kws), "medium": 3, "low": 1}.get(priority, 1)
         for kw in cn_kws[:kw_limit]:
             if kw != name:
-                queries.append((priority, name, kw))
+                cn_queries.append((priority, name, kw))
 
-        # 3) 英文关键词（给 Twitter/Reddit）
+        # 中文组合（仅 high）
+        if priority == "high" and len(cn_kws) >= 2:
+            cn_queries.append((priority, name, f"{cn_kws[0]} {cn_kws[1]}"))
+
+        # 英文关键词（给 Twitter/Reddit）
         kw_limit_en = {"high": len(en_kws), "medium": 3, "low": 1}.get(priority, 1)
         for kw in en_kws[:kw_limit_en]:
             if kw != name:
-                queries.append((priority, name, kw))
+                en_queries.append((priority, name, kw))
 
-        # 4) 组合查询：topic名 + 关键词（仅 high，生成 2-3 词组合）
-        if priority == "high" and len(keywords) >= 2:
-            # 中文组合
-            if len(cn_kws) >= 2:
-                queries.append((priority, name, f"{cn_kws[0]} {cn_kws[1]}"))
-            # 英文组合
-            if len(en_kws) >= 2:
-                queries.append((priority, name, f"{en_kws[0]} {en_kws[1]}"))
+        # 英文组合（仅 high）
+        if priority == "high" and len(en_kws) >= 2:
+            en_queries.append((priority, name, f"{en_kws[0]} {en_kws[1]}"))
 
     # 去重
-    seen: set[str] = set()
-    deduped: list[tuple[str, str, str]] = []
-    for p, t, q in queries:
-        if q not in seen:
-            seen.add(q)
-            deduped.append((p, t, q))
-    return deduped
+    def _dedup(queries):
+        seen: set[str] = set()
+        result = []
+        for p, t, q in queries:
+            if q not in seen:
+                seen.add(q)
+                result.append((p, t, q))
+        return result
+
+    # 加语言前缀后合并
+    result = []
+    for p, t, q in _dedup(cn_queries):
+        result.append((f"{p}-cn", t, q))
+    for p, t, q in _dedup(en_queries):
+        result.append((f"{p}-en", t, q))
+    return result
 
 
 def generate_google_queries(
@@ -226,7 +248,7 @@ def generate_google_queries(
     生成 Google 搜索用的查询（带日期过滤 + site: 定向）。
     返回 (priority, topic_name, query) 元组列表。
     """
-    start_cn, end_cn, start_iso, end_iso = build_date_range(date_str, window)
+    start_iso, end_iso = build_date_range(date_str, window)
     queries: list[tuple[str, str, str]] = []
 
     topics = profile.get("topics", [])
@@ -245,22 +267,24 @@ def generate_google_queries(
 
         cn_kws, en_kws = _split_keywords(keywords)
 
-        # 中文 Google 搜索（带日期范围）
-        queries.append((priority, name, f"{name} {start_cn}-{end_cn}"))
-        if len(cn_kws) >= 2:
-            queries.append((priority, name, f"{cn_kws[0]} {cn_kws[1]} 最新 {start_cn}"))
+        # topic 名称 + after:
+        queries.append((priority, name, f"{name} after:{start_iso}"))
 
-        # 英文 Google 搜索（带 after:）
+        # 中文关键词组合 + after:
+        if len(cn_kws) >= 2:
+            queries.append((priority, name, f"{cn_kws[0]} {cn_kws[1]} after:{start_iso}"))
+
+        # 英文关键词组合 + after:
         if en_kws:
             en_combo = " ".join(en_kws[:3])
             queries.append((priority, name, f"{en_combo} after:{start_iso}"))
 
-        # 单个关键词 + 日期（high 全部，medium 前 2，low 前 1）
+        # 单个中文关键词 + after:（high 全部，medium 前 2，low 前 1）
         kw_limit = {"high": len(cn_kws), "medium": 2, "low": 1}.get(priority, 1)
         for kw in cn_kws[:kw_limit]:
-            queries.append((priority, name, f"{kw} {start_cn}-{end_cn}"))
+            queries.append((priority, name, f"{kw} after:{start_iso}"))
 
-        # 交叉：topic名 + keyword + after:（仅 high）
+        # 交叉：topic名 + 英文keyword + after:（仅 high）
         if priority == "high":
             for kw in en_kws[:3]:
                 if kw != name:
@@ -303,12 +327,12 @@ def generate_google_queries(
     # Search seeds
     search_cfg = sources.get("search", {}) if isinstance(sources.get("search"), dict) else {}
     for seed in search_cfg.get("cn", []) or []:
-        queries.append(("seed-cn", "国内搜索种子", f"{seed} {start_cn}-{end_cn}"))
+        queries.append(("seed-cn", "国内搜索种子", f"{seed} after:{start_iso}"))
     for seed in search_cfg.get("global", []) or []:
         queries.append(("seed-global", "海外搜索种子", f"{seed} after:{start_iso}"))
     for seed in sources.get("search_seeds", []) or []:
         if _is_cn(seed):
-            queries.append(("seed-cn", "国内搜索种子", f"{seed} {start_cn}-{end_cn}"))
+            queries.append(("seed-cn", "国内搜索种子", f"{seed} after:{start_iso}"))
         else:
             queries.append(("seed-global", "海外搜索种子", f"{seed} after:{start_iso}"))
 
@@ -316,19 +340,19 @@ def generate_google_queries(
     for qp in profile.get("query_profiles", []):
         topic_name = qp.get("topic", "话题")
         for seed in qp.get("cn", []) or []:
-            queries.append(("profile-cn", topic_name, f"{seed} {start_cn}-{end_cn}"))
+            queries.append(("profile-cn", topic_name, f"{seed} after:{start_iso}"))
         for seed in qp.get("global", []) or []:
             queries.append(("profile-global", topic_name, f"{seed} after:{start_iso}"))
 
     # 综合聚合查询
     role = profile.get("role", "")
     if role:
-        queries.append(("extra", "综合", f"{role} 行业动态 {start_cn}-{end_cn}"))
-        queries.append(("extra", "综合", f"{role} 新闻 最新发布 {end_cn}"))
+        queries.append(("extra", "综合", f"{role} 行业动态 after:{start_iso}"))
+        queries.append(("extra", "综合", f"{role} 新闻 最新发布 after:{start_iso}"))
 
     high_names = [t["name"] for t in topics_sorted if t.get("priority") == "high"]
     if len(high_names) >= 2:
-        queries.append(("extra", "综合", f"{' '.join(high_names[:3])} 最新动态 {start_cn}"))
+        queries.append(("extra", "综合", f"{' '.join(high_names[:3])} 最新动态 after:{start_iso}"))
 
     # 去重
     seen: set[str] = set()
@@ -396,9 +420,9 @@ def main() -> None:
         help="以 JSON 格式输出",
     )
     parser.add_argument(
-        "--save",
+        "--no-save",
         action="store_true",
-        help="保存查询结果到 output/raw/{date}_queries.txt",
+        help="不保存查询结果到 output/raw/{date}_queries.txt（默认保存）",
     )
     args = parser.parse_args()
 
@@ -424,7 +448,7 @@ def main() -> None:
         outputs.append(text)
         print(text)
 
-    if args.save:
+    if not args.no_save:
         raw_dir = root / "output" / "raw"
         raw_dir.mkdir(parents=True, exist_ok=True)
         save_path = raw_dir / f"{args.date}_queries.txt"

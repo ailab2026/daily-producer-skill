@@ -1,66 +1,193 @@
-role: "AI 产品经理"
-role_context: "负责 AI 产品规划与落地，关注模型能力变化、AI coding 工作流、Agent 生态以及头部模型厂商的产品动作，希望快速掌握可转化为产品决策的信号。"
+role: "AI 从业者"
+role_context: "同时关注大模型、AI 编程、Agent、AI 产品、开源模型与企业落地，需要兼顾产品、技术和行业应用信号。"
 
 topics:
-  - name: "AI coding"
+  - name: "大模型"
     priority: high
     keywords:
-      - "AI coding"
-      - "coding agent"
-      - "agentic coding"
-      - "devtool"
+      - "大模型"
+      - "基础模型"
+      - "多模态模型"
+      - "推理模型"
+      - "长上下文"
+      - "OpenAI"
+      - "Anthropic"
+      - "Gemini"
+      - "GPT-5"
+      - "Claude"
+      - "Llama"
+      - "Qwen"
+  - name: "AI 编程"
+    priority: high
+    keywords:
+      - "AI 编程"
       - "代码生成"
       - "编程助手"
-      - "Copilot"
-      - "Cursor"
-      - "Claude Code"
       - "Codex"
+      - "Claude Code"
+      - "Cursor"
+      - "Windsurf"
+      - "GitHub Copilot"
+      - "Aider"
+      - "OpenCode"
+      - "code agent"
+      - "agentic coding"
   - name: "Agent"
     priority: high
     keywords:
       - "Agent"
       - "AI Agent"
-      - "智能体"
-      - "workflow"
-      - "tool use"
       - "multi-agent"
       - "agent framework"
-      - "automation"
-      - "agent memory"
-      - "agent infra"
-  - name: "OpenAI / Anthropic"
-    priority: high
-    keywords:
-      - "OpenAI"
-      - "Anthropic"
-      - "GPT"
-      - "Claude"
-      - "model release"
-      - "API"
-      - "Responses API"
-      - "function calling"
-      - "pricing"
-      - "safety"
-  - name: "AI 产品与生态"
+      - "tool use"
+      - "computer use"
+      - "workflow automation"
+      - "OpenAI Agents"
+      - "LangGraph"
+      - "AutoGen"
+      - "CrewAI"
+      - "Manus"
+  - name: "AI 产品"
     priority: medium
     keywords:
       - "AI 产品"
       - "AI 应用"
-      - "developer tools"
-      - "LLM"
-      - "推理模型"
+      - "AI 搜索"
+      - "AI 助手"
+      - "AI 浏览器"
+      - "Perplexity"
+      - "ChatGPT"
+      - "Claude app"
+      - "Midjourney"
+      - "Runway"
+  - name: "开源模型"
+    priority: medium
+    keywords:
       - "开源模型"
-      - "product update"
-      - "benchmark"
-      - "prompt"
-      - "工作流"
+      - "open-weight model"
+      - "open source llm"
+      - "Llama"
+      - "Mistral"
+      - "Qwen open"
+      - "DeepSeek"
+      - "vLLM"
+      - "Ollama"
+      - "SGLang"
+  - name: "企业落地"
+    priority: medium
+    keywords:
+      - "企业落地"
+      - "AI 商业化"
+      - "生产环境部署"
+      - "企业知识库"
+      - "RAG"
+      - "AI workflow"
+      - "AI ROI"
+      - "copilot for enterprise"
+      - "vertical AI"
+      - "LLMOps"
 
 exclude_topics:
-  - "无关 AI 的内容"
-  - "纯泛科技但不涉及 AI 的内容"
-  - "无实质信息增量的转载"
-  - "纯营销稿"
-  - "旧闻翻炒"
+  - "和 AI 无关的泛科技新闻"
+
+sources:
+  platforms:
+    cn:
+      - name: "微博"
+        opencli: "weibo"
+        commands:
+          - "hot --limit 30"
+          - "search \"{keyword}\" --limit 10"
+        login_required: partial
+      - name: "小红书"
+        opencli: "xiaohongshu"
+        commands:
+          - "search \"{keyword}\" --limit 10"
+          - "feed --limit 10"
+        login_required: yes
+      - name: "B站"
+        opencli: "bilibili"
+        commands:
+          - "hot --limit 20"
+          - "search \"{keyword}\" --limit 10"
+        login_required: partial
+      - name: "知乎"
+        opencli: "zhihu"
+        commands:
+          - "hot --limit 20"
+          - "search \"{keyword}\""
+        login_required: partial
+      - name: "V2EX"
+        opencli: "v2ex"
+        commands:
+          - "hot"
+          - "latest"
+        login_required: no
+    global:
+      - name: "Twitter/X"
+        opencli: "twitter"
+        commands:
+          - "search \"{keyword}\" --limit 15 --filter top"
+          - "trending --limit 20"
+        login_required: yes
+      - name: "Reddit"
+        opencli: "reddit"
+        commands:
+          - "search \"{keyword}\" --sort relevance --time week --limit 15"
+          - "hot --limit 20"
+        login_required: no
+      - name: "Hacker News"
+        opencli: "hackernews"
+        commands:
+          - "top"
+          - "search \"{keyword}\""
+          - "new"
+        login_required: no
+      - name: "YouTube"
+        opencli: "youtube"
+        commands:
+          - "search \"{keyword}\""
+          - "transcript \"{url}\""
+        login_required: no
+      - name: "arXiv"
+        opencli: "arxiv"
+        commands:
+          - "search \"{keyword}\""
+        login_required: no
+  websites:
+    cn:
+      - name: "机器之心"
+        url: "https://www.jiqizhixin.com/"
+        type: "media"
+      - name: "量子位"
+        url: "https://www.qbitai.com/"
+        type: "media"
+      - name: "InfoQ AI"
+        url: "https://www.infoq.cn/topic/AI"
+        type: "media"
+    global:
+      - name: "OpenAI News"
+        url: "https://openai.com/news/"
+        type: "official"
+      - name: "Anthropic News"
+        url: "https://www.anthropic.com/news"
+        type: "official"
+      - name: "TechCrunch AI"
+        url: "https://techcrunch.com/category/artificial-intelligence/"
+        type: "media"
+
+collection:
+  window_days: 3
+  priority_order:
+    - "官方确认信息"
+    - "高讨论度社区信号"
+    - "开源与开发者实践"
+    - "背景性报道"
+  exclude_rules:
+    - "纯搬运无信息增量"
+    - "无来源的情绪内容"
+    - "弱相关泛热点"
+    - "旧闻翻炒"
 
 daily:
   max_items: 15
@@ -68,50 +195,13 @@ daily:
   include_actions: true
   include_trends: true
   language: "zh-CN"
-  publish_root: "/root/.openclaw/workspaces/daily-producer-isolated/output"
-  public_base_url: "http://47.237.109.132"
-  public_daily_path: "/daily/{date}.html"
 
 pipeline:
-  owner: "daily-producer"
-  mode: "producer-owned"
-  profile_required: true
-  feedback_window_days: 7
-  collection_window_days: 3
-  search_preference: "agent-reach"
-  content_fetch_preference: "agent-reach"
+  search_preference: "opencli-first"
   fallback_search_tools:
     - "web_search"
     - "web_fetch"
   fallback_requires_reason: true
-  steps:
-    - "check_profile"
-    - "load_recent_feedback"
-    - "collect_index_candidates"
-    - "collect_detail_for_selected"
-    - "compose_payload_json"
-    - "render_daily_html"
-    - "render_site_index"
-    - "serve_from_output_root"
-  outputs:
-    json: "output/daily/{date}.json"
-    html: "output/daily/{date}.html"
-    index: "output/index.html"
-    raw_index: "output/raw/{date}_index.txt"
-    raw_detail: "output/raw/{date}_detail.txt"
-    feedback: "data/feedback/{date}.json"
-  rendering:
-    single_page_visual_baseline: "reference/daily_example.html"
-    renderer: "scripts/render_daily.py"
-    index_renderer: "scripts/render_index.py"
-  publishing:
-    output_root_is_public_root: true
-    require_index_refresh: true
-    require_daily_refresh: true
-    port_80_serves_publish_root: true
-    archive_previous_html: true
-    archive_dir: "output/archive"
-    archive_name_format: "{year-month-day-hour-min}.html"
 
 server:
   host: "0.0.0.0"
@@ -124,332 +214,3 @@ feishu:
     wiki_list: ""
     doc_read: ""
     chat_messages: ""
-
-sources:
-  cn:
-    - name: "微博"
-      url: "https://weibo.com/"
-      type: "community"
-      keywords:
-        - "OpenAI"
-        - "Anthropic"
-        - "Claude"
-        - "GPT"
-        - "AI coding"
-        - "Agent"
-        - "智能体"
-        - "编程助手"
-        - "开发者工具"
-        - "AI 产品"
-    - name: "微信公众号"
-      url: "https://mp.weixin.qq.com/"
-      type: "official"
-      keywords:
-        - "OpenAI"
-        - "Anthropic"
-        - "Claude"
-        - "GPT"
-        - "AI coding"
-        - "Agent"
-        - "智能体"
-        - "模型发布"
-        - "API 更新"
-        - "产品分析"
-    - name: "量子位公众号"
-      url: "https://mp.weixin.qq.com/"
-      type: "media"
-      keywords:
-        - "量子位"
-        - "AI"
-        - "OpenAI"
-        - "Anthropic"
-        - "Claude"
-        - "GPT"
-        - "AI coding"
-        - "Agent"
-        - "智能体"
-        - "模型发布"
-    - name: "机器之心"
-      url: "https://www.jiqizhixin.com/"
-      type: "media"
-      keywords:
-        - "机器之心"
-        - "OpenAI"
-        - "Anthropic"
-        - "Claude"
-        - "GPT"
-        - "AI Agent"
-        - "智能体"
-        - "AI coding"
-        - "模型发布"
-        - "开发者工具"
-    - name: "少数派"
-      url: "https://sspai.com/"
-      type: "media"
-      keywords:
-        - "AI"
-        - "AI coding"
-        - "Copilot"
-        - "Cursor"
-        - "Claude"
-        - "ChatGPT"
-        - "效率工具"
-        - "开发工作流"
-        - "智能体"
-        - "产品体验"
-    - name: "即刻"
-      url: "https://web.okjike.com/"
-      type: "community"
-      keywords:
-        - "OpenAI"
-        - "Anthropic"
-        - "Claude"
-        - "GPT"
-        - "AI coding"
-        - "Agent"
-        - "开发者工具"
-        - "模型更新"
-        - "prompt"
-        - "workflow"
-    - name: "小红书"
-      url: "https://www.xiaohongshu.com/"
-      type: "community"
-      keywords:
-        - "AI coding"
-        - "Agent"
-        - "OpenAI"
-        - "Anthropic"
-        - "Claude"
-        - "ChatGPT"
-        - "开发者工具"
-        - "效率"
-        - "产品经理"
-        - "AI 应用"
-    - name: "量子位"
-      url: "https://www.qbitai.com/"
-      type: "media"
-      keywords:
-        - "OpenAI"
-        - "Anthropic"
-        - "Claude"
-        - "GPT"
-        - "AI coding"
-        - "Agent"
-        - "智能体"
-        - "开源模型"
-        - "产品发布"
-        - "行业动态"
-    - name: "InfoQ AI"
-      url: "https://www.infoq.cn/topic/AI"
-      type: "media"
-      keywords:
-        - "AI coding"
-        - "Agent"
-        - "OpenAI"
-        - "Anthropic"
-        - "Claude"
-        - "GPT"
-        - "developer tools"
-        - "工程实践"
-        - "AI 产品"
-        - "工作流"
-  global:
-    - name: "Reddit"
-      url: "https://www.reddit.com/"
-      type: "community"
-      keywords:
-        - "OpenAI"
-        - "Anthropic"
-        - "Claude"
-        - "GPT"
-        - "AI coding"
-        - "coding agent"
-        - "Agent"
-        - "developer tools"
-        - "workflow"
-        - "community discussion"
-    - name: "X"
-      url: "https://x.com/"
-      type: "community"
-      keywords:
-        - "OpenAI"
-        - "Anthropic"
-        - "Claude"
-        - "GPT"
-        - "AI coding"
-        - "coding agent"
-        - "Agent"
-        - "model release"
-        - "API update"
-        - "product update"
-    - name: "GitHub"
-      url: "https://github.com/"
-      type: "official"
-      keywords:
-        - "AI coding"
-        - "coding agent"
-        - "agent framework"
-        - "OpenAI SDK"
-        - "Anthropic SDK"
-        - "LLM"
-        - "developer tools"
-        - "workflow"
-        - "open source"
-        - "release"
-    - name: "OpenAI News"
-      url: "https://openai.com/news/"
-      type: "official"
-      keywords:
-        - "OpenAI"
-        - "GPT"
-        - "API"
-        - "Responses API"
-        - "Agents"
-        - "pricing"
-        - "model"
-        - "developer"
-        - "release"
-        - "product"
-    - name: "Anthropic News"
-      url: "https://www.anthropic.com/news"
-      type: "official"
-      keywords:
-        - "Anthropic"
-        - "Claude"
-        - "API"
-        - "tool use"
-        - "agent"
-        - "model"
-        - "release"
-        - "developer"
-        - "pricing"
-        - "safety"
-
-query_profiles:
-  - topic: "AI coding"
-    cn:
-      - "AI coding 编程助手 最新"
-      - "Claude Code Cursor Copilot 最新"
-      - "AI coding 开发者工具 最近3天"
-    global:
-      - "AI coding after:2026-04-01"
-      - "coding agent developer tools after:2026-04-01"
-      - "Claude Code Cursor Copilot after:2026-04-01"
-  - topic: "Agent"
-    cn:
-      - "Agent 智能体 最新"
-      - "AI Agent 工作流 最近3天"
-      - "多智能体 框架 最新"
-    global:
-      - "AI Agent after:2026-04-01"
-      - "agent workflow tool use after:2026-04-01"
-      - "multi-agent framework after:2026-04-01"
-  - topic: "OpenAI / Anthropic"
-    cn:
-      - "OpenAI Anthropic 最新"
-      - "Claude GPT API 更新 最近3天"
-      - "OpenAI Anthropic 模型 发布 最新"
-    global:
-      - "OpenAI Anthropic after:2026-04-01"
-      - "Claude GPT API update after:2026-04-01"
-      - "OpenAI Anthropic model release after:2026-04-01"
-  - topic: "AI 产品与生态"
-    cn:
-      - "AI 产品 最新 动态"
-      - "开发者工具 AI 产品 最近3天"
-    global:
-      - "AI product update after:2026-04-01"
-      - "developer tools AI workflow after:2026-04-01"
-
-source_channels:
-  primary:
-    cn:
-      - "微信公众号"
-      - "量子位公众号"
-      - "机器之心"
-      - "微博"
-      - "少数派"
-    global:
-      - "X"
-      - "Reddit"
-      - "GitHub"
-  secondary:
-    cn:
-      - "即刻"
-      - "小红书"
-      - "量子位"
-    global:
-      - "OpenAI News"
-      - "Anthropic News"
-      - "技术媒体"
-  capability:
-    cn:
-      - "中文网页搜索能力"
-      - "中文社交平台搜索能力"
-      - "中文正文提取能力"
-    global:
-      - "Global web search capability"
-      - "Global social search capability"
-      - "Global content fetch capability"
-
-collection_contract:
-  window_days: 3
-  must_cover:
-    - "头部模型厂商最新动态"
-    - "AI coding 与 agent 产品更新"
-    - "社区反馈与开发者讨论变化"
-    - "开源生态与 GitHub 热点"
-    - "定价、规则或平台能力变化"
-  required_platforms:
-    official:
-      cn:
-        - "微信公众号"
-        - "量子位公众号"
-        - "机器之心"
-        - "相关官网与发布页"
-      global:
-        - "OpenAI 官方"
-        - "Anthropic 官方"
-    community:
-      cn:
-        - "微博"
-        - "即刻"
-        - "小红书"
-      global:
-        - "X"
-        - "Reddit"
-        - "GitHub"
-    media:
-      cn:
-        - "少数派"
-        - "机器之心"
-        - "量子位"
-      global:
-        - "TechCrunch"
-        - "The Verge"
-        - "Hacker News"
-  priority_order:
-    - "官方确认信息"
-    - "高讨论度社区信号"
-    - "开源与开发者实践"
-    - "背景性报道"
-  selection_rules:
-    include:
-      - "最近 3 天内"
-      - "与画像强相关"
-      - "有明确来源链接"
-      - "有真实影响或高讨论度"
-      - "优先多源交叉验证"
-    exclude:
-      - "纯搬运"
-      - "无信息增量的情绪内容"
-      - "弱相关泛热点"
-      - "旧闻翻炒"
-      - "无关 AI 的内容"
-  execution_hint:
-    - "每轮先建候选池，再少量深抓"
-    - "优先覆盖官方源与核心社区源"
-    - "sources 必须区分 cn 和 global，并满足来源数量与关键词数量要求"
-    - "若发生 fallback，必须在 raw 留痕里写明 fallback_reason"
-    - "若某源未采集，需说明是未执行、未命中还是不可用"
-    - "日报正文需明确区分：官方事实、社区讨论、媒体解读"

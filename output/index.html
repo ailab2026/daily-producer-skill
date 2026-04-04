@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>日报 · 导航</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1A1A2E',
+            accent: '#6C5CE7',
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif; }
+  </style>
+</head>
+<body class="bg-[#FAFBFC] text-primary min-h-screen">
+  <div class="max-w-3xl mx-auto py-12 px-6">
+    <h1 class="text-2xl font-bold mb-1">
+      <i class="fa-solid fa-newspaper text-accent mr-2"></i>日报
+    </h1>
+    <p class="text-gray-400 text-sm mb-8">共 1 期</p>
+
+    <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="border-b border-gray-100 text-gray-400 text-xs uppercase">
+            <th class="py-3 px-4 text-left font-medium">日期</th>
+            <th class="py-3 px-4 text-center font-medium">资讯</th>
+            <th class="py-3 px-4 text-center font-medium">角色</th>
+          </tr>
+        </thead>
+        <tbody>
+      <tr class="border-b border-gray-50 hover:bg-gray-50/50">
+        <td class="py-3 px-4"><a href="daily/2026-04-04.html" class="text-accent hover:underline font-medium">2026年4月4日 · 周六</a></td>
+        <td class="py-3 px-4 text-center text-sm text-gray-500">6 条</td>
+        <td class="py-3 px-4 text-center"><span class="bg-[#F3F0FF] text-accent text-xs px-2 py-0.5 rounded-full">AI 从业者</span></td>
+      </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>

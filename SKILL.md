@@ -29,6 +29,27 @@ description: End-to-end daily report production engine — from user profile che
 
 ---
 
+## 日报启动协议（强制）
+
+当用户表达“生成日报 / 进入流程 / 跑 daily / 生成今天的日报”这类意图时，必须先完成以下入口检查，再决定是否进入初始化。
+
+### Mandatory Preflight
+
+1. **必须先读取 `config/profile.yaml`**
+2. 根据读取结果严格分流：
+   - **不存在** → 必须先读取并遵循 `init/daily-init.md`，进入初始化流程
+   - **存在** → 直接使用现有 profile，继续日报生产流程
+3. **只有以下两种情况允许向用户发起初始化相关提问：**
+   - `config/profile.yaml` 不存在
+   - 用户明确要求“重新初始化 / 重建画像 / daily-init”
+
+### 禁止行为
+
+- 未读取 `config/profile.yaml` 就先问用户“你关注什么”“你想看什么”
+- 仅因为用户说“进入流程”就默认进入初始化
+- 把“生成日报”和“初始化画像”视为同一入口
+- 在 `config/profile.yaml` 已存在且用户未要求重建时，主动触发初始化对话
+
 ## 执行流程
 
 ```
@@ -46,10 +67,16 @@ check_profile
 
 检查 `config/profile.yaml` 是否存在。
 
-- **文件不存在** → 进入 `init/daily-init.md` 初始化流程，**不跳过**
+- **文件不存在** → 必须先读取并遵循 `init/daily-init.md`，进入初始化流程，**不跳过、不自行概括、不允许仅凭本文件摘要执行初始化**
 - **文件存在** → 直接读取使用，继续后续步骤
 
-初始化流程按 `reference/profile_template.yaml` 模板生成 profile。
+**强制执行约束：**
+1. 一旦发现 `config/profile.yaml` 不存在，调用方必须先读取 `init/daily-init.md` 原文，再继续。
+2. 在 `init/daily-init.md` 被读取之前，不得提前向用户发起初始化问题，不得自行压缩为一次性问卷。
+3. 如果 `init/daily-init.md` 规定为逐步提问，则必须一问一答推进；每次只提出当前步骤要求的一个问题或一个确认动作，等待用户回复后再进入下一步。
+4. 只有在 `init/daily-init.md` 明确允许的情况下，才能把多个信息点合并为一次提问。
+
+初始化流程按 `init/daily-init.md` 与 `reference/profile_template.yaml` 模板共同执行，不能只参考其中之一。
 
 ### Step 2: load_recent_feedback
 
@@ -244,7 +271,17 @@ data/
 
 ## 画像初始化引导
 
-当 profile 不可用时，不跳过，而是引导初始化：
+当 profile 不可用时，不跳过，而是引导初始化。
+
+**这里是摘要，不是初始化流程正文。真正执行时必须读取 `init/daily-init.md`。**
+
+执行约束：
+1. 不得仅依据本节摘要直接开始提问。
+2. 必须先读取 `init/daily-init.md`，再按其中步骤执行。
+3. 如果 `init/daily-init.md` 与本节摘要有差异，以 `init/daily-init.md` 为准。
+4. 若 `init/daily-init.md` 要求逐步提问，则严禁一次性抛出多个问题。
+
+摘要目标：
 1. 先问用户关心什么，不问看哪些站
 2. 按角色推荐来源模板（cn/global 分层）
 3. 自动补齐 topics → keywords → query_profiles → collection_contract
