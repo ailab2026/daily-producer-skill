@@ -1,0 +1,201 @@
+# 日报搜索查询（platform）— 2026-04-04（窗口 3 天）
+# 共 42 条查询
+
+
+## [high] AI coding
+  AI coding
+  代码生成
+  编程助手
+  coding agent
+  agentic coding
+  devtool
+  Copilot
+  Cursor
+  Claude Code
+  Codex
+  代码生成 编程助手
+  AI coding coding agent
+
+## [high] Agent
+  Agent
+  智能体
+  AI Agent
+  workflow
+  tool use
+  multi-agent
+  agent framework
+  automation
+  agent memory
+  agent infra
+  Agent AI Agent
+
+## [high] OpenAI / Anthropic
+  OpenAI / Anthropic
+  OpenAI
+  Anthropic
+  GPT
+  Claude
+  model release
+  API
+  Responses API
+  function calling
+  pricing
+  safety
+  OpenAI Anthropic
+
+## [medium] AI 产品与生态
+  AI 产品与生态
+  AI 产品
+  AI 应用
+  推理模型
+  developer tools
+  LLM
+  product update
+
+============================================================
+
+# 日报搜索查询（google）— 2026-04-04（窗口 3 天）
+# 共 88 条查询
+
+
+## [high] AI coding
+  AI coding 2026年4月2日-2026年4月4日
+  代码生成 编程助手 最新 2026年4月2日
+  AI coding coding agent agentic coding after:2026-04-02
+  代码生成 2026年4月2日-2026年4月4日
+  编程助手 2026年4月2日-2026年4月4日
+  AI coding coding agent after:2026-04-02
+  AI coding agentic coding after:2026-04-02
+
+## [high] Agent
+  Agent 2026年4月2日-2026年4月4日
+  Agent AI Agent workflow after:2026-04-02
+  智能体 2026年4月2日-2026年4月4日
+  Agent AI Agent after:2026-04-02
+  Agent workflow after:2026-04-02
+
+## [high] OpenAI / Anthropic
+  OpenAI / Anthropic 2026年4月2日-2026年4月4日
+  OpenAI Anthropic GPT after:2026-04-02
+  OpenAI / Anthropic OpenAI after:2026-04-02
+  OpenAI / Anthropic Anthropic after:2026-04-02
+  OpenAI / Anthropic GPT after:2026-04-02
+
+## [medium] AI 产品与生态
+  AI 产品与生态 2026年4月2日-2026年4月4日
+  AI 产品 AI 应用 最新 2026年4月2日
+  developer tools LLM product update after:2026-04-02
+  AI 产品 2026年4月2日-2026年4月4日
+  AI 应用 2026年4月2日-2026年4月4日
+
+## [site] 微博
+  site:weibo.com OpenAI after:2026-04-02
+  site:weibo.com Anthropic after:2026-04-02
+  site:weibo.com Claude after:2026-04-02
+
+## [site] 微信公众号
+  site:mp.weixin.qq.com OpenAI after:2026-04-02
+  site:mp.weixin.qq.com Anthropic after:2026-04-02
+  site:mp.weixin.qq.com Claude after:2026-04-02
+
+## [site] 量子位公众号
+  site:mp.weixin.qq.com 量子位 after:2026-04-02
+  site:mp.weixin.qq.com AI after:2026-04-02
+
+## [site] 机器之心
+  site:jiqizhixin.com 机器之心 after:2026-04-02
+  site:jiqizhixin.com OpenAI after:2026-04-02
+  site:jiqizhixin.com Anthropic after:2026-04-02
+
+## [site] 少数派
+  site:sspai.com AI after:2026-04-02
+  site:sspai.com AI coding after:2026-04-02
+  site:sspai.com Copilot after:2026-04-02
+
+## [site] 即刻
+  site:web.okjike.com OpenAI after:2026-04-02
+  site:web.okjike.com Anthropic after:2026-04-02
+  site:web.okjike.com Claude after:2026-04-02
+
+## [site] 小红书
+  site:xiaohongshu.com AI coding after:2026-04-02
+  site:xiaohongshu.com Agent after:2026-04-02
+  site:xiaohongshu.com OpenAI after:2026-04-02
+
+## [site] 量子位
+  site:qbitai.com OpenAI after:2026-04-02
+  site:qbitai.com Anthropic after:2026-04-02
+  site:qbitai.com Claude after:2026-04-02
+
+## [site] InfoQ AI
+  site:infoq.cn AI coding after:2026-04-02
+  site:infoq.cn Agent after:2026-04-02
+  site:infoq.cn OpenAI after:2026-04-02
+
+## [site] Reddit
+  site:reddit.com OpenAI after:2026-04-02
+  site:reddit.com Anthropic after:2026-04-02
+  site:reddit.com Claude after:2026-04-02
+
+## [site] X
+  site:x.com OpenAI after:2026-04-02
+  site:x.com Anthropic after:2026-04-02
+  site:x.com Claude after:2026-04-02
+
+## [site] GitHub
+  site:github.com AI coding after:2026-04-02
+  site:github.com coding agent after:2026-04-02
+  site:github.com agent framework after:2026-04-02
+
+## [site] OpenAI News
+  site:openai.com OpenAI after:2026-04-02
+  site:openai.com GPT after:2026-04-02
+  site:openai.com API after:2026-04-02
+
+## [site] Anthropic News
+  site:anthropic.com Anthropic after:2026-04-02
+  site:anthropic.com Claude after:2026-04-02
+  site:anthropic.com API after:2026-04-02
+
+## [profile-cn] AI coding
+  AI coding 编程助手 最新 2026年4月2日-2026年4月4日
+  Claude Code Cursor Copilot 最新 2026年4月2日-2026年4月4日
+  AI coding 开发者工具 最近3天 2026年4月2日-2026年4月4日
+
+## [profile-global] AI coding
+  AI coding after:2026-04-01 after:2026-04-02
+  coding agent developer tools after:2026-04-01 after:2026-04-02
+  Claude Code Cursor Copilot after:2026-04-01 after:2026-04-02
+
+## [profile-cn] Agent
+  Agent 智能体 最新 2026年4月2日-2026年4月4日
+  AI Agent 工作流 最近3天 2026年4月2日-2026年4月4日
+  多智能体 框架 最新 2026年4月2日-2026年4月4日
+
+## [profile-global] Agent
+  AI Agent after:2026-04-01 after:2026-04-02
+  agent workflow tool use after:2026-04-01 after:2026-04-02
+  multi-agent framework after:2026-04-01 after:2026-04-02
+
+## [profile-cn] OpenAI / Anthropic
+  OpenAI Anthropic 最新 2026年4月2日-2026年4月4日
+  Claude GPT API 更新 最近3天 2026年4月2日-2026年4月4日
+  OpenAI Anthropic 模型 发布 最新 2026年4月2日-2026年4月4日
+
+## [profile-global] OpenAI / Anthropic
+  OpenAI Anthropic after:2026-04-01 after:2026-04-02
+  Claude GPT API update after:2026-04-01 after:2026-04-02
+  OpenAI Anthropic model release after:2026-04-01 after:2026-04-02
+
+## [profile-cn] AI 产品与生态
+  AI 产品 最新 动态 2026年4月2日-2026年4月4日
+  开发者工具 AI 产品 最近3天 2026年4月2日-2026年4月4日
+
+## [profile-global] AI 产品与生态
+  AI product update after:2026-04-01 after:2026-04-02
+  developer tools AI workflow after:2026-04-01 after:2026-04-02
+
+## [extra] 综合
+  AI 产品经理 行业动态 2026年4月2日-2026年4月4日
+  AI 产品经理 新闻 最新发布 2026年4月4日
+  AI coding Agent OpenAI / Anthropic 最新动态 2026年4月2日

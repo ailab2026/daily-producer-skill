@@ -1,0 +1,148 @@
+# 日报 — 用户兴趣配置模板
+# 首次使用 /daily 时根据用户选择自动生成
+# 用户可随时手动编辑，下次运行即生效
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# 第一部分：用户画像（关心什么）
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# 角色：影响摘要的解读角度和行动建议的方向
+role: ""
+# 示例："AI 产品经理"、"独立开发者"、"二级市场研究者"
+
+# 角色补充描述（可选，帮助更精准解读）
+role_context: ""
+# 示例："负责 AI 产���规划与落地，关注模型能力变化和 Agent 生态"
+
+# 关注话题
+# priority: high（必选）| medium（有则采）| low（偶尔看看）
+# keywords: 中英文混合，具体的产品名/技术名/行业术语，不要泛词
+#   - 中文关键词 → 自动分发给微博/小红书/B站搜索
+#   - 英文关键词 → 自动分发给 Twitter/Reddit 搜索
+#   - 所有关键词 → 自动生成 Google site: 搜索查询
+topics: []
+  # - name: "话题名称"
+  #   priority: high
+  #   keywords:
+  #     - "中文关键词1"
+  #     - "English keyword"
+  #     - "产品名/技术名"
+
+# 不感兴趣的话题（采集和筛选时排除）
+exclude_topics: []
+  # - "纯营销稿"
+  # - "旧闻翻炒"
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# 第二部分：信息来源（去哪里找）
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# 来源只需要声明"去哪个平台找"，不需要重复写关键词。
+# 关键词统一从上面的 topics[*].keywords 获取，自动分发到各平台。
+
+sources:
+  # 固定采集平台（opencli 原生支持，每次采集必须覆盖）
+  # 类型：opencli 平台名，用于自动生成 opencli 命令
+  platforms:
+    cn:
+      # - name: "微博"
+      #   opencli: "weibo"           # opencli 命令前缀
+      #   commands:                   # 支持的采集命令
+      #     - "hot --limit 30"       # 热搜（不需要登录）
+      #     - "search \"{keyword}\" --limit 10"  # 关键词搜索（需要登录）
+      #   login_required: partial     # partial=部分命令需要 | yes=全部需要 | no=不需要
+      # - name: "小红书"
+      #   opencli: "xiaohongshu"
+      #   commands:
+      #     - "search \"{keyword}\" --limit 10"
+      #     - "feed --limit 10"
+      #   login_required: yes
+      # - name: "B站"
+      #   opencli: "bilibili"
+      #   commands:
+      #     - "hot --limit 20"
+      #     - "search \"{keyword}\" --limit 10"
+      #   login_required: partial
+    global:
+      # - name: "Twitter/X"
+      #   opencli: "twitter"
+      #   commands:
+      #     - "search \"{keyword}\" --limit 15 --filter top"
+      #     - "trending --limit 20"
+      #   login_required: yes
+      # - name: "Reddit"
+      #   opencli: "reddit"
+      #   commands:
+      #     - "search \"{keyword}\" --sort relevance --time week --limit 15"
+      #     - "hot --limit 20"
+      #   login_required: no
+
+  # 媒体/官网来源（通过 opencli web read 或 google site: 采集）
+  # 没有 opencli 专用适配器的站点放这里
+  websites:
+    cn: []
+      # - name: "机器之心"
+      #   url: "https://www.jiqizhixin.com/"
+      #   type: "media"              # media | official | community
+      # - name: "量子位"
+      #   url: "https://www.qbitai.com/"
+      #   type: "media"
+    global: []
+      # - name: "OpenAI News"
+      #   url: "https://openai.com/news/"
+      #   type: "official"
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# 第三部分：采集规则
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+collection:
+  window_days: 3                 # 采集时���窗口
+  priority_order:                # 信息优先级排序
+    - "官方确认信息"
+    - "高讨论度社区信号"
+    - "开源与开发者实践"
+    - "背景性报道"
+  exclude_rules:                 # 排除规则（与 exclude_topics 配合）
+    - "纯搬运无信息增量"
+    - "无来源的情绪内容"
+    - "弱相关泛热点"
+    - "旧闻翻炒"
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# 第四部分：运行配置（一般不需要改）
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+daily:
+  max_items: 15                  # 速览:10 | 标准:15 | 深度:20
+  summary_style: "detailed"      # brief | detailed | deep
+  include_actions: true          # 是否生成行动建议
+  include_trends: true           # 是否生成趋势雷达
+  language: "zh-CN"              # 输出语言
+
+pipeline:
+  search_preference: "opencli-first"
+  fallback_search_tools:
+    - "web_search"
+    - "web_fetch"
+  fallback_requires_reason: true
+
+server:
+  host: "0.0.0.0"
+  timeout_hours: 2
+  port: 17890
+
+feishu:
+  group_id: ""
+  tools:
+    wiki_list: ""
+    doc_read: ""
+    chat_messages: ""
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# 采集执行约束（不可删除）：
+# 1) 关键词统一从 topics[*].keywords 获取，自动按语言分发到各平台
+# 2) 所有信息源内容抓取默认优先走 opencli
+# 3) 平台未登录时，降级到 opencli google search "site:<域名> <关键词>"
+# 4) 发生 fallback 时，必须在 raw 留痕里写清 fallback_reason
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
