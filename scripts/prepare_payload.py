@@ -112,6 +112,14 @@ def parse_detail(text: str) -> list[dict]:
                 current["fields"]["has_fetched_content"] = True
             elif current.get("fields", {}).get("has_fetched_content"):
                 current["content"] += line + "\n"
+            # 正文续行（多行推文等，不匹配任何已知格式的非空行）
+            elif line.strip() and not line.startswith("---") and not line.startswith("#") and not line.startswith("="):
+                # 追加到 text 字段
+                existing_text = current["fields"].get("text", "")
+                if existing_text:
+                    current["fields"]["text"] = existing_text + "\n" + line.strip()
+                else:
+                    current["fields"]["text"] = line.strip()
 
     if current:
         items.append(current)

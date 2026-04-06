@@ -1,8 +1,8 @@
 # 日报候选详情 — 2026-04-06
-# 生成时间: 2026-04-06 10:18:49
-# 平台类条目（已有内容）: 42
-# 网站类条目（深抓正文）: 49
-# 深抓成功: 36
+# 生成时间: 2026-04-06 10:50:15
+# 平台类条目（已有内容）: 68
+# 网站类条目（深抓正文）: 64
+# 深抓成功: 45
 # 深抓失败: 0
 
 ======================================================================
@@ -51,6 +51,16 @@ time_parsed: 2026-04-05
 
 --- [微博] (cn) ---
 type: platform
+keyword: 大模型
+title: 我用大模型接管了我的量化交易账户。已经3天了。它什么也没买。这3天，它每分钟都在认真思考。并输出结论： [14:30:41] 什么也不买 - 无确认信号 with buy_date=2026-04-03[14:31:42] 什么也不买 -无确认信号with buy_date=2026-04-03[14:32:41] 什么也不买 -无确认信号with buy_date=2026-04-03[14:33:41] 什么也不买 -无确认信号with buy_date=2026-04-03[14:34:41] 什么也不买 -无确认信号with buy_date=2026-04-03[14:35:41] 什么也不买 -无确认信号with buy_date=2026-04-03[14:36:41] 什么也不买 -无确认信号with buy_date=2026-04-03[14:37:41] 什么也不买 -无确认信号with buy_date=2026-04-03 收起d
+author: 梁赛
+time: 04月03日 16:31
+url: https://weibo.com/1725941200/Qz6gj6w9H?refer_flag=1001030103_
+time_status: in_window
+time_parsed: 2026-04-03
+
+--- [微博] (cn) ---
+type: platform
 keyword: AI 产品
 title: 🚀 OPCPlay 案例分析：小哥靠 5 个AI 小产品月赚 70万美金！每个产品均为 AI + 订阅模式，解决重复劳动，强调“autopilot”（自动驾驶）和持续价值。1️⃣ Revid.ai（AI 视频生成 AI）* 功能：从文本、链接、文档或想法一键生成病毒式短视频（TikTok/Instagram/YouTube Shorts 等）。自动脚本、配音（70+ 语言真实声音）、视觉、编辑、趋势分析、一键发布。* 亮点：无需剪辑经验，几分钟出片，商业使用权，已生成大量视频。* 定价：Hobby 约 $39/月起（含 credits，最受欢迎），Growth $99/月，Ultra $199/月（年付更优惠）。* 收入贡献：约 40 万美元/月（组合中最高）。* 适用人群：内容创作者、品牌、独立艺术家。2️⃣ Outrank.so（AI SEO 流量工具）* 功能：AI 全自动生成+优化+发布 SEO 文章（每月 30 篇基础），包含关键词研究、图片生成、多语言（150+）、自动发布到 WordPress/Webflow 等，还带反向链接网络。* 亮点：真正 autopilot，有多站点折扣，帮用户快速提升有机流量和域名评级。* 定价：Standard 约 $99/月（30 篇文章），可加购更多文章，企业版自定义。* 收入贡献：约 20 万美元/月。* 适用人群：创业者、代理机构、需要持续内容产出的网站主。3️⃣ SuperX.so（X/Twitter 增长工具）* 功能：AI 分析病毒帖、生成个性化内容、重写、聪明调度（根据受众活跃时间发帖）、自动化互动、仪表盘分析；支持 Chrome 扩展。* 亮点：比老产品 Tweet Hunter 更新更频繁，增长更快。* 定价：约 $39/月起（具体以官网为准）。* 收入贡献：约 1.3 万美元/月（仍在快速增长中）。* 适用人群：独立黑客、创作者、创始人（建个人品牌）。4️⃣PostSyncer.com（一键多平台发布）* 功能：一次编写内容，同步发布到 Twitter、Facebook、Instagram、TikTok、YouTube、LinkedIn 等 10+ 平台；支持线程、轮播、Reels、AI 生成、统一评论管理和分析。* 亮点：保持发帖一致性，节省大量时间，定价亲民。* 定价：Starter 约 $29/月起，Pro $49，Pro Plus $99（含更多账号和 AI credits）。* 收入贡献：较低（约 1-2 万美元/月，仍在增长）。* 适用人群：多平台创作者、需要跨平台分发的用户。5️⃣Feather.so（Notion 转博客/网站）* 功能：无代码将 Notion 数据库/页面转为 SEO 友好独立博客/网站（自定义域名、sitemap、RSS、搜索、相关文章、分析等）；内容仍在 Notion 管理。* 亮点：适合把 Notion 当 CMS 使用，增长稳定，低 churn（流失率）。* 定价：按页面浏览量计费（站点创建不限）。* 收入贡献：约 1 万美元/月。* 适用人群：用 Notion 写内容的博主、创始人。🔥 共同商业模式与优势：—* 订阅核心：月费从 $10~$99 不等（低至两杯星巴克），用户痛点解决后持续付费 → 高留存、稳定现金流。—* AI 驱动：降低人力成本，实现自动化生成、优化、分发、分析。—* 产品矩阵策略：5 个产品覆盖内容全链路（生成 → SEO 优化 → 多平台分发 → 网站构建），相互导流，分散风险。—* 增长打法：Build in public + X 营销。—* 快速验证（先发帖测需求，再建 MVP）。—* 合作模式（给创作者分成而非股权）。—* 专注“帮人省时间/涨流量/省钱”的工具。🚀 战略准备：1.从个人痛点或已付费问题出发：不要凭空创新问题，只在执行上创新。找创作者/独立黑客/创业者正在用钱解决的痛点（如内容生成、SEO、社交分发）。2.采用 SaaS Studio / 产品矩阵模式：不是 all in 一个产品，而是并行多个小工具，覆盖内容全链路（生成 → 优化 → 分发 → 网站）。好处：分散风险、相互导流、稳定现金流。3.Bootstrapped + 小团队：自力更生，部分产品用 co-maker 模式（给开发者分成收入，而非股权）。一人主导，多人协作。4.Build in Public：在各平台每天分享进度、失败、用户反馈。把个人品牌变成主要分发渠道。5.AI 驱动降低成本：用codex等工具快速开发，AI 实现自动化（autopilot），让产品“帮用户省时间/涨流量”。核心哲学：速度 > 完美、验证 > 创新、分布 > 产品、订阅现金流 > 一次性卖。他强调“build in public”（公开构建）、快速迭代、找对 co-maker（合作开发者），并把每个产品当作“关系”而非单纯代码来经营。）Tibo的成功证明：专注解决创作者痛点 + 订阅模式 + 产品矩阵 + 公开构建，能实现可持续高收入。（数据来源于Tibo本人X/LinkedIn/博客公开分享及社区报道，实际以官网为准，收入有宣传成分，可能含波动）#How I AI# #TokenFi# #词元经济# #OPC# #一人公司# #OPCPlay# 收起d
 author: OpenClaw
@@ -81,6 +91,16 @@ time_parsed: 2026-04-04
 
 --- [微博] (cn) ---
 type: platform
+keyword: AI 产品
+title: 问了AI一个问题，董宇辉卖澳洲优思益和三只羊卖美诚月饼，性质哪一个更恶劣一些？AI对比分析出来，居然是董宇辉这事儿性质要恶劣得多。#市场监管部门对优思益推手立案调查##董宇辉曾说产品上播10天前有人试吃# ​
+author: 非主流视野
+time: 04月03日 10:37
+url: https://weibo.com/7387801989/Qz3Wp5IWl?refer_flag=1001030103_
+time_status: in_window
+time_parsed: 2026-04-03
+
+--- [微博] (cn) ---
+type: platform
 keyword: Agent
 title: 【架构比模型更重要：Claude Code源码泄露揭示了AI Agent 的生产级蓝图】快速阅读：Claude Code 的源码泄露揭示了生产级 AI Agent 的真正护城河：不在于模型本身有多聪明，而在于围绕模型构建的编排层（Orchestration Layer）。通过怀疑式记忆、后台整合与风险分级，AI 正从被动响应工具转向主动工作的系统。---这次泄露最值钱的不是那些隐藏功能，而是看到了一套年营收达 25 亿美元规模的系统是如何处理“不确定性”的。很多人盯着模型参数看，但真正的进步发生在模型之外。Claude Code 的架构证明了，AI Agent 的进化逻辑更像是在构建一个可靠的操作系统，而不是在调优一个聊天机器人。最让我觉得有意思的是那个“怀疑式记忆”机制。大多数开发者在做 Agent 时，会默认把模型之前的输出当作真理，这会导致 Agent 在错误的方向上越走越远。但这里的逻辑是：把记忆当成“提示”而非“事实”。在执行动作前，必须先去现实世界验证一遍。这就像是在指令流水线里加了一个校验单元，防止错误的指令污染整个状态机。还有一个很有趣的细节：autoDream。它让 Agent 在闲置时进行“后台整合”，把杂乱的观察结果进行去重和压缩。这很像人类的睡眠过程，通过主动的重构来清理内存噪声，防止随着对话增长，上下文被无用的垃圾信息填满。有网友提到，这种架构其实是由于约束条件驱动的必然结果。如果你想让 Agent 既能自主工作又不至于失控，你只能这么设计：给风险分级，高风险动作必须由人审批；给 KAIROS 守护进程，让它在后台干活但限制它的阻塞预算，别让它变成用户的负担。这种设计思路其实是在把 AI 当作一个“不可信的承包商”来对待。与其追求它绝对正确，不如建立一套完善的审计、回滚和验证机制。现在的技术路径很清晰：模型正在商品化，而围绕模型的编排、记忆管理和工具路由，才是真正的护城河。有人在讨论这是否是一种“语义漂移攻击”，但事实是，当大家都在独立开发 Agent 时，竟然不约而同地撞上了这套架构。这说明，在可靠性和成本的约束下，通往生产级的路径只有这一条。既然架构已经清晰了，下一个问题是，当多个并行 Agent 产生了冲突的观察结果时，谁来当那个仲裁者？reddit.com/r/artificial/comments/1s9jprb/the_claude_code_leak_accidentally_published_the 收起d
 author: 爱可可-爱生活
@@ -96,6 +116,16 @@ title: 电子书 解码 Agent Harness -- Claude Code 架构深度剖析github库
 author: 蚁工厂
 time: 04月03日 12:45
 url: https://weibo.com/2194035935/Qz4Mv1Dnt?refer_flag=1001030103_
+time_status: in_window
+time_parsed: 2026-04-03
+
+--- [微博] (cn) ---
+type: platform
+keyword: Agent
+title: Claude Code项目太大了，几十万行代码。要学Agent项目也可以参考MiniMax的这个演示项目Mini-Agent地址：github.com/MiniMax-AI/Mini-Agent/Mini Agent 是一个极简但专业的演示项目，旨在展示使用 MiniMax M2.5 模型构建 Agent 的最佳实践。项目通过兼容 Anthropic 的 API，完全支持交错思维（interleaved thinking），从而解锁 M2 模型在处理长而复杂的任务时强大的推理能力。该项目具备一系列为稳健、智能的 Agent 开发而设计的特性： ✅ 完整的 Agent 执行循环：一个完整可靠的执行框架，配备了文件系统和 Shell 操作的基础工具集。 ✅ 持久化记忆：通过内置的 Session Note Tool，Agent 能够在多个会话中保留关键信息。 ✅ 智能上下文管理：自动对会话历史进行摘要，可处理长达可配置 Token 上限的上下文，从而支持无限长的任务。 ✅ 集成 Claude Skills：内置 15 种专业技能，涵盖文档处理、设计、测试和开发等领域。 ✅ 集成 MCP 工具：原生支持 MCP 协议，可轻松接入知识图谱、网页搜索等工具。 ✅ 全面的日志记录：为每个请求、响应和工具执行提供详细日志，便于调试。 ✅ 简洁明了的设计：美观的命令行界面和易于理解的代码库，使其成为构建高级 Agent 的理想起点。#How I AI# 收起d
+author: 蚁工厂
+time: 04月03日 08:26
+url: https://weibo.com/2194035935/Qz35h0mpP?refer_flag=1001030103_
 time_status: in_window
 time_parsed: 2026-04-03
 
@@ -118,6 +148,16 @@ time: 04月03日 08:57
 url: https://weibo.com/1402400261/Qz3hUhTp0?refer_flag=1001030103_
 time_status: in_window
 time_parsed: 2026-04-03
+
+--- [微博] (cn) ---
+type: platform
+keyword: AI 编程
+title: Google Cloud AI 总监开源的 AI 编程 Skills 仓库，融入了谷歌软件工程的最佳实践，含金量拉满。6大生命周期，7个原子化指令，19 项核心技能 SOP。AI 编程的核心不是如何生成代码，而是如何建立工程纪律，也就是所谓的 Harness 工程。好的 AI 提示词应该带有强校验门槛的 SOP，做好上下文工程和任何拆解。只有给 AI 设置不可跨越的验证关卡，它才能从代码玩具变成生产力工具。传送门：github.com/addyosmani/agent-skills#HOW I AI##科技先锋官##程序员##AI编程# 收起d
+author: 欧巴聊AI
+time: 04月05日 12:32
+url: https://weibo.com/2771284557/Qznyb1S0Z?refer_flag=1001030103_
+time_status: in_window
+time_parsed: 2026-04-05
 
 --- [微博] (cn) ---
 type: platform
@@ -149,6 +189,27 @@ url: https://weibo.com/1727858283/Qz0dUoQFo?refer_flag=1001030103_
 time_status: in_window
 time_parsed: 2026-04-03
 
+--- [微博] (cn) ---
+type: platform
+keyword: 开源模型
+title: Netflix也发开源模型了：void-model，这也是他们在huggingface上分享的第一个模型。地址：huggingface.co/netflix/void-model这是个视频模型。VOID能够从视频中移除物体及其在场景中引发的所有互动——不仅是阴影和反射等次级效应，还包括物体因人物移除而掉落等物理互动。#How I AI# L蚁工厂的微博视频 收起d
+author: 蚁工厂
+time: 04月03日 19:20
+url: https://weibo.com/2194035935/Qz7mGn06r?refer_flag=1001030103_
+time_status: in_window
+time_parsed: 2026-04-03
+
+--- [小红书] (cn) ---
+type: platform
+keyword: AI 产品
+title: 这届AI产品，正在接管工作流
+author: Ellie昨天 17:31
+time: 2026-04-05
+hot: 9
+url: https://www.xiaohongshu.com/search_result/69d22bed0000000022001a7e?xsec_token=ABosnKzYY27HEaGkH-XPyLQYcP71L8VmaEZ7H8kcGbkos=&xsec_source=
+time_status: in_window
+time_parsed: 2026-04-05
+
 --- [小红书] (cn) ---
 type: platform
 keyword: Agent
@@ -168,6 +229,17 @@ author: 葬愛咸鱼1天前
 time: 2026-04-03
 hot: 155
 url: https://www.xiaohongshu.com/search_result/69cf822900000000230132ce?xsec_token=ABtHSfBbpJhaGSNJMLhf2mm0beakBC0EHa0-H6y8k3gRE=&xsec_source=
+time_status: in_window
+time_parsed: 2026-04-03
+
+--- [小红书] (cn) ---
+type: platform
+keyword: Agent
+title: Agent Skill设计范式02|Generator生成器
+author: 猫叔薛定亮2天前
+time: 2026-04-03
+hot: 8
+url: https://www.xiaohongshu.com/search_result/69cf63ac000000001a036083?xsec_token=ABtHSfBbpJhaGSNJMLhf2mm2New4VAfBPX6q84DPlMv5g=&xsec_source=
 time_status: in_window
 time_parsed: 2026-04-03
 
@@ -203,6 +275,17 @@ hot: 10
 url: https://www.xiaohongshu.com/search_result/69d1b6130000000023005c85?xsec_token=ABWV-9F6NGbjlLw8mj0ebKEvZS20ITfqbwgDYtHOuO5iY=&xsec_source=
 time_status: in_window
 time_parsed: 2026-04-05
+
+--- [小红书] (cn) ---
+type: platform
+keyword: 开源模型
+title: 2026 夯爆了的开源模型 Gemma 4来袭
+author: 十七卡蓝里1天前
+time: 2026-04-04
+hot: 1
+url: https://www.xiaohongshu.com/search_result/69d084cf0000000022003780?xsec_token=ABeslAnEPLPTHKPOc6Gh8sj27WNpKY2SHf62GhgF-6ByE=&xsec_source=
+time_status: in_window
+time_parsed: 2026-04-04
 
 --- [36氪] (cn) ---
 type: platform
@@ -244,6 +327,16 @@ url: https://36kr.com/p/3751046517129735?f=rss
 time_status: in_window
 time_parsed: 2026-04-03
 
+--- [36氪] (cn) ---
+type: platform
+keyword: (none)
+title: 元气森林2044创造营背后：创新要年轻，研发要更重 | 最前线
+summary: 作者 | 钟艺璇 3月30日，第二届“元气森林创造营2044”活动在咸宁举行。活动现场，十余位年轻的产品经理带着多款元气森林家族新产品上台亮相，分享了各自打造新品的初心与研发历程。 “创造营2044”萌芽于2024年元气森林经销商大会上“2
+time: 2026-04-03
+url: https://36kr.com/p/3749467949482759?f=rss
+time_status: in_window
+time_parsed: 2026-04-03
+
 --- [Twitter/X] (global) ---
 type: platform
 keyword: large language model
@@ -257,8 +350,35 @@ time_parsed: 2026-04-03
 
 --- [Twitter/X] (global) ---
 type: platform
+keyword: large language model
+title: Wow, this tweet went very viral!
+I wanted share a possibly slightly improved version of the tweet in an "idea file". The idea of the idea file is that in this era of LLM agents, there is less of a point/need of sharing the specific code/app, you just share the idea, then the other person's agent customizes & builds it for your specific needs.
+So here's the idea in a gist format: https://t.co/NlAfEJjtJV
+You can give this to your agent and it can build you your own LLM wiki and guide you on how to use it etc. It's intentionally kept a little bit abstract/vague because there are so many directions to take this in. And ofc, people can adjust the idea or contribute their own in the Discussion which is cool.
+author: karpathy
+time: Sat Apr 04 16:45:23 +0000 2026
+hot: 22175
+url: https://x.com/i/status/2040470801506541998
+time_status: in_window
+time_parsed: 2026-04-04
+
+--- [Twitter/X] (global) ---
+type: platform
 keyword: AI product
 title: $19k/day ads are starting to look like this
+simple product shot, natural light, nothing overproduced
+opening the bottle, showing the pills inside
+and you genuinely can’t tell it’s ai
+no crazy hooks, just clean, believable visuals
+it feels like something you’d film yourself
+that’s why it converts
+no friction, no skepticism, just instant trust
+same product, dozens of slight variations
+angles, lighting, hands, environments swapped
+ai turns one idea into endless creatives
+this is where static + simple motion wins
+rt + comment “productreal” and i’ll send the setup
+(follow for dm)
 author: davidfigeira
 time: Sat Apr 04 13:05:16 +0000 2026
 hot: 60
@@ -268,14 +388,129 @@ time_parsed: 2026-04-04
 
 --- [Twitter/X] (global) ---
 type: platform
+keyword: AI product
+title: GPT-5.5 looks like it’s coming soon
+An omnimodal, agentic model from OpenAI. These appear to be the first image generations already testable in the Arena.
+If true, this is the beginning of a very different kind of AI product.
+author: VraserX
+time: Sat Apr 04 05:51:43 +0000 2026
+hot: 181
+url: https://x.com/i/status/2040306300064559475
+time_status: in_window
+time_parsed: 2026-04-04
+
+--- [Twitter/X] (global) ---
+type: platform
 keyword: Agent
 title: Google Stitch has released 𝗗𝗘𝗦𝗜𝗚𝗡.𝗺𝗱 🤯
+One markdown file that teaches your AI coding agent your entire design system.
+→ No Figma exports
+→ No JSON schemas
+→ Nothing to configure
+The part that saves the most time: 
+A free collection of 40+ pre-built files already exists, extracted from real products. Stripe, Vercel, Linear, Notion, Lovable, Claude, ElevenLabs, Cursor, Warp, Zapier, and more.
+Drop it in your project root. Claude Code, Cursor, Gemini CLI, and GitHub Copilot all read it natively.
+100% Free and Open-Source.
 author: dr_cintas
 time: Fri Apr 03 18:59:04 +0000 2026
 hot: 3845
 url: https://x.com/i/status/2040142054211117218
 time_status: in_window
 time_parsed: 2026-04-03
+
+--- [Twitter/X] (global) ---
+type: platform
+keyword: Agent
+title: CLAUDE IS OFFERING 13 AI COURSES & CERTIFICATES.
+ALL FREE. START LEARNING NOW.
+* Claude 101. Learn Claude for everyday work.
+https://t.co/5BTxHDLkFl
+* AI Fluency: Frameworks & Foundations.
+https://t.co/4cVd0yWh2b
+* Introduction to Agent Skills.
+https://t.co/Qp2dthHEWw
+* Building with the Claude API.
+https://t.co/XLETKnmsOH
+* Claude Code in Action.
+https://t.co/mWx2ncByVG
+* Intro to Model Context Protocol.
+https://t.co/SRtsyXnxiK
+* MCP: Advanced Topics.
+https://t.co/qsIwMXbetq
+* AI Fluency for Students.
+https://t.co/5wYhqBX1Fx
+* AI Fluency for Educators.
+https://t.co/m39LPSqMiy
+* Teaching AI Fluency.
+https://t.co/5tIKdujzu3
+* AI Fluency for Nonprofits.
+https://t.co/bZyzIAcnCy
+* Claude with Amazon Bedrock.
+https://t.co/ACR2hYAwdc
+* Claude with Google Cloud's Vertex AI.
+https://t.co/w6BM2XNgqi
+author: RoundtableSpace
+time: Sun Apr 05 12:45:00 +0000 2026
+hot: 3417
+url: https://x.com/i/status/2040772692866183308
+time_status: in_window
+time_parsed: 2026-04-05
+
+--- [Twitter/X] (global) ---
+type: platform
+keyword: AI coding
+title: Google Stitch has released 𝗗𝗘𝗦𝗜𝗚𝗡.𝗺𝗱 🤯
+One markdown file that teaches your AI coding agent your entire design system.
+→ No Figma exports
+→ No JSON schemas
+→ Nothing to configure
+The part that saves the most time: 
+A free collection of 40+ pre-built files already exists, extracted from real products. Stripe, Vercel, Linear, Notion, Lovable, Claude, ElevenLabs, Cursor, Warp, Zapier, and more.
+Drop it in your project root. Claude Code, Cursor, Gemini CLI, and GitHub Copilot all read it natively.
+100% Free and Open-Source.
+author: dr_cintas
+time: Fri Apr 03 18:59:04 +0000 2026
+hot: 3845
+url: https://x.com/i/status/2040142054211117218
+time_status: in_window
+time_parsed: 2026-04-03
+
+--- [Twitter/X] (global) ---
+type: platform
+keyword: open source model
+title: 🚨 BREAKING: NVIDIA just removed the biggest friction point in Voice AI
+They open-sourced PersonaPlex 7B, a real-time conversational model. It listens and speaks simultaneously to handle natural interruptions and overlaps.
+100% Open Source. https://t.co/eiCVTFJSGi
+author: HowToAI_
+time: Sat Apr 04 06:58:30 +0000 2026
+hot: 5991
+url: https://x.com/i/status/2040323104577339641
+time_status: in_window
+time_parsed: 2026-04-04
+
+--- [Reddit] (global) ---
+type: platform
+keyword: large language model
+title: Running Large Language Model in Vanilla Minecraft
+author: This-Purchase-3325
+subreddit: r/MinecraftCommands
+time: 2026-04-03 15:56
+hot: 209
+url: https://reddit.com/r/MinecraftCommands/comments/1sbhgyf/running_large_language_model_in_vanilla_minecraft/
+time_status: in_window
+time_parsed: 2026-04-03
+
+--- [Reddit] (global) ---
+type: platform
+keyword: AI product
+title: I spent a week reading through AI-generated code that's been in production for 8 months. It was fine. That was the problem.
+author: Ambitious-Garbage-73
+subreddit: r/node
+time: 2026-04-04 19:09
+hot: 423
+url: https://reddit.com/r/node/comments/1schszw/i_spent_a_week_reading_through_aigenerated_code/
+time_status: in_window
+time_parsed: 2026-04-04
 
 --- [Reddit] (global) ---
 type: platform
@@ -288,6 +523,18 @@ hot: 38338
 url: https://reddit.com/r/illinois/comments/1schi7h/gov_jb_pritzker_just_made_illinois_the_first/
 time_status: in_window
 time_parsed: 2026-04-04
+
+--- [Reddit] (global) ---
+type: platform
+keyword: Agent
+title: [Charania] Luka Dončić’s agent intends to apply for an “Extraordinary Circumstances Challenge” to the 65-game rule. Luka missed two games this season for the birth of his second child in Slovenia.
+author: YujiDomainExpansion
+subreddit: r/nba
+time: 2026-04-03 22:09
+hot: 5131
+url: https://reddit.com/r/nba/comments/1sbrfgs/charania_luka_dončićs_agent_intends_to_apply_for/
+time_status: in_window
+time_parsed: 2026-04-03
 
 --- [Reddit] (global) ---
 type: platform
@@ -327,6 +574,18 @@ time_parsed: 2026-04-05
 
 --- [Reddit] (global) ---
 type: platform
+keyword: AI coding
+title: I mass deleted 3 months of AI generated code last week. Here is what I learned.
+author: Ambitious-Garbage-73
+subreddit: r/ChatGPT
+time: 2026-04-04 00:41
+hot: 1111
+url: https://reddit.com/r/ChatGPT/comments/1sbuyeg/i_mass_deleted_3_months_of_ai_generated_code_last/
+time_status: in_window
+time_parsed: 2026-04-04
+
+--- [Reddit] (global) ---
+type: platform
 keyword: open source model
 title: Gemma 4 just dropped — fully local, no API, no subscription
 author: EvolvinAI29
@@ -336,6 +595,18 @@ hot: 570
 url: https://reddit.com/r/AI_Agents/comments/1sbhal2/gemma_4_just_dropped_fully_local_no_api_no/
 time_status: in_window
 time_parsed: 2026-04-03
+
+--- [Reddit] (global) ---
+type: platform
+keyword: open source model
+title: I built an open-source replacement for APC SmartSlot network cards (OpenNMC)
+author: Craft4Cube
+subreddit: r/homelab
+time: 2026-04-05 13:35
+hot: 2251
+url: https://reddit.com/r/homelab/comments/1sd3swi/i_built_an_opensource_replacement_for_apc/
+time_status: in_window
+time_parsed: 2026-04-05
 
 --- [Reddit] (global) ---
 type: platform
@@ -385,6 +656,18 @@ url: https://reddit.com/r/worldnews/comments/1sdev28/iran_now_threatening_to_clo
 time_status: in_window
 time_parsed: 2026-04-05
 
+--- [Reddit] (global) ---
+type: platform
+keyword: (none)
+title: Patching up a spot in the wall
+author: Legal-Bet-4034
+subreddit: r/oddlysatisfying
+time: 2026-04-05 21:59
+hot: 11783
+url: https://reddit.com/r/oddlysatisfying/comments/1sdge85/patching_up_a_spot_in_the_wall/
+time_status: in_window
+time_parsed: 2026-04-05
+
 --- [YouTube] (global) ---
 type: platform
 keyword: Agent
@@ -409,6 +692,42 @@ url: https://www.youtube.com/watch?v=ATbeBhnXjbY
 time_status: in_window
 time_parsed: 2026-04-05
 
+--- [YouTube] (global) ---
+type: platform
+keyword: Agent
+title: Hermes + Honcho  Self Improving Autonomous AI Agent!
+author: Julian Goldie SEO
+time: 13 hours ago
+duration: 12:56
+hot: 1,603 views
+url: https://www.youtube.com/watch?v=gnDFkXl9AEc
+time_status: in_window
+time_parsed: 2026-04-05
+
+--- [YouTube] (global) ---
+type: platform
+keyword: AI coding
+title: Fully FREE Qwen 3.6 Plus + Qwen Code: This FREE AI Coder is ACTUALLY GOOD!
+author: AICodeKing
+time: 15 hours ago
+duration: 8:37
+hot: 6,137 views
+url: https://www.youtube.com/watch?v=_A32wawAgGo
+time_status: in_window
+time_parsed: 2026-04-05
+
+--- [YouTube] (global) ---
+type: platform
+keyword: open source model
+title: Google just destroyed all open-source models (Gemma 4)
+author: David Ondrej
+time: 2 days ago
+duration: 23:38
+hot: 50,404 views
+url: https://www.youtube.com/watch?v=HdohxOTO6lo
+time_status: in_window
+time_parsed: 2026-04-04
+
 --- [Reuters] (global) ---
 type: platform
 keyword: AI product
@@ -417,6 +736,15 @@ time: 2026-04-05
 url: https://www.reuters.com/world/asia-pacific/foxconn-first-quarter-revenue-jumps-30-yy-2026-04-05/
 time_status: in_window
 time_parsed: 2026-04-05
+
+--- [Reuters] (global) ---
+type: platform
+keyword: AI product
+title: After Ukraine, Iran war further supercharges marine drone revolution
+time: 2026-04-03
+url: https://www.reuters.com/default/after-ukraine-iran-war-further-supercharges-marine-drone-revolution-2026-04-03/
+time_status: in_window
+time_parsed: 2026-04-03
 
 --- [Reuters] (global) ---
 type: platform
@@ -454,6 +782,24 @@ url: https://www.reuters.com/sports/baseball/tigers-jack-flaherty-out-wow-his-fo
 time_status: in_window
 time_parsed: 2026-04-04
 
+--- [Reuters] (global) ---
+type: platform
+keyword: Agent
+title: MLB roundup: Konnor Griffin shines in debut as Pirates top Orioles
+time: 2026-04-04
+url: https://www.reuters.com/sports/mlb-roundup-konnor-griffin-shines-debut-pirates-top-orioles--flm-2026-04-04/
+time_status: in_window
+time_parsed: 2026-04-04
+
+--- [Reuters] (global) ---
+type: platform
+keyword: AI coding
+title: AI is rewiring the world’s most prolific film industry
+time: 2026-04-04
+url: https://www.reuters.com/technology/ai-is-rewiring-worlds-most-prolific-film-industry-2026-04-04/
+time_status: in_window
+time_parsed: 2026-04-04
+
 
 # ━━ 第二部分：网站类条目（深抓正文）━━
 
@@ -470,9 +816,9 @@ web/read
 ┌─────────────────────────────────────────────────────────────┬────────┬──────────────┬─────────┬─────────┐
 │ Title                                                       │ Author │ Publish_time │ Status  │ Size    │
 ├─────────────────────────────────────────────────────────────┼────────┼──────────────┼─────────┼─────────┤
-│ 日调用量超万亿破纪录！阿里千问3.6Plus登顶全球模型调用量榜首 │ -      │ -            │ success │ 14.2 KB │
+│ 日调用量超万亿破纪录！阿里千问3.6Plus登顶全球模型调用量榜首 │ -      │ -            │ success │ 14.4 KB │
 └─────────────────────────────────────────────────────────────┴────────┴──────────────┴─────────┴─────────┘
-1 items · 3.6s · web/read
+1 items · 4.1s · web/read
 
 --- [量子位] (website) ---
 type: website_detail
@@ -487,9 +833,9 @@ web/read
 ┌────────────────────────────────────────────────────────────────────┬────────┬──────────────┬─────────┬─────────┐
 │ Title                                                              │ Author │ Publish_time │ Status  │ Size    │
 ├────────────────────────────────────────────────────────────────────┼────────┼──────────────┼─────────┼─────────┤
-│ OpenAI新模型不是GPTX！全新预训练“土豆”曝光，Sora成弃子的原因找到了 │ -      │ -            │ success │ 32.3 KB │
+│ OpenAI新模型不是GPTX！全新预训练“土豆”曝光，Sora成弃子的原因找到了 │ -      │ -            │ success │ 31.9 KB │
 └────────────────────────────────────────────────────────────────────┴────────┴──────────────┴─────────┴─────────┘
-1 items · 5.3s · web/read
+1 items · 5.4s · web/read
 
 --- [量子位] (website) ---
 type: website_detail
@@ -503,9 +849,9 @@ web/read
 ┌──────────────────────────────────────────────┬────────┬──────────────┬─────────┬─────────┐
 │ Title                                        │ Author │ Publish_time │ Status  │ Size    │
 ├──────────────────────────────────────────────┼────────┼──────────────┼─────────┼─────────┤
-│ 19岁，常青藤辍学，这群中国年轻人重构了AI记忆 │ -      │ -            │ success │ 25.4 KB │
+│ 19岁，常青藤辍学，这群中国年轻人重构了AI记忆 │ -      │ -            │ success │ 25.3 KB │
 └──────────────────────────────────────────────┴────────┴──────────────┴─────────┴─────────┘
-1 items · 6.1s · web/read
+1 items · 6.2s · web/read
 
 --- [量子位] (website) ---
 type: website_detail
@@ -520,9 +866,25 @@ web/read
 ┌────────────────────┬────────┬──────────────┬─────────┬─────────┐
 │ Title              │ Author │ Publish_time │ Status  │ Size    │
 ├────────────────────┼────────┼──────────────┼─────────┼─────────┤
-│ 联想重新定义“龙虾” │ -      │ -            │ success │ 27.0 KB │
+│ 联想重新定义“龙虾” │ -      │ -            │ success │ 27.5 KB │
 └────────────────────┴────────┴──────────────┴─────────┴─────────┘
-1 items · 7.2s · web/read
+1 items · 6.3s · web/read
+
+--- [量子位] (website) ---
+type: website_detail
+keyword: 大模型
+title: GPT-6，曝光了
+url: https://www.qbitai.com/2026/04/396366.html
+time_status: google_filtered
+fetch_status: success
+fetched_content:
+web/read
+┌───────┬────────┬──────────────┬─────────┬─────────┐
+│ Title │ Author │ Publish_time │ Status  │ Size    │
+├───────┼────────┼──────────────┼─────────┼─────────┤
+│ GPT   │ -      │ -            │ success │ 14.7 KB │
+└───────┴────────┴──────────────┴─────────┴─────────┘
+1 items · 9.7s · web/read
 
 --- [量子位] (website) ---
 type: website_detail
@@ -537,9 +899,9 @@ web/read
 ┌────────────────────┬────────┬──────────────┬─────────┬─────────┐
 │ Title              │ Author │ Publish_time │ Status  │ Size    │
 ├────────────────────┼────────┼──────────────┼─────────┼─────────┤
-│ 联想重新定义“龙虾” │ -      │ -            │ success │ 27.0 KB │
+│ 联想重新定义“龙虾” │ -      │ -            │ success │ 27.5 KB │
 └────────────────────┴────────┴──────────────┴─────────┴─────────┘
-1 items · 7.2s · web/read
+1 items · 6.3s · web/read
 
 --- [量子位] (website) ---
 type: website_detail
@@ -554,9 +916,9 @@ web/read
 ┌────────────────────────────────────────────────────────────────────┬────────┬──────────────┬─────────┬─────────┐
 │ Title                                                              │ Author │ Publish_time │ Status  │ Size    │
 ├────────────────────────────────────────────────────────────────────┼────────┼──────────────┼─────────┼─────────┤
-│ OpenAI新模型不是GPTX！全新预训练“土豆”曝光，Sora成弃子的原因找到了 │ -      │ -            │ success │ 32.3 KB │
+│ OpenAI新模型不是GPTX！全新预训练“土豆”曝光，Sora成弃子的原因找到了 │ -      │ -            │ success │ 31.9 KB │
 └────────────────────────────────────────────────────────────────────┴────────┴──────────────┴─────────┴─────────┘
-1 items · 5.3s · web/read
+1 items · 5.4s · web/read
 
 --- [量子位] (website) ---
 type: website_detail
@@ -573,7 +935,7 @@ web/read
 ├────────────────────────────────────────────────────────────────────────────┼────────┼──────────────┼─────────┼─────────┤
 │ 为了不跟龙虾抢电脑用，有人开始造Agent专属的“三无”硬件，比Mac Mini+存储便宜 │ -      │ -            │ success │ 20.1 KB │
 └────────────────────────────────────────────────────────────────────────────┴────────┴──────────────┴─────────┴─────────┘
-1 items · 3.6s · web/read
+1 items · 4.8s · web/read
 
 --- [量子位] (website) ---
 type: website_detail
@@ -588,9 +950,26 @@ web/read
 ┌──────────────────────────────────────────────┬────────┬──────────────┬─────────┬─────────┐
 │ Title                                        │ Author │ Publish_time │ Status  │ Size    │
 ├──────────────────────────────────────────────┼────────┼──────────────┼─────────┼─────────┤
-│ 19岁，常青藤辍学，这群中国年轻人重构了AI记忆 │ -      │ -            │ success │ 25.4 KB │
+│ 19岁，常青藤辍学，这群中国年轻人重构了AI记忆 │ -      │ -            │ success │ 25.3 KB │
 └──────────────────────────────────────────────┴────────┴──────────────┴─────────┴─────────┘
-1 items · 6.1s · web/read
+1 items · 6.2s · web/read
+
+--- [量子位] (website) ---
+type: website_detail
+keyword: AI 产品
+title: GPT-6，曝光了
+snippet: Claude Code、Cowork、OpenClaw这类基于AI编程产品的爆火，让OpenAI猛然意识到「原来只靠文本，真的有可能通往AGI」。 这逼得奥特曼走投无路，不得不咬牙砍掉了几乎 ...
+url: https://www.qbitai.com/2026/04/396366.html
+time_status: google_filtered
+fetch_status: success
+fetched_content:
+web/read
+┌───────┬────────┬──────────────┬─────────┬─────────┐
+│ Title │ Author │ Publish_time │ Status  │ Size    │
+├───────┼────────┼──────────────┼─────────┼─────────┤
+│ GPT   │ -      │ -            │ success │ 14.7 KB │
+└───────┴────────┴──────────────┴─────────┴─────────┘
+1 items · 9.7s · web/read
 
 --- [量子位] (website) ---
 type: website_detail
@@ -607,7 +986,7 @@ web/read
 ├────────────────────────────────────────────────────────────────────────────┼────────┼──────────────┼─────────┼─────────┤
 │ 为了不跟龙虾抢电脑用，有人开始造Agent专属的“三无”硬件，比Mac Mini+存储便宜 │ -      │ -            │ success │ 20.1 KB │
 └────────────────────────────────────────────────────────────────────────────┴────────┴──────────────┴─────────┴─────────┘
-1 items · 3.6s · web/read
+1 items · 4.8s · web/read
 
 --- [量子位] (website) ---
 type: website_detail
@@ -622,9 +1001,9 @@ web/read
 ┌────────────────────┬────────┬──────────────┬─────────┬─────────┐
 │ Title              │ Author │ Publish_time │ Status  │ Size    │
 ├────────────────────┼────────┼──────────────┼─────────┼─────────┤
-│ 联想重新定义“龙虾” │ -      │ -            │ success │ 27.0 KB │
+│ 联想重新定义“龙虾” │ -      │ -            │ success │ 27.5 KB │
 └────────────────────┴────────┴──────────────┴─────────┴─────────┘
-1 items · 7.2s · web/read
+1 items · 6.3s · web/read
 
 --- [量子位] (website) ---
 type: website_detail
@@ -641,7 +1020,7 @@ web/read
 ├────────────────────┼────────┼──────────────┼─────────┼─────────┤
 │ 具身龙虾，上车理想 │ -      │ -            │ success │ 17.0 KB │
 └────────────────────┴────────┴──────────────┴─────────┴─────────┘
-1 items · 4.4s · web/read
+1 items · 5.7s · web/read
 
 --- [量子位] (website) ---
 type: website_detail
@@ -658,7 +1037,23 @@ web/read
 ├───────────────────────────────────────────────────────────┼────────┼──────────────┼─────────┼────────┤
 │ 太初元碁向员工发放百亿算力token并将共建高校AI科教融合学院 │ -      │ -            │ success │ 9.8 KB │
 └───────────────────────────────────────────────────────────┴────────┴──────────────┴─────────┴────────┘
-1 items · 1.6s · web/read
+1 items · 1.8s · web/read
+
+--- [量子位] (website) ---
+type: website_detail
+keyword: Agent
+title: Linux内核维护者崩溃了！AI每天狂塞10份漏洞报告
+url: https://www.qbitai.com/2026/04/396358.html
+time_status: google_filtered
+fetch_status: success
+fetched_content:
+web/read
+┌─────────────────────────────────────────────────────────────┬────────┬──────────────┬─────────┬─────────┐
+│ Title                                                       │ Author │ Publish_time │ Status  │ Size    │
+├─────────────────────────────────────────────────────────────┼────────┼──────────────┼─────────┼─────────┤
+│ Linux内核维护者崩溃了！AI每天狂塞10份漏洞报告，想摸会鱼都难 │ -      │ -            │ success │ 19.6 KB │
+└─────────────────────────────────────────────────────────────┴────────┴──────────────┴─────────┴─────────┘
+1 items · 3.9s · web/read
 
 --- [InfoQ AI] (website) ---
 type: website_detail
@@ -675,7 +1070,7 @@ web/read
 ├─────────────────────────────────────────────────────┼────────┼──────────────┼─────────┼────────┤
 │ 本地大模型部署_本地大模型部署技术文章_InfoQ写作社区 │ -      │ -            │ success │ 1.1 KB │
 └─────────────────────────────────────────────────────┴────────┴──────────────┴─────────┴────────┘
-1 items · 2.9s · web/read
+1 items · 3.1s · web/read
 
 --- [InfoQ AI] (website) ---
 type: website_detail
@@ -692,7 +1087,7 @@ web/read
 ├─────────────────────────────────────────────────┼────────┼──────────────┼─────────┼────────┤
 │ Evomap如何让Agent从单体智能到群体进化｜QCon北京 │ -      │ -            │ success │ 6.3 KB │
 └─────────────────────────────────────────────────┴────────┴──────────────┴─────────┴────────┘
-1 items · 2.6s · web/read
+1 items · 3.9s · web/read
 
 --- [InfoQ AI] (website) ---
 type: website_detail
@@ -709,7 +1104,7 @@ web/read
 ├──────────────────────────────────────────────────────────────────┼────────┼──────────────┼─────────┼────────┤
 │ Pinterest 部署生产级模型上下文协议生态系统，赋能 AI 智能体工作流 │ -      │ -            │ success │ 4.4 KB │
 └──────────────────────────────────────────────────────────────────┴────────┴──────────────┴─────────┴────────┘
-1 items · 3.7s · web/read
+1 items · 3.6s · web/read
 
 --- [InfoQ AI] (website) ---
 type: website_detail
@@ -724,9 +1119,26 @@ web/read
 ┌────────┬────────┬──────────────┬─────────┬─────────┐
 │ Title  │ Author │ Publish_time │ Status  │ Size    │
 ├────────┼────────┼──────────────┼─────────┼─────────┤
-│ spring │ -      │ -            │ success │ 12.1 KB │
+│ spring │ -      │ -            │ success │ 12.4 KB │
 └────────┴────────┴──────────────┴─────────┴─────────┘
-1 items · 5.0s · web/read
+1 items · 11.0s · web/read
+
+--- [InfoQ AI] (website) ---
+type: website_detail
+keyword: 大模型
+title: Harness Engineering 又来颠覆了——你们开发不写文档
+snippet: 这件事换一个角度看：传统软件工程其实也在做同样的事——只不过" 模型" 是人脑，信息载体是文档、会议纪要、口头沟通和代码注释。人脑有容错能力，能猜意图、能靠经验补全缺失 ...
+url: https://xie.infoq.cn/article/27fbffac73a2e31c0f19e5ee7
+time_status: google_filtered
+fetch_status: success
+fetched_content:
+web/read
+┌─────────────────────────────────┬────────┬──────────────┬─────────┬─────────┐
+│ Title                           │ Author │ Publish_time │ Status  │ Size    │
+├─────────────────────────────────┼────────┼──────────────┼─────────┼─────────┤
+│ Harness Engineering 又来颠覆了— │ -      │ -            │ success │ 11.6 KB │
+└─────────────────────────────────┴────────┴──────────────┴─────────┴─────────┘
+1 items · 8.4s · web/read
 
 --- [InfoQ AI] (website) ---
 type: website_detail
@@ -743,7 +1155,7 @@ web/read
 ├─────────────────────────────────────────────────┼────────┼──────────────┼─────────┼────────┤
 │ Evomap如何让Agent从单体智能到群体进化｜QCon北京 │ -      │ -            │ success │ 6.3 KB │
 └─────────────────────────────────────────────────┴────────┴──────────────┴─────────┴────────┘
-1 items · 2.6s · web/read
+1 items · 3.9s · web/read
 
 --- [InfoQ AI] (website) ---
 type: website_detail
@@ -758,9 +1170,9 @@ web/read
 ┌─────────────────────────────────┬────────┬──────────────┬─────────┬─────────┐
 │ Title                           │ Author │ Publish_time │ Status  │ Size    │
 ├─────────────────────────────────┼────────┼──────────────┼─────────┼─────────┤
-│ Harness Engineering 又来颠覆了— │ -      │ -            │ success │ 11.4 KB │
+│ Harness Engineering 又来颠覆了— │ -      │ -            │ success │ 11.6 KB │
 └─────────────────────────────────┴────────┴──────────────┴─────────┴─────────┘
-1 items · 8.3s · web/read
+1 items · 8.4s · web/read
 
 --- [InfoQ AI] (website) ---
 type: website_detail
@@ -775,9 +1187,9 @@ web/read
 ┌─────────────────────────────────────────────────────────────┬────────┬──────────────┬─────────┬────────┐
 │ Title                                                       │ Author │ Publish_time │ Status  │ Size   │
 ├─────────────────────────────────────────────────────────────┼────────┼──────────────┼─────────┼────────┤
-│ AIFUT大会｜倒计时冲刺3天！！！_数字生命卡兹克_InfoQ写作社区 │ -      │ -            │ success │ 5.6 KB │
+│ AIFUT大会｜倒计时冲刺3天！！！_数字生命卡兹克_InfoQ写作社区 │ -      │ -            │ success │ 5.2 KB │
 └─────────────────────────────────────────────────────────────┴────────┴──────────────┴─────────┴────────┘
-1 items · 6.8s · web/read
+1 items · 11.8s · web/read
 
 --- [InfoQ AI] (website) ---
 type: website_detail
@@ -792,9 +1204,26 @@ web/read
 ┌────────┬────────┬──────────────┬─────────┬─────────┐
 │ Title  │ Author │ Publish_time │ Status  │ Size    │
 ├────────┼────────┼──────────────┼─────────┼─────────┤
-│ spring │ -      │ -            │ success │ 12.1 KB │
+│ spring │ -      │ -            │ success │ 12.4 KB │
 └────────┴────────┴──────────────┴─────────┴─────────┘
-1 items · 5.0s · web/read
+1 items · 11.0s · web/read
+
+--- [InfoQ AI] (website) ---
+type: website_detail
+keyword: AI 产品
+title: 若依（RuoYi）框架除了官方版本，还有这些实用的开源生态项目
+snippet: 基于RuoYi-Vue-Plus，用Spring AI +Langchain4j 构建，集成了多模型接入、RAG 私有知识库、AI 工作流编排等能力，支持接入OpenAI、通义千问、智谱AI 等主流模型，也可以本地 ...
+url: https://xie.infoq.cn/article/3505aa405e7442d854a8f5d69
+time_status: google_filtered
+fetch_status: success
+fetched_content:
+web/read
+┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┬────────┬──────────────┬─────────┬─────────┐
+│ Title                                                                                                              │ Author │ Publish_time │ Status  │ Size    │
+├────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼────────┼──────────────┼─────────┼─────────┤
+│ 若依（RuoYi）框架除了官方版本，还有这些实用的开源生态项目，你都知道吗？建议收藏_AI_Java_若依框架教程_InfoQ写作社区 │ -      │ -            │ success │ 14.8 KB │
+└────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┴────────┴──────────────┴─────────┴─────────┘
+1 items · 20.9s · web/read
 
 --- [InfoQ AI] (website) ---
 type: website_detail
@@ -811,7 +1240,7 @@ web/read
 ├─────────────────────────────────────────────────┼────────┼──────────────┼─────────┼────────┤
 │ Evomap如何让Agent从单体智能到群体进化｜QCon北京 │ -      │ -            │ success │ 6.3 KB │
 └─────────────────────────────────────────────────┴────────┴──────────────┴─────────┴────────┘
-1 items · 2.6s · web/read
+1 items · 3.9s · web/read
 
 --- [InfoQ AI] (website) ---
 type: website_detail
@@ -828,7 +1257,7 @@ web/read
 ├────────────────────────────────────────────────────┼────────┼──────────────┼─────────┼────────┤
 │ Helidon 引入 Agent 能力，Java 框架开始内建 AI 编排 │ -      │ -            │ success │ 6.4 KB │
 └────────────────────────────────────────────────────┴────────┴──────────────┴─────────┴────────┘
-1 items · 2.4s · web/read
+1 items · 2.5s · web/read
 
 --- [InfoQ AI] (website) ---
 type: website_detail
@@ -843,9 +1272,9 @@ web/read
 ┌─────────────────────────────────┬────────┬──────────────┬─────────┬─────────┐
 │ Title                           │ Author │ Publish_time │ Status  │ Size    │
 ├─────────────────────────────────┼────────┼──────────────┼─────────┼─────────┤
-│ Harness Engineering 又来颠覆了— │ -      │ -            │ success │ 11.4 KB │
+│ Harness Engineering 又来颠覆了— │ -      │ -            │ success │ 11.6 KB │
 └─────────────────────────────────┴────────┴──────────────┴─────────┴─────────┘
-1 items · 8.3s · web/read
+1 items · 8.4s · web/read
 
 --- [InfoQ AI] (website) ---
 type: website_detail
@@ -862,7 +1291,23 @@ web/read
 ├────────────────────────────────┼────────┼──────────────┼─────────┼────────┤
 │ Ops-Agentic-Search_Ops-Agentic │ -      │ -            │ success │ 3.1 KB │
 └────────────────────────────────┴────────┴──────────────┴─────────┴────────┘
-1 items · 2.5s · web/read
+1 items · 2.4s · web/read
+
+--- [InfoQ AI] (website) ---
+type: website_detail
+keyword: Agent
+title: spring-ai 第二提示词介绍_砍材农夫
+url: https://xie.infoq.cn/article/34eda6537691e1b2aa829ae04
+time_status: google_filtered
+fetch_status: success
+fetched_content:
+web/read
+┌────────┬────────┬──────────────┬─────────┬─────────┐
+│ Title  │ Author │ Publish_time │ Status  │ Size    │
+├────────┼────────┼──────────────┼─────────┼─────────┤
+│ spring │ -      │ -            │ success │ 12.4 KB │
+└────────┴────────┴──────────────┴─────────┴─────────┘
+1 items · 11.0s · web/read
 
 --- [OpenAI News] (website) ---
 type: website_detail
@@ -877,9 +1322,9 @@ web/read
 ┌───────────────────────────────────────────────────────────────────────────┬────────┬───────────────────────────┬─────────┬─────────┐
 │ Title                                                                     │ Author │ Publish_time              │ Status  │ Size    │
 ├───────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────┼─────────┼─────────┤
-│ Exploring advanced NLP prompts for fiction editing by writers - Prompting │ -      │ 2026-04-04T13:33:41+00:00 │ success │ 23.1 KB │
+│ Exploring advanced NLP prompts for fiction editing by writers - Prompting │ -      │ 2026-04-04T13:33:41+00:00 │ success │ 552.0 B │
 └───────────────────────────────────────────────────────────────────────────┴────────┴───────────────────────────┴─────────┴─────────┘
-1 items · 5.5s · web/read
+1 items · 3.4s · web/read
 
 --- [OpenAI News] (website) ---
 type: website_detail
@@ -896,7 +1341,24 @@ web/read
 ├─────────────────────────┼────────┼──────────────┼─────────┼──────────┤
 │ ChatGPT — Release Notes │ -      │ -            │ success │ 129.8 KB │
 └─────────────────────────┴────────┴──────────────┴─────────┴──────────┘
-1 items · 5.6s · web/read
+1 items · 5.2s · web/read
+
+--- [OpenAI News] (website) ---
+type: website_detail
+keyword: large language model
+title: April 2026 — ChatGPT / API Image Gallery, Prompt Tips, ...
+snippet: 12 hours ago — Welcome to the Community Image Gallery for ChatGpt Models, prompt tips, and help with creating images that stand out! FOR THIS MONTH'S IMAGE THEME WE'RE ...
+url: https://community.openai.com/t/april-2026-chatgpt-api-image-gallery-prompt-tips-and-help-generative-art-theme-spring-new-beginnings/1378298?page=7
+time_status: google_filtered
+fetch_status: success
+fetched_content:
+web/read
+┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┬────────┬───────────────────────────┬─────────┬─────────┐
+│ Title                                                                                                                      │ Author │ Publish_time              │ Status  │ Size    │
+├────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────┼─────────┼─────────┤
+│ April 2026 — ChatGPT / API Image Gallery, Prompt Tips, and Help: Generative Art Theme: Spring / New Beginnings - Community │ -      │ 2026-04-05T12:23:38+00:00 │ success │ 15.7 KB │
+└────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┴────────┴───────────────────────────┴─────────┴─────────┘
+1 items · 3.9s · web/read
 
 --- [OpenAI News] (website) ---
 type: website_detail
@@ -913,7 +1375,7 @@ web/read
 ├─────────────────────────────────────────────────────────┼────────┼──────────────┼─────────┼────────┤
 │ Managing credits and spend controls in ChatGPT Business │ -      │ -            │ success │ 3.6 KB │
 └─────────────────────────────────────────────────────────┴────────┴──────────────┴─────────┴────────┘
-1 items · 2.7s · web/read
+1 items · 2.6s · web/read
 
 --- [OpenAI News] (website) ---
 type: website_detail
@@ -930,7 +1392,7 @@ web/read
 ├─────────────────────────┼────────┼──────────────┼─────────┼──────────┤
 │ ChatGPT — Release Notes │ -      │ -            │ success │ 129.8 KB │
 └─────────────────────────┴────────┴──────────────┴─────────┴──────────┘
-1 items · 5.6s · web/read
+1 items · 5.2s · web/read
 
 --- [OpenAI News] (website) ---
 type: website_detail
@@ -947,7 +1409,7 @@ web/read
 ├─────────────────────────────┼────────┼──────────────┼─────────┼────────┤
 │ What is ChatGPT Enterprise? │ -      │ -            │ success │ 8.7 KB │
 └─────────────────────────────┴────────┴──────────────┴─────────┴────────┘
-1 items · 2.0s · web/read
+1 items · 2.2s · web/read
 
 --- [OpenAI News] (website) ---
 type: website_detail
@@ -964,7 +1426,24 @@ web/read
 ├──────────────────────────────────┼────────┼──────────────┼─────────┼─────────┤
 │ ChatGPT Business - Release Notes │ -      │ -            │ success │ 47.3 KB │
 └──────────────────────────────────┴────────┴──────────────┴─────────┴─────────┘
-1 items · 2.1s · web/read
+1 items · 1.9s · web/read
+
+--- [OpenAI News] (website) ---
+type: website_detail
+keyword: AI product
+title: ChatGPT — 更新日志
+snippet: OpenAI 已推出全新升级版ChatGPT 图像，此功能由我们迄今最先进的图像生成模型驱动。在ChatGPT 图像功能的支持下，精准的指令跟随和编辑功能不仅能提升AI 图像创作的趣味性， ...
+url: https://help.openai.com/zh-hans-cn/articles/6825453-chatgpt-%E5%8F%91%E5%B8%83%E8%AF%B4%E6%98%8E
+time_status: google_filtered
+fetch_status: success
+fetched_content:
+web/read
+┌────────────────────┬────────┬──────────────┬─────────┬──────────┐
+│ Title              │ Author │ Publish_time │ Status  │ Size     │
+├────────────────────┼────────┼──────────────┼─────────┼──────────┤
+│ ChatGPT — 更新日志 │ -      │ -            │ success │ 122.5 KB │
+└────────────────────┴────────┴──────────────┴─────────┴──────────┘
+1 items · 4.2s · web/read
 
 --- [OpenAI News] (website) ---
 type: website_detail
@@ -981,7 +1460,7 @@ web/read
 ├──────────────────────────────────────────┼────────┼───────────────────────────┼─────────┼─────────┤
 │ Error on Agent Mode Capability - ChatGPT │ -      │ 2026-04-05T14:47:41+00:00 │ success │ 887.0 B │
 └──────────────────────────────────────────┴────────┴───────────────────────────┴─────────┴─────────┘
-1 items · 2.8s · web/read
+1 items · 2.7s · web/read
 
 --- [OpenAI News] (website) ---
 type: website_detail
@@ -998,7 +1477,7 @@ web/read
 ├─────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────┼─────────┼────────┤
 │ Feature request: fully integrated local multi-agent coding workflow - Community │ -      │ 2026-04-05T12:35:08+00:00 │ success │ 1.9 KB │
 └─────────────────────────────────────────────────────────────────────────────────┴────────┴───────────────────────────┴─────────┴────────┘
-1 items · 2.4s · web/read
+1 items · 3.6s · web/read
 
 --- [OpenAI News] (website) ---
 type: website_detail
@@ -1015,7 +1494,7 @@ web/read
 ├────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────┼─────────┼────────┤
 │ Feature Request: Structural Personality via Role- and Relationship-Based Multi-Agent Architecture - ChatGPT / Feature requests │ -      │ 2026-04-04T09:45:38+00:00 │ success │ 7.0 KB │
 └────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┴────────┴───────────────────────────┴─────────┴────────┘
-1 items · 3.3s · web/read
+1 items · 3.7s · web/read
 
 --- [OpenAI News] (website) ---
 type: website_detail
@@ -1032,7 +1511,24 @@ web/read
 ├────────────────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────┼─────────┼────────┤
 │ So, why do agents choose to do the wrong things? Are you aware of anti hallucination research? - Codex │ -      │ 2026-04-05T08:47:38+00:00 │ success │ 2.8 KB │
 └────────────────────────────────────────────────────────────────────────────────────────────────────────┴────────┴───────────────────────────┴─────────┴────────┘
-1 items · 5.2s · web/read
+1 items · 4.7s · web/read
+
+--- [OpenAI News] (website) ---
+type: website_detail
+keyword: Agent
+title: GitLab with Codex Cloud Agent - #34 by soakes
+snippet: Dear OpenAI team, I'm a developer currently using the Codex Cloud Agent and would love to see broader SCM support beyond GitHub ... GitLab with Codex Cloud Agent.
+url: https://community.openai.com/t/gitlab-with-codex-cloud-agent/1268080/34
+time_status: google_filtered
+fetch_status: success
+fetched_content:
+web/read
+┌───────────────────────────────────────┬────────┬───────────────────────────┬─────────┬─────────┐
+│ Title                                 │ Author │ Publish_time              │ Status  │ Size    │
+├───────────────────────────────────────┼────────┼───────────────────────────┼─────────┼─────────┤
+│ GitLab with Codex Cloud Agent - Codex │ -      │ 2026-04-05T08:08:55+00:00 │ success │ 807.0 B │
+└───────────────────────────────────────┴────────┴───────────────────────────┴─────────┴─────────┘
+1 items · 3.6s · web/read
 
 --- [Anthropic News] (website) ---
 type: website_detail
@@ -1049,7 +1545,7 @@ web/read
 ├─────────────────────────────────────────────────────────────────────────────┼──────────────┼──────────────┼─────────┼────────┤
 │ Plan First, Ship Faster: How CodeRabbit Built Agent Orchestration on Claude │ @AnthropicAI │ -            │ success │ 3.0 KB │
 └─────────────────────────────────────────────────────────────────────────────┴──────────────┴──────────────┴─────────┴────────┘
-1 items · 5.3s · web/read
+1 items · 3.0s · web/read
 
 --- [Anthropic News] (website) ---
 type: website_detail
@@ -1066,7 +1562,24 @@ web/read
 ├─────────────────────────────────┼──────────────┼──────────────┼─────────┼────────┤
 │ Frontier Safety Roadmap Updates │ @AnthropicAI │ -            │ success │ 3.9 KB │
 └─────────────────────────────────┴──────────────┴──────────────┴─────────┴────────┘
-1 items · 6.6s · web/read
+1 items · 1.9s · web/read
+
+--- [Anthropic News] (website) ---
+type: website_detail
+keyword: AI product
+title: Claude Code for Healthcare: How Physicians Build with AI
+snippet: Healthcare workers are using Claude Code to build tools for patient care. See what they've made, and get your questions answered by Anthropic's Claude Code ...
+url: https://www.anthropic.com/webinars/claude-code-in-healthcare-how-physicians-are-building-with-claude
+time_status: google_filtered
+fetch_status: success
+fetched_content:
+web/read
+┌──────────────────────────────────────────────────────────┬──────────────┬──────────────┬─────────┬────────┐
+│ Title                                                    │ Author       │ Publish_time │ Status  │ Size   │
+├──────────────────────────────────────────────────────────┼──────────────┼──────────────┼─────────┼────────┤
+│ Claude Code for Healthcare: How Physicians Build with AI │ @AnthropicAI │ -            │ success │ 3.1 KB │
+└──────────────────────────────────────────────────────────┴──────────────┴──────────────┴─────────┴────────┘
+1 items · 1.8s · web/read
 
 --- [Anthropic News] (website) ---
 type: website_detail
@@ -1083,7 +1596,40 @@ web/read
 ├─────────────────────────────────────────────────────────────────────────────┼──────────────┼──────────────┼─────────┼────────┤
 │ Plan First, Ship Faster: How CodeRabbit Built Agent Orchestration on Claude │ @AnthropicAI │ -            │ success │ 3.0 KB │
 └─────────────────────────────────────────────────────────────────────────────┴──────────────┴──────────────┴─────────┴────────┘
-1 items · 5.3s · web/read
+1 items · 3.0s · web/read
+
+--- [Anthropic News] (website) ---
+type: website_detail
+keyword: Agent
+title: Frontier Safety Roadmap Updates
+url: https://www.anthropic.com/responsible-scaling-policy/updates
+time_status: google_filtered
+fetch_status: success
+fetched_content:
+web/read
+┌─────────────────────────────────┬──────────────┬──────────────┬─────────┬────────┐
+│ Title                           │ Author       │ Publish_time │ Status  │ Size   │
+├─────────────────────────────────┼──────────────┼──────────────┼─────────┼────────┤
+│ Frontier Safety Roadmap Updates │ @AnthropicAI │ -            │ success │ 3.9 KB │
+└─────────────────────────────────┴──────────────┴──────────────┴─────────┴────────┘
+1 items · 1.9s · web/read
+
+--- [TechCrunch] (website) ---
+type: website_detail
+keyword: large language model
+title: In Japan, the robot isn't coming for your job; it's filling ...
+snippet: 11 hours ago — Driven by labor shortages, Japan is pushing physical AI from pilot projects into real-world deployment.
+url: https://techcrunch.com/2026/04/05/japan-is-proving-experimental-physical-ai-is-ready-for-the-real-world/
+time_status: google_filtered
+fetch_status: success
+fetched_content:
+web/read
+┌──────────────────────────────────────────────────────────────────────────────────┬───────────┬───────────────────────────┬─────────┬─────────┐
+│ Title                                                                            │ Author    │ Publish_time              │ Status  │ Size    │
+├──────────────────────────────────────────────────────────────────────────────────┼───────────┼───────────────────────────┼─────────┼─────────┤
+│ In Japan, the robot isn't coming for your job; it's filling the one nobody wants │ Kate Park │ 2026-04-05T14:00:00+00:00 │ success │ 15.5 KB │
+└──────────────────────────────────────────────────────────────────────────────────┴───────────┴───────────────────────────┴─────────┴─────────┘
+1 items · 4.3s · web/read
 
 --- [TechCrunch] (website) ---
 type: website_detail
@@ -1100,7 +1646,7 @@ web/read
 ├──────────────────────────────────────────────────────────────────────────────────┼───────────┼───────────────────────────┼─────────┼─────────┤
 │ In Japan, the robot isn't coming for your job; it's filling the one nobody wants │ Kate Park │ 2026-04-05T14:00:00+00:00 │ success │ 15.5 KB │
 └──────────────────────────────────────────────────────────────────────────────────┴───────────┴───────────────────────────┴─────────┴─────────┘
-1 items · 3.4s · web/read
+1 items · 4.3s · web/read
 
 --- [TechCrunch] (website) ---
 type: website_detail
@@ -1117,7 +1663,7 @@ web/read
 ├─────────────────────────────────────────────────────────────────────────────────────┼────────────┼───────────────────────────┼─────────┼────────┤
 │ Copilot is ‘for entertainment purposes only,’ according to Microsoft’s terms of use │ Anthony Ha │ 2026-04-05T18:51:37+00:00 │ success │ 6.4 KB │
 └─────────────────────────────────────────────────────────────────────────────────────┴────────────┴───────────────────────────┴─────────┴────────┘
-1 items · 3.1s · web/read
+1 items · 3.8s · web/read
 
 --- [TechCrunch] (website) ---
 type: website_detail
@@ -1134,7 +1680,7 @@ web/read
 ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼───────────────────────────┼─────────┼────────┤
 │ Anthropic says Claude Code subscribers will need to pay extra for OpenClaw usage │ Anthony Ha │ 2026-04-04T16:32:22+00:00 │ success │ 8.5 KB │
 └──────────────────────────────────────────────────────────────────────────────────┴────────────┴───────────────────────────┴─────────┴────────┘
-1 items · 3.8s · web/read
+1 items · 3.7s · web/read
 
 --- [TechCrunch] (website) ---
 type: website_detail
@@ -1150,7 +1696,24 @@ web/read
 ├────────────────────────────────────────────────────────┼─────────────────┼───────────────────────────┼─────────┼─────────┤
 │ TechCrunch Mobility: ‘A stunning lack of transparency’ │ Kirsten Korosec │ 2026-04-05T16:05:00+00:00 │ success │ 16.4 KB │
 └────────────────────────────────────────────────────────┴─────────────────┴───────────────────────────┴─────────┴─────────┘
-1 items · 3.8s · web/read
+1 items · 4.0s · web/read
+
+--- [TechCrunch] (website) ---
+type: website_detail
+keyword: AI product
+title: Embattled startup Delve has 'parted ways' with Y Combinator
+snippet: 1 day ago — The controversy around Delve appears to have cost the compliance startup its relationship with accelerator Y Combinator.
+url: https://techcrunch.com/2026/04/04/embattled-startup-delve-has-parted-ways-with-y-combinator/
+time_status: google_filtered
+fetch_status: success
+fetched_content:
+web/read
+┌─────────────────────────────────────────────────────────────┬────────────┬───────────────────────────┬─────────┬─────────┐
+│ Title                                                       │ Author     │ Publish_time              │ Status  │ Size    │
+├─────────────────────────────────────────────────────────────┼────────────┼───────────────────────────┼─────────┼─────────┤
+│ Embattled startup Delve has ‘parted ways’ with Y Combinator │ Anthony Ha │ 2026-04-04T21:03:43+00:00 │ success │ 10.3 KB │
+└─────────────────────────────────────────────────────────────┴────────────┴───────────────────────────┴─────────┴─────────┘
+1 items · 2.8s · web/read
 
 --- [TechCrunch] (website) ---
 type: website_detail
@@ -1167,7 +1730,7 @@ web/read
 ├────────────┼────────┼───────────────────────────┼─────────┼─────────┤
 │ April 2026 │ -      │ 2026-04-05T12:36:03-07:00 │ success │ 14.2 KB │
 └────────────┴────────┴───────────────────────────┴─────────┴─────────┘
-1 items · 3.8s · web/read
+1 items · 3.0s · web/read
 
 --- [TechCrunch] (website) ---
 type: website_detail
@@ -1184,6 +1747,22 @@ web/read
 ├──────────────────────────────────────────────────────────────────────────────────┼────────────┼───────────────────────────┼─────────┼────────┤
 │ Anthropic says Claude Code subscribers will need to pay extra for OpenClaw usage │ Anthony Ha │ 2026-04-04T16:32:22+00:00 │ success │ 8.5 KB │
 └──────────────────────────────────────────────────────────────────────────────────┴────────────┴───────────────────────────┴─────────┴────────┘
+1 items · 3.7s · web/read
+
+--- [TechCrunch] (website) ---
+type: website_detail
+keyword: Agent
+title: April 2026 | Page 2 of 2
+url: https://techcrunch.com/2026/04/page/2/
+time_status: google_filtered
+fetch_status: success
+fetched_content:
+web/read
+┌──────────────────────────┬────────┬───────────────────────────┬─────────┬─────────┐
+│ Title                    │ Author │ Publish_time              │ Status  │ Size    │
+├──────────────────────────┼────────┼───────────────────────────┼─────────┼─────────┤
+│ April 2026 | Page 2 of 3 │ -      │ 2026-04-02T11:19:39-07:00 │ success │ 14.9 KB │
+└──────────────────────────┴────────┴───────────────────────────┴─────────┴─────────┘
 1 items · 3.8s · web/read
 
 --- [The Verge] (website) ---
@@ -1199,9 +1778,9 @@ web/read
 ┌────────────────────────────────────────────┬─────────────────┬───────────────────────────┬─────────┬────────┐
 │ Title                                      │ Author          │ Publish_time              │ Status  │ Size   │
 ├────────────────────────────────────────────┼─────────────────┼───────────────────────────┼─────────┼────────┤
-│ Really, you made this without AI? Prove it │ Jess Weatherbed │ 2026-04-04T13:00:00+00:00 │ success │ 5.5 KB │
+│ Really, you made this without AI? Prove it │ Jess Weatherbed │ 2026-04-04T13:00:00+00:00 │ success │ 5.6 KB │
 └────────────────────────────────────────────┴─────────────────┴───────────────────────────┴─────────┴────────┘
-1 items · 8.3s · web/read
+1 items · 10.1s · web/read
 
 --- [The Verge] (website) ---
 type: website_detail
@@ -1218,7 +1797,7 @@ web/read
 ├───────────────────────────────────────────────────────────────────────┼─────────────────┼───────────────────────────┼─────────┼────────┤
 │ I let Gemini in Google Maps plan my day and it went surprisingly well │ Allison Johnson │ 2026-04-05T14:00:00+00:00 │ success │ 5.3 KB │
 └───────────────────────────────────────────────────────────────────────┴─────────────────┴───────────────────────────┴─────────┴────────┘
-1 items · 8.1s · web/read
+1 items · 10.7s · web/read
 
 --- [The Verge] (website) ---
 type: website_detail
@@ -1235,7 +1814,7 @@ web/read
 ├────────────────────────────────────────────────────────────────────────────────┼──────────────────┼───────────────────────────┼─────────┼────────┤
 │ Teens are torturing AI chatbots, confiding in them, and sometimes dating them. │ Terrence O'Brien │ 2026-04-05T15:10:54+00:00 │ success │ 3.2 KB │
 └────────────────────────────────────────────────────────────────────────────────┴──────────────────┴───────────────────────────┴─────────┴────────┘
-1 items · 8.6s · web/read
+1 items · 6.7s · web/read
 
 --- [The Verge] (website) ---
 type: website_detail
@@ -1252,7 +1831,24 @@ web/read
 ├────────────────────────────────┼──────────────────┼───────────────────────────┼─────────┼────────┤
 │ Grammarly’s sloppelganger saga │ Stevie Bonifield │ 2026-04-05T12:00:00+00:00 │ success │ 6.1 KB │
 └────────────────────────────────┴──────────────────┴───────────────────────────┴─────────┴────────┘
-1 items · 10.8s · web/read
+1 items · 7.1s · web/read
+
+--- [The Verge] (website) ---
+type: website_detail
+keyword: AI product
+title: How the Amazon Echo learned to talk — and listen
+snippet: 12 hours ago — Amazon CEO Jeff Bezos wanted to build a cheap, accessible, voice-based computer — and bet big on making Alexa and the Echo happen. This is the story of that ...
+url: https://www.theverge.com/podcast/907146/amazon-echo-alexa-version-history
+time_status: google_filtered
+fetch_status: success
+fetched_content:
+web/read
+┌─────────────────────────────────────┬──────────────┬───────────────────────────┬─────────┬────────┐
+│ Title                               │ Author       │ Publish_time              │ Status  │ Size   │
+├─────────────────────────────────────┼──────────────┼───────────────────────────┼─────────┼────────┤
+│ How the Amazon Echo learned to talk │ David Pierce │ 2026-04-05T12:24:45+00:00 │ success │ 5.5 KB │
+└─────────────────────────────────────┴──────────────┴───────────────────────────┴─────────┴────────┘
+1 items · 10.2s · web/read
 
 --- [The Verge] (website) ---
 type: website_detail
@@ -1269,7 +1865,7 @@ web/read
 ├────────────────────────────────┼──────────────────┼───────────────────────────┼─────────┼────────┤
 │ Grammarly’s sloppelganger saga │ Stevie Bonifield │ 2026-04-05T12:00:00+00:00 │ success │ 6.1 KB │
 └────────────────────────────────┴──────────────────┴───────────────────────────┴─────────┴────────┘
-1 items · 10.8s · web/read
+1 items · 7.1s · web/read
 
 --- [The Verge] (website) ---
 type: website_detail
@@ -1286,4 +1882,4 @@ web/read
 ├─────────────────────────────────────┼──────────────┼───────────────────────────┼─────────┼────────┤
 │ How the Amazon Echo learned to talk │ David Pierce │ 2026-04-05T12:24:45+00:00 │ success │ 5.5 KB │
 └─────────────────────────────────────┴──────────────┴───────────────────────────┴─────────┴────────┘
-1 items · 16.5s · web/read
+1 items · 10.2s · web/read

@@ -435,10 +435,13 @@ def format_raw_output(all_results: list[dict], date_str: str, max_results: int =
         "",
     ]
 
-    # 统计
+    # 统计（按截断后的实际输出数量）
     total_items = 0
     for res in all_results:
-        total_items += len(res.get("data", []))
+        data = res.get("data", [])
+        if max_results > 0:
+            data = data[:max_results]
+        total_items += len(data)
     lines.append(f"# 总候选条目: {total_items}")
     lines.append("")
     lines.append("=" * 70)

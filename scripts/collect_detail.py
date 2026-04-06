@@ -62,6 +62,9 @@ def parse_filtered_index(text: str) -> tuple[list[dict], list[dict]]:
     for line in text.splitlines():
         # 新的平台块
         if line.startswith("--- ["):
+            # 保存上一条
+            if current_item:
+                _classify_item(current_item, platform_items, website_items)
             m = re.match(r"--- \[(.+?)\] \((.+?)\) ---", line)
             current_block_meta = {
                 "platform": m.group(1) if m else "unknown",
@@ -83,6 +86,7 @@ def parse_filtered_index(text: str) -> tuple[list[dict], list[dict]]:
             current_item = {
                 "index": int(m.group(1)) if m else 0,
                 "title": m.group(2).strip() if m else "",
+                "content_lines": [],
                 "platform": current_block_meta.get("platform", ""),
                 "region": current_block_meta.get("region", ""),
                 "keyword": current_block_meta.get("keyword", ""),
@@ -94,6 +98,10 @@ def parse_filtered_index(text: str) -> tuple[list[dict], list[dict]]:
             m = re.match(r"^\s{6}(\w+):\s*(.*)", line)
             if m:
                 current_item["fields"][m.group(1)] = m.group(2).strip()
+
+        # 正文续行（多行推文等）
+        elif current_item and line.strip() and not line.startswith("---") and not line.startswith("#") and not line.startswith("command:") and not line.startswith("keyword:") and not line.startswith("status:") and not line.startswith("count:") and not line.startswith("fetch_stack:"):
+            current_item["content_lines"].append(line)
 
     # 最后一条
     if current_item:
@@ -161,6 +169,8 @@ def format_detail_output(
         lines.append(f"type: platform")
         lines.append(f"keyword: {item.get('keyword', '')}")
         lines.append(f"title: {item['title']}")
+        for content_line in item.get("content_lines", []):
+            lines.append(content_line)
         for k, v in item["fields"].items():
             lines.append(f"{k}: {v}")
         lines.append("")
@@ -175,6 +185,8 @@ def format_detail_output(
         lines.append(f"type: website_detail")
         lines.append(f"keyword: {item.get('keyword', '')}")
         lines.append(f"title: {item['title']}")
+        for content_line in item.get("content_lines", []):
+            lines.append(content_line)
         for k, v in item["fields"].items():
             lines.append(f"{k}: {v}")
 
