@@ -1,5 +1,5 @@
 # 日报候选池（筛选后）— 2026-04-06
-# 筛选时间: 2026-04-06 08:40:49
+# 筛选时间: 2026-04-06 10:08:04
 # 原始条目: 370
 # 保留: 132（其中无时间标记: 121）
 # 移除（超出时间窗口）: 238
@@ -339,6 +339,9 @@ count: 2
       time_parsed: 2026-04-03
 
   [4] Wow, this tweet went very viral!
+I wanted share a possibly slightly improved version of the tweet in an "idea file". The idea of the idea file is that in this era of LLM agents, there is less of a point/need of sharing the specific code/app, you just share the idea, then the other person's agent customizes & builds it for your specific needs.
+So here's the idea in a gist format: https://t.co/NlAfEJjtJV
+You can give this to your agent and it can build you your own LLM wiki and guide you on how to use it etc. It's intentionally kept a little bit abstract/vague because there are so many directions to take this in. And ofc, people can adjust the idea or contribute their own in the Discussion which is cool.
       author: karpathy
       time: Sat Apr 04 16:45:23 +0000 2026
       hot: 22175
@@ -354,6 +357,19 @@ status: success
 count: 2
 
   [1] $19k/day ads are starting to look like this
+simple product shot, natural light, nothing overproduced
+opening the bottle, showing the pills inside
+and you genuinely can’t tell it’s ai
+no crazy hooks, just clean, believable visuals
+it feels like something you’d film yourself
+that’s why it converts
+no friction, no skepticism, just instant trust
+same product, dozens of slight variations
+angles, lighting, hands, environments swapped
+ai turns one idea into endless creatives
+this is where static + simple motion wins
+rt + comment “productreal” and i’ll send the setup
+(follow for dm)
       author: davidfigeira
       time: Sat Apr 04 13:05:16 +0000 2026
       hot: 60
@@ -362,6 +378,8 @@ count: 2
       time_parsed: 2026-04-04
 
   [3] GPT-5.5 looks like it’s coming soon
+An omnimodal, agentic model from OpenAI. These appear to be the first image generations already testable in the Arena.
+If true, this is the beginning of a very different kind of AI product.
       author: VraserX
       time: Sat Apr 04 05:51:43 +0000 2026
       hot: 181
@@ -377,6 +395,14 @@ status: success
 count: 2
 
   [2] Google Stitch has released 𝗗𝗘𝗦𝗜𝗚𝗡.𝗺𝗱 🤯
+One markdown file that teaches your AI coding agent your entire design system.
+→ No Figma exports
+→ No JSON schemas
+→ Nothing to configure
+The part that saves the most time: 
+A free collection of 40+ pre-built files already exists, extracted from real products. Stripe, Vercel, Linear, Notion, Lovable, Claude, ElevenLabs, Cursor, Warp, Zapier, and more.
+Drop it in your project root. Claude Code, Cursor, Gemini CLI, and GitHub Copilot all read it natively.
+100% Free and Open-Source.
       author: dr_cintas
       time: Fri Apr 03 18:59:04 +0000 2026
       hot: 3845
@@ -385,6 +411,33 @@ count: 2
       time_parsed: 2026-04-03
 
   [4] CLAUDE IS OFFERING 13 AI COURSES & CERTIFICATES.
+ALL FREE. START LEARNING NOW.
+* Claude 101. Learn Claude for everyday work.
+https://t.co/5BTxHDLkFl
+* AI Fluency: Frameworks & Foundations.
+https://t.co/4cVd0yWh2b
+* Introduction to Agent Skills.
+https://t.co/Qp2dthHEWw
+* Building with the Claude API.
+https://t.co/XLETKnmsOH
+* Claude Code in Action.
+https://t.co/mWx2ncByVG
+* Intro to Model Context Protocol.
+https://t.co/SRtsyXnxiK
+* MCP: Advanced Topics.
+https://t.co/qsIwMXbetq
+* AI Fluency for Students.
+https://t.co/5wYhqBX1Fx
+* AI Fluency for Educators.
+https://t.co/m39LPSqMiy
+* Teaching AI Fluency.
+https://t.co/5tIKdujzu3
+* AI Fluency for Nonprofits.
+https://t.co/bZyzIAcnCy
+* Claude with Amazon Bedrock.
+https://t.co/ACR2hYAwdc
+* Claude with Google Cloud's Vertex AI.
+https://t.co/w6BM2XNgqi
       author: RoundtableSpace
       time: Sun Apr 05 12:45:00 +0000 2026
       hot: 3417
@@ -400,6 +453,14 @@ status: success
 count: 1
 
   [3] Google Stitch has released 𝗗𝗘𝗦𝗜𝗚𝗡.𝗺𝗱 🤯
+One markdown file that teaches your AI coding agent your entire design system.
+→ No Figma exports
+→ No JSON schemas
+→ Nothing to configure
+The part that saves the most time: 
+A free collection of 40+ pre-built files already exists, extracted from real products. Stripe, Vercel, Linear, Notion, Lovable, Claude, ElevenLabs, Cursor, Warp, Zapier, and more.
+Drop it in your project root. Claude Code, Cursor, Gemini CLI, and GitHub Copilot all read it natively.
+100% Free and Open-Source.
       author: dr_cintas
       time: Fri Apr 03 18:59:04 +0000 2026
       hot: 3845
@@ -415,6 +476,8 @@ status: success
 count: 1
 
   [4] 🚨 BREAKING: NVIDIA just removed the biggest friction point in Voice AI
+They open-sourced PersonaPlex 7B, a real-time conversational model. It listens and speaks simultaneously to handle natural interruptions and overlaps.
+100% Open Source. https://t.co/eiCVTFJSGi
       author: HowToAI_
       time: Sat Apr 04 06:58:30 +0000 2026
       hot: 5991

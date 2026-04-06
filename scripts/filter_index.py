@@ -192,6 +192,7 @@ def parse_index_file(text: str) -> list[dict]:
                 current_item = {
                     "index": int(m.group(1)) if m else 0,
                     "title": m.group(2).strip() if m else "",
+                    "content_lines": [],
                     "fields": {},
                 }
 
@@ -200,6 +201,10 @@ def parse_index_file(text: str) -> list[dict]:
                 m = re.match(r"^\s{6}(\w+):\s*(.*)", line)
                 if m:
                     current_item["fields"][m.group(1)] = m.group(2).strip()
+
+            # 正文续行：属于当前条目但不是字段行的文本（如 Twitter 推文多行正文）
+            elif current_item and line.strip() and not line.startswith("---") and not line.startswith("#") and not line.startswith("command:") and not line.startswith("keyword:") and not line.startswith("status:") and not line.startswith("count:") and not line.startswith("fetch_stack:") and not line.startswith("error:"):
+                current_item["content_lines"].append(line)
 
     # 保存最后一个 block
     if current_block is not None:
@@ -312,6 +317,9 @@ def format_filtered(entries: list[dict], date_str: str, stats: dict) -> str:
 
         for item in block["items"]:
             lines.append(f"  [{item['index']}] {item['title']}")
+            # 输出多行正文（如 Twitter 推文续行）
+            for content_line in item.get("content_lines", []):
+                lines.append(content_line)
             for k, v in item["fields"].items():
                 lines.append(f"      {k}: {v}")
             lines.append("")
