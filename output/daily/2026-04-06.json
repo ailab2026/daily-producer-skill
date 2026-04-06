@@ -111,7 +111,7 @@
       "time_label": "4月4日-5日",
       "source_date": "2026-04-05",
       "source": "Twitter / 量子位",
-      "url": "https://x.com/i/status/2040415404267360569",
+      "url": "https://x.com/i/status/2040306300064559475",
       "summary": {
         "what_happened": "Twitter 热传 GPT-5.5 即将发布的信号。同时量子位报道 OpenAI 下一代模型代号「土豆」采用全新预训练范式，不再延续 GPT 命名，Sora 视频项目疑似被放弃。",
         "why_it_matters": "如果 GPT-5.5 和全新架构同时推进，说明 OpenAI 在延续现有产品线的同时布局下一代技术。这对整个行业的模型选型和 API 投入决策有重大影响。"
@@ -124,7 +124,7 @@
         "cross_refs": 2,
         "evidence": "Twitter 讨论 + 量子位泄露报道（未经官方确认）",
         "sources": [
-          {"name": "Twitter GPT-5.5 讨论", "url": "https://x.com/i/status/2040415404267360569"},
+          {"name": "Twitter GPT-5.5 讨论", "url": "https://x.com/i/status/2040306300064559475"},
           {"name": "量子位 土豆曝光", "url": "https://www.qbitai.com/2026/04/396535.html"}
         ]
       }
@@ -151,7 +151,7 @@
         "sources": [
           {"name": "小红书 清华新作", "url": "https://www.xiaohongshu.com/search_result/69cfb9ad000000001a028861"},
           {"name": "微博 架构蓝图", "url": "https://weibo.com/1402400261/QzmVW5Hcq?refer_flag=1001030103_"},
-          {"name": "微博 Mini-Agent", "url": "https://weibo.com/1402400261/QzmVW5Hcq?refer_flag=1001030103_"}
+          {"name": "微博 Mini-Agent", "url": "https://weibo.com/2194035935/Qz35h0mpP?refer_flag=1001030103_"}
         ]
       }
     },
@@ -277,7 +277,7 @@
         "evidence": "微博蚁工厂(电子书) + 微博(Mini-Agent)",
         "sources": [
           {"name": "微博 蚁工厂", "url": "https://weibo.com/2194035935/Qz4Mv1Dnt?refer_flag=1001030103_"},
-          {"name": "微博 Mini-Agent", "url": "https://weibo.com/1402400261/QzmVW5Hcq?refer_flag=1001030103_"}
+          {"name": "微博 Mini-Agent", "url": "https://weibo.com/2194035935/Qz35h0mpP?refer_flag=1001030103_"}
         ]
       }
     },
@@ -361,7 +361,7 @@
       "time_label": "近3天",
       "source_date": "2026-04-05",
       "source": "微博",
-      "url": "https://weibo.com/1402400261/QzmVW5Hcq?refer_flag=1001030103_",
+      "url": "https://weibo.com/2194035935/Qz7mGn06r?refer_flag=1001030103_",
       "summary": {
         "what_happened": "Netflix 在 HuggingFace 上发布第一个开源模型 void-model。",
         "why_it_matters": "又一家大型科技公司加入开源模型阵营，开源生态持续扩大。"
@@ -374,7 +374,7 @@
         "cross_refs": 1,
         "evidence": "微博报道",
         "sources": [
-          {"name": "微博", "url": "https://weibo.com/1402400261/QzmVW5Hcq?refer_flag=1001030103_"}
+          {"name": "微博", "url": "https://weibo.com/2194035935/Qz7mGn06r?refer_flag=1001030103_"}
         ]
       }
     },
