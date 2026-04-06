@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>日报 · 2026-04-06</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1A1A2E',
+            accent: '#6C5CE7',
+            'accent-hover': '#5A4BD1',
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .ai-gradient-line { border-left: 3px solid; border-image: linear-gradient(to bottom, #6C5CE7, #3B82F6) 1; }
+    .ai-bg { background: linear-gradient(135deg, #F8F7FF, #F0F7FF); }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif; }
+    .card-hover { transition: box-shadow 0.2s ease, transform 0.2s ease; }
+    .card-hover:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.1); transform: translateY(-1px); }
+    .sidebar-scroll::-webkit-scrollbar { width: 4px; }
+    .sidebar-scroll::-webkit-scrollbar-track { background: transparent; }
+    .sidebar-scroll::-webkit-scrollbar-thumb { background: #E5E7EB; border-radius: 2px; }
+    .feed-scroll::-webkit-scrollbar { width: 5px; }
+    .feed-scroll::-webkit-scrollbar-track { background: transparent; }
+    .feed-scroll::-webkit-scrollbar-thumb { background: #E5E7EB; border-radius: 3px; }
+
+    .vote-btn, .bookmark-btn { cursor: pointer; user-select: none; transition: all 0.2s ease; }
+    .vote-btn:hover { color: #6C5CE7; }
+    .vote-btn.voted { color: #6C5CE7; font-weight: 600; }
+    .bookmark-btn:hover { color: #F59E0B; }
+    .bookmark-btn.bookmarked { color: #F59E0B; }
+    .tag-clickable { cursor: pointer; transition: all 0.15s ease; }
+    .tag-clickable:hover { transform: scale(1.05); box-shadow: 0 1px 4px rgba(108,92,231,0.2); }
+    .tag-clickable.tag-clicked { background: #6C5CE7 !important; color: white !important; }
+
+    .action-item { position: relative; }
+    .ai-trigger-wrap {
+      position: absolute; top: 4px; right: 4px;
+      display: flex; align-items: flex-start; z-index: 50;
+      pointer-events: none;
+    }
+    .ai-trigger-icon {
+      width: 26px; height: 26px; border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+      color: #C4B5FD; font-size: 12px; cursor: pointer;
+      transition: all 0.15s ease; flex-shrink: 0;
+      pointer-events: auto;
+    }
+    .ai-trigger-icon:hover { background: #6C5CE7; color: white; }
+    .ai-menu {
+      background: white; border-radius: 10px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.12), 0 1px 3px rgba(0,0,0,0.06);
+      padding: 6px; min-width: 156px;
+      opacity: 0; pointer-events: none;
+      transform: translateX(8px);
+      transition: opacity 0.18s ease, transform 0.18s ease;
+      margin-right: 4px;
+    }
+    .ai-menu.open { opacity: 1; pointer-events: auto; transform: translateX(0); }
+    .ai-menu-item {
+      display: flex; align-items: center; gap: 8px;
+      padding: 7px 12px; border-radius: 7px; font-size: 12px;
+      color: #4B5563; cursor: pointer; transition: background 0.12s ease; white-space: nowrap;
+    }
+    .ai-menu-item:hover { background: #F5F3FF; color: #6C5CE7; }
+    .ai-menu-item i { width: 16px; text-align: center; font-size: 13px; }
+    .ai-menu-item .item-icon-claude { color: #C96E2B; }
+    .ai-menu-item .item-icon-chatgpt { color: #0FA47F; }
+    .ai-menu-item .item-icon-deepseek { color: #2563EB; }
+    .ai-menu-item .item-icon-copy { color: #9CA3AF; }
+    .ai-menu-sep { height: 1px; background: #F3F4F6; margin: 4px 8px; }
+
+    .card-ai-wrap { position: relative; flex-shrink: 0; }
+    .card-ai-wrap .ai-menu { position: absolute; bottom: calc(100% + 6px); right: 0; margin-right: 0; }
+    .card-ai-btn {
+      display: inline-flex; align-items: center; gap: 3px;
+      padding: 2px 8px; border-radius: 6px; font-size: 11px;
+      cursor: pointer; transition: all 0.15s ease; color: #C4B5FD; white-space: nowrap;
+    }
+    .card-ai-btn:hover { background: #6C5CE7; color: white; }
+
+    .cred-tooltip { position: relative; }
+    .cred-tooltip .cred-tooltip-text {
+      visibility: hidden; opacity: 0;
+      position: absolute; bottom: calc(100% + 6px); left: 50%; transform: translateX(-50%);
+      background: #1A1A2E; color: #fff; font-size: 11px; line-height: 1.5;
+      padding: 8px 12px; border-radius: 8px; white-space: nowrap; z-index: 100;
+      transition: opacity 0.15s ease, visibility 0.15s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .cred-tooltip .cred-tooltip-text::after {
+      content: ''; position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
+      border: 5px solid transparent; border-top-color: #1A1A2E;
+    }
+    .cred-tooltip:hover .cred-tooltip-text { visibility: visible; opacity: 1; }
+    .cred-tooltip-row { display: block; padding: 2px 0; }
+    .cred-tooltip-link {
+      color: #C4B5FD; text-decoration: none; transition: color 0.1s ease;
+    }
+    .cred-tooltip-link:hover { color: #fff; text-decoration: underline; }
+
+    .toast {
+      position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(80px);
+      background: #1A1A2E; color: white; padding: 10px 20px; border-radius: 10px;
+      font-size: 13px; z-index: 9999; transition: transform 0.3s ease, opacity 0.3s ease; opacity: 0;
+    }
+    .toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
+  </style>
+</head>
+<body class="bg-[#FAFBFC] text-primary lg:h-screen lg:overflow-hidden flex flex-col">
+
+  <header class="flex-shrink-0 bg-white border-b border-gray-100 px-4 lg:px-8 py-3 lg:py-4">
+    <div class="max-w-[1600px] mx-auto">
+      <div class="flex items-center justify-between">
+        <h1 class="text-lg lg:text-2xl font-bold text-primary"><i class="fa-solid fa-newspaper text-accent mr-1.5 lg:mr-2"></i>AI情报站</h1>
+        <div class="flex items-center gap-2">
+          <span class="text-gray-400 text-xs hidden lg:inline"><i class="fa-regular fa-clock mr-1"></i>生成于 10:24</span>
+          <span class="inline-block bg-[#F3F0FF] text-accent text-xs font-medium px-2 lg:px-3 py-1 lg:py-1.5 rounded-full"><i class="fa-solid fa-user mr-1"></i>AI 行业观察者</span>
+        </div>
+      </div>
+      <div class="flex items-center gap-2 mt-1 lg:mt-0.5 text-xs text-gray-400">
+        <span><i class="fa-regular fa-calendar mr-1"></i>2026年4月6日 · 周日</span>
+        <span class="text-gray-200">·</span>
+        <span class="bg-accent/10 text-accent font-medium px-2 py-0.5 rounded-full">15 条资讯</span>
+        <span class="lg:hidden"><span class="text-gray-200 mx-0.5">·</span><i class="fa-regular fa-clock mr-0.5"></i>10:24</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="flex-1 flex flex-col lg:flex-row lg:overflow-hidden max-w-[1600px] mx-auto w-full">
+
+    <aside class="w-full lg:w-[420px] flex-shrink-0 border-b lg:border-b-0 lg:border-r border-gray-100 bg-white lg:overflow-y-auto sidebar-scroll">
+      <div class="p-5 space-y-5">
+
+        <section>
+          <h2 class="text-base font-semibold text-primary mb-3 flex items-center">
+            <span class="w-6 h-6 rounded-md bg-accent/10 flex items-center justify-center mr-2"><i class="fa-solid fa-bolt text-accent text-[10px]"></i></span>今日速览
+          </h2>
+          <ol class="space-y-3 text-[13px] leading-relaxed">
+            <li class="flex gap-2.5 items-start">
+              <span class="flex-shrink-0 w-5 h-5 rounded-full bg-accent text-white text-[10px] font-bold flex items-center justify-center mt-0.5">1</span>
+              <span class="text-gray-700"><strong class="text-primary">OpenAI 下一代模型代号「土豆」曝光，告别 GPT 命名</strong>：量子位报道 OpenAI 下一代模型采用全新预训练范式，代号「土豆」，不再延续 GPT 系列。Sora 视频项目疑似被放弃。如果属实，这是 GPT-3 以来最大的技术路线转向。</span>
+            </li>
+            <li class="flex gap-2.5 items-start">
+              <span class="flex-shrink-0 w-5 h-5 rounded-full bg-accent text-white text-[10px] font-bold flex items-center justify-center mt-0.5">2</span>
+              <span class="text-gray-700"><strong class="text-primary">Gemma 4 开源效应持续发酵，Agent Harness 成新焦点</strong>：Gemma 4 在微博、小红书、YouTube 持续热议。清华团队发表研究证明 Agent 能力上限由 Harness（编排层）决定，与 Claude Code 泄露分析形成学术呼应。</span>
+            </li>
+            <li class="flex gap-2.5 items-start">
+              <span class="flex-shrink-0 w-5 h-5 rounded-full bg-accent text-white text-[10px] font-bold flex items-center justify-center mt-0.5">3</span>
+              <span class="text-gray-700"><strong class="text-primary">小米 MiMo Token 套餐颠覆定价，但排名急跌引发质疑</strong>：小米推出大模型 Token 订阅套餐，Open Router 排名从第一跌至第十七。低价策略与模型质量的矛盾浮出水面。</span>
+            </li>
+          </ol>
+        </section>
+
+        <hr class="border-gray-100">
+
+        <section>
+          <h2 class="text-base font-semibold text-primary mb-3 flex items-center">
+            <span class="w-6 h-6 rounded-md bg-accent/10 flex items-center justify-center mr-2"><i class="fa-solid fa-bullseye text-accent text-[10px]"></i></span>今日行动建议
+          </h2>
+          <ul class="space-y-2.5 text-[13px]">
+            <li class="action-item flex items-start gap-2.5 ai-bg rounded-lg px-3 py-2.5"
+                data-action-type="watch"
+                data-action-prompt="帮我整理 OpenAI 新模型「土豆」目前已知的所有信息，分析它与 GPT 系列的关系和可能的技术路线变化。">
+              <i class="fa-solid fa-eye text-amber-500 mt-0.5 text-sm"></i>
+              <div class="flex-1">
+                <strong class="text-amber-600">持续关注</strong>
+                <p class="text-gray-600 mt-0.5 leading-relaxed">密切跟踪 OpenAI「土豆」新架构后续信息，评估对 GPT 生态投入的影响。</p>
+              </div>
+            </li>
+            <li class="action-item flex items-start gap-2.5 ai-bg rounded-lg px-3 py-2.5"
+                data-action-type="learn"
+                data-action-prompt="帮我总结清华 Agent Harness 研究和 Claude Code 架构分析的核心观点，对比传统 Agent 框架的差异，给出可落地的设计建议。">
+              <i class="fa-solid fa-book-open text-blue-500 mt-0.5 text-sm"></i>
+              <div class="flex-1">
+                <strong class="text-blue-600">建议学习</strong>
+                <p class="text-gray-600 mt-0.5 leading-relaxed">精读清华 Agent Harness 研究和 Claude Code 架构电子书，提炼可落地的 Agent 设计原则。</p>
+              </div>
+            </li>
+            <li class="action-item flex items-start gap-2.5 ai-bg rounded-lg px-3 py-2.5"
+                data-action-type="try"
+                data-action-prompt="帮我配置 OpenClaude 项目，实现在 Claude Code 中同时调用多个模型进行编程，并对比不同模型在不同任务上的效果。">
+              <i class="fa-solid fa-wrench text-emerald-500 mt-0.5 text-sm"></i>
+              <div class="flex-1">
+                <strong class="text-emerald-600">建议尝试</strong>
+                <p class="text-gray-600 mt-0.5 leading-relaxed">用 OpenClaude 在 Claude Code 中接入多模型，体验多模型协作编程的效果。</p>
+              </div>
+            </li>
+            <li class="action-item flex items-start gap-2.5 ai-bg rounded-lg px-3 py-2.5"
+                data-action-type="alert"
+                data-action-prompt="帮我对比 Claude Code、Cursor、Codex、Copilot 在 Agent 功能和最新定价方面的差异，给出性价比最高的组合建议。">
+              <i class="fa-solid fa-triangle-exclamation text-red-500 mt-0.5 text-sm"></i>
+              <div class="flex-1">
+                <strong class="text-red-600">需要警惕</strong>
+                <p class="text-gray-600 mt-0.5 leading-relaxed">Anthropic Claude Code + OpenClaw 额外收费已确认，Copilot 被标注仅供娱乐。AI 编程工具定价正在收紧。</p>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <hr class="border-gray-100">
+
+        <section>
+          <h2 class="text-base font-semibold text-primary mb-3 flex items-center">
+            <span class="w-6 h-6 rounded-md bg-accent/10 flex items-center justify-center mr-2"><i class="fa-solid fa-chart-line text-accent text-[10px]"></i></span>趋势雷达
+          </h2>
+          <div class="space-y-2 text-[13px] mb-3">
+            <div class="flex items-center gap-2">
+              <span class="flex-shrink-0 w-12 text-right"><i class="fa-solid fa-arrow-trend-up text-emerald-500 text-xs mr-0.5"></i><strong class="text-emerald-600 text-[11px]">上升</strong></span>
+              <div class="flex gap-1.5 flex-wrap"><span class="bg-emerald-50 text-emerald-700 text-[11px] px-2 py-0.5 rounded-full">新预训练范式</span><span class="bg-emerald-50 text-emerald-700 text-[11px] px-2 py-0.5 rounded-full">Agent Harness 工程</span><span class="bg-emerald-50 text-emerald-700 text-[11px] px-2 py-0.5 rounded-full">多模型协作编程</span><span class="bg-emerald-50 text-emerald-700 text-[11px] px-2 py-0.5 rounded-full">端侧大模型</span></div>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="flex-shrink-0 w-12 text-right"><i class="fa-solid fa-arrow-trend-down text-gray-400 text-xs mr-0.5"></i><strong class="text-gray-500 text-[11px]">消退</strong></span>
+              <div class="flex gap-1.5 flex-wrap"><span class="bg-gray-50 text-gray-500 text-[11px] px-2 py-0.5 rounded-full">GPT 系列命名延续</span><span class="bg-gray-50 text-gray-500 text-[11px] px-2 py-0.5 rounded-full">Sora 类视频生成</span><span class="bg-gray-50 text-gray-500 text-[11px] px-2 py-0.5 rounded-full">单一 API 依赖</span></div>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="flex-shrink-0 w-12 text-right"><i class="fa-solid fa-fire text-red-500 text-xs mr-0.5"></i><strong class="text-red-600 text-[11px]">持续</strong></span>
+              <div class="flex gap-1.5 flex-wrap"><span class="bg-red-50 text-red-600 text-[11px] px-2 py-0.5 rounded-full">开源模型竞赛</span><span class="bg-red-50 text-red-600 text-[11px] px-2 py-0.5 rounded-full">AI 编程工具迭代</span><span class="bg-red-50 text-red-600 text-[11px] px-2 py-0.5 rounded-full">国产芯片适配</span></div>
+            </div>
+          <div class="ai-bg rounded-lg px-3 py-3">            <p class="text-[12px] text-gray-600 leading-relaxed">              <i class="fa-solid fa-wand-magic-sparkles text-accent mr-1"></i>              <strong class="text-primary">AI 洞察：</strong>本周最重要信号：OpenAI 可能从 GPT 转向全新预训练架构，同时「架构比模型更重要」从社区共识走向清华学术验证。Agent 开发的竞争焦点正在从模型能力转向编排层设计。            </p>          </div>
+          </div>
+        </section>
+
+      </div>
+    </aside>
+
+    <main class="flex-1 lg:overflow-y-auto feed-scroll px-4 lg:px-8 py-6 min-w-0">
+      <h2 class="text-lg font-semibold text-primary mb-4 flex items-center">
+        <span class="w-7 h-7 rounded-lg bg-accent/10 flex items-center justify-center mr-2.5"><i class="fa-solid fa-newspaper text-accent text-xs"></i></span>
+        今日资讯<span class="text-xs text-gray-400 font-normal ml-3">按相关度排序 · 共 15 条</span>
+      </h2>
+      <div class="space-y-3">
+        <article class="bg-white rounded-xl shadow-sm p-4 card-hover"
+                 data-article-id="article-1" data-title="OpenAI 新模型代号「土豆」曝光：全新预训练范式，Sora 成弃子" data-tags="WyIjT3BlbkFJIiwgIiPpooTorq3nu4MiLCAiI+aooeWei+aetuaehCIsICIjU29yYSJd">
+          <div class="flex items-start justify-between">
+            <h3 class="text-[15px] font-semibold text-primary leading-snug"><i class="fa-solid fa-fire text-red-500 mr-1.5 text-xs"></i>OpenAI 新模型代号「土豆」曝光：全新预训练范式，Sora 成弃子</h3>
+            <span class="text-xs text-gray-400 whitespace-nowrap ml-3">4月5日</span>
+          </div>
+          <p class="text-xs text-gray-400 mt-1"><i class="fa-solid fa-link mr-1"></i>量子位<span class="inline-flex items-center gap-0.5 text-[10px] text-blue-500 bg-blue-50 px-1.5 py-0.5 rounded ml-1.5" title="主流媒体来源"><i class="fa-solid fa-newspaper text-[9px]"></i>媒体</span><span class="inline-flex items-center gap-0.5 text-[10px] text-red-400 bg-red-50 px-1.5 py-0.5 rounded ml-1" title="低置信度"><i class="fa-solid fa-circle-exclamation text-[9px]"></i>存疑</span></p>
+          <div class="ai-gradient-line pl-3 my-2.5 text-[13px] text-gray-600 leading-relaxed">
+            <p class="mb-0.5"><strong class="text-gray-700">发生了什么：</strong>量子位报道 OpenAI 下一代模型代号「土豆」，采用全新预训练范式而非 GPT 系列延续，Sora 视频生成项目疑似被放弃。</p>
+<p><strong class="text-gray-700">为什么重要：</strong>如果属实，这是 GPT-3 以来最大的技术路线转向，对整个行业的模型选型、API 生态和产品规划都有深远影响。</p>
+          </div>
+          <div class="bg-[#F8F7FF] rounded-lg px-3 py-2 text-[13px] text-gray-700 my-2"><i class="fa-solid fa-lightbulb text-accent mr-1"></i><strong>与你相关：</strong>直接影响对 OpenAI 生态的投入决策，现有 fine-tuning 和 prompt engineering 经验可能需要重新评估。</div>
+          <div class="flex items-center justify-between mt-2">
+            <div class="flex gap-1.5 flex-wrap"><span class="bg-[#F3F0FF] text-accent text-[11px] px-2.5 py-0.5 rounded-full">#OpenAI</span><span class="bg-[#F3F0FF] text-accent text-[11px] px-2.5 py-0.5 rounded-full">#预训练</span><span class="bg-[#F3F0FF] text-accent text-[11px] px-2.5 py-0.5 rounded-full">#模型架构</span><span class="bg-[#F3F0FF] text-accent text-[11px] px-2.5 py-0.5 rounded-full">#Sora</span></div>
+            <a href="https://www.qbitai.com/2026/04/396535.html" target="_blank" class="text-accent text-xs hover:underline">
+              <i class="fa-solid fa-arrow-up-right-from-square mr-1"></i>原文
+            </a>
+          </div>
+        </article>
+        <article class="bg-white rounded-xl shadow-sm p-4 card-hover"
+                 data-article-id="article-2" data-title="Gemma 4 持续发酵：多平台热议端侧部署与 Qwen 对比" data-tags="WyIjR2VtbWE0IiwgIiPlvIDmupDmqKHlnosiLCAiI+err+S+p0FJIl0=">
+          <div class="flex items-start justify-between">
+            <h3 class="text-[15px] font-semibold text-primary leading-snug"><i class="fa-solid fa-fire text-red-500 mr-1.5 text-xs"></i>Gemma 4 持续发酵：多平台热议端侧部署与 Qwen 对比</h3>
+            <span class="text-xs text-gray-400 whitespace-nowrap ml-3">4月3日-6日</span>
+          </div>
+          <p class="text-xs text-gray-400 mt-1"><i class="fa-solid fa-link mr-1"></i>多平台<span class="inline-flex items-center gap-0.5 text-[10px] text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded ml-1.5" title="官方一手来源"><i class="fa-solid fa-shield-halved text-[9px]"></i>一手</span><span class="inline-flex items-center gap-0.5 text-[10px] text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded ml-1" title="高置信度"><i class="fa-solid fa-circle-check text-[9px]"></i>高可信</span><span class="cred-tooltip inline-flex items-center gap-0.5 text-[10px] text-violet-500 bg-violet-50 px-1.5 py-0.5 rounded ml-1 cursor-help"><i class="fa-solid fa-code-merge text-[9px]"></i>6源验证<span class="cred-tooltip-text"><span class="cred-tooltip-row"><a href="https://weibo.com/1727858283/Qz0dUoQFo?refer_flag=1001030103_" target="_blank" class="cred-tooltip-link">宝玉xp 微博<i class="fa-solid fa-arrow-up-right-from-square text-[8px] ml-0.5 opacity-60"></i></a></span><span class="cred-tooltip-row"><a href="https://weibo.com/5703921756/Qz3Mwv82K?refer_flag=1001030103_" target="_blank" class="cred-tooltip-link">新智元 微博<i class="fa-solid fa-arrow-up-right-from-square text-[8px] ml-0.5 opacity-60"></i></a></span><span class="cred-tooltip-row"><a href="https://weibo.com/1401527553/Qz4g2zA6w?refer_flag=1001030103_" target="_blank" class="cred-tooltip-link">tombkeeper 微博<i class="fa-solid fa-arrow-up-right-from-square text-[8px] ml-0.5 opacity-60"></i></a></span><span class="cred-tooltip-row"><a href="https://www.xiaohongshu.com/search_result/69cf0225000000002200cab0" target="_blank" class="cred-tooltip-link">小红书<i class="fa-solid fa-arrow-up-right-from-square text-[8px] ml-0.5 opacity-60"></i></a></span><span class="cred-tooltip-row"><a href="https://www.xiaohongshu.com/search_result/69d1b6130000000023005c85" target="_blank" class="cred-tooltip-link">小红书 Gemma4 炸场<i class="fa-solid fa-arrow-up-right-from-square text-[8px] ml-0.5 opacity-60"></i></a></span><span class="cred-tooltip-row"><a href="https://www.youtube.com/watch?v=ATbeBhnXjbY" target="_blank" class="cred-tooltip-link">YouTube Hermes Agent<i class="fa-solid fa-arrow-up-right-from-square text-[8px] ml-0.5 opacity-60"></i></a></span></span></span></p>
+          <div class="ai-gradient-line pl-3 my-2.5 text-[13px] text-gray-600 leading-relaxed">
+            <p class="mb-0.5"><strong class="text-gray-700">发生了什么：</strong>Google Gemma 4 发布后在微博、小红书、YouTube 持续热议。焦点：31B vs Qwen 3.5 对比、E2B/E4B 端侧部署体验、Apache 2.0 商业化影响。Hermes Agent 也发布了 Gemma 4 集成更新。</p>
+<p><strong class="text-gray-700">为什么重要：</strong>Gemma 4 正在改变开源模型竞争格局，端侧部署从概念走向实用。</p>
+          </div>
+          <div class="bg-[#F8F7FF] rounded-lg px-3 py-2 text-[13px] text-gray-700 my-2"><i class="fa-solid fa-lightbulb text-accent mr-1"></i><strong>与你相关：</strong>持续跟踪 Gemma 4 vs Qwen 对比评测，作为产品底层模型选型依据。</div>
+          <div class="flex items-center justify-between mt-2">
+            <div class="flex gap-1.5 flex-wrap"><span class="bg-[#F3F0FF] text-accent text-[11px] px-2.5 py-0.5 rounded-full">#Gemma4</span><span class="bg-[#F3F0FF] text-accent text-[11px] px-2.5 py-0.5 rounded-full">#开源模型</span><span class="bg-[#F3F0FF] text-accent text-[11px] px-2.5 py-0.5 rounded-full">#端侧AI</span></div>
+            <a href="https://weibo.com/1727858283/Qz0dUoQFo?refer_flag=1001030103_" target="_blank" class="text-accent text-xs hover:underline">
+              <i class="fa-solid fa-arrow-up-right-from-square mr-1"></i>原文
+            </a>
+          </div>
+        </article>
+        <article class="bg-white rounded-xl shadow-sm p-4 card-hover"
+                 data-article-id="article-3" data-title="清华研究：Agent 能力上限由 Harness 决定，而非模型本身" data-tags="WyIjQWdlbnQiLCAiI0hhcm5lc3MiLCAiI+a4heWNjiIsICIj5p625p6EIl0=">
+          <div class="flex items-start justify-between">
+            <h3 class="text-[15px] font-semibold text-primary leading-snug"><i class="fa-solid fa-fire text-red-500 mr-1.5 text-xs"></i>清华研究：Agent 能力上限由 Harness 决定，而非模型本身</h3>
+            <span class="text-xs text-gray-400 whitespace-nowrap ml-3">近3天</span>
+          </div>
+          <p class="text-xs text-gray-400 mt-1"><i class="fa-solid fa-link mr-1"></i>小红书 / 微博<span class="inline-flex items-center gap-0.5 text-[10px] text-blue-500 bg-blue-50 px-1.5 py-0.5 rounded ml-1.5" title="主流媒体来源"><i class="fa-solid fa-newspaper text-[9px]"></i>媒体</span><span class="inline-flex items-center gap-0.5 text-[10px] text-amber-500 bg-amber-50 px-1.5 py-0.5 rounded ml-1" title="中等置信度"><i class="fa-solid fa-circle-minus text-[9px]"></i>待验证</span><span class="cred-tooltip inline-flex items-center gap-0.5 text-[10px] text-violet-500 bg-violet-50 px-1.5 py-0.5 rounded ml-1 cursor-help"><i class="fa-solid fa-code-merge text-[9px]"></i>2源验证<span class="cred-tooltip-text"><span class="cred-tooltip-row"><a href="https://www.xiaohongshu.com/search_result/69cfb9ad000000001a028861" target="_blank" class="cred-tooltip-link">小红书 清华新作<i class="fa-solid fa-arrow-up-right-from-square text-[8px] ml-0.5 opacity-60"></i></a></span><span class="cred-tooltip-row"><a href="https://weibo.com/1402400261/QzmVW5Hcq?refer_flag=1001030103_" target="_blank" class="cred-tooltip-link">微博 爱可可 架构蓝图<i class="fa-solid fa-arrow-up-right-from-square text-[8px] ml-0.5 opacity-60"></i></a></span></span></span></p>
+          <div class="ai-gradient-line pl-3 my-2.5 text-[13px] text-gray-600 leading-relaxed">
+            <p class="mb-0.5"><strong class="text-gray-700">发生了什么：</strong>清华团队发表研究指出 Agent 能力天花板取决于 Harness（编排层）设计质量，而非底层模型。与 Claude Code 泄露事件中「架构比模型更重要」形成学术呼应。</p>
+<p><strong class="text-gray-700">为什么重要：</strong>从学术角度验证工程界直觉——投资 Agent 编排层比追求更强模型更有性价比。</p>
+          </div>
+          <div class="bg-[#F8F7FF] rounded-lg px-3 py-2 text-[13px] text-gray-700 my-2"><i class="fa-solid fa-lightbulb text-accent mr-1"></i><strong>与你相关：</strong>直接指导 Agent 开发策略：把更多精力放在 Harness 设计上。</div>
+          <div class="flex items-center justify-between mt-2">
+            <div class="flex gap-1.5 flex-wrap"><span class="bg-[#F3F0FF] text-accent text-[11px] px-2.5 py-0.5 rounded-full">#Agent</span><span class="bg-[#F3F0FF] text-accent text-[11px] px-2.5 py-0.5 rounded-full">#Harness</span><span class="bg-[#F3F0FF] text-accent text-[11px] px-2.5 py-0.5 rounded-full">#清华</span><span class="bg-[#F3F0FF] text-accent text-[11px] px-2.5 py-0.5 rounded-full">#架构</span></div>
+            <a href="https://www.xiaohongshu.com/search_result/69cfb9ad000000001a028861" target="_blank" class="text-accent text-xs hover:underline">
+              <i class="fa-solid fa-arrow-up-right-from-square mr-1"></i>原文
+            </a>
+          </div>
+        </article>
+        <article class="bg-white rounded-xl shadow-sm p-4 card-hover"
+                 data-article-id="article-4" data-title="小米 Token 套餐上线后排名从第一跌至第十七" data-tags="WyIj5bCP57GzIiwgIiNNaU1vIiwgIiPlrprku7ciLCAiI0FQSSJd">
+          <div class="flex items-start justify-between">
+            <h3 class="text-[15px] font-semibold text-primary leading-snug"><i class="fa-solid fa-thumbtack text-amber-500 mr-1.5 text-xs"></i>小米 Token 套餐上线后排名从第一跌至第十七</h3>
+            <span class="text-xs text-gray-400 whitespace-nowrap ml-3">4月4日-5日</span>
+          </div>
+          <p class="text-xs text-gray-400 mt-1"><i class="fa-solid fa-link mr-1"></i>微博<span class="inline-flex items-center gap-0.5 text-[10px] text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded ml-1.5" title="官方一手来源"><i class="fa-solid fa-shield-halved text-[9px]"></i>一手</span><span class="inline-flex items-center gap-0.5 text-[10px] text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded ml-1" title="高置信度"><i class="fa-solid fa-circle-check text-[9px]"></i>高可信</span><span class="cred-tooltip inline-flex items-center gap-0.5 text-[10px] text-violet-500 bg-violet-50 px-1.5 py-0.5 rounded ml-1 cursor-help"><i class="fa-solid fa-code-merge text-[9px]"></i>3源验证<span class="cred-tooltip-text"><span class="cred-tooltip-row"><a href="https://weibo.com/6623723777/Qz5WzsoN0?refer_flag=1001030103_" target="_blank" class="cred-tooltip-link">微博 Token套餐讨论<i class="fa-solid fa-arrow-up-right-from-square text-[8px] ml-0.5 opacity-60"></i></a></span><span class="cred-tooltip-row"><a href="https://weibo.com/1749127163/Qz4nC3Abt?refer_flag=1001030103_" target="_blank" class="cred-tooltip-link">微博 雷军万亿Token<i class="fa-solid fa-arrow-up-right-from-square text-[8px] ml-0.5 opacity-60"></i></a></span><span class="cred-tooltip-row"><a href="https://weibo.com/1829465157/QzlNokW9v?refer_flag=1001030103_" target="_blank" class="cred-tooltip-link">微博 排名下滑<i class="fa-solid fa-arrow-up-right-from-square text-[8px] ml-0.5 opacity-60"></i></a></span></span></span></p>
+          <div class="ai-gradient-line pl-3 my-2.5 text-[13px] text-gray-600 leading-relaxed">
+            <p class="mb-0.5"><strong class="text-gray-700">发生了什么：</strong>小米推出 MiMo 大模型 Token 订阅套餐颠覆行业定价，MiMo-V2-Pro 在 Open Router 排名从第一快速下滑至第十七。</p>
+<p><strong class="text-gray-700">为什么重要：</strong>低价策略在质量评估面前显示脆弱性，大模型 API 市场的价格战可能不如预期有效。</p>
+          </div>
+          <div class="bg-[#F8F7FF] rounded-lg px-3 py-2 text-[13px] text-gray-700 my-2"><i class="fa-solid fa-lightbulb text-accent mr-1"></i><strong>与你相关：</strong>大模型 API 定价进入新阶段，工具选型需同时考虑价格和质量排名。</div>
+          <div class="flex items-center justify-between mt-2">
+            <div class="flex gap-1.5 flex-wrap"><span class="bg-[#F3F0FF] text-accent text-[11px] px-2.5 py-0.5 rounded-full">#小米</span><span class="bg-[#F3F0FF] text-accent text-[11px] px-2.5 py-0.5 rounded-full">#MiMo</span><span class="bg-[#F3F0FF] text-accent text-[11px] px-2.5 py-0.5 rounded-full">#定价</span><span class="bg-[#F3F0FF] text-accent text-[11px] px-2.5 py-0.5 rounded-full">#API</span></div>
+            <a href="https://weibo.com/6623723777/Qz5WzsoN0?refer_flag=1001030103_" target="_blank" class="text-accent text-xs hover:underline">
+              <i class="fa-solid fa-arrow-up-right-from-square mr-1"></i>原文
+            </a>
+          </div>
+        </article>
+        <article class="bg-white rounded-xl shadow-sm p-4 card-hover"
+                 data-article-id="article-5" data-title="OpenClaude 开源：Claude Code 中接入多模型编程" data-tags="WyIjQ2xhdWRlQ29kZSIsICIj5aSa5qih5Z6LIiwgIiPlvIDmupAiXQ==">
+          <div class="flex items-start justify-between">
+            <h3 class="text-[15px] font-semibold text-primary leading-snug"><i class="fa-solid fa-thumbtack text-amber-500 mr-1.5 text-xs"></i>OpenClaude 开源：Claude Code 中接入多模型编程</h3>
+            <span class="text-xs text-gray-400 whitespace-nowrap ml-3">近3天</span>
+          </div>
+          <p class="text-xs text-gray-400 mt-1"><i class="fa-solid fa-link mr-1"></i>微博 · 爱可可-爱生活<span class="inline-flex items-center gap-0.5 text-[10px] text-blue-500 bg-blue-50 px-1.5 py-0.5 rounded ml-1.5" title="主流媒体来源"><i class="fa-solid fa-newspaper text-[9px]"></i>媒体</span><span class="inline-flex items-center gap-0.5 text-[10px] text-amber-500 bg-amber-50 px-1.5 py-0.5 rounded ml-1" title="中等置信度"><i class="fa-solid fa-circle-minus text-[9px]"></i>待验证</span></p>
+          <div class="ai-gradient-line pl-3 my-2.5 text-[13px] text-gray-600 leading-relaxed">
+            <p class="mb-0.5"><strong class="text-gray-700">发生了什么：</strong>OpenClaude 开源项目允许在 Claude Code 中接入多个模型，根据任务类型自动路由到最合适的模型。</p>
+<p><strong class="text-gray-700">为什么重要：</strong>多模型协作编程从概念走向实用，降低对单一 API 供应商的依赖。</p>
+          </div>
+          <div class="bg-[#F8F7FF] rounded-lg px-3 py-2 text-[13px] text-gray-700 my-2"><i class="fa-solid fa-lightbulb text-accent mr-1"></i><strong>与你相关：</strong>如果你在用 Claude Code，这个项目可以立即提升多任务场景效率。</div>
+          <div class="flex items-center justify-between mt-2">
+            <div class="flex gap-1.5 flex-wrap"><span class="bg-[#F3F0FF] text-accent text-[11px] px-2.5 py-0.5 rounded-full">#ClaudeCode</span><span class="bg-[#F3F0FF] text-accent text-[11px] px-2.5 py-0.5 rounded-full">#多模型</span><span class="bg-[#F3F0FF] text-accent text-[11px] px-2.5 py-0.5 rounded-full">#开源</span></div>
+            <a href="https://weibo.com/1402400261/Qz3hUhTp0?refer_flag=1001030103_" target="_blank" class="text-accent text-xs hover:underline">
+              <i class="fa-solid fa-arrow-up-right-from-square mr-1"></i>原文
+            </a>
+          </div>
+        </article>
+        <article class="bg-white rounded-xl shadow-sm p-4 card-hover"
+                 data-article-id="article-6" data-title="用 Claude Code 构建 AI 求职系统，获 740+ offer" data-tags="WyIjQ2xhdWRlQ29kZSIsICIjQWdlbnTlupTnlKgiLCAiI+axguiBjCJd">
+          <div class="flex items-start justify-between">
+            <h3 class="text-[15px] font-semibold text-primary leading-snug"><i class="fa-solid fa-thumbtack text-amber-500 mr-1.5 text-xs"></i>用 Claude Code 构建 AI 求职系统，获 740+ offer</h3>
+            <span class="text-xs text-gray-400 whitespace-nowrap ml-3">4月5日</span>
+          </div>
+          <p class="text-xs text-gray-400 mt-1"><i class="fa-solid fa-link mr-1"></i>Reddit r/ClaudeAI<span class="inline-flex items-center gap-0.5 text-[10px] text-blue-500 bg-blue-50 px-1.5 py-0.5 rounded ml-1.5" title="主流媒体来源"><i class="fa-solid fa-newspaper text-[9px]"></i>媒体</span><span class="inline-flex items-center gap-0.5 text-[10px] text-amber-500 bg-amber-50 px-1.5 py-0.5 rounded ml-1" title="中等置信度"><i class="fa-solid fa-circle-minus text-[9px]"></i>待验证</span></p>
+          <div class="ai-gradient-line pl-3 my-2.5 text-[13px] text-gray-600 leading-relaxed">
+            <p class="mb-0.5"><strong class="text-gray-700">发生了什么：</strong>Reddit 用户用 Claude Code 构建自动化求职系统，获得 740+ 个面试/offer，并将项目开源。</p>
+<p><strong class="text-gray-700">为什么重要：</strong>AI Agent 应用从开发工具扩展到求职等非技术场景，验证了 Agent 的通用化潜力。</p>
+          </div>
+          <div class="bg-[#F8F7FF] rounded-lg px-3 py-2 text-[13px] text-gray-700 my-2"><i class="fa-solid fa-lightbulb text-accent mr-1"></i><strong>与你相关：</strong>关注 Agent 在各类工作流中的落地模式。</div>
+          <div class="flex items-center justify-between mt-2">
+            <div class="flex gap-1.5 flex-wrap"><span class="bg-[#F3F0FF] text-accent text-[11px] px-2.5 py-0.5 rounded-full">#ClaudeCode</span><span class="bg-[#F3F0FF] text-accent text-[11px] px-2.5 py-0.5 rounded-full">#Agent应用</span><span class="bg-[#F3F0FF] text-accent text-[11px] px-2.5 py-0.5 rounded-full">#求职</span></div>
+            <a href="https://reddit.com/r/ClaudeAI/comments/1sd2f37/i_built_an_ai_job_search_system_with_claude_code/" target="_blank" class="text-accent text-xs hover:underline">
+              <i class="fa-solid fa-arrow-up-right-from-square mr-1"></i>原文
+            </a>
+          </div>
+        </article>
+        <article class="bg-white rounded-xl shadow-sm p-4 card-hover"
+                 data-article-id="article-7" data-title="DeepSeek V4 将基于华为昇腾 950PR 运行" data-tags="WyIjRGVlcFNlZWsiLCAiI+WNjuS4uuaYh+iFviIsICIj5Zu95Lqn6Iqv54mHIl0=">
+          <div class="flex items-start justify-between">
+            <h3 class="text-[15px] font-semibold text-primary leading-snug"><i class="fa-solid fa-thumbtack text-amber-500 mr-1.5 text-xs"></i>DeepSeek V4 将基于华为昇腾 950PR 运行</h3>
+            <span class="text-xs text-gray-400 whitespace-nowrap ml-3">4月4日</span>
+          </div>
+          <p class="text-xs text-gray-400 mt-1"><i class="fa-solid fa-link mr-1"></i>微博<span class="inline-flex items-center gap-0.5 text-[10px] text-blue-500 bg-blue-50 px-1.5 py-0.5 rounded ml-1.5" title="主流媒体来源"><i class="fa-solid fa-newspaper text-[9px]"></i>媒体</span><span class="inline-flex items-center gap-0.5 text-[10px] text-amber-500 bg-amber-50 px-1.5 py-0.5 rounded ml-1" title="中等置信度"><i class="fa-solid fa-circle-minus text-[9px]"></i>待验证</span></p>
+          <div class="ai-gradient-line pl-3 my-2.5 text-[13px] text-gray-600 leading-relaxed">
+            <p class="mb-0.5"><strong class="text-gray-700">发生了什么：</strong>外媒知情人士透露 DeepSeek V4 将在华为昇腾 950PR 上运行（单卡算力 2.87x H20），未给 NVIDIA 早期访问权限。</p>
+<p><strong class="text-gray-700">为什么重要：</strong>中国头部 AI 公司加速去 NVIDIA 化，国产 AI 芯片生态成型。</p>
+          </div>
+          <div class="bg-[#F8F7FF] rounded-lg px-3 py-2 text-[13px] text-gray-700 my-2"><i class="fa-solid fa-lightbulb text-accent mr-1"></i><strong>与你相关：</strong>算力基础设施格局变化对模型推理成本有直接影响。</div>
+          <div class="flex items-center justify-between mt-2">
+            <div class="flex gap-1.5 flex-wrap"><span class="bg-[#F3F0FF] text-accent text-[11px] px-2.5 py-0.5 rounded-full">#DeepSeek</span><span class="bg-[#F3F0FF] text-accent text-[11px] px-2.5 py-0.5 rounded-full">#华为昇腾</span><span class="bg-[#F3F0FF] text-accent text-[11px] px-2.5 py-0.5 rounded-full">#国产芯片</span></div>
+            <a href="https://weibo.com/7785431482/Qzhmb20Ge?refer_flag=1001030103_" target="_blank" class="text-accent text-xs hover:underline">
+              <i class="fa-solid fa-arrow-up-right-from-square mr-1"></i>原文
+            </a>
+          </div>
+        </article>
+        <article class="bg-white rounded-xl shadow-sm p-4 card-hover"
+                 data-article-id="article-8" data-title="Claude Code 架构电子书《解码 Agent Harness》发布" data-tags="WyIjQ2xhdWRlQ29kZSIsICIjQWdlbnTmnrbmnoQiLCAiI+eUteWtkOS5piJd">
+          <div class="flex items-start justify-between">
+            <h3 class="text-[15px] font-semibold text-primary leading-snug">Claude Code 架构电子书《解码 Agent Harness》发布</h3>
+            <span class="text-xs text-gray-400 whitespace-nowrap ml-3">4月3日</span>
+          </div>
+          <p class="text-xs text-gray-400 mt-1"><i class="fa-solid fa-link mr-1"></i>微博 · 蚁工厂<span class="inline-flex items-center gap-0.5 text-[10px] text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded ml-1.5" title="官方一手来源"><i class="fa-solid fa-shield-halved text-[9px]"></i>一手</span><span class="inline-flex items-center gap-0.5 text-[10px] text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded ml-1" title="高置信度"><i class="fa-solid fa-circle-check text-[9px]"></i>高可信</span><span class="cred-tooltip inline-flex items-center gap-0.5 text-[10px] text-violet-500 bg-violet-50 px-1.5 py-0.5 rounded ml-1 cursor-help"><i class="fa-solid fa-code-merge text-[9px]"></i>2源验证<span class="cred-tooltip-text"><span class="cred-tooltip-row"><a href="https://weibo.com/2194035935/Qz4Mv1Dnt?refer_flag=1001030103_" target="_blank" class="cred-tooltip-link">微博 蚁工厂<i class="fa-solid fa-arrow-up-right-from-square text-[8px] ml-0.5 opacity-60"></i></a></span><span class="cred-tooltip-row"><a href="https://weibo.com/1402400261/QzmVW5Hcq?refer_flag=1001030103_" target="_blank" class="cred-tooltip-link">微博 爱可可<i class="fa-solid fa-arrow-up-right-from-square text-[8px] ml-0.5 opacity-60"></i></a></span></span></span></p>
+          <div class="ai-gradient-line pl-3 my-2.5 text-[13px] text-gray-600 leading-relaxed">
+            <p class="mb-0.5"><strong class="text-gray-700">发生了什么：</strong>开源电子书《解码 Agent Harness》发布，系统化拆解 Claude Code 泄露源码的架构设计：怀疑式记忆、autoDream、KAIROS 守护进程、风险分级。</p>
+<p><strong class="text-gray-700">为什么重要：</strong>Agent 编排层的最佳实践从碎片讨论走向系统化知识沉淀。</p>
+          </div>
+          <div class="bg-[#F8F7FF] rounded-lg px-3 py-2 text-[13px] text-gray-700 my-2"><i class="fa-solid fa-lightbulb text-accent mr-1"></i><strong>与你相关：</strong>Agent 架构设计的参考教材，值得精读。</div>
+          <div class="flex items-center justify-between mt-2">
+            <div class="flex gap-1.5 flex-wrap"><span class="bg-[#F3F0FF] text-accent text-[11px] px-2.5 py-0.5 rounded-full">#ClaudeCode</span><span class="bg-[#F3F0FF] text-accent text-[11px] px-2.5 py-0.5 rounded-full">#Agent架构</span><span class="bg-[#F3F0FF] text-accent text-[11px] px-2.5 py-0.5 rounded-full">#电子书</span></div>
+            <a href="https://weibo.com/2194035935/Qz4Mv1Dnt?refer_flag=1001030103_" target="_blank" class="text-accent text-xs hover:underline">
+              <i class="fa-solid fa-arrow-up-right-from-square mr-1"></i>原文
+            </a>
+          </div>
+        </article>
+        <article class="bg-white rounded-xl shadow-sm p-4 card-hover"
+                 data-article-id="article-9" data-title="Anthropic Claude Code + OpenClaw 额外收费确认" data-tags="WyIjQW50aHJvcGljIiwgIiNDbGF1ZGVDb2RlIiwgIiPlrprku7ciXQ==">
+          <div class="flex items-start justify-between">
+            <h3 class="text-[15px] font-semibold text-primary leading-snug">Anthropic Claude Code + OpenClaw 额外收费确认</h3>
+            <span class="text-xs text-gray-400 whitespace-nowrap ml-3">4月4日</span>
+          </div>
+          <p class="text-xs text-gray-400 mt-1"><i class="fa-solid fa-link mr-1"></i>TechCrunch<span class="inline-flex items-center gap-0.5 text-[10px] text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded ml-1.5" title="官方一手来源"><i class="fa-solid fa-shield-halved text-[9px]"></i>一手</span><span class="inline-flex items-center gap-0.5 text-[10px] text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded ml-1" title="高置信度"><i class="fa-solid fa-circle-check text-[9px]"></i>高可信</span></p>
+          <div class="ai-gradient-line pl-3 my-2.5 text-[13px] text-gray-600 leading-relaxed">
+            <p class="mb-0.5"><strong class="text-gray-700">发生了什么：</strong>TechCrunch 确认 Anthropic 对 Claude Code 用户使用 OpenClaw 功能收取额外费用。</p>
+<p><strong class="text-gray-700">为什么重要：</strong>AI 编程工具从免费/包含转向分层收费，开发者需重新评估工具链成本。</p>
+          </div>
+          <div class="bg-[#F8F7FF] rounded-lg px-3 py-2 text-[13px] text-gray-700 my-2"><i class="fa-solid fa-lightbulb text-accent mr-1"></i><strong>与你相关：</strong>使用 Claude Code 工作流的开发者需评估成本变化。</div>
+          <div class="flex items-center justify-between mt-2">
+            <div class="flex gap-1.5 flex-wrap"><span class="bg-[#F3F0FF] text-accent text-[11px] px-2.5 py-0.5 rounded-full">#Anthropic</span><span class="bg-[#F3F0FF] text-accent text-[11px] px-2.5 py-0.5 rounded-full">#ClaudeCode</span><span class="bg-[#F3F0FF] text-accent text-[11px] px-2.5 py-0.5 rounded-full">#定价</span></div>
+            <a href="https://techcrunch.com/2026/04/04/anthropic-says-claude-code-subscribers-will-need-to-pay-extra-for-openclaw-support/" target="_blank" class="text-accent text-xs hover:underline">
+              <i class="fa-solid fa-arrow-up-right-from-square mr-1"></i>原文
+            </a>
+          </div>
+        </article>
+        <article class="bg-white rounded-xl shadow-sm p-4 card-hover"
+                 data-article-id="article-10" data-title="awesome-design-md：30+ 品牌设计系统变成 AI 可读的 .md 文件" data-tags="WyIjQUnnvJbnqIsiLCAiI+iuvuiuoeezu+e7nyIsICIj5byA5rqQIl0=">
+          <div class="flex items-start justify-between">
+            <h3 class="text-[15px] font-semibold text-primary leading-snug">awesome-design-md：30+ 品牌设计系统变成 AI 可读的 .md 文件</h3>
+            <span class="text-xs text-gray-400 whitespace-nowrap ml-3">4月5日</span>
+          </div>
+          <p class="text-xs text-gray-400 mt-1"><i class="fa-solid fa-link mr-1"></i>微博 · 爱可可-爱生活<span class="inline-flex items-center gap-0.5 text-[10px] text-blue-500 bg-blue-50 px-1.5 py-0.5 rounded ml-1.5" title="主流媒体来源"><i class="fa-solid fa-newspaper text-[9px]"></i>媒体</span><span class="inline-flex items-center gap-0.5 text-[10px] text-amber-500 bg-amber-50 px-1.5 py-0.5 rounded ml-1" title="中等置信度"><i class="fa-solid fa-circle-minus text-[9px]"></i>待验证</span></p>
+          <div class="ai-gradient-line pl-3 my-2.5 text-[13px] text-gray-600 leading-relaxed">
+            <p class="mb-0.5"><strong class="text-gray-700">发生了什么：</strong>开源项目将 Apple、Spotify 等 30+ 品牌设计系统浓缩为 .md 文件，AI 编程助手读取后可生成高质量 UI。</p>
+<p><strong class="text-gray-700">为什么重要：</strong>将「设计品味」变成可复用的开发资源，解决 AI 生成 UI 同质化问题。</p>
+          </div>
+          <div class="bg-[#F8F7FF] rounded-lg px-3 py-2 text-[13px] text-gray-700 my-2"><i class="fa-solid fa-lightbulb text-accent mr-1"></i><strong>与你相关：</strong>可直接集成到 Cursor/Claude Code 开发流程中。</div>
+          <div class="flex items-center justify-between mt-2">
+            <div class="flex gap-1.5 flex-wrap"><span class="bg-[#F3F0FF] text-accent text-[11px] px-2.5 py-0.5 rounded-full">#AI编程</span><span class="bg-[#F3F0FF] text-accent text-[11px] px-2.5 py-0.5 rounded-full">#设计系统</span><span class="bg-[#F3F0FF] text-accent text-[11px] px-2.5 py-0.5 rounded-full">#开源</span></div>
+            <a href="https://weibo.com/1402400261/QzpDchGbr?refer_flag=1001030103_" target="_blank" class="text-accent text-xs hover:underline">
+              <i class="fa-solid fa-arrow-up-right-from-square mr-1"></i>原文
+            </a>
+          </div>
+        </article>
+        <article class="bg-white rounded-xl shadow-sm p-4 card-hover"
+                 data-article-id="article-11" data-title="大模型编程能力排名：Claude 断崖领先，中美之争加剧" data-tags="WyIjQUnnvJbnqIsiLCAiI0NsYXVkZSIsICIj5o6S5ZCNIl0=">
+          <div class="flex items-start justify-between">
+            <h3 class="text-[15px] font-semibold text-primary leading-snug">大模型编程能力排名：Claude 断崖领先，中美之争加剧</h3>
+            <span class="text-xs text-gray-400 whitespace-nowrap ml-3">4月5日</span>
+          </div>
+          <p class="text-xs text-gray-400 mt-1"><i class="fa-solid fa-link mr-1"></i>微博<span class="inline-flex items-center gap-0.5 text-[10px] text-blue-500 bg-blue-50 px-1.5 py-0.5 rounded ml-1.5" title="主流媒体来源"><i class="fa-solid fa-newspaper text-[9px]"></i>媒体</span><span class="inline-flex items-center gap-0.5 text-[10px] text-amber-500 bg-amber-50 px-1.5 py-0.5 rounded ml-1" title="中等置信度"><i class="fa-solid fa-circle-minus text-[9px]"></i>待验证</span></p>
+          <div class="ai-gradient-line pl-3 my-2.5 text-[13px] text-gray-600 leading-relaxed">
+            <p class="mb-0.5"><strong class="text-gray-700">发生了什么：</strong>最新编程能力排名显示 Claude 断崖式领先，从国旗分布看 AI 编程已是中美直接竞争。</p>
+<p><strong class="text-gray-700">为什么重要：</strong>编程是大模型商业化最直接场景，排名直接影响工具选型。</p>
+          </div>
+          <div class="bg-[#F8F7FF] rounded-lg px-3 py-2 text-[13px] text-gray-700 my-2"><i class="fa-solid fa-lightbulb text-accent mr-1"></i><strong>与你相关：</strong>持续跟踪编程排名变化作为工具选型参考。</div>
+          <div class="flex items-center justify-between mt-2">
+            <div class="flex gap-1.5 flex-wrap"><span class="bg-[#F3F0FF] text-accent text-[11px] px-2.5 py-0.5 rounded-full">#AI编程</span><span class="bg-[#F3F0FF] text-accent text-[11px] px-2.5 py-0.5 rounded-full">#Claude</span><span class="bg-[#F3F0FF] text-accent text-[11px] px-2.5 py-0.5 rounded-full">#排名</span></div>
+            <a href="https://weibo.com/2177245391/QzjefCIXb?refer_flag=1001030103_" target="_blank" class="text-accent text-xs hover:underline">
+              <i class="fa-solid fa-arrow-up-right-from-square mr-1"></i>原文
+            </a>
+          </div>
+        </article>
+        <article class="bg-white rounded-xl shadow-sm p-4 card-hover"
+                 data-article-id="article-12" data-title="CodeRabbit 基于 Claude 构建多 Agent 代码审查系统" data-tags="WyIjQWdlbnQiLCAiI0NvZGVSYWJiaXQiLCAiI0FudGhyb3BpYyJd">
+          <div class="flex items-start justify-between">
+            <h3 class="text-[15px] font-semibold text-primary leading-snug">CodeRabbit 基于 Claude 构建多 Agent 代码审查系统</h3>
+            <span class="text-xs text-gray-400 whitespace-nowrap ml-3">近3天</span>
+          </div>
+          <p class="text-xs text-gray-400 mt-1"><i class="fa-solid fa-link mr-1"></i>Anthropic 官方<span class="inline-flex items-center gap-0.5 text-[10px] text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded ml-1.5" title="官方一手来源"><i class="fa-solid fa-shield-halved text-[9px]"></i>一手</span><span class="inline-flex items-center gap-0.5 text-[10px] text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded ml-1" title="高置信度"><i class="fa-solid fa-circle-check text-[9px]"></i>高可信</span></p>
+          <div class="ai-gradient-line pl-3 my-2.5 text-[13px] text-gray-600 leading-relaxed">
+            <p class="mb-0.5"><strong class="text-gray-700">发生了什么：</strong>Anthropic 官方分享 CodeRabbit 如何基于 Claude 构建多 Agent 协作代码审查系统。</p>
+<p><strong class="text-gray-700">为什么重要：</strong>来自 Anthropic 官方的 Agent 编排生产级案例。</p>
+          </div>
+          <div class="bg-[#F8F7FF] rounded-lg px-3 py-2 text-[13px] text-gray-700 my-2"><i class="fa-solid fa-lightbulb text-accent mr-1"></i><strong>与你相关：</strong>Agent 编排的生产级参考。</div>
+          <div class="flex items-center justify-between mt-2">
+            <div class="flex gap-1.5 flex-wrap"><span class="bg-[#F3F0FF] text-accent text-[11px] px-2.5 py-0.5 rounded-full">#Agent</span><span class="bg-[#F3F0FF] text-accent text-[11px] px-2.5 py-0.5 rounded-full">#CodeRabbit</span><span class="bg-[#F3F0FF] text-accent text-[11px] px-2.5 py-0.5 rounded-full">#Anthropic</span></div>
+            <a href="https://www.anthropic.com/webinars/how-coderabbit-orchestrates-agents-to-strengthen" target="_blank" class="text-accent text-xs hover:underline">
+              <i class="fa-solid fa-arrow-up-right-from-square mr-1"></i>原文
+            </a>
+          </div>
+        </article>
+        <article class="bg-white rounded-xl shadow-sm p-4 card-hover"
+                 data-article-id="article-13" data-title="Copilot 被标注仅供「娱乐用途」" data-tags="WyIjQ29waWxvdCIsICIjTWljcm9zb2Z0IiwgIiPms5XlvosiXQ==">
+          <div class="flex items-start justify-between">
+            <h3 class="text-[15px] font-semibold text-primary leading-snug">Copilot 被标注仅供「娱乐用途」</h3>
+            <span class="text-xs text-gray-400 whitespace-nowrap ml-3">4月5日</span>
+          </div>
+          <p class="text-xs text-gray-400 mt-1"><i class="fa-solid fa-link mr-1"></i>TechCrunch<span class="inline-flex items-center gap-0.5 text-[10px] text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded ml-1.5" title="官方一手来源"><i class="fa-solid fa-shield-halved text-[9px]"></i>一手</span><span class="inline-flex items-center gap-0.5 text-[10px] text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded ml-1" title="高置信度"><i class="fa-solid fa-circle-check text-[9px]"></i>高可信</span></p>
+          <div class="ai-gradient-line pl-3 my-2.5 text-[13px] text-gray-600 leading-relaxed">
+            <p class="mb-0.5"><strong class="text-gray-700">发生了什么：</strong>TechCrunch 报道 Microsoft Copilot 被发现在某些场景下标注为仅供「entertainment purposes only」。</p>
+<p><strong class="text-gray-700">为什么重要：</strong>AI 编程工具的法律免责声明正在收紧，可能影响企业级采用决策。</p>
+          </div>
+          <div class="bg-[#F8F7FF] rounded-lg px-3 py-2 text-[13px] text-gray-700 my-2"><i class="fa-solid fa-lightbulb text-accent mr-1"></i><strong>与你相关：</strong>使用 Copilot 的团队需关注其法律定位变化。</div>
+          <div class="flex items-center justify-between mt-2">
+            <div class="flex gap-1.5 flex-wrap"><span class="bg-[#F3F0FF] text-accent text-[11px] px-2.5 py-0.5 rounded-full">#Copilot</span><span class="bg-[#F3F0FF] text-accent text-[11px] px-2.5 py-0.5 rounded-full">#Microsoft</span><span class="bg-[#F3F0FF] text-accent text-[11px] px-2.5 py-0.5 rounded-full">#法律</span></div>
+            <a href="https://techcrunch.com/2026/04/05/copilot-is-for-entertainment-purposes-only-according-to-microsoft/" target="_blank" class="text-accent text-xs hover:underline">
+              <i class="fa-solid fa-arrow-up-right-from-square mr-1"></i>原文
+            </a>
+          </div>
+        </article>
+        <article class="bg-white rounded-xl shadow-sm p-4 card-hover"
+                 data-article-id="article-14" data-title="为了不跟龙虾抢电脑，有人造 Agent 专属「三无」硬件" data-tags="WyIjQWdlbnQiLCAiI+ehrOS7tiIsICIj5Lqn5ZOB6LaL5Yq/Il0=">
+          <div class="flex items-start justify-between">
+            <h3 class="text-[15px] font-semibold text-primary leading-snug">为了不跟龙虾抢电脑，有人造 Agent 专属「三无」硬件</h3>
+            <span class="text-xs text-gray-400 whitespace-nowrap ml-3">近3天</span>
+          </div>
+          <p class="text-xs text-gray-400 mt-1"><i class="fa-solid fa-link mr-1"></i>量子位<span class="inline-flex items-center gap-0.5 text-[10px] text-blue-500 bg-blue-50 px-1.5 py-0.5 rounded ml-1.5" title="主流媒体来源"><i class="fa-solid fa-newspaper text-[9px]"></i>媒体</span><span class="inline-flex items-center gap-0.5 text-[10px] text-amber-500 bg-amber-50 px-1.5 py-0.5 rounded ml-1" title="中等置信度"><i class="fa-solid fa-circle-minus text-[9px]"></i>待验证</span></p>
+          <div class="ai-gradient-line pl-3 my-2.5 text-[13px] text-gray-600 leading-relaxed">
+            <p class="mb-0.5"><strong class="text-gray-700">发生了什么：</strong>量子位报道 Agent 专属硬件趋势——无屏幕、无键盘、无鼠标的「三无」设备，专为 AI Agent 独立运行设计。</p>
+<p><strong class="text-gray-700">为什么重要：</strong>Agent 从软件走向专属硬件，使用场景从「辅助人」转向「独立运行」。</p>
+          </div>
+          <div class="bg-[#F8F7FF] rounded-lg px-3 py-2 text-[13px] text-gray-700 my-2"><i class="fa-solid fa-lightbulb text-accent mr-1"></i><strong>与你相关：</strong>Agent 专属硬件是值得关注的新品类方向。</div>
+          <div class="flex items-center justify-between mt-2">
+            <div class="flex gap-1.5 flex-wrap"><span class="bg-[#F3F0FF] text-accent text-[11px] px-2.5 py-0.5 rounded-full">#Agent</span><span class="bg-[#F3F0FF] text-accent text-[11px] px-2.5 py-0.5 rounded-full">#硬件</span><span class="bg-[#F3F0FF] text-accent text-[11px] px-2.5 py-0.5 rounded-full">#产品趋势</span></div>
+            <a href="https://www.qbitai.com/2026/04/396351.html" target="_blank" class="text-accent text-xs hover:underline">
+              <i class="fa-solid fa-arrow-up-right-from-square mr-1"></i>原文
+            </a>
+          </div>
+        </article>
+        <article class="bg-white rounded-xl shadow-sm p-4 card-hover"
+                 data-article-id="article-15" data-title="阿里千问 3.6-Plus 日调用量超万亿，登顶国产编程模型" data-tags="WyIj5Y2D6ZeuIiwgIiPpmL/ph4wiLCAiI0FJ57yW56iLIl0=">
+          <div class="flex items-start justify-between">
+            <h3 class="text-[15px] font-semibold text-primary leading-snug">阿里千问 3.6-Plus 日调用量超万亿，登顶国产编程模型</h3>
+            <span class="text-xs text-gray-400 whitespace-nowrap ml-3">4月3日</span>
+          </div>
+          <p class="text-xs text-gray-400 mt-1"><i class="fa-solid fa-link mr-1"></i>量子位<span class="inline-flex items-center gap-0.5 text-[10px] text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded ml-1.5" title="官方一手来源"><i class="fa-solid fa-shield-halved text-[9px]"></i>一手</span><span class="inline-flex items-center gap-0.5 text-[10px] text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded ml-1" title="高置信度"><i class="fa-solid fa-circle-check text-[9px]"></i>高可信</span></p>
+          <div class="ai-gradient-line pl-3 my-2.5 text-[13px] text-gray-600 leading-relaxed">
+            <p class="mb-0.5"><strong class="text-gray-700">发生了什么：</strong>阿里千问 3.6-Plus 在 Arena 编程榜排名中国第一，日调用量超万亿 Token。</p>
+<p><strong class="text-gray-700">为什么重要：</strong>国产编程模型在国际评测中取得突破性位置。</p>
+          </div>
+          <div class="bg-[#F8F7FF] rounded-lg px-3 py-2 text-[13px] text-gray-700 my-2"><i class="fa-solid fa-lightbulb text-accent mr-1"></i><strong>与你相关：</strong>国产编程模型选型有了新参考。</div>
+          <div class="flex items-center justify-between mt-2">
+            <div class="flex gap-1.5 flex-wrap"><span class="bg-[#F3F0FF] text-accent text-[11px] px-2.5 py-0.5 rounded-full">#千问</span><span class="bg-[#F3F0FF] text-accent text-[11px] px-2.5 py-0.5 rounded-full">#阿里</span><span class="bg-[#F3F0FF] text-accent text-[11px] px-2.5 py-0.5 rounded-full">#AI编程</span></div>
+            <a href="https://www.qbitai.com/2026/04/396346.html" target="_blank" class="text-accent text-xs hover:underline">
+              <i class="fa-solid fa-arrow-up-right-from-square mr-1"></i>原文
+            </a>
+          </div>
+        </article>
+      </div>
+      <div class="text-center text-xs text-gray-400 mt-6 pb-4">
+        数据来源：微博、小红书、Reddit、YouTube、量子位、TechCrunch、Anthropic News、OpenAI Community、InfoQ AI<br>
+        生成时间 2026-04-06 10:24
+      </div>
+    </main>
+  </div>
+
+<div id="toast" class="toast"></div>
+
+<script>
+(function() {
+  'use strict';
+  const DATE = '2026-04-06';
+  const IS_HTTP = location.protocol.startsWith('http');
+  const events = [];
+  const cardTimers = {};
+  const cardDwellTime = {};
+  const pageLoadTime = Date.now();
+  const sessionId = (window.crypto && typeof window.crypto.randomUUID === 'function')
+    ? window.crypto.randomUUID()
+    : ('session-' + Date.now() + '-' + Math.random().toString(16).slice(2));
+  let leaveHandled = false;
+
+  const AI_TOOLS = [{"id": "claude", "name": "Claude", "icon": "fa-solid fa-message", "btnClass": "btn-claude", "url": "https://claude.ai/new?q={prompt}"}, {"id": "chatgpt", "name": "ChatGPT", "icon": "fa-brands fa-openai", "btnClass": "btn-chatgpt", "url": "https://chatgpt.com/?q={prompt}"}, {"id": "deepseek", "name": "DeepSeek", "icon": "fa-solid fa-magnifying-glass", "btnClass": "btn-deepseek", "url": "https://chat.deepseek.com/?q={prompt}"}, {"id": "copy", "name": "复制 Prompt", "icon": "fa-regular fa-copy", "btnClass": "btn-copy", "url": null}];
+
+  function ts() { return new Date().toISOString(); }
+  function log(event) { events.push(event); console.log('%c[反馈]%c ' + event.type, 'color:#6C5CE7;font-weight:bold', 'color:#333', event); }
+  function showToast(msg, dur) { const t = document.getElementById('toast'); t.textContent = msg; t.classList.add('show'); setTimeout(() => t.classList.remove('show'), dur || 2000); }
+  function decodeBase64Utf8(value) {
+    const binary = atob(value);
+    if (typeof TextDecoder !== 'undefined') {
+      const bytes = Uint8Array.from(binary, ch => ch.charCodeAt(0));
+      return new TextDecoder('utf-8').decode(bytes);
+    }
+    const escaped = Array.from(binary, ch => '%' + ch.charCodeAt(0).toString(16).padStart(2, '0')).join('');
+    return decodeURIComponent(escaped);
+  }
+  function parseTags(value) {
+    if (!value) return [];
+    try {
+      return JSON.parse(decodeBase64Utf8(value));
+    } catch (err) {
+      return [];
+    }
+  }
+
+  function sendToAI(tool, prompt) {
+    if (tool.id === 'copy') { navigator.clipboard.writeText(prompt).then(() => showToast('Prompt 已复制到剪贴板')); }
+    else { window.open(tool.url.replace('{prompt}', encodeURIComponent(prompt)), '_blank'); showToast('已发送至 ' + tool.name); }
+    log({ type: 'send_to_ai', tool: tool.id, prompt: prompt.substring(0, 100) + '...', timestamp: ts() });
+  }
+
+  function showAIMenu(anchor, prompt) {
+    document.querySelectorAll('.ai-menu').forEach(m => m.classList.remove('open'));
+    const menu = document.createElement('div'); menu.className = 'ai-menu open';
+    AI_TOOLS.forEach((tool, i) => {
+      if (i > 0 && tool.id === 'copy') menu.insertAdjacentHTML('beforeend', '<div class="ai-menu-sep"></div>');
+      const item = document.createElement('div'); item.className = 'ai-menu-item';
+      item.innerHTML = '<i class="' + tool.icon + ' item-icon-' + tool.id + '"></i><span>' + tool.name + '</span>';
+      item.addEventListener('click', e => { e.stopPropagation(); sendToAI(tool, prompt); menu.remove(); });
+      menu.appendChild(item);
+    });
+    anchor.style.position = 'relative'; anchor.appendChild(menu);
+    setTimeout(() => { const close = e => { if (!menu.contains(e.target)) { menu.remove(); document.removeEventListener('click', close); } }; document.addEventListener('click', close); }, 0);
+  }
+
+  const cards = document.querySelectorAll('main article.card-hover');
+  cards.forEach((card, i) => {
+    const h3 = card.querySelector('h3'); if (!h3) return;
+    const title = h3.textContent.trim().replace(/^[^\w\u4e00-\u9fff]+/, '');
+    const id = card.dataset.articleId || ('article-' + (i + 1));
+    card.dataset.articleId = id; card.dataset.title = title;
+    const tagEls = card.querySelectorAll('span[class*="rounded-full"]');
+    const tags = [];
+    tagEls.forEach(t => {
+      const text = t.textContent.trim();
+      if (text.startsWith('#')) { tags.push(text); t.classList.add('tag-clickable');
+        t.addEventListener('click', function() { const w = this.classList.toggle('tag-clicked'); log({ type: w ? 'tag_follow' : 'tag_unfollow', tag: text, articleId: id, title, timestamp: ts() }); });
+      }
+    });
+    card.dataset.tags = card.dataset.tags || '';
+    const actionBar = card.querySelector('.flex.items-center.justify-between.mt-2');
+    if (actionBar) {
+      const btnGroup = document.createElement('span'); btnGroup.className = 'flex items-center gap-3 ml-auto mr-3';
+      btnGroup.innerHTML = '<span class="vote-btn flex items-center gap-1 text-gray-400 text-xs" data-voted="false"><i class="fa-solid fa-caret-up text-sm"></i><span class="vote-count">0</span></span><span class="bookmark-btn text-gray-300 text-sm" data-bookmarked="false"><i class="fa-regular fa-bookmark"></i></span>';
+      const sourceLink = actionBar.querySelector('a');
+      if (sourceLink) actionBar.insertBefore(btnGroup, sourceLink);
+      btnGroup.querySelector('.vote-btn').addEventListener('click', function() {
+        const v = this.dataset.voted === 'true'; this.dataset.voted = v ? 'false' : 'true'; this.classList.toggle('voted'); this.querySelector('.vote-count').textContent = v ? '0' : '1';
+        log({ type: v ? 'unvote' : 'vote', articleId: id, title, tags, timestamp: ts() });
+      });
+      btnGroup.querySelector('.bookmark-btn').addEventListener('click', function() {
+        const m = this.dataset.bookmarked === 'true'; this.dataset.bookmarked = m ? 'false' : 'true'; this.classList.toggle('bookmarked');
+        this.querySelector('i').className = m ? 'fa-regular fa-bookmark' : 'fa-solid fa-bookmark';
+        log({ type: m ? 'unbookmark' : 'bookmark', articleId: id, title, tags, timestamp: ts() });
+      });
+    }
+  });
+
+  document.querySelectorAll('.action-item').forEach(item => {
+    const prompt = item.dataset.actionPrompt; if (!prompt) return;
+    const wrap = document.createElement('div'); wrap.className = 'ai-trigger-wrap';
+    const menu = document.createElement('div'); menu.className = 'ai-menu';
+    AI_TOOLS.forEach((tool, i) => {
+      if (i > 0 && tool.id === 'copy') menu.insertAdjacentHTML('beforeend', '<div class="ai-menu-sep"></div>');
+      const mi = document.createElement('div'); mi.className = 'ai-menu-item';
+      mi.innerHTML = '<i class="' + tool.icon + ' item-icon-' + tool.id + '"></i><span>' + tool.name + '</span>';
+      mi.addEventListener('click', e => { e.stopPropagation(); sendToAI(tool, prompt); });
+      menu.appendChild(mi);
+    });
+    wrap.appendChild(menu);
+    const icon = document.createElement('span'); icon.className = 'ai-trigger-icon';
+    icon.innerHTML = '<i class="fa-solid fa-paper-plane"></i>'; icon.title = '发送至工具';
+    wrap.appendChild(icon); item.appendChild(wrap);
+    let ht = null;
+    function show() { clearTimeout(ht); menu.classList.add('open'); }
+    function hide() { ht = setTimeout(() => menu.classList.remove('open'), 150); }
+    icon.addEventListener('mouseenter', show); icon.addEventListener('mouseleave', hide);
+    menu.addEventListener('mouseenter', show); menu.addEventListener('mouseleave', hide);
+  });
+
+  cards.forEach(card => {
+    const title = card.dataset.title; const tags = parseTags(card.dataset.tags || '');
+    const se = card.querySelector('.ai-gradient-line'); const s = se ? se.textContent.trim().substring(0, 200) : '';
+    const re = card.querySelector('[class*="F8F7FF"]'); const r = re ? re.textContent.trim() : '';
+    const dp = '我在阅读日报时看到了这条资讯，请帮我深入分析：\n\n标题：' + title + '\n标签：' + tags.join(' ') + '\n摘要：' + s + '\n' + (r ? '与我的关联：' + r + '\n' : '') + '\n请从以下角度展开：\n1. 技术细节和背景\n2. 短期和长期影响\n3. 我应如何应对\n4. 推荐学习资源';
+    const ab = card.querySelector('.flex.items-center.justify-between.mt-2');
+    if (ab) {
+      const wrap = document.createElement('span'); wrap.className = 'card-ai-wrap';
+      const icon = document.createElement('span'); icon.className = 'card-ai-btn';
+      icon.innerHTML = '<i class="fa-solid fa-wand-magic-sparkles text-[10px]"></i>深入分析'; wrap.appendChild(icon);
+      const menu = document.createElement('div'); menu.className = 'ai-menu';
+      AI_TOOLS.forEach((tool, i) => {
+        if (i > 0 && tool.id === 'copy') menu.insertAdjacentHTML('beforeend', '<div class="ai-menu-sep"></div>');
+        const mi = document.createElement('div'); mi.className = 'ai-menu-item';
+        mi.innerHTML = '<i class="' + tool.icon + ' item-icon-' + tool.id + '"></i><span>' + tool.name + '</span>';
+        mi.addEventListener('click', e => { e.stopPropagation(); sendToAI(tool, dp); });
+        menu.appendChild(mi);
+      });
+      wrap.appendChild(menu);
+      let ht = null;
+      function show() { clearTimeout(ht); menu.classList.add('open'); }
+      function hide() { ht = setTimeout(() => menu.classList.remove('open'), 150); }
+      icon.addEventListener('mouseenter', show); icon.addEventListener('mouseleave', hide);
+      menu.addEventListener('mouseenter', show); menu.addEventListener('mouseleave', hide);
+      const sl = ab.querySelector('a'); if (sl) ab.insertBefore(wrap, sl);
+    }
+  });
+
+  const fc = document.querySelector('main.feed-scroll');
+  if (fc) {
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { const c = e.target, id = c.dataset.articleId; if (!id) return;
+        if (e.isIntersecting) { cardTimers[id] = Date.now(); } else if (cardTimers[id]) {
+          const el = Date.now() - cardTimers[id]; cardDwellTime[id] = (cardDwellTime[id] || 0) + el; delete cardTimers[id];
+          if (el > 5000) log({ type: 'dwell', articleId: id, title: c.dataset.title, tags: parseTags(c.dataset.tags || ''), duration_ms: el, timestamp: ts() });
+        }
+      });
+    }, { root: fc, threshold: 0.5 });
+    cards.forEach(c => obs.observe(c));
+  }
+
+  document.querySelectorAll('main a[target="_blank"]').forEach(l => {
+    l.addEventListener('click', function() { const c = this.closest('article[data-article-id]');
+      if (c) log({ type: 'click_source', articleId: c.dataset.articleId, title: c.dataset.title, tags: parseTags(c.dataset.tags || ''), url: this.href, timestamp: ts() });
+    });
+  });
+
+  document.addEventListener('copy', function() {
+    const s = window.getSelection(); if (!s || !s.anchorNode) return;
+    const c = s.anchorNode.parentElement?.closest('article[data-article-id]');
+    if (c) log({ type: 'copy', articleId: c.dataset.articleId, title: c.dataset.title, tags: parseTags(c.dataset.tags || ''), copiedText: s.toString().substring(0, 100), timestamp: ts() });
+  });
+
+  function buildSummary() {
+    Object.keys(cardTimers).forEach(id => { cardDwellTime[id] = (cardDwellTime[id] || 0) + (Date.now() - cardTimers[id]); });
+    const totalTime = Math.round((Date.now() - pageLoadTime) / 1000);
+    const voteState = new Map();
+    const bookmarkState = new Map();
+    const tagState = new Map();
+    events.forEach(e => {
+      if ((e.type === 'vote' || e.type === 'unvote') && e.articleId) voteState.set(e.articleId, e);
+      if ((e.type === 'bookmark' || e.type === 'unbookmark') && e.articleId) bookmarkState.set(e.articleId, e);
+      if ((e.type === 'tag_follow' || e.type === 'tag_unfollow') && e.tag) tagState.set(e.tag, e.type === 'tag_follow');
+    });
+    const voted = [...voteState.values()].filter(e => e.type === 'vote').map(e => ({ id: e.articleId, title: e.title, tags: e.tags }));
+    const bookmarked = [...bookmarkState.values()].filter(e => e.type === 'bookmark').map(e => ({ id: e.articleId, title: e.title, tags: e.tags }));
+    const tagFollows = [...tagState.entries()].filter(([, followed]) => followed).map(([tag]) => tag);
+    const tagUnfollows = [...tagState.entries()].filter(([, followed]) => !followed).map(([tag]) => tag);
+    const clicked = events.filter(e => e.type === 'click_source').map(e => ({ id: e.articleId, title: e.title, tags: e.tags || [] }));
+    const copied = events.filter(e => e.type === 'copy').map(e => ({ id: e.articleId, title: e.title, tags: e.tags || [] }));
+    const aiUsage = events.filter(e => e.type === 'send_to_ai');
+    const aiCounts = {}; aiUsage.forEach(u => { aiCounts[u.tool] = (aiCounts[u.tool] || 0) + 1; });
+    const dwellRanking = Object.entries(cardDwellTime).map(([id, ms]) => {
+      const c = document.querySelector(`[data-article-id="${id}"]`);
+      return { articleId: id, title: c ? c.dataset.title : id, tags: c ? parseTags(c.dataset.tags || '') : [], dwell_seconds: Math.round(ms / 1000) };
+    }).filter(d => d.dwell_seconds > 0).sort((a, b) => b.dwell_seconds - a.dwell_seconds);
+    const tagScores = {};
+    function addTS(tags, w) { (tags || []).forEach(t => { tagScores[t] = (tagScores[t] || 0) + w; }); }
+    voted.forEach(v => addTS(v.tags, 3)); bookmarked.forEach(b => addTS(b.tags, 3));
+    tagFollows.forEach(t => { tagScores[t] = (tagScores[t] || 0) + 2; });
+    dwellRanking.forEach(d => { if (d.dwell_seconds >= 5) addTS(d.tags, 1); });
+    const tagRanking = Object.entries(tagScores).sort((a, b) => b[1] - a[1]).map(([tag, score]) => ({ tag, score }));
+    return {
+      date: DATE,
+      session: { session_id: sessionId, total_time_seconds: totalTime, total_events: events.length, page_load: new Date(pageLoadTime).toISOString() },
+      explicit_feedback: { voted, bookmarked, tags_followed: tagFollows, tags_unfollowed: tagUnfollows },
+      implicit_feedback: { dwell_ranking: dwellRanking, articles_clicked: clicked, articles_copied: copied },
+      ai_interaction: { tools_used: aiCounts, detail: aiUsage.map(u => ({ tool: u.tool, prompt_preview: u.prompt })) },
+      interest_profile: { tag_scores: tagRanking, top_interests: tagRanking.slice(0, 5).map(t => t.tag) },
+      all_events: events
+    };
+  }
+
+  function onLeave() {
+    if (leaveHandled) return;
+    leaveHandled = true;
+    const summary = buildSummary();
+    if (IS_HTTP) navigator.sendBeacon('/api/feedback', JSON.stringify(summary));
+    try { const st = JSON.parse(localStorage.getItem('daily_feedback') || '[]'); st.push(summary); if (st.length > 30) st.splice(0, st.length - 30); localStorage.setItem('daily_feedback', JSON.stringify(st)); } catch(e) {}
+    console.log('\n%c╔══════════════════════════════════════════════════╗', 'color:#6C5CE7');
+    console.log('%c║     日报反馈汇总 · ' + DATE + '                  ║', 'color:#6C5CE7;font-weight:bold');
+    console.log('%c╚══════════════════════════════════════════════════╝', 'color:#6C5CE7');
+    console.log(JSON.stringify(summary, null, 2));
+  }
+  window.addEventListener('pagehide', onLeave, { capture: true });
+  window.addEventListener('beforeunload', onLeave, { capture: true });
+
+  console.log('%c╔══════════════════════════════════════════════════╗', 'color:#6C5CE7');
+  console.log('%c║     日报反馈采集已启动 · ' + DATE + '            ║', 'color:#6C5CE7;font-weight:bold');
+  console.log('%c╚══════════════════════════════════════════════════╝', 'color:#6C5CE7');
+  console.log('%c模式：' + (IS_HTTP ? 'HTTP（反馈自动回流）' : 'File（仅控制台+localStorage）'), 'color:#333;font-weight:bold');
+  console.log('  📌 隐式 — 停留时长、原文点击、文本复制');
+  console.log('  👆 显式 — 投票(▲)、收藏(🔖)、标签关注');
+  console.log('  🤖 AI — 行动建议/深入分析 发送至工具');
+  console.log('%c关闭页面时自动输出汇总\n', 'color:#888');
+})();
+</script>
+</body>
+</html>
