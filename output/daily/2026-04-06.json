@@ -136,7 +136,7 @@
       "time_label": "近3天",
       "source_date": "2026-04-05",
       "source": "小红书 / 微博",
-      "url": "https://www.xiaohongshu.com/search_result/69cfb9ad000000001a028861",
+      "url": "https://www.xiaohongshu.com/search_result/69cfb9ad00000000200380fe?xsec_token=ABtHSfBbpJhaGSNJMLhf2mm91AyAaR9KjJtE0OCC990aE=&xsec_source=",
       "summary": {
         "what_happened": "清华团队发表研究指出 Agent 能力天花板取决于 Harness（编排层）设计质量。与 Claude Code 泄露中「架构比模型更重要」和 MiniMax Mini-Agent 开源形成三方呼应。",
         "why_it_matters": "Agent 编排层的重要性从工程直觉走向学术验证+开源实践。"
@@ -149,7 +149,7 @@
         "cross_refs": 3,
         "evidence": "小红书(324 likes) + 微博架构分析 + 微博 Mini-Agent",
         "sources": [
-          {"name": "小红书 清华新作", "url": "https://www.xiaohongshu.com/search_result/69cfb9ad000000001a028861"},
+          {"name": "小红书 清华新作", "url": "https://www.xiaohongshu.com/search_result/69cfb9ad00000000200380fe?xsec_token=ABtHSfBbpJhaGSNJMLhf2mm91AyAaR9KjJtE0OCC990aE=&xsec_source="},
           {"name": "微博 架构蓝图", "url": "https://weibo.com/1402400261/QzmVW5Hcq?refer_flag=1001030103_"},
           {"name": "微博 Mini-Agent", "url": "https://weibo.com/2194035935/Qz35h0mpP?refer_flag=1001030103_"}
         ]
@@ -177,7 +177,7 @@
         "sources": [
           {"name": "宝玉xp 微博", "url": "https://weibo.com/1727858283/Qz0dUoQFo?refer_flag=1001030103_"},
           {"name": "新智元 微博", "url": "https://weibo.com/5703921756/Qz3Mwv82K?refer_flag=1001030103_"},
-          {"name": "小红书", "url": "https://www.xiaohongshu.com/search_result/69cf0225000000002200cab0"},
+          {"name": "小红书", "url": "https://www.xiaohongshu.com/search_result/69cf02250000000022001ec8?xsec_token=ABtHSfBbpJhaGSNJMLhf2mm0tGu6DhraAscMgOIGIN1ck=&xsec_source="},
           {"name": "YouTube Hermes Agent", "url": "https://www.youtube.com/watch?v=ATbeBhnXjbY"}
         ]
       }
@@ -302,7 +302,7 @@
         "evidence": "TechCrunch 两篇报道",
         "sources": [
           {"name": "TechCrunch Claude+OpenClaw", "url": "https://techcrunch.com/2026/04/04/anthropic-says-claude-code-subscribers-will-need-to-pay-extra-for-openclaw-support/"},
-          {"name": "TechCrunch Copilot", "url": "https://techcrunch.com/2026/04/05/copilot-is-for-entertainment-purposes-only-according-to-microsoft/"}
+          {"name": "TechCrunch Copilot", "url": "https://techcrunch.com/2026/04/05/copilot-is-for-entertainment-purposes-only-according-to-microsofts-terms-of-service/"}
         ]
       }
     },

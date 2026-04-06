@@ -152,12 +152,59 @@ def validate(data: dict) -> list[str]:
     return errors
 
 
-def main():
-    if len(sys.argv) < 2:
-        print("用法: python3 scripts/validate_payload.py <json_file>", file=sys.stderr)
-        sys.exit(1)
+def validate_urls_against_candidates(data: dict, candidates_data: dict) -> list[str]:
+    """校验日报 JSON 中的所有 URL 是否来自 candidates.json。"""
+    errors = []
 
-    path = Path(sys.argv[1])
+    # 收集 candidates 中的所有 URL
+    candidate_urls = set()
+    for c in candidates_data.get("candidates", []):
+        url = c.get("url", "")
+        if url:
+            candidate_urls.add(url)
+
+    if not candidate_urls:
+        errors.append("[candidates] candidates.json 中没有找到任何 URL")
+        return errors
+
+    # 检查日报中每个 URL
+    articles = data.get("articles", [])
+    for i, article in enumerate(articles):
+        prefix = f"[articles[{i}]]"
+
+        # 主 URL
+        url = article.get("url", "")
+        if url and url not in candidate_urls:
+            errors.append(f"{prefix}.url 不在 candidates.json 中: {url[:70]}")
+
+        # credibility sources URL
+        cred = article.get("credibility", {})
+        sources_list = cred.get("sources", [])
+        if isinstance(sources_list, list):
+            for si, src in enumerate(sources_list):
+                src_url = src.get("url", "") if isinstance(src, dict) else ""
+                if src_url and src_url not in candidate_urls:
+                    errors.append(f"{prefix}.credibility.sources[{si}].url 不在 candidates.json 中: {src_url[:70]}")
+
+    # 检查重复 URL（同一 URL 用在不同 article 的主链接上可能是误用）
+    main_urls = [a.get("url", "") for a in articles if a.get("url")]
+    seen = {}
+    for url in main_urls:
+        if url in seen:
+            errors.append(f"多条 article 使用了相同的主 URL: {url[:70]}")
+        seen[url] = True
+
+    return errors
+
+
+def main():
+    import argparse
+    parser = argparse.ArgumentParser(description="校验日报 JSON")
+    parser.add_argument("input", help="日报 JSON 文件路径")
+    parser.add_argument("--candidates", default="", help="candidates.json 路径，用于 URL 交叉校验")
+    args = parser.parse_args()
+
+    path = Path(args.input)
     if not path.exists():
         print(f"ERROR: {path} 不存在", file=sys.stderr)
         sys.exit(1)
@@ -168,7 +215,29 @@ def main():
         print(f"ERROR: JSON 解析失败: {e}", file=sys.stderr)
         sys.exit(1)
 
+    # 结构校验
     errors = validate(data)
+
+    # URL 交叉校验（如果提供了 candidates）
+    candidates_path = Path(args.candidates) if args.candidates else None
+    if not candidates_path:
+        # 自动查找同日期的 candidates
+        date = data.get("meta", {}).get("date", "")
+        if date:
+            auto_path = path.parent.parent / "raw" / f"{date}_candidates.json"
+            if auto_path.exists():
+                candidates_path = auto_path
+
+    if candidates_path and candidates_path.exists():
+        try:
+            candidates_data = json.loads(candidates_path.read_text(encoding="utf-8"))
+            url_errors = validate_urls_against_candidates(data, candidates_data)
+            errors.extend(url_errors)
+            print(f"URL 交叉校验: 使用 {candidates_path.name}", file=sys.stderr)
+        except json.JSONDecodeError:
+            print(f"WARNING: {candidates_path} 解析失败，跳过 URL 校验", file=sys.stderr)
+    else:
+        print(f"INFO: 未找到 candidates.json，跳过 URL 交叉校验", file=sys.stderr)
 
     if not errors:
         articles = data.get("articles", [])
