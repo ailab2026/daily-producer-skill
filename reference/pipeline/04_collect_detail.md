@@ -70,8 +70,17 @@ fetched_content:
 | `--dry-run` | false | 只输出要抓的 URL 列表 |
 | `--no-save` | false | 不保存到文件 |
 
+## 多行正文保留
+
+与 filter_index.py 一样，解析器保留 `[N]` 标题行与字段行之间的所有多行正文（如 Twitter 推文），输出到 detail.txt 时完整写回。
+
+## 超时和间隔
+
+- 单次请求超时：**60 秒**（部分网站如 The Verge 单次需要 15-20 秒，连续请求时更慢）
+- 请求间隔：**5 秒**（给浏览器释放资源时间）
+- 实测 36 个 URL 全部成功（之前 30s 超时时 20 个失败）
+
 ## 常见失败原因
 
-- OpenAI community / Anthropic 网站有反爬，`opencli web read` 经常超时
-- TechCrunch / The Verge 部分文章有 paywall
-- 失败的条目仍保留在 detail.txt 中，标记 `fetch_status: FAILED`，不影响后续流程
+- 超时（浏览器资源占满）→ 已通过加大超时和间隔解决
+- 部分网站有反爬（少数情况）→ 失败条目保留在 detail.txt 中标记 `fetch_status: FAILED`，不影响后续流程

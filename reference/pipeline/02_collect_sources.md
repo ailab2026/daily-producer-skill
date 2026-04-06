@@ -80,6 +80,10 @@ count: 结果数
 | `--platform` | 空 | 只采集指定平台（逗号分隔，如 `weibo,twitter`） |
 | `--skip-websites` | false | 跳过媒体/官网采集 |
 | `--no-save` | false | 不保存到文件 |
+
+## 注意事项
+
+- 统计数量以 `--max-results` 截断后的实际输出为准（头部 `# 总候选条目` 和文件内 `[N]` 条目数一致）
 | `--dry-run` | false | 只输出要执行的命令，不实际执行 |
 
 ## 特殊处理

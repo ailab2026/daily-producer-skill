@@ -93,3 +93,7 @@ python3 scripts/prepare_payload.py --date {date}
 | `--date` | 今天 | 目标日期 |
 | `--top` | 0 | 保留前 N 条，0=全部保留 |
 | `--no-save` | false | 不保存到文件 |
+
+## 多行正文处理
+
+Twitter 推文等多行内容在 detail.txt 中以续行形式存在。解析器将这些续行追加到 `fields["text"]` 字段中（换行拼接），用于关键词匹配和去噪判断。

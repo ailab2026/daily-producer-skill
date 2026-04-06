@@ -62,3 +62,23 @@ python3 scripts/filter_index.py --date {date} --window 3
 | `--date` | 今天 | 目标日期 |
 | `--window` | 3 | 时间窗口天数 |
 | `--dry-run` | false | 只输出统计，不保存 |
+
+## 多行正文保留
+
+Twitter 推文等多行内容在筛选后完整保留。解析器收集 `[N]` 标题行与字段行之间的所有文本行作为 `content_lines`，输出时写回原位。
+
+```
+# 筛选前：
+  [4] Wow, this tweet went very viral!
+I wanted share a possibly slightly improved version...
+So here's the idea in a gist format: https://t.co/...
+      author: karpathy
+
+# 筛选后保持完整：
+  [4] Wow, this tweet went very viral!
+I wanted share a possibly slightly improved version...
+So here's the idea in a gist format: https://t.co/...
+      author: karpathy
+      time_status: in_window
+      time_parsed: 2026-04-04
+```

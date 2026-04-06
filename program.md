@@ -486,12 +486,12 @@ opencli doctor
 | 步骤 | 产出 | 数量 |
 |------|------|------|
 | 01 build_queries | 搜索查询 | 90 条（platform + google） |
-| 02 collect_sources | 原始候选 | 949 条（21 个平台/网站） |
+| 02 collect_sources | 原始候选 | ~370 条写入文件（21 个平台/网站，max-results=5） |
 | 03 filter_index | 筛选后 | 132 条 |
-| 04 collect_detail | 深抓后 | 91 条（42 平台 + 49 网站） |
-| 05 prepare_payload | 去噪后 | 69 条 |
-| 06 AI 生成 | 最终日报 | 15 条（3 major + 4 notable + 7 normal + 1 minor） |
-| 07 validate | 校验 | ✅ 通过 |
+| 04 collect_detail | 深抓后 | 132 条（68 平台 + 64 网站，45 URL 深抓全部成功） |
+| 05 prepare_payload | 去噪后 | 99 条 |
+| 06 AI 生成 | 最终日报 | 15 条（3 major + 5 notable + 6 normal + 1 minor） |
+| 07 validate | 校验 | ✅ 通过（含 URL 交叉校验） |
 | 08 render | HTML | 1 个页面 |
 
 各平台采集成功率：

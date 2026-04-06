@@ -19,6 +19,16 @@ python3 scripts/validate_payload.py output/daily/{date}.json
 - 通过：`✅ 校验通过` + 统计信息
 - 失败：`❌ 校验失败` + 具体错误列表
 
+## 用法
+
+```bash
+# 基本校验（自动查找同日期 candidates.json 做 URL 交叉校验）
+python3 scripts/validate_payload.py output/daily/{date}.json
+
+# 指定 candidates 文件
+python3 scripts/validate_payload.py output/daily/{date}.json --candidates output/raw/{date}_candidates.json
+```
+
 ## 校验项
 
 ### meta（必需）
@@ -64,3 +74,17 @@ python3 scripts/validate_payload.py output/daily/{date}.json
    [articles[2].summary.why_it_matters] 缺失
    [articles[5].url] 格式错误: example.com/...
 ```
+
+### URL 交叉校验（自动执行）
+
+脚本自动加载 `output/raw/{date}_candidates.json`，检查：
+
+- 每条 article 的主 `url` 必须在 candidates 中存在
+- 每条 `credibility.sources[*].url` 必须在 candidates 中存在
+- 不同 article 不能使用相同的主 URL
+- 含 `/example` 的 URL 视为假 URL
+
+### credibility 一致性
+
+- `cross_refs > 1` 时 `sources` 数组不能为空
+- `sources` 中每个 URL 不能含 `/example`
