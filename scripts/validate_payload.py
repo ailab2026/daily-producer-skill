@@ -126,12 +126,24 @@ def validate(data: dict) -> list[str]:
             url = article.get("url", "")
             if url and not url.startswith("http"):
                 errors.append(f"{prefix}.url 格式错误: {url[:50]}")
+            if url and "/example" in url:
+                errors.append(f"{prefix}.url 疑似假 URL（含 /example）: {url[:60]}")
 
             # credibility（可选但推荐）
             cred = article.get("credibility")
             if cred:
                 if cred.get("confidence") and cred["confidence"] not in ("high", "medium", "low"):
                     errors.append(f"{prefix}.credibility.confidence 无效: {cred['confidence']}")
+                # cross_refs 与 sources 数量一致性
+                cross_refs = cred.get("cross_refs", 0)
+                sources_list = cred.get("sources", [])
+                if cross_refs > 1 and isinstance(sources_list, list) and len(sources_list) == 0:
+                    errors.append(f"{prefix}.credibility cross_refs={cross_refs} 但 sources 为空，缺少来源 URL")
+                if isinstance(sources_list, list):
+                    for si, src in enumerate(sources_list):
+                        src_url = src.get("url", "") if isinstance(src, dict) else ""
+                        if src_url and "/example" in src_url:
+                            errors.append(f"{prefix}.credibility.sources[{si}].url 疑似假 URL: {src_url[:60]}")
 
     # ━━ data_sources ━━
     if not data.get("data_sources") or not isinstance(data.get("data_sources"), list):

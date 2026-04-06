@@ -89,6 +89,13 @@
 }
 ```
 
+## 强制规则
+
+1. **禁止使用假 URL**：所有 `url` 和 `credibility.sources[*].url` 必须从 candidates.json 中的真实 URL 复制，不得编造（如 `https://weibo.com/example/xxx`）
+2. **多源合并时保留所有原始 URL**：同一事件在多平台出现时，主 `url` 用最重要来源的 URL，其余放入 `credibility.sources` 数组
+3. **cross_refs 必须有依据**：`cross_refs` 数值必须等于 `credibility.sources` 数组的长度，不能写一个数字但没列出来源
+4. **没有 URL 就不写**：如果 candidates.json 中某条没有 url，对应 article 的 url 字段写空字符串，不要编造
+
 ## 生成后
 
 **必须运行 validate_payload.py 校验**，通过后才能渲染 HTML。
