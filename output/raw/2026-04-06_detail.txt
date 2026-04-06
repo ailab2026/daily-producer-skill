@@ -1,9 +1,9 @@
 # 日报候选详情 — 2026-04-06
-# 生成时间: 2026-04-06 08:54:27
+# 生成时间: 2026-04-06 09:42:36
 # 平台类条目（已有内容）: 42
 # 网站类条目（深抓正文）: 49
-# 深抓成功: 16
-# 深抓失败: 20
+# 深抓成功: 36
+# 深抓失败: 0
 
 ======================================================================
 
@@ -470,9 +470,9 @@ web/read
 ┌─────────────────────────────────────────────────────────────┬────────┬──────────────┬─────────┬─────────┐
 │ Title                                                       │ Author │ Publish_time │ Status  │ Size    │
 ├─────────────────────────────────────────────────────────────┼────────┼──────────────┼─────────┼─────────┤
-│ 日调用量超万亿破纪录！阿里千问3.6Plus登顶全球模型调用量榜首 │ -      │ -            │ success │ 14.4 KB │
+│ 日调用量超万亿破纪录！阿里千问3.6Plus登顶全球模型调用量榜首 │ -      │ -            │ success │ 14.6 KB │
 └─────────────────────────────────────────────────────────────┴────────┴──────────────┴─────────┴─────────┘
-1 items · 4.0s · web/read
+1 items · 3.7s · web/read
 
 --- [量子位] (website) ---
 type: website_detail
@@ -487,9 +487,9 @@ web/read
 ┌────────────────────────────────────────────────────────────────────┬────────┬──────────────┬─────────┬─────────┐
 │ Title                                                              │ Author │ Publish_time │ Status  │ Size    │
 ├────────────────────────────────────────────────────────────────────┼────────┼──────────────┼─────────┼─────────┤
-│ OpenAI新模型不是GPTX！全新预训练“土豆”曝光，Sora成弃子的原因找到了 │ -      │ -            │ success │ 32.1 KB │
+│ OpenAI新模型不是GPTX！全新预训练“土豆”曝光，Sora成弃子的原因找到了 │ -      │ -            │ success │ 32.3 KB │
 └────────────────────────────────────────────────────────────────────┴────────┴──────────────┴─────────┴─────────┘
-1 items · 9.3s · web/read
+1 items · 5.4s · web/read
 
 --- [量子位] (website) ---
 type: website_detail
@@ -503,9 +503,9 @@ web/read
 ┌──────────────────────────────────────────────┬────────┬──────────────┬─────────┬─────────┐
 │ Title                                        │ Author │ Publish_time │ Status  │ Size    │
 ├──────────────────────────────────────────────┼────────┼──────────────┼─────────┼─────────┤
-│ 19岁，常青藤辍学，这群中国年轻人重构了AI记忆 │ -      │ -            │ success │ 25.5 KB │
+│ 19岁，常青藤辍学，这群中国年轻人重构了AI记忆 │ -      │ -            │ success │ 25.6 KB │
 └──────────────────────────────────────────────┴────────┴──────────────┴─────────┴─────────┘
-1 items · 9.0s · web/read
+1 items · 6.3s · web/read
 
 --- [量子位] (website) ---
 type: website_detail
@@ -520,9 +520,9 @@ web/read
 ┌────────────────────┬────────┬──────────────┬─────────┬─────────┐
 │ Title              │ Author │ Publish_time │ Status  │ Size    │
 ├────────────────────┼────────┼──────────────┼─────────┼─────────┤
-│ 联想重新定义“龙虾” │ -      │ -            │ success │ 27.2 KB │
+│ 联想重新定义“龙虾” │ -      │ -            │ success │ 26.8 KB │
 └────────────────────┴────────┴──────────────┴─────────┴─────────┘
-1 items · 7.5s · web/read
+1 items · 6.2s · web/read
 
 --- [量子位] (website) ---
 type: website_detail
@@ -537,9 +537,9 @@ web/read
 ┌────────────────────┬────────┬──────────────┬─────────┬─────────┐
 │ Title              │ Author │ Publish_time │ Status  │ Size    │
 ├────────────────────┼────────┼──────────────┼─────────┼─────────┤
-│ 联想重新定义“龙虾” │ -      │ -            │ success │ 27.2 KB │
+│ 联想重新定义“龙虾” │ -      │ -            │ success │ 26.8 KB │
 └────────────────────┴────────┴──────────────┴─────────┴─────────┘
-1 items · 7.5s · web/read
+1 items · 6.2s · web/read
 
 --- [量子位] (website) ---
 type: website_detail
@@ -554,9 +554,9 @@ web/read
 ┌────────────────────────────────────────────────────────────────────┬────────┬──────────────┬─────────┬─────────┐
 │ Title                                                              │ Author │ Publish_time │ Status  │ Size    │
 ├────────────────────────────────────────────────────────────────────┼────────┼──────────────┼─────────┼─────────┤
-│ OpenAI新模型不是GPTX！全新预训练“土豆”曝光，Sora成弃子的原因找到了 │ -      │ -            │ success │ 32.1 KB │
+│ OpenAI新模型不是GPTX！全新预训练“土豆”曝光，Sora成弃子的原因找到了 │ -      │ -            │ success │ 32.3 KB │
 └────────────────────────────────────────────────────────────────────┴────────┴──────────────┴─────────┴─────────┘
-1 items · 9.3s · web/read
+1 items · 5.4s · web/read
 
 --- [量子位] (website) ---
 type: website_detail
@@ -571,9 +571,9 @@ web/read
 ┌────────────────────────────────────────────────────────────────────────────┬────────┬──────────────┬─────────┬─────────┐
 │ Title                                                                      │ Author │ Publish_time │ Status  │ Size    │
 ├────────────────────────────────────────────────────────────────────────────┼────────┼──────────────┼─────────┼─────────┤
-│ 为了不跟龙虾抢电脑用，有人开始造Agent专属的“三无”硬件，比Mac Mini+存储便宜 │ -      │ -            │ success │ 20.4 KB │
+│ 为了不跟龙虾抢电脑用，有人开始造Agent专属的“三无”硬件，比Mac Mini+存储便宜 │ -      │ -            │ success │ 20.6 KB │
 └────────────────────────────────────────────────────────────────────────────┴────────┴──────────────┴─────────┴─────────┘
-1 items · 3.3s · web/read
+1 items · 3.8s · web/read
 
 --- [量子位] (website) ---
 type: website_detail
@@ -588,9 +588,9 @@ web/read
 ┌──────────────────────────────────────────────┬────────┬──────────────┬─────────┬─────────┐
 │ Title                                        │ Author │ Publish_time │ Status  │ Size    │
 ├──────────────────────────────────────────────┼────────┼──────────────┼─────────┼─────────┤
-│ 19岁，常青藤辍学，这群中国年轻人重构了AI记忆 │ -      │ -            │ success │ 25.5 KB │
+│ 19岁，常青藤辍学，这群中国年轻人重构了AI记忆 │ -      │ -            │ success │ 25.6 KB │
 └──────────────────────────────────────────────┴────────┴──────────────┴─────────┴─────────┘
-1 items · 9.0s · web/read
+1 items · 6.3s · web/read
 
 --- [量子位] (website) ---
 type: website_detail
@@ -605,9 +605,9 @@ web/read
 ┌────────────────────────────────────────────────────────────────────────────┬────────┬──────────────┬─────────┬─────────┐
 │ Title                                                                      │ Author │ Publish_time │ Status  │ Size    │
 ├────────────────────────────────────────────────────────────────────────────┼────────┼──────────────┼─────────┼─────────┤
-│ 为了不跟龙虾抢电脑用，有人开始造Agent专属的“三无”硬件，比Mac Mini+存储便宜 │ -      │ -            │ success │ 20.4 KB │
+│ 为了不跟龙虾抢电脑用，有人开始造Agent专属的“三无”硬件，比Mac Mini+存储便宜 │ -      │ -            │ success │ 20.6 KB │
 └────────────────────────────────────────────────────────────────────────────┴────────┴──────────────┴─────────┴─────────┘
-1 items · 3.3s · web/read
+1 items · 3.8s · web/read
 
 --- [量子位] (website) ---
 type: website_detail
@@ -622,9 +622,9 @@ web/read
 ┌────────────────────┬────────┬──────────────┬─────────┬─────────┐
 │ Title              │ Author │ Publish_time │ Status  │ Size    │
 ├────────────────────┼────────┼──────────────┼─────────┼─────────┤
-│ 联想重新定义“龙虾” │ -      │ -            │ success │ 27.2 KB │
+│ 联想重新定义“龙虾” │ -      │ -            │ success │ 26.8 KB │
 └────────────────────┴────────┴──────────────┴─────────┴─────────┘
-1 items · 7.5s · web/read
+1 items · 6.2s · web/read
 
 --- [量子位] (website) ---
 type: website_detail
@@ -641,7 +641,7 @@ web/read
 ├────────────────────┼────────┼──────────────┼─────────┼─────────┤
 │ 具身龙虾，上车理想 │ -      │ -            │ success │ 17.0 KB │
 └────────────────────┴────────┴──────────────┴─────────┴─────────┘
-1 items · 5.0s · web/read
+1 items · 4.6s · web/read
 
 --- [量子位] (website) ---
 type: website_detail
@@ -658,7 +658,7 @@ web/read
 ├───────────────────────────────────────────────────────────┼────────┼──────────────┼─────────┼────────┤
 │ 太初元碁向员工发放百亿算力token并将共建高校AI科教融合学院 │ -      │ -            │ success │ 9.8 KB │
 └───────────────────────────────────────────────────────────┴────────┴──────────────┴─────────┴────────┘
-1 items · 1.8s · web/read
+1 items · 2.4s · web/read
 
 --- [InfoQ AI] (website) ---
 type: website_detail
@@ -675,7 +675,7 @@ web/read
 ├─────────────────────────────────────────────────────┼────────┼──────────────┼─────────┼────────┤
 │ 本地大模型部署_本地大模型部署技术文章_InfoQ写作社区 │ -      │ -            │ success │ 1.1 KB │
 └─────────────────────────────────────────────────────┴────────┴──────────────┴─────────┴────────┘
-1 items · 6.1s · web/read
+1 items · 3.0s · web/read
 
 --- [InfoQ AI] (website) ---
 type: website_detail
@@ -692,7 +692,7 @@ web/read
 ├─────────────────────────────────────────────────┼────────┼──────────────┼─────────┼────────┤
 │ Evomap如何让Agent从单体智能到群体进化｜QCon北京 │ -      │ -            │ success │ 6.3 KB │
 └─────────────────────────────────────────────────┴────────┴──────────────┴─────────┴────────┘
-1 items · 3.7s · web/read
+1 items · 2.7s · web/read
 
 --- [InfoQ AI] (website) ---
 type: website_detail
@@ -709,7 +709,7 @@ web/read
 ├──────────────────────────────────────────────────────────────────┼────────┼──────────────┼─────────┼────────┤
 │ Pinterest 部署生产级模型上下文协议生态系统，赋能 AI 智能体工作流 │ -      │ -            │ success │ 4.4 KB │
 └──────────────────────────────────────────────────────────────────┴────────┴──────────────┴─────────┴────────┘
-1 items · 3.6s · web/read
+1 items · 2.3s · web/read
 
 --- [InfoQ AI] (website) ---
 type: website_detail
@@ -724,9 +724,9 @@ web/read
 ┌────────┬────────┬──────────────┬─────────┬─────────┐
 │ Title  │ Author │ Publish_time │ Status  │ Size    │
 ├────────┼────────┼──────────────┼─────────┼─────────┤
-│ spring │ -      │ -            │ success │ 11.7 KB │
+│ spring │ -      │ -            │ success │ 11.9 KB │
 └────────┴────────┴──────────────┴─────────┴─────────┘
-1 items · 21.2s · web/read
+1 items · 6.3s · web/read
 
 --- [InfoQ AI] (website) ---
 type: website_detail
@@ -743,7 +743,7 @@ web/read
 ├─────────────────────────────────────────────────┼────────┼──────────────┼─────────┼────────┤
 │ Evomap如何让Agent从单体智能到群体进化｜QCon北京 │ -      │ -            │ success │ 6.3 KB │
 └─────────────────────────────────────────────────┴────────┴──────────────┴─────────┴────────┘
-1 items · 3.7s · web/read
+1 items · 2.7s · web/read
 
 --- [InfoQ AI] (website) ---
 type: website_detail
@@ -758,9 +758,9 @@ web/read
 ┌─────────────────────────────────┬────────┬──────────────┬─────────┬─────────┐
 │ Title                           │ Author │ Publish_time │ Status  │ Size    │
 ├─────────────────────────────────┼────────┼──────────────┼─────────┼─────────┤
-│ Harness Engineering 又来颠覆了— │ -      │ -            │ success │ 193.0 B │
+│ Harness Engineering 又来颠覆了— │ -      │ -            │ success │ 11.1 KB │
 └─────────────────────────────────┴────────┴──────────────┴─────────┴─────────┘
-1 items · 2.2s · web/read
+1 items · 7.1s · web/read
 
 --- [InfoQ AI] (website) ---
 type: website_detail
@@ -772,12 +772,12 @@ time_status: google_filtered
 fetch_status: success
 fetched_content:
 web/read
-┌─────────────────────────────────────────────────────────────┬────────┬──────────────┬─────────┬─────────┐
-│ Title                                                       │ Author │ Publish_time │ Status  │ Size    │
-├─────────────────────────────────────────────────────────────┼────────┼──────────────┼─────────┼─────────┤
-│ AIFUT大会｜倒计时冲刺3天！！！_数字生命卡兹克_InfoQ写作社区 │ -      │ -            │ success │ 237.0 B │
-└─────────────────────────────────────────────────────────────┴────────┴──────────────┴─────────┴─────────┘
-1 items · 2.2s · web/read
+┌─────────────────────────────────────────────────────────────┬────────┬──────────────┬─────────┬────────┐
+│ Title                                                       │ Author │ Publish_time │ Status  │ Size   │
+├─────────────────────────────────────────────────────────────┼────────┼──────────────┼─────────┼────────┤
+│ AIFUT大会｜倒计时冲刺3天！！！_数字生命卡兹克_InfoQ写作社区 │ -      │ -            │ success │ 5.5 KB │
+└─────────────────────────────────────────────────────────────┴────────┴──────────────┴─────────┴────────┘
+1 items · 11.2s · web/read
 
 --- [InfoQ AI] (website) ---
 type: website_detail
@@ -792,9 +792,9 @@ web/read
 ┌────────┬────────┬──────────────┬─────────┬─────────┐
 │ Title  │ Author │ Publish_time │ Status  │ Size    │
 ├────────┼────────┼──────────────┼─────────┼─────────┤
-│ spring │ -      │ -            │ success │ 11.7 KB │
+│ spring │ -      │ -            │ success │ 11.9 KB │
 └────────┴────────┴──────────────┴─────────┴─────────┘
-1 items · 21.2s · web/read
+1 items · 6.3s · web/read
 
 --- [InfoQ AI] (website) ---
 type: website_detail
@@ -811,7 +811,7 @@ web/read
 ├─────────────────────────────────────────────────┼────────┼──────────────┼─────────┼────────┤
 │ Evomap如何让Agent从单体智能到群体进化｜QCon北京 │ -      │ -            │ success │ 6.3 KB │
 └─────────────────────────────────────────────────┴────────┴──────────────┴─────────┴────────┘
-1 items · 3.7s · web/read
+1 items · 2.7s · web/read
 
 --- [InfoQ AI] (website) ---
 type: website_detail
@@ -828,7 +828,7 @@ web/read
 ├────────────────────────────────────────────────────┼────────┼──────────────┼─────────┼────────┤
 │ Helidon 引入 Agent 能力，Java 框架开始内建 AI 编排 │ -      │ -            │ success │ 6.4 KB │
 └────────────────────────────────────────────────────┴────────┴──────────────┴─────────┴────────┘
-1 items · 7.3s · web/read
+1 items · 2.4s · web/read
 
 --- [InfoQ AI] (website) ---
 type: website_detail
@@ -843,9 +843,9 @@ web/read
 ┌─────────────────────────────────┬────────┬──────────────┬─────────┬─────────┐
 │ Title                           │ Author │ Publish_time │ Status  │ Size    │
 ├─────────────────────────────────┼────────┼──────────────┼─────────┼─────────┤
-│ Harness Engineering 又来颠覆了— │ -      │ -            │ success │ 193.0 B │
+│ Harness Engineering 又来颠覆了— │ -      │ -            │ success │ 11.1 KB │
 └─────────────────────────────────┴────────┴──────────────┴─────────┴─────────┘
-1 items · 2.2s · web/read
+1 items · 7.1s · web/read
 
 --- [InfoQ AI] (website) ---
 type: website_detail
@@ -862,7 +862,7 @@ web/read
 ├────────────────────────────────┼────────┼──────────────┼─────────┼────────┤
 │ Ops-Agentic-Search_Ops-Agentic │ -      │ -            │ success │ 3.1 KB │
 └────────────────────────────────┴────────┴──────────────┴─────────┴────────┘
-1 items · 5.6s · web/read
+1 items · 2.6s · web/read
 
 --- [OpenAI News] (website) ---
 type: website_detail
@@ -877,9 +877,9 @@ web/read
 ┌───────────────────────────────────────────────────────────────────────────┬────────┬───────────────────────────┬─────────┬─────────┐
 │ Title                                                                     │ Author │ Publish_time              │ Status  │ Size    │
 ├───────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────┼─────────┼─────────┤
-│ Exploring advanced NLP prompts for fiction editing by writers - Prompting │ -      │ 2026-04-04T13:33:41+00:00 │ success │ 23.1 KB │
+│ Exploring advanced NLP prompts for fiction editing by writers - Prompting │ -      │ 2026-04-04T13:33:41+00:00 │ success │ 552.0 B │
 └───────────────────────────────────────────────────────────────────────────┴────────┴───────────────────────────┴─────────┴─────────┘
-1 items · 5.0s · web/read
+1 items · 3.4s · web/read
 
 --- [OpenAI News] (website) ---
 type: website_detail
@@ -888,8 +888,15 @@ title: ChatGPT — Release Notes
 snippet: As of March 11, 2026, GPT-5.1 models are no longer available in ChatGPT. This applies to GPT-5.1 Instant, GPT-5.1 Thinking, and GPT-5.1 Pro. Existing ...
 url: https://help.openai.com/fr-ca/articles/6825453-chatgpt-release-notes
 time_status: google_filtered
-fetch_status: FAILED
-fetch_error: timeout
+fetch_status: success
+fetched_content:
+web/read
+┌─────────────────────────┬────────┬──────────────┬─────────┬──────────┐
+│ Title                   │ Author │ Publish_time │ Status  │ Size     │
+├─────────────────────────┼────────┼──────────────┼─────────┼──────────┤
+│ ChatGPT — Release Notes │ -      │ -            │ success │ 129.8 KB │
+└─────────────────────────┴────────┴──────────────┴─────────┴──────────┘
+1 items · 6.2s · web/read
 
 --- [OpenAI News] (website) ---
 type: website_detail
@@ -898,8 +905,15 @@ title: Managing credits and spend controls in ChatGPT Business
 snippet: 2 days ago — Learn when ChatGPT Business needs credits, how to add credits and auto-top-up, and how to review usage analytics and spend controls for Codex.
 url: https://help.openai.com/en/articles/20001155-managing-credits-and-spend-controls-in-chatgpt-business
 time_status: google_filtered
-fetch_status: FAILED
-fetch_error: timeout
+fetch_status: success
+fetched_content:
+web/read
+┌─────────────────────────────────────────────────────────┬────────┬──────────────┬─────────┬────────┐
+│ Title                                                   │ Author │ Publish_time │ Status  │ Size   │
+├─────────────────────────────────────────────────────────┼────────┼──────────────┼─────────┼────────┤
+│ Managing credits and spend controls in ChatGPT Business │ -      │ -            │ success │ 3.6 KB │
+└─────────────────────────────────────────────────────────┴────────┴──────────────┴─────────┴────────┘
+1 items · 2.8s · web/read
 
 --- [OpenAI News] (website) ---
 type: website_detail
@@ -908,8 +922,15 @@ title: ChatGPT — Release Notes
 snippet: We've improved shopping in ChatGPT to make it easier to discover, compare, and decide on products. Product results are now more visually rich, with improved ...
 url: https://help.openai.com/fr-ca/articles/6825453-chatgpt-release-notes
 time_status: google_filtered
-fetch_status: FAILED
-fetch_error: timeout
+fetch_status: success
+fetched_content:
+web/read
+┌─────────────────────────┬────────┬──────────────┬─────────┬──────────┐
+│ Title                   │ Author │ Publish_time │ Status  │ Size     │
+├─────────────────────────┼────────┼──────────────┼─────────┼──────────┤
+│ ChatGPT — Release Notes │ -      │ -            │ success │ 129.8 KB │
+└─────────────────────────┴────────┴──────────────┴─────────┴──────────┘
+1 items · 6.2s · web/read
 
 --- [OpenAI News] (website) ---
 type: website_detail
@@ -918,8 +939,15 @@ title: What is ChatGPT Enterprise?
 snippet: 1 day ago — Learn what ChatGPT Enterprise includes, how organizations and members get access, how workspaces and seat types behave, and what happens when you migrate ...
 url: https://help.openai.com/es-es/articles/8265053-what-is-chatgpt-enterprise
 time_status: google_filtered
-fetch_status: FAILED
-fetch_error: timeout
+fetch_status: success
+fetched_content:
+web/read
+┌─────────────────────────────┬────────┬──────────────┬─────────┬────────┐
+│ Title                       │ Author │ Publish_time │ Status  │ Size   │
+├─────────────────────────────┼────────┼──────────────┼─────────┼────────┤
+│ What is ChatGPT Enterprise? │ -      │ -            │ success │ 8.7 KB │
+└─────────────────────────────┴────────┴──────────────┴─────────┴────────┘
+1 items · 3.8s · web/read
 
 --- [OpenAI News] (website) ---
 type: website_detail
@@ -928,8 +956,15 @@ title: ChatGPT Business - Release Notes
 snippet: We're rolling out updated Box, Notion, Linear, and Dropbox apps in ChatGPT Business. These updates add new app actions, including new write capabilities ...
 url: https://help.openai.com/en/articles/11391654-chatgpt-business-release-notes
 time_status: google_filtered
-fetch_status: FAILED
-fetch_error: timeout
+fetch_status: success
+fetched_content:
+web/read
+┌──────────────────────────────────┬────────┬──────────────┬─────────┬─────────┐
+│ Title                            │ Author │ Publish_time │ Status  │ Size    │
+├──────────────────────────────────┼────────┼──────────────┼─────────┼─────────┤
+│ ChatGPT Business - Release Notes │ -      │ -            │ success │ 47.3 KB │
+└──────────────────────────────────┴────────┴──────────────┴─────────┴─────────┘
+1 items · 3.5s · web/read
 
 --- [OpenAI News] (website) ---
 type: website_detail
@@ -938,8 +973,15 @@ title: Error on Agent Mode Capability - #15 by OpenAI_Support
 snippet: Hey everyone, apologies for the rough experience here. Our team recently deployed several improvements, and Agent Mode in ChatGPT should be working now.
 url: https://community.openai.com/t/error-on-agent-mode-capability/1375715/15
 time_status: google_filtered
-fetch_status: FAILED
-fetch_error: timeout
+fetch_status: success
+fetched_content:
+web/read
+┌──────────────────────────────────────────┬────────┬───────────────────────────┬─────────┬─────────┐
+│ Title                                    │ Author │ Publish_time              │ Status  │ Size    │
+├──────────────────────────────────────────┼────────┼───────────────────────────┼─────────┼─────────┤
+│ Error on Agent Mode Capability - ChatGPT │ -      │ 2026-04-05T14:47:41+00:00 │ success │ 887.0 B │
+└──────────────────────────────────────────┴────────┴───────────────────────────┴─────────┴─────────┘
+1 items · 2.8s · web/read
 
 --- [OpenAI News] (website) ---
 type: website_detail
@@ -948,8 +990,15 @@ title: Feature request: fully integrated local multi-agent coding ...
 snippet: Feature request: fully integrated local multi-agent coding workflow. I'm a heavy power user doing deep planning plus direct repo/machine execution.
 url: https://community.openai.com/t/feature-request-fully-integrated-local-multi-agent-coding-workflow/1378592
 time_status: google_filtered
-fetch_status: FAILED
-fetch_error: timeout
+fetch_status: success
+fetched_content:
+web/read
+┌─────────────────────────────────────────────────────────────────────────────────┬────────┬───────────────────────────┬─────────┬────────┐
+│ Title                                                                           │ Author │ Publish_time              │ Status  │ Size   │
+├─────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────┼─────────┼────────┤
+│ Feature request: fully integrated local multi-agent coding workflow - Community │ -      │ 2026-04-05T12:35:08+00:00 │ success │ 1.9 KB │
+└─────────────────────────────────────────────────────────────────────────────────┴────────┴───────────────────────────┴─────────┴────────┘
+1 items · 2.4s · web/read
 
 --- [OpenAI News] (website) ---
 type: website_detail
@@ -958,8 +1007,15 @@ title: Feature Request: Structural Personality via Role- and ...
 snippet: 1. Specialized Agents (Functional Decomposition). Decompose capabilities into distinct agents: Ideation / Generation Agent. Reasoning / Analysis Agent.
 url: https://community.openai.com/t/feature-request-structural-personality-via-role-and-relationship-based-multi-agent-architecture/1378503
 time_status: google_filtered
-fetch_status: FAILED
-fetch_error: timeout
+fetch_status: success
+fetched_content:
+web/read
+┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┬────────┬───────────────────────────┬─────────┬────────┐
+│ Title                                                                                                                          │ Author │ Publish_time              │ Status  │ Size   │
+├────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────┼─────────┼────────┤
+│ Feature Request: Structural Personality via Role- and Relationship-Based Multi-Agent Architecture - ChatGPT / Feature requests │ -      │ 2026-04-04T09:45:38+00:00 │ success │ 7.0 KB │
+└────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┴────────┴───────────────────────────┴─────────┴────────┘
+1 items · 2.6s · web/read
 
 --- [OpenAI News] (website) ---
 type: website_detail
@@ -968,8 +1024,15 @@ title: So, why do agents choose to do the wrong things? Are you ...
 snippet: So, why do agents choose to do the wrong things? Are you aware of anti hallucination research? Codex · Semyon_Karaman ...
 url: https://community.openai.com/t/so-why-do-agents-choose-to-do-the-wrong-things-are-you-aware-of-anti-hallucination-research/1378572
 time_status: google_filtered
-fetch_status: FAILED
-fetch_error: timeout
+fetch_status: success
+fetched_content:
+web/read
+┌────────────────────────────────────────────────────────────────────────────────────────────────────────┬────────┬───────────────────────────┬─────────┬────────┐
+│ Title                                                                                                  │ Author │ Publish_time              │ Status  │ Size   │
+├────────────────────────────────────────────────────────────────────────────────────────────────────────┼────────┼───────────────────────────┼─────────┼────────┤
+│ So, why do agents choose to do the wrong things? Are you aware of anti hallucination research? - Codex │ -      │ 2026-04-05T08:47:38+00:00 │ success │ 2.8 KB │
+└────────────────────────────────────────────────────────────────────────────────────────────────────────┴────────┴───────────────────────────┴─────────┴────────┘
+1 items · 4.0s · web/read
 
 --- [Anthropic News] (website) ---
 type: website_detail
@@ -978,8 +1041,15 @@ title: How CodeRabbit Built Agent Orchestration on Claude
 snippet: AI coding tools helped engineering teams ship faster, but faster doesn't mean aligned. CodeRabbit saw this firsthand across millions of code reviews: ...
 url: https://www.anthropic.com/webinars/how-coderabbit-orchestrates-agents-to-strengthen-ai-generated-code
 time_status: google_filtered
-fetch_status: FAILED
-fetch_error: timeout
+fetch_status: success
+fetched_content:
+web/read
+┌─────────────────────────────────────────────────────────────────────────────┬──────────────┬──────────────┬─────────┬────────┐
+│ Title                                                                       │ Author       │ Publish_time │ Status  │ Size   │
+├─────────────────────────────────────────────────────────────────────────────┼──────────────┼──────────────┼─────────┼────────┤
+│ Plan First, Ship Faster: How CodeRabbit Built Agent Orchestration on Claude │ @AnthropicAI │ -            │ success │ 3.0 KB │
+└─────────────────────────────────────────────────────────────────────────────┴──────────────┴──────────────┴─────────┴────────┘
+1 items · 6.5s · web/read
 
 --- [Anthropic News] (website) ---
 type: website_detail
@@ -988,8 +1058,15 @@ title: Frontier Safety Roadmap Updates
 snippet: An initial assessment of what AI-assisted security tooling (vulnerability discovery, automated patching, anomaly detection) is feasible today. A pilot of a ...
 url: https://www.anthropic.com/responsible-scaling-policy/updates
 time_status: google_filtered
-fetch_status: FAILED
-fetch_error: timeout
+fetch_status: success
+fetched_content:
+web/read
+┌─────────────────────────────────┬──────────────┬──────────────┬─────────┬────────┐
+│ Title                           │ Author       │ Publish_time │ Status  │ Size   │
+├─────────────────────────────────┼──────────────┼──────────────┼─────────┼────────┤
+│ Frontier Safety Roadmap Updates │ @AnthropicAI │ -            │ success │ 3.9 KB │
+└─────────────────────────────────┴──────────────┴──────────────┴─────────┴────────┘
+1 items · 2.5s · web/read
 
 --- [Anthropic News] (website) ---
 type: website_detail
@@ -998,8 +1075,15 @@ title: How CodeRabbit Built Agent Orchestration on Claude
 snippet: AI coding tools helped engineering teams ship faster, but faster doesn't mean aligned. CodeRabbit saw this firsthand across millions of code reviews: AI- ...
 url: https://www.anthropic.com/webinars/how-coderabbit-orchestrates-agents-to-strengthen-ai-generated-code
 time_status: google_filtered
-fetch_status: FAILED
-fetch_error: timeout
+fetch_status: success
+fetched_content:
+web/read
+┌─────────────────────────────────────────────────────────────────────────────┬──────────────┬──────────────┬─────────┬────────┐
+│ Title                                                                       │ Author       │ Publish_time │ Status  │ Size   │
+├─────────────────────────────────────────────────────────────────────────────┼──────────────┼──────────────┼─────────┼────────┤
+│ Plan First, Ship Faster: How CodeRabbit Built Agent Orchestration on Claude │ @AnthropicAI │ -            │ success │ 3.0 KB │
+└─────────────────────────────────────────────────────────────────────────────┴──────────────┴──────────────┴─────────┴────────┘
+1 items · 6.5s · web/read
 
 --- [TechCrunch] (website) ---
 type: website_detail
@@ -1008,8 +1092,15 @@ title: In Japan, the robot isn't coming for your job; it's filling ...
 snippet: Physical AI is emerging as one of the next major industrial battlegrounds, with Japan's push driven more by necessity than anything else.
 url: https://techcrunch.com/2026/04/05/japan-is-proving-experimental-physical-ai-is-ready-for-the-real-world/
 time_status: google_filtered
-fetch_status: FAILED
-fetch_error: timeout
+fetch_status: success
+fetched_content:
+web/read
+┌──────────────────────────────────────────────────────────────────────────────────┬───────────┬───────────────────────────┬─────────┬─────────┐
+│ Title                                                                            │ Author    │ Publish_time              │ Status  │ Size    │
+├──────────────────────────────────────────────────────────────────────────────────┼───────────┼───────────────────────────┼─────────┼─────────┤
+│ In Japan, the robot isn't coming for your job; it's filling the one nobody wants │ Kate Park │ 2026-04-05T14:00:00+00:00 │ success │ 15.5 KB │
+└──────────────────────────────────────────────────────────────────────────────────┴───────────┴───────────────────────────┴─────────┴─────────┘
+1 items · 4.7s · web/read
 
 --- [TechCrunch] (website) ---
 type: website_detail
@@ -1018,8 +1109,15 @@ title: Copilot is 'for entertainment purposes only,' according to ...
 snippet: Copilot is 'for entertainment purposes only,' according to Microsoft's terms of use. AI skeptics aren't the only ones warning users not to unthinkingly trust ...
 url: https://techcrunch.com/2026/04/05/copilot-is-for-entertainment-purposes-only-according-to-microsofts-terms-of-service/
 time_status: google_filtered
-fetch_status: FAILED
-fetch_error: timeout
+fetch_status: success
+fetched_content:
+web/read
+┌─────────────────────────────────────────────────────────────────────────────────────┬────────────┬───────────────────────────┬─────────┬────────┐
+│ Title                                                                               │ Author     │ Publish_time              │ Status  │ Size   │
+├─────────────────────────────────────────────────────────────────────────────────────┼────────────┼───────────────────────────┼─────────┼────────┤
+│ Copilot is ‘for entertainment purposes only,’ according to Microsoft’s terms of use │ Anthony Ha │ 2026-04-05T18:51:37+00:00 │ success │ 6.5 KB │
+└─────────────────────────────────────────────────────────────────────────────────────┴────────────┴───────────────────────────┴─────────┴────────┘
+1 items · 3.3s · web/read
 
 --- [TechCrunch] (website) ---
 type: website_detail
@@ -1028,8 +1126,15 @@ title: Anthropic says Claude Code subscribers will need to pay ...
 snippet: 1 day ago — It's about to become more expensive for Claude Code subscribers to use Anthropic's coding assistant with OpenClaw and other third-party tools.
 url: https://techcrunch.com/2026/04/04/anthropic-says-claude-code-subscribers-will-need-to-pay-extra-for-openclaw-support/
 time_status: google_filtered
-fetch_status: FAILED
-fetch_error: timeout
+fetch_status: success
+fetched_content:
+web/read
+┌──────────────────────────────────────────────────────────────────────────────────┬────────────┬───────────────────────────┬─────────┬────────┐
+│ Title                                                                            │ Author     │ Publish_time              │ Status  │ Size   │
+├──────────────────────────────────────────────────────────────────────────────────┼────────────┼───────────────────────────┼─────────┼────────┤
+│ Anthropic says Claude Code subscribers will need to pay extra for OpenClaw usage │ Anthony Ha │ 2026-04-04T16:32:22+00:00 │ success │ 8.5 KB │
+└──────────────────────────────────────────────────────────────────────────────────┴────────────┴───────────────────────────┴─────────┴────────┘
+1 items · 3.1s · web/read
 
 --- [TechCrunch] (website) ---
 type: website_detail
@@ -1037,8 +1142,15 @@ keyword: AI product
 title: TechCrunch Mobility: 'A stunning lack of transparency'
 url: https://techcrunch.com/2026/04/05/techcrunch-mobility-a-stunning-lack-of-transparency/
 time_status: google_filtered
-fetch_status: FAILED
-fetch_error: timeout
+fetch_status: success
+fetched_content:
+web/read
+┌────────────────────────────────────────────────────────┬─────────────────┬───────────────────────────┬─────────┬─────────┐
+│ Title                                                  │ Author          │ Publish_time              │ Status  │ Size    │
+├────────────────────────────────────────────────────────┼─────────────────┼───────────────────────────┼─────────┼─────────┤
+│ TechCrunch Mobility: ‘A stunning lack of transparency’ │ Kirsten Korosec │ 2026-04-05T16:05:00+00:00 │ success │ 16.4 KB │
+└────────────────────────────────────────────────────────┴─────────────────┴───────────────────────────┴─────────┴─────────┘
+1 items · 3.5s · web/read
 
 --- [TechCrunch] (website) ---
 type: website_detail
@@ -1047,8 +1159,15 @@ title: April 2026
 snippet: US Homeland Security Investigations (HSI) agents stand guard at the Bishop Henry Whipple Federal. Security · ICE says it bought Paragon's spyware to use in ...
 url: https://techcrunch.com/2026/04/
 time_status: google_filtered
-fetch_status: FAILED
-fetch_error: timeout
+fetch_status: success
+fetched_content:
+web/read
+┌────────────┬────────┬───────────────────────────┬─────────┬─────────┐
+│ Title      │ Author │ Publish_time              │ Status  │ Size    │
+├────────────┼────────┼───────────────────────────┼─────────┼─────────┤
+│ April 2026 │ -      │ 2026-04-05T12:36:03-07:00 │ success │ 14.2 KB │
+└────────────┴────────┴───────────────────────────┴─────────┴─────────┘
+1 items · 5.4s · web/read
 
 --- [TechCrunch] (website) ---
 type: website_detail
@@ -1057,8 +1176,15 @@ title: Anthropic says Claude Code subscribers will need to pay ...
 snippet: 1 day ago — It's about to become more expensive for Claude Code subscribers to use Anthropic's coding assistant with OpenClaw and other third-party tools.
 url: https://techcrunch.com/2026/04/04/anthropic-says-claude-code-subscribers-will-need-to-pay-extra-for-openclaw-support/
 time_status: google_filtered
-fetch_status: FAILED
-fetch_error: timeout
+fetch_status: success
+fetched_content:
+web/read
+┌──────────────────────────────────────────────────────────────────────────────────┬────────────┬───────────────────────────┬─────────┬────────┐
+│ Title                                                                            │ Author     │ Publish_time              │ Status  │ Size   │
+├──────────────────────────────────────────────────────────────────────────────────┼────────────┼───────────────────────────┼─────────┼────────┤
+│ Anthropic says Claude Code subscribers will need to pay extra for OpenClaw usage │ Anthony Ha │ 2026-04-04T16:32:22+00:00 │ success │ 8.5 KB │
+└──────────────────────────────────────────────────────────────────────────────────┴────────────┴───────────────────────────┴─────────┴────────┘
+1 items · 3.1s · web/read
 
 --- [The Verge] (website) ---
 type: website_detail
@@ -1067,8 +1193,15 @@ title: Really, you made this without AI? Prove it
 snippet: 1 day ago — Creatives want to start labeling human-made text, images, audio, and video with AI-free logos. Now they just have to pick one.
 url: https://www.theverge.com/tech/906453/human-made-ai-free-logo-creative-content
 time_status: google_filtered
-fetch_status: FAILED
-fetch_error: timeout
+fetch_status: success
+fetched_content:
+web/read
+┌────────────────────────────────────────────┬─────────────────┬───────────────────────────┬─────────┬────────┐
+│ Title                                      │ Author          │ Publish_time              │ Status  │ Size   │
+├────────────────────────────────────────────┼─────────────────┼───────────────────────────┼─────────┼────────┤
+│ Really, you made this without AI? Prove it │ Jess Weatherbed │ 2026-04-04T13:00:00+00:00 │ success │ 5.5 KB │
+└────────────────────────────────────────────┴─────────────────┴───────────────────────────┴─────────┴────────┘
+1 items · 10.5s · web/read
 
 --- [The Verge] (website) ---
 type: website_detail
@@ -1077,8 +1210,15 @@ title: I let Gemini in Google Maps plan my day and it went ...
 snippet: 11 hours ago — Gemini in Google Maps is a surprisingly useful way to explore new territory.
 url: https://www.theverge.com/tech/907015/gemini-google-maps-hands-on
 time_status: google_filtered
-fetch_status: FAILED
-fetch_error: timeout
+fetch_status: success
+fetched_content:
+web/read
+┌───────────────────────────────────────────────────────────────────────┬─────────────────┬───────────────────────────┬─────────┬────────┐
+│ Title                                                                 │ Author          │ Publish_time              │ Status  │ Size   │
+├───────────────────────────────────────────────────────────────────────┼─────────────────┼───────────────────────────┼─────────┼────────┤
+│ I let Gemini in Google Maps plan my day and it went surprisingly well │ Allison Johnson │ 2026-04-05T14:00:00+00:00 │ success │ 5.3 KB │
+└───────────────────────────────────────────────────────────────────────┴─────────────────┴───────────────────────────┴─────────┴────────┘
+1 items · 6.8s · web/read
 
 --- [The Verge] (website) ---
 type: website_detail
@@ -1087,8 +1227,15 @@ title: Teens are torturing AI chatbots, confiding in them, and ...
 snippet: Teens are torturing AI chatbots, confiding in them, and sometimes dating them. We're still grappling with the impact chatbots are having on younger people. But ...
 url: https://www.theverge.com/ai-artificial-intelligence/907166/teens-are-torturing-ai-chatbots-confiding-in-them-and-sometimes-dating-them
 time_status: google_filtered
-fetch_status: FAILED
-fetch_error: timeout
+fetch_status: success
+fetched_content:
+web/read
+┌────────────────────────────────────────────────────────────────────────────────┬──────────────────┬───────────────────────────┬─────────┬────────┐
+│ Title                                                                          │ Author           │ Publish_time              │ Status  │ Size   │
+├────────────────────────────────────────────────────────────────────────────────┼──────────────────┼───────────────────────────┼─────────┼────────┤
+│ Teens are torturing AI chatbots, confiding in them, and sometimes dating them. │ Terrence O'Brien │ 2026-04-05T15:10:54+00:00 │ success │ 3.2 KB │
+└────────────────────────────────────────────────────────────────────────────────┴──────────────────┴───────────────────────────┴─────────┴────────┘
+1 items · 16.2s · web/read
 
 --- [The Verge] (website) ---
 type: website_detail
@@ -1097,8 +1244,15 @@ title: Grammarly's sloppelganger saga
 snippet: Grammarly can let its users generate as many AI writing tips as they want; the issue here was using the names of Verge staffers and countless other writers, ...
 url: https://www.theverge.com/column/906606/grammarly-expert-review-ai-saga
 time_status: google_filtered
-fetch_status: FAILED
-fetch_error: timeout
+fetch_status: success
+fetched_content:
+web/read
+┌────────────────────────────────┬──────────────────┬───────────────────────────┬─────────┬────────┐
+│ Title                          │ Author           │ Publish_time              │ Status  │ Size   │
+├────────────────────────────────┼──────────────────┼───────────────────────────┼─────────┼────────┤
+│ Grammarly’s sloppelganger saga │ Stevie Bonifield │ 2026-04-05T12:00:00+00:00 │ success │ 6.1 KB │
+└────────────────────────────────┴──────────────────┴───────────────────────────┴─────────┴────────┘
+1 items · 10.2s · web/read
 
 --- [The Verge] (website) ---
 type: website_detail
@@ -1107,8 +1261,15 @@ title: Grammarly's sloppelganger saga
 snippet: Grammarly would live on as part of Superhuman, but the writing aid's sidebar would increasingly become a hub for AI agents, rather than just grammar and ...
 url: https://www.theverge.com/column/906606/grammarly-expert-review-ai-saga
 time_status: google_filtered
-fetch_status: FAILED
-fetch_error: timeout
+fetch_status: success
+fetched_content:
+web/read
+┌────────────────────────────────┬──────────────────┬───────────────────────────┬─────────┬────────┐
+│ Title                          │ Author           │ Publish_time              │ Status  │ Size   │
+├────────────────────────────────┼──────────────────┼───────────────────────────┼─────────┼────────┤
+│ Grammarly’s sloppelganger saga │ Stevie Bonifield │ 2026-04-05T12:00:00+00:00 │ success │ 6.1 KB │
+└────────────────────────────────┴──────────────────┴───────────────────────────┴─────────┴────────┘
+1 items · 10.2s · web/read
 
 --- [The Verge] (website) ---
 type: website_detail
@@ -1117,5 +1278,12 @@ title: How the Amazon Echo learned to talk — and listen
 snippet: 12 hours ago — Amazon CEO Jeff Bezos wanted to build a cheap, accessible, voice-based computer — and bet big on making Alexa and the Echo happen. This is the story of that ...
 url: https://www.theverge.com/podcast/907146/amazon-echo-alexa-version-history
 time_status: google_filtered
-fetch_status: FAILED
-fetch_error: timeout
+fetch_status: success
+fetched_content:
+web/read
+┌─────────────────────────────────────┬──────────────┬───────────────────────────┬─────────┬────────┐
+│ Title                               │ Author       │ Publish_time              │ Status  │ Size   │
+├─────────────────────────────────────┼──────────────┼───────────────────────────┼─────────┼────────┤
+│ How the Amazon Echo learned to talk │ David Pierce │ 2026-04-05T12:24:45+00:00 │ success │ 5.5 KB │
+└─────────────────────────────────────┴──────────────┴───────────────────────────┴─────────┴────────┘
+1 items · 10.7s · web/read

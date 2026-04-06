@@ -25,7 +25,7 @@ import time
 from datetime import datetime
 from pathlib import Path
 
-REQUEST_DELAY = 3
+REQUEST_DELAY = 5
 
 
 def resolve_root_dir() -> Path:
@@ -110,7 +110,7 @@ def _classify_item(item: dict, platform_items: list, website_items: list):
         platform_items.append(item)
 
 
-def fetch_url(url: str, timeout: int = 30) -> dict:
+def fetch_url(url: str, timeout: int = 60) -> dict:
     """用 opencli web read 抓取 URL 正文。"""
     cmd = f'opencli web read --url "{url}"'
     env = os.environ.copy()
