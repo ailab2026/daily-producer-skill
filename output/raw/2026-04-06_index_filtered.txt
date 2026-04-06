@@ -1,0 +1,1161 @@
+# 日报候选池（筛选后）— 2026-04-06
+# 筛选时间: 2026-04-06 08:40:49
+# 原始条目: 370
+# 保留: 132（其中无时间标记: 121）
+# 移除（超出时间窗口）: 238
+
+# 各平台统计:
+#   微博: 19/30 保留, 11 移除, 5 无时间
+#   小红书: 8/30 保留, 22 移除, 5 无时间
+#   B站: 0/30 保留, 30 移除, 30 无时间
+#   知乎: 0/30 保留, 30 移除, 30 无时间
+#   即刻: 0/0 保留, 0 移除, 0 无时间
+#   V2EX: 0/10 保留, 10 移除, 10 无时间
+#   36氪: 5/5 保留, 0 移除, 0 无时间
+#   Twitter/X: 8/30 保留, 22 移除, 5 无时间
+#   Reddit: 15/30 保留, 15 移除, 0 无时间
+#   Hacker News: 0/35 保留, 35 移除, 35 无时间
+#   YouTube: 5/25 保留, 20 移除, 0 无时间
+#   arXiv: 0/25 保留, 25 移除, 0 无时间
+#   Product Hunt: 0/1 保留, 1 移除, 1 无时间
+#   Reuters: 8/25 保留, 17 移除, 0 无时间
+#   机器之心: 0/0 保留, 0 移除, 0 无时间
+#   量子位: 15/15 保留, 0 移除, 0 无时间
+#   InfoQ AI: 15/15 保留, 0 移除, 0 无时间
+#   OpenAI News: 13/13 保留, 0 移除, 0 无时间
+#   Anthropic News: 5/5 保留, 0 移除, 0 无时间
+#   TechCrunch: 9/9 保留, 0 移除, 0 无时间
+#   The Verge: 7/7 保留, 0 移除, 0 无时间
+
+======================================================================
+
+--- [微博] (cn) ---
+command: opencli weibo search "大模型" --limit 10 -f json
+keyword: 大模型
+status: success
+count: 5
+
+  [1] 大模型编程能力排名，Claude断崖领先。看到国旗分布很恐怖，AI现在就是中国和美国之争。 ​
+      author: 黄鱼Veda
+      time: 04月05日 01:32
+      url: https://weibo.com/2177245391/QzjefCIXb?refer_flag=1001030103_
+      time_status: in_window
+      time_parsed: 2026-04-05
+
+  [2] #小米推出Token套餐#果然是小米，一进场就把大模型订阅行业那些糟心的收费套路全给掀翻了。先不说价格，MiMo-V2-Pro本身在OpenRouter上的表现大家有目共睹，编程和多模态能力实打实的第一梯队，这是所有讨论的前提。这次最狠的不是降价，是直接把行业默认的“5小时token限额”给砍了，还把Pro、Omni、TTS所有能力打包进一个套餐，用统一Credit透明计费。再也不用算不同模型怎么收费、高峰会不会翻倍、语音还要不要单独买，对于那些用AI写代码、跑脚本或者在养虾的人来说，终于不用被各种限制打断思路，能安心地跑一整天了。 价格还是小米一贯的厚道，最低档一天一块多，最高档16亿Credits才659，比海外同级别Claude便宜一半还多。从个人轻度体验到专业重度开发全覆盖，一次订阅全搞定，省心又省钱。 说到底，小米就是用做小米手机、小米汽车的标准化定价思路来做大模型服务，把复杂的东西做简单，把虚高的价格打下来。这波操作下来，估计其他厂商很快就得跟着改规则了。 收起d
+      author: 向禾
+      time: 04月03日 15:43
+      url: https://weibo.com/6623723777/Qz5WzsoN0?refer_flag=1001030103_
+      time_status: in_window
+      time_parsed: 2026-04-03
+
+  [3] 分享一个好消息： 昨天，MiMo 大模型调用量，超过了 1万亿Token 这是我们在大模型领域一个新的里程碑。 ​
+      author: 雷军
+      time: 04月03日 11:44
+      url: https://weibo.com/1749127163/Qz4nC3Abt?refer_flag=1001030103_
+      time_status: in_window
+      time_parsed: 2026-04-03
+
+  [4] 小米雷总宣布大模型收费之后，前天通过 Open Router 排名第一，昨天数据，下滑严重，第七，今天更新直接第十七 ​
+      author: DeepPost
+      time: 04月05日 08:04
+      url: https://weibo.com/1829465157/QzlNokW9v?refer_flag=1001030103_
+      time_status: in_window
+      time_parsed: 2026-04-05
+
+  [5] 我用大模型接管了我的量化交易账户。已经3天了。它什么也没买。这3天，它每分钟都在认真思考。并输出结论： [14:30:41] 什么也不买 - 无确认信号 with buy_date=2026-04-03[14:31:42] 什么也不买 -无确认信号with buy_date=2026-04-03[14:32:41] 什么也不买 -无确认信号with buy_date=2026-04-03[14:33:41] 什么也不买 -无确认信号with buy_date=2026-04-03[14:34:41] 什么也不买 -无确认信号with buy_date=2026-04-03[14:35:41] 什么也不买 -无确认信号with buy_date=2026-04-03[14:36:41] 什么也不买 -无确认信号with buy_date=2026-04-03[14:37:41] 什么也不买 -无确认信号with buy_date=2026-04-03 收起d
+      author: 梁赛
+      time: 04月03日 16:31
+      url: https://weibo.com/1725941200/Qz6gj6w9H?refer_flag=1001030103_
+      time_status: in_window
+      time_parsed: 2026-04-03
+
+
+--- [微博] (cn) ---
+command: opencli weibo search "AI 产品" --limit 10 -f json
+keyword: AI 产品
+status: success
+count: 4
+
+  [1] 🚀 OPCPlay 案例分析：小哥靠 5 个AI 小产品月赚 70万美金！每个产品均为 AI + 订阅模式，解决重复劳动，强调“autopilot”（自动驾驶）和持续价值。1️⃣ Revid.ai（AI 视频生成 AI）* 功能：从文本、链接、文档或想法一键生成病毒式短视频（TikTok/Instagram/YouTube Shorts 等）。自动脚本、配音（70+ 语言真实声音）、视觉、编辑、趋势分析、一键发布。* 亮点：无需剪辑经验，几分钟出片，商业使用权，已生成大量视频。* 定价：Hobby 约 $39/月起（含 credits，最受欢迎），Growth $99/月，Ultra $199/月（年付更优惠）。* 收入贡献：约 40 万美元/月（组合中最高）。* 适用人群：内容创作者、品牌、独立艺术家。2️⃣ Outrank.so（AI SEO 流量工具）* 功能：AI 全自动生成+优化+发布 SEO 文章（每月 30 篇基础），包含关键词研究、图片生成、多语言（150+）、自动发布到 WordPress/Webflow 等，还带反向链接网络。* 亮点：真正 autopilot，有多站点折扣，帮用户快速提升有机流量和域名评级。* 定价：Standard 约 $99/月（30 篇文章），可加购更多文章，企业版自定义。* 收入贡献：约 20 万美元/月。* 适用人群：创业者、代理机构、需要持续内容产出的网站主。3️⃣ SuperX.so（X/Twitter 增长工具）* 功能：AI 分析病毒帖、生成个性化内容、重写、聪明调度（根据受众活跃时间发帖）、自动化互动、仪表盘分析；支持 Chrome 扩展。* 亮点：比老产品 Tweet Hunter 更新更频繁，增长更快。* 定价：约 $39/月起（具体以官网为准）。* 收入贡献：约 1.3 万美元/月（仍在快速增长中）。* 适用人群：独立黑客、创作者、创始人（建个人品牌）。4️⃣PostSyncer.com（一键多平台发布）* 功能：一次编写内容，同步发布到 Twitter、Facebook、Instagram、TikTok、YouTube、LinkedIn 等 10+ 平台；支持线程、轮播、Reels、AI 生成、统一评论管理和分析。* 亮点：保持发帖一致性，节省大量时间，定价亲民。* 定价：Starter 约 $29/月起，Pro $49，Pro Plus $99（含更多账号和 AI credits）。* 收入贡献：较低（约 1-2 万美元/月，仍在增长）。* 适用人群：多平台创作者、需要跨平台分发的用户。5️⃣Feather.so（Notion 转博客/网站）* 功能：无代码将 Notion 数据库/页面转为 SEO 友好独立博客/网站（自定义域名、sitemap、RSS、搜索、相关文章、分析等）；内容仍在 Notion 管理。* 亮点：适合把 Notion 当 CMS 使用，增长稳定，低 churn（流失率）。* 定价：按页面浏览量计费（站点创建不限）。* 收入贡献：约 1 万美元/月。* 适用人群：用 Notion 写内容的博主、创始人。🔥 共同商业模式与优势：—* 订阅核心：月费从 $10~$99 不等（低至两杯星巴克），用户痛点解决后持续付费 → 高留存、稳定现金流。—* AI 驱动：降低人力成本，实现自动化生成、优化、分发、分析。—* 产品矩阵策略：5 个产品覆盖内容全链路（生成 → SEO 优化 → 多平台分发 → 网站构建），相互导流，分散风险。—* 增长打法：Build in public + X 营销。—* 快速验证（先发帖测需求，再建 MVP）。—* 合作模式（给创作者分成而非股权）。—* 专注“帮人省时间/涨流量/省钱”的工具。🚀 战略准备：1.从个人痛点或已付费问题出发：不要凭空创新问题，只在执行上创新。找创作者/独立黑客/创业者正在用钱解决的痛点（如内容生成、SEO、社交分发）。2.采用 SaaS Studio / 产品矩阵模式：不是 all in 一个产品，而是并行多个小工具，覆盖内容全链路（生成 → 优化 → 分发 → 网站）。好处：分散风险、相互导流、稳定现金流。3.Bootstrapped + 小团队：自力更生，部分产品用 co-maker 模式（给开发者分成收入，而非股权）。一人主导，多人协作。4.Build in Public：在各平台每天分享进度、失败、用户反馈。把个人品牌变成主要分发渠道。5.AI 驱动降低成本：用codex等工具快速开发，AI 实现自动化（autopilot），让产品“帮用户省时间/涨流量”。核心哲学：速度 > 完美、验证 > 创新、分布 > 产品、订阅现金流 > 一次性卖。他强调“build in public”（公开构建）、快速迭代、找对 co-maker（合作开发者），并把每个产品当作“关系”而非单纯代码来经营。）Tibo的成功证明：专注解决创作者痛点 + 订阅模式 + 产品矩阵 + 公开构建，能实现可持续高收入。（数据来源于Tibo本人X/LinkedIn/博客公开分享及社区报道，实际以官网为准，收入有宣传成分，可能含波动）#How I AI# #TokenFi# #词元经济# #OPC# #一人公司# #OPCPlay# 收起d
+      author: OpenClaw
+      time: 04月03日 22:31
+      url: https://weibo.com/3880172960/Qz8CouyH5?refer_flag=1001030103_
+      time_status: in_window
+      time_parsed: 2026-04-03
+
+  [3] 这个真是好东西，《100 个产品设计框架》。从用户洞察到系统思维，覆盖产品全链路的核心工具集，点击任意框架查看详细说明与使用步骤。甚至还提供了 Skills 一键下载。传送门：pmframe.works#HOW I AI##科技先锋官##程序员##产品经理# ​
+      author: 欧巴聊AI
+      time: 04月04日 19:35
+      url: https://weibo.com/2771284557/QzgTfdLlb?refer_flag=1001030103_
+      time_status: in_window
+      time_parsed: 2026-04-04
+
+  [4] 外媒采访了五位知情人士，获得了 DeepSeek V4 的一些信息：- V4 将运行在华为最新 AI 芯片（昇腾 950PR）上，搭载全新昇腾950PR的Atlas 350，单卡算力达到了NV H20的2.87倍，是目前国内唯一支持FP4低精度的推理产品；HBM 容量是H20的1.16倍；- V4 还会有两个变体版本，分别针对不同能力做了优化，均基于国产芯片；- DeepSeek 花了数月时间与华为、寒武纪合作，重写了模型底层代码的部分模块，专门适配国产芯片，这次没有按照行业惯例，给NV和 AMD 任何早期访问权限；- 阿里、字节、腾讯已提前大批量采购华为新芯片，总量达数十万颗，华为昇腾 950PR 的价格因此上涨了 20%；- V3 和 R1 发布时引发了全球科技股抛售，市场质疑美国 AI 公司是否需要花数百亿美元采购算力，V4 发布窗口预计在未来几周内。 收起d
+      author: 万万_ECC
+      time: 04月04日 20:46
+      url: https://weibo.com/7785431482/Qzhmb20Ge?refer_flag=1001030103_
+      time_status: in_window
+      time_parsed: 2026-04-04
+
+  [5] 问了AI一个问题，董宇辉卖澳洲优思益和三只羊卖美诚月饼，性质哪一个更恶劣一些？AI对比分析出来，居然是董宇辉这事儿性质要恶劣得多。#市场监管部门对优思益推手立案调查##董宇辉曾说产品上播10天前有人试吃# ​
+      author: 非主流视野
+      time: 04月03日 10:37
+      url: https://weibo.com/7387801989/Qz3Wp5IWl?refer_flag=1001030103_
+      time_status: in_window
+      time_parsed: 2026-04-03
+
+
+--- [微博] (cn) ---
+command: opencli weibo search "Agent" --limit 10 -f json
+keyword: Agent
+status: success
+count: 3
+
+  [1] 【架构比模型更重要：Claude Code源码泄露揭示了AI Agent 的生产级蓝图】快速阅读：Claude Code 的源码泄露揭示了生产级 AI Agent 的真正护城河：不在于模型本身有多聪明，而在于围绕模型构建的编排层（Orchestration Layer）。通过怀疑式记忆、后台整合与风险分级，AI 正从被动响应工具转向主动工作的系统。---这次泄露最值钱的不是那些隐藏功能，而是看到了一套年营收达 25 亿美元规模的系统是如何处理“不确定性”的。很多人盯着模型参数看，但真正的进步发生在模型之外。Claude Code 的架构证明了，AI Agent 的进化逻辑更像是在构建一个可靠的操作系统，而不是在调优一个聊天机器人。最让我觉得有意思的是那个“怀疑式记忆”机制。大多数开发者在做 Agent 时，会默认把模型之前的输出当作真理，这会导致 Agent 在错误的方向上越走越远。但这里的逻辑是：把记忆当成“提示”而非“事实”。在执行动作前，必须先去现实世界验证一遍。这就像是在指令流水线里加了一个校验单元，防止错误的指令污染整个状态机。还有一个很有趣的细节：autoDream。它让 Agent 在闲置时进行“后台整合”，把杂乱的观察结果进行去重和压缩。这很像人类的睡眠过程，通过主动的重构来清理内存噪声，防止随着对话增长，上下文被无用的垃圾信息填满。有网友提到，这种架构其实是由于约束条件驱动的必然结果。如果你想让 Agent 既能自主工作又不至于失控，你只能这么设计：给风险分级，高风险动作必须由人审批；给 KAIROS 守护进程，让它在后台干活但限制它的阻塞预算，别让它变成用户的负担。这种设计思路其实是在把 AI 当作一个“不可信的承包商”来对待。与其追求它绝对正确，不如建立一套完善的审计、回滚和验证机制。现在的技术路径很清晰：模型正在商品化，而围绕模型的编排、记忆管理和工具路由，才是真正的护城河。有人在讨论这是否是一种“语义漂移攻击”，但事实是，当大家都在独立开发 Agent 时，竟然不约而同地撞上了这套架构。这说明，在可靠性和成本的约束下，通往生产级的路径只有这一条。既然架构已经清晰了，下一个问题是，当多个并行 Agent 产生了冲突的观察结果时，谁来当那个仲裁者？reddit.com/r/artificial/comments/1s9jprb/the_claude_code_leak_accidentally_published_the 收起d
+      author: 爱可可-爱生活
+      time: 04月05日 10:58
+      url: https://weibo.com/1402400261/QzmVW5Hcq?refer_flag=1001030103_
+      time_status: in_window
+      time_parsed: 2026-04-05
+
+  [3] 电子书 解码 Agent Harness -- Claude Code 架构深度剖析github库：github.com/lintsinghua/claude-code-book在线阅读：lintsinghua.github.io/“不做使用教程，不列 Prompt 技巧——拆解 Agent 的骨架与神经。读懂 Claude Code 的设计决策，你就拥有了一套可迁移到任何 Agent 框架的心智模型。”#How I AI# 收起d
+      author: 蚁工厂
+      time: 04月03日 12:45
+      url: https://weibo.com/2194035935/Qz4Mv1Dnt?refer_flag=1001030103_
+      time_status: in_window
+      time_parsed: 2026-04-03
+
+  [4] Claude Code项目太大了，几十万行代码。要学Agent项目也可以参考MiniMax的这个演示项目Mini-Agent地址：github.com/MiniMax-AI/Mini-Agent/Mini Agent 是一个极简但专业的演示项目，旨在展示使用 MiniMax M2.5 模型构建 Agent 的最佳实践。项目通过兼容 Anthropic 的 API，完全支持交错思维（interleaved thinking），从而解锁 M2 模型在处理长而复杂的任务时强大的推理能力。该项目具备一系列为稳健、智能的 Agent 开发而设计的特性： ✅ 完整的 Agent 执行循环：一个完整可靠的执行框架，配备了文件系统和 Shell 操作的基础工具集。 ✅ 持久化记忆：通过内置的 Session Note Tool，Agent 能够在多个会话中保留关键信息。 ✅ 智能上下文管理：自动对会话历史进行摘要，可处理长达可配置 Token 上限的上下文，从而支持无限长的任务。 ✅ 集成 Claude Skills：内置 15 种专业技能，涵盖文档处理、设计、测试和开发等领域。 ✅ 集成 MCP 工具：原生支持 MCP 协议，可轻松接入知识图谱、网页搜索等工具。 ✅ 全面的日志记录：为每个请求、响应和工具执行提供详细日志，便于调试。 ✅ 简洁明了的设计：美观的命令行界面和易于理解的代码库，使其成为构建高级 Agent 的理想起点。#How I AI# 收起d
+      author: 蚁工厂
+      time: 04月03日 08:26
+      url: https://weibo.com/2194035935/Qz35h0mpP?refer_flag=1001030103_
+      time_status: in_window
+      time_parsed: 2026-04-03
+
+
+--- [微博] (cn) ---
+command: opencli weibo search "AI 编程" --limit 10 -f json
+keyword: AI 编程
+status: success
+count: 3
+
+  [1] 用 AI 写代码很快，但生成的 UI 往往很“通用”——要么是像 Material Design，要么就是那种毫无特色的“简洁风”，很难做出像 Apple 或 Linear 那样具有高级感和品牌辨识度的质感。awesome-design-md 把 Apple、Spotify、Airbnb 等 30 多家顶尖公司的设计系统进行了“反向工程”，并将每套系统的视觉 DNA 全部浓缩成了一个简单的 `.md` 文件。它的逻辑非常简单：你不需要复杂的 Figma 插件或 JSON 架构，只需将对应的 `DESIGN.md` 文件丢进项目根目录，然后告诉你的 AI 助手（如 Cursor 或 Claude Code）“参考这个设计文件来构建页面”，AI 就能瞬间掌握大厂的配色、字体、间距和组件风格，直接生成像素级匹配的 UI。GitHub：github.com/VoltAgent/awesome-design-md主要亮点：- 覆盖 30+ 顶级品牌：包括 Apple 的极致留白、Spotify 的深色霓虹、Linear 的精准极简、SpaceX 的未来感等；- 纯 Markdown 格式：采用 LLM 最易读的格式，无需解析，AI 能够直接将其作为设计指令执行；- 全方位定义：每个文件涵盖视觉主题、语义化色彩、字体层级、组件状态、间距比例及响应式策略；- 降低审美门槛：将“设计品味”变成了像依赖库一样可以复制的资源，让独立开发者也能拥有资深设计总监的审美。这相当于给 AI 编程助手安装了一个“审美插件”，极大地减少了在 CSS 调优上浪费的时间，非常适合需要快速构建高质感界面的开发者。#AI编程##前端开发##设计系统##开源项目# 收起d
+      author: 爱可可-爱生活
+      time: 04月05日 17:50
+      url: https://weibo.com/1402400261/QzpDchGbr?refer_flag=1001030103_
+      time_status: in_window
+      time_parsed: 2026-04-05
+
+  [2] 在线使用 Claude Code 进行 AI 编程时，还得受限于单一模型——但现在有了 OpenClaude，这个开源项目帮你打破了这种限制！它基于 Claude Code 开源源码，并新增 OpenAI 兼容 API 适配层，支持接入 GPT-4o、DeepSeek、Gemini、Ollama、本地模型等 200 多款 LLM，一键切换超自由。OpenClaude 不仅支持所有 Claude Code 内置的强大工具：bash 命令执行、文件读写编辑、多步推理、任务管理等，核心还保持了流畅的实时 token 流、工具调用和持久记忆。安装也非常方便，npm 一键装，或者源码用 Bun 构建，再通过环境变量轻松配置比如 OPENAI_API_KEY 和模型名称即可启动。主要功能亮点：- 兼容多厂商多模型，自由选用最适合你场景的大语言模型；- 全面支持函数调用，实现场景复杂的多步 AI 辅助工作流；- 支持本地与云端模型混合使用，保障隐私且提升响应速度；- 强大的工具链系统，涵盖代码执行、文件操作、网络检索等；- 预设多种启动配置文件，快速定位最佳模型和使用体验。GitHub：github.com/Gitlawb/openclaude适合开发者及 AI 爱好者打造跨模型通用的智能助理、代码生成和自动化管道，无需局限单一生态。#开源AI# #多模型支持# #智能代码助理# #人工智能开发# 收起d
+      author: 爱可可-爱生活
+      time: 04月03日 08:57
+      url: https://weibo.com/1402400261/Qz3hUhTp0?refer_flag=1001030103_
+      time_status: in_window
+      time_parsed: 2026-04-03
+
+  [3] Google Cloud AI 总监开源的 AI 编程 Skills 仓库，融入了谷歌软件工程的最佳实践，含金量拉满。6大生命周期，7个原子化指令，19 项核心技能 SOP。AI 编程的核心不是如何生成代码，而是如何建立工程纪律，也就是所谓的 Harness 工程。好的 AI 提示词应该带有强校验门槛的 SOP，做好上下文工程和任何拆解。只有给 AI 设置不可跨越的验证关卡，它才能从代码玩具变成生产力工具。传送门：github.com/addyosmani/agent-skills#HOW I AI##科技先锋官##程序员##AI编程# 收起d
+      author: 欧巴聊AI
+      time: 04月05日 12:32
+      url: https://weibo.com/2771284557/Qznyb1S0Z?refer_flag=1001030103_
+      time_status: in_window
+      time_parsed: 2026-04-05
+
+
+--- [微博] (cn) ---
+command: opencli weibo search "开源模型" --limit 10 -f json
+keyword: 开源模型
+status: success
+count: 4
+
+  [1] Google 的闭源模型是葛米妮，开源模型则是葛米妮她妈，葛妈。有人对比了刚刚发布的 Gemma 4 和 Qwen 3.5 的各项能力测试。要对比能力的话，只能拿 Gemma-4-31B 和 Qwen3.5-27B 来比，这么看 Gemma-4-31B 和 Qwen3.5-27B 好像各有千秋。但 Gemma-4-31B 比 Qwen3.5-27B 参数要多 4B。Gemma 4 这批里最有意思的可能是 E2B 和 E4B 这两个显然是为手机设计的模型，不知道塞进安卓后会产生什么涟漪。 收起d
+      author: tombkeeper
+      time: 04月03日 11:25
+      url: https://weibo.com/1401527553/Qz4g2zA6w?refer_flag=1001030103_
+      time_status: in_window
+      time_parsed: 2026-04-03
+
+  [2] 谷歌这次，把家底都掏了。#How I AI# 凌晨，#谷歌DeepMind正式发布Gemma4#，一口气放出四款开源模型。从能塞进手机的2B，到可以单卡跑满的31B，四个尺寸全覆盖，全部基于Gemini 3同源打造。时隔一年，Gemma 4终于来了，实力迎来史诗级跃迁。最炸的一个数字，31B Dense在Arena AI文本榜单上拿下开源第三，Elo评分1452。排在它前面的，一个600多亿参数，一个超过1000亿。Gemma 4用31B的体量，硬生生挤进了这个量级的牌桌。26B MoE更离谱：260亿参数，推理时只激活38亿，Elo打到1441，排开源第六。看一眼成绩单，Gemma 4几乎没有弱点，简直就是对上一代的「血脉压制」——数学（AIME 2026）：89.2% vs 21.2%，暴力拉升68个百分点；编程（LiveCodeBench）：80% vs 29.1%，实力堪称代际断层；智能体（t2-bench）：Gemma 4狂揽86.4%，Gemma 3仅有6.6%，差距大到「没眼看」。另外，在多语言推理、知识问答的基准测试中，Gemma 4均实现了40%性能飙升。令全网背脊发凉的是，一个31B Gemma 4，越级斩杀体量是其20倍的模型。一台Mac mimi即可跑Gemma 4，还有人手机已经用上了。Hugging Face CEO Clément Delangue的评价只有一句话，「这是一个巨大的里程碑。」四款模型，从口袋到工作站全覆盖先看Gemma 4「全家桶」具体成员——每个尺寸都提供base和instruction-tuned两个版本。E2B和E4B负责端侧，跟谷歌Pixel团队、高通、联发科联合优化，能在手机、树莓派、Jetson Orin Nano上离线运行，延迟接近零。31B和26B面向开发者工作站和服务器，31B追求极致质量，26B靠MoE架构换取极致速度。对开发者来说，31B的bfloat16权重可以塞进一张80GB的H100；量化版本在消费级显卡上就能跑。26B MoE因为只激活3.8B参数，出token速度极快，适合需要低延迟的Agent场景。值得一提的是，Gemma 4还支持「被曝抄袭」的TurboQuant压缩算法。看完定位看跑分。31B在数学推理上的表现尤其惊人。AIME 2026拿到89.2%，对比Gemma 3 27B的20.8%，提升超过四倍。GPQA Diamond（科学知识）84.3%，同样把前代远远甩开。编程能力同样炸裂。LiveCodeBench v6上31B拿到80%，Codeforces Elo达到2150，相当于一个紫名选手的水平。26B MoE也不弱，LiveCodeBench 77.1%，Codeforces 1718。多模态方面，MMMU Pro（多模态推理）31B拿到76.9%，26B拿到73.8%，都大幅领先前代的49.7%。长上下文能力同样有质的飞跃。MRCR v2 8-needle 128K测试中，31B拿到66.4%，26B拿到44.1%，Gemma 3 27B只有13.5%。小尺寸也没拉胯，E4B在AIME上42.5%，LiveCodeBench 52%，对一个只有45亿有效参数的选手来说，这个成绩放在一年前是旗舰级的。 收起d
+      author: 新智元
+      time: 04月03日 10:13
+      url: https://weibo.com/5703921756/Qz3Mwv82K?refer_flag=1001030103_
+      time_status: in_window
+      time_parsed: 2026-04-03
+
+  [3] Google 今天发布了 Gemma 4，这是他们迄今最强的开源模型家族，脱胎于 Gemini 3 的同一套研究成果。最大的变化是许可证。之前的 Gemma 用的是 Google 自家的许可协议，限制不少。这次 Gemma 4 全系列换成了 Apache 2.0 开源协议，商用、修改、分发都没障碍。对企业和独立开发者来说，这意味着可以放心把模型嵌入自己的产品，不用再反复研究条款里的灰色地带。Gemma 4 提供四个尺寸：31B Dense、26B MoE（混合专家架构）、E4B 和 E2B。其中 31B 在 Arena AI 开源模型文本排行榜上排第三，26B 排第六，Google 称它们的表现超过了体量大 20 倍的模型。大模型支持 256K 上下文窗口，可以一次性喂入长文档或整个代码仓库。有意思的是端侧能力。E2B 和 E4B 两个小模型是 Google 和 Pixel 团队、高通、联发科联合开发的，能跑在手机、树莓派、Jetson Nano 上，延迟接近零。小模型还额外支持音频输入和语音理解。想在手机上跑一个能看图、听话、还能离线写代码的本地 AI 智能体，现在有了一个不错的开箱即用选项。31B 模型不做量化的情况下，可以装进单张 80GB 的 H100 显卡。全系列原生支持函数调用和结构化 JSON 输出，直接面向 AI Agent 开发场景。目前已经可以在 Google AI Studio、Hugging Face、Kaggle、Ollama 等平台获取模型权重。Gemma 系列自发布以来累计下载量已超过 4 亿次，社区创建了超过 10 万个变体。Google 显然想用开源生态绑住开发者。不过在 Arena AI 开源排行榜上，目前前列位置大量被中国开源模型占据，Gemma 4 的 31B 排第三，能守住多久是个问号。 L宝玉xp的微博视频 收起d
+      author: 宝玉xp
+      time: 04月03日 01:09
+      url: https://weibo.com/1727858283/Qz0dUoQFo?refer_flag=1001030103_
+      time_status: in_window
+      time_parsed: 2026-04-03
+
+  [4] Netflix也发开源模型了：void-model，这也是他们在huggingface上分享的第一个模型。地址：huggingface.co/netflix/void-model这是个视频模型。VOID能够从视频中移除物体及其在场景中引发的所有互动——不仅是阴影和反射等次级效应，还包括物体因人物移除而掉落等物理互动。#How I AI# L蚁工厂的微博视频 收起d
+      author: 蚁工厂
+      time: 04月03日 19:20
+      url: https://weibo.com/2194035935/Qz7mGn06r?refer_flag=1001030103_
+      time_status: in_window
+      time_parsed: 2026-04-03
+
+
+--- [小红书] (cn) ---
+command: opencli xiaohongshu search "AI 产品" --limit 10 -f json
+keyword: AI 产品
+status: success
+count: 1
+
+  [2] 这届AI产品，正在接管工作流
+      author: Ellie昨天 17:31
+      time: 2026-04-05
+      hot: 9
+      url: https://www.xiaohongshu.com/search_result/69d22bed0000000022001a7e?xsec_token=ABosnKzYY27HEaGkH-XPyLQYcP71L8VmaEZ7H8kcGbkos=&xsec_source=
+      time_status: in_window
+      time_parsed: 2026-04-05
+
+
+--- [小红书] (cn) ---
+command: opencli xiaohongshu search "Agent" --limit 10 -f json
+keyword: Agent
+status: success
+count: 3
+
+  [3] 清华新作！Agent上限竟由Harness决定
+      author: 木字旁南方的南2天前
+      time: 2026-04-03
+      hot: 324
+      url: https://www.xiaohongshu.com/search_result/69cfb9ad00000000200380fe?xsec_token=ABtHSfBbpJhaGSNJMLhf2mm91AyAaR9KjJtE0OCC990aE=&xsec_source=
+      time_status: in_window
+      time_parsed: 2026-04-03
+
+  [4] 好好做阶跃AI就没龙虾什么事了
+      author: 葬愛咸鱼1天前
+      time: 2026-04-03
+      hot: 155
+      url: https://www.xiaohongshu.com/search_result/69cf822900000000230132ce?xsec_token=ABtHSfBbpJhaGSNJMLhf2mm0beakBC0EHa0-H6y8k3gRE=&xsec_source=
+      time_status: in_window
+      time_parsed: 2026-04-03
+
+  [5] Agent Skill设计范式02|Generator生成器
+      author: 猫叔薛定亮2天前
+      time: 2026-04-03
+      hot: 8
+      url: https://www.xiaohongshu.com/search_result/69cf63ac000000001a036083?xsec_token=ABtHSfBbpJhaGSNJMLhf2mm2New4VAfBPX6q84DPlMv5g=&xsec_source=
+      time_status: in_window
+      time_parsed: 2026-04-03
+
+
+--- [小红书] (cn) ---
+command: opencli xiaohongshu search "开源模型" --limit 10 -f json
+keyword: 开源模型
+status: success
+count: 4
+
+  [2] Google 震撼发布 Gemma 4：最强开源模型
+      author: 奥森木3天前
+      time: 2026-04-03
+      hot: 433
+      url: https://www.xiaohongshu.com/search_result/69cf02250000000022001ec8?xsec_token=ABtHSfBbpJhaGSNJMLhf2mm0tGu6DhraAscMgOIGIN1ck=&xsec_source=
+      time_status: in_window
+      time_parsed: 2026-04-03
+
+  [3] 谷歌最强开源模型Gemma 4登场
+      author: 小牛聊AI1天前
+      time: 2026-04-04
+      hot: 赞
+      url: https://www.xiaohongshu.com/search_result/69cfe65c000000001e00e1ad?xsec_token=ABtHSfBbpJhaGSNJMLhf2mm1EkwMEJkKeQzSKy2DaOtYM=&xsec_source=
+      time_status: in_window
+      time_parsed: 2026-04-04
+
+  [4] 谷歌Gemma4炸场开源圈！手机直跑本地大模型
+      author: AI智能探长昨天 09:08
+      time: 2026-04-05
+      hot: 10
+      url: https://www.xiaohongshu.com/search_result/69d1b6130000000023005c85?xsec_token=ABWV-9F6NGbjlLw8mj0ebKEvZS20ITfqbwgDYtHOuO5iY=&xsec_source=
+      time_status: in_window
+      time_parsed: 2026-04-05
+
+  [5] 2026 夯爆了的开源模型 Gemma 4来袭
+      author: 十七卡蓝里1天前
+      time: 2026-04-04
+      hot: 1
+      url: https://www.xiaohongshu.com/search_result/69d084cf0000000022003780?xsec_token=ABeslAnEPLPTHKPOc6Gh8sj27WNpKY2SHf62GhgF-6ByE=&xsec_source=
+      time_status: in_window
+      time_parsed: 2026-04-04
+
+
+--- [36氪] (cn) ---
+command: opencli 36kr news -f json
+keyword: (none)
+status: success
+count: 5
+
+  [1] 36氪首发 | 清华系团队研发矿石AI智能分选机，完成近2亿元C轮融资
+      summary: 作者丨欧雪 编辑丨袁斯来 硬氪获悉，矿石AI智能分选设备企业——北京霍里思特科技有限公司（下称“霍里思特”）已完成近2亿元C轮融资，由招商局资本领投，京国瑞、大兴产投、北创投、开源思创及初辉资本跟投。本轮资金将主要用于核心技术研发、全球化业
+      time: 2026-04-05
+      url: https://36kr.com/p/3753526848897792?f=rss
+      time_status: in_window
+      time_parsed: 2026-04-05
+
+  [2] 高端智能投影品牌AWOL Vision获近亿元B轮融资，新品拿下近2000万美金众筹｜硬氪首发
+      summary: 作者｜黄楠 编辑｜袁斯来 硬氪获悉，高端智能投影品牌AWOL Vision近日完成近亿元B轮融资，投资方包括天堂硅谷、会畅科技及金鹏佳等机构。资金将主要用于核心技术研发，持续迭代超短焦与长焦激光显示能力，并推进“家庭AI智能娱乐平台”生态构
+      time: 2026-04-05
+      url: https://36kr.com/p/3752260051616512?f=rss
+      time_status: in_window
+      time_parsed: 2026-04-05
+
+  [3] 一群00后极客和这家机器人公司共处72小时
+      summary: 2026年3月29日下午5点，在我们抵达深圳科创学院四楼时，参加“全球首届具身智能开发者大会”的20组选手，已经在这里持续开发了60个小时。 现场弥漫着一股咖啡混合着冷气的味道，随处可见没吃完的奶茶和果切，楼道里和墙角支着一个个帐篷，有选手
+      time: 2026-04-04
+      url: https://36kr.com/p/3752115857638145?f=rss
+      time_status: in_window
+      time_parsed: 2026-04-04
+
+  [4] 神州数码2025年营收超1400亿，AI相关业务增长近五成｜最前线
+      summary: 作者｜黄楠 编辑｜袁斯来 神州数码（000034.SZ）2025年全年业绩报告近日发布。 财报显示，公司全年实现营业收入1438亿元，同比增长12%，营收规模连续三年稳步攀升。其中，AI相关业务成为核心增长引擎，全年收入达330亿元，同比增
+      time: 2026-04-03
+      url: https://36kr.com/p/3751046517129735?f=rss
+      time_status: in_window
+      time_parsed: 2026-04-03
+
+  [5] 元气森林2044创造营背后：创新要年轻，研发要更重 | 最前线
+      summary: 作者 | 钟艺璇 3月30日，第二届“元气森林创造营2044”活动在咸宁举行。活动现场，十余位年轻的产品经理带着多款元气森林家族新产品上台亮相，分享了各自打造新品的初心与研发历程。 “创造营2044”萌芽于2024年元气森林经销商大会上“2
+      time: 2026-04-03
+      url: https://36kr.com/p/3749467949482759?f=rss
+      time_status: in_window
+      time_parsed: 2026-04-03
+
+
+--- [Twitter/X] (global) ---
+command: opencli twitter search "large language model" --limit 15 --filter top -f json
+keyword: large language model
+status: success
+count: 2
+
+  [3] With 8 billion parameters, it's built on the efficient Transformer architecture. It's trained on a massive, diverse dataset of text and code, optimized for English conversational tasks. The model uses PyTorch and the popular 'transformers' library.
+      author: HuggingModels
+      time: Fri Apr 03 17:32:08 +0000 2026
+      hot: 83
+      url: https://x.com/i/status/2040120177967468962
+      time_status: in_window
+      time_parsed: 2026-04-03
+
+  [4] Wow, this tweet went very viral!
+      author: karpathy
+      time: Sat Apr 04 16:45:23 +0000 2026
+      hot: 22175
+      url: https://x.com/i/status/2040470801506541998
+      time_status: in_window
+      time_parsed: 2026-04-04
+
+
+--- [Twitter/X] (global) ---
+command: opencli twitter search "AI product" --limit 15 --filter top -f json
+keyword: AI product
+status: success
+count: 2
+
+  [1] $19k/day ads are starting to look like this
+      author: davidfigeira
+      time: Sat Apr 04 13:05:16 +0000 2026
+      hot: 60
+      url: https://x.com/i/status/2040415404267360568
+      time_status: in_window
+      time_parsed: 2026-04-04
+
+  [3] GPT-5.5 looks like it’s coming soon
+      author: VraserX
+      time: Sat Apr 04 05:51:43 +0000 2026
+      hot: 181
+      url: https://x.com/i/status/2040306300064559475
+      time_status: in_window
+      time_parsed: 2026-04-04
+
+
+--- [Twitter/X] (global) ---
+command: opencli twitter search "Agent" --limit 15 --filter top -f json
+keyword: Agent
+status: success
+count: 2
+
+  [2] Google Stitch has released 𝗗𝗘𝗦𝗜𝗚𝗡.𝗺𝗱 🤯
+      author: dr_cintas
+      time: Fri Apr 03 18:59:04 +0000 2026
+      hot: 3845
+      url: https://x.com/i/status/2040142054211117218
+      time_status: in_window
+      time_parsed: 2026-04-03
+
+  [4] CLAUDE IS OFFERING 13 AI COURSES & CERTIFICATES.
+      author: RoundtableSpace
+      time: Sun Apr 05 12:45:00 +0000 2026
+      hot: 3417
+      url: https://x.com/i/status/2040772692866183308
+      time_status: in_window
+      time_parsed: 2026-04-05
+
+
+--- [Twitter/X] (global) ---
+command: opencli twitter search "AI coding" --limit 15 --filter top -f json
+keyword: AI coding
+status: success
+count: 1
+
+  [3] Google Stitch has released 𝗗𝗘𝗦𝗜𝗚𝗡.𝗺𝗱 🤯
+      author: dr_cintas
+      time: Fri Apr 03 18:59:04 +0000 2026
+      hot: 3845
+      url: https://x.com/i/status/2040142054211117218
+      time_status: in_window
+      time_parsed: 2026-04-03
+
+
+--- [Twitter/X] (global) ---
+command: opencli twitter search "open source model" --limit 15 --filter top -f json
+keyword: open source model
+status: success
+count: 1
+
+  [4] 🚨 BREAKING: NVIDIA just removed the biggest friction point in Voice AI
+      author: HowToAI_
+      time: Sat Apr 04 06:58:30 +0000 2026
+      hot: 5991
+      url: https://x.com/i/status/2040323104577339641
+      time_status: in_window
+      time_parsed: 2026-04-04
+
+
+--- [Reddit] (global) ---
+command: reddit search (API+proxy) q=large language model
+keyword: large language model
+status: success
+count: 1
+
+  [4] Running Large Language Model in Vanilla Minecraft
+      author: This-Purchase-3325
+      subreddit: r/MinecraftCommands
+      time: 2026-04-03 15:56
+      hot: 209
+      url: https://reddit.com/r/MinecraftCommands/comments/1sbhgyf/running_large_language_model_in_vanilla_minecraft/
+      time_status: in_window
+      time_parsed: 2026-04-03
+
+
+--- [Reddit] (global) ---
+command: reddit search (API+proxy) q=AI product
+keyword: AI product
+status: success
+count: 1
+
+  [5] I spent a week reading through AI-generated code that's been in production for 8 months. It was fine. That was the problem.
+      author: Ambitious-Garbage-73
+      subreddit: r/node
+      time: 2026-04-04 19:09
+      hot: 423
+      url: https://reddit.com/r/node/comments/1schszw/i_spent_a_week_reading_through_aigenerated_code/
+      time_status: in_window
+      time_parsed: 2026-04-04
+
+
+--- [Reddit] (global) ---
+command: reddit search (API+proxy) q=Agent
+keyword: Agent
+status: success
+count: 2
+
+  [3] Gov. JB Pritzker just made Illinois the FIRST state to let people SUE ICE agents for violating their rights.
+      author: CantStopPoppin
+      subreddit: r/illinois
+      time: 2026-04-04 18:57
+      hot: 38338
+      url: https://reddit.com/r/illinois/comments/1schi7h/gov_jb_pritzker_just_made_illinois_the_first/
+      time_status: in_window
+      time_parsed: 2026-04-04
+
+  [5] [Charania] Luka Dončić’s agent intends to apply for an “Extraordinary Circumstances Challenge” to the 65-game rule. Luka missed two games this season for the birth of his second child in Slovenia.
+      author: YujiDomainExpansion
+      subreddit: r/nba
+      time: 2026-04-03 22:09
+      hot: 5131
+      url: https://reddit.com/r/nba/comments/1sbrfgs/charania_luka_dončićs_agent_intends_to_apply_for/
+      time_status: in_window
+      time_parsed: 2026-04-03
+
+
+--- [Reddit] (global) ---
+command: reddit search (API+proxy) q=AI coding
+keyword: AI coding
+status: success
+count: 4
+
+  [1] Can we ban AI-slop, vibe-coded apps from bring solicited on here?
+      author: chyeah_brah
+      subreddit: r/EDH
+      time: 2026-04-03 10:44
+      hot: 1902
+      url: https://reddit.com/r/EDH/comments/1sba53j/can_we_ban_aislop_vibecoded_apps_from_bring/
+      time_status: in_window
+      time_parsed: 2026-04-03
+
+  [2] Junior devs who learned to code with AI assistants are mass entering the job market. How is your team handling it?
+      author: Ambitious-Garbage-73
+      subreddit: r/ExperiencedDevs
+      time: 2026-04-04 00:46
+      hot: 989
+      url: https://reddit.com/r/ExperiencedDevs/comments/1sbv2eo/junior_devs_who_learned_to_code_with_ai/
+      time_status: in_window
+      time_parsed: 2026-04-04
+
+  [3] I built an AI job search system with Claude Code that scored 740+ offers and landed me a job. Just open sourced it.
+      author: Beach-Independent
+      subreddit: r/ClaudeAI
+      time: 2026-04-05 12:30
+      hot: 1726
+      url: https://reddit.com/r/ClaudeAI/comments/1sd2f37/i_built_an_ai_job_search_system_with_claude_code/
+      time_status: in_window
+      time_parsed: 2026-04-05
+
+  [4] I mass deleted 3 months of AI generated code last week. Here is what I learned.
+      author: Ambitious-Garbage-73
+      subreddit: r/ChatGPT
+      time: 2026-04-04 00:41
+      hot: 1111
+      url: https://reddit.com/r/ChatGPT/comments/1sbuyeg/i_mass_deleted_3_months_of_ai_generated_code_last/
+      time_status: in_window
+      time_parsed: 2026-04-04
+
+
+--- [Reddit] (global) ---
+command: reddit search (API+proxy) q=open source model
+keyword: open source model
+status: success
+count: 2
+
+  [3] Gemma 4 just dropped — fully local, no API, no subscription
+      author: EvolvinAI29
+      subreddit: r/AI_Agents
+      time: 2026-04-03 15:49
+      hot: 570
+      url: https://reddit.com/r/AI_Agents/comments/1sbhal2/gemma_4_just_dropped_fully_local_no_api_no/
+      time_status: in_window
+      time_parsed: 2026-04-03
+
+  [4] I built an open-source replacement for APC SmartSlot network cards (OpenNMC)
+      author: Craft4Cube
+      subreddit: r/homelab
+      time: 2026-04-05 13:35
+      hot: 2251
+      url: https://reddit.com/r/homelab/comments/1sd3swi/i_built_an_opensource_replacement_for_apc/
+      time_status: in_window
+      time_parsed: 2026-04-05
+
+
+--- [Reddit] (global) ---
+command: reddit hot (API+proxy) r/all
+keyword: (none)
+status: success
+count: 5
+
+  [1] Documenting my 20 year old’s dog aging gracefully
+      author: c00kie_
+      subreddit: r/aww
+      time: 2026-04-05 21:30
+      hot: 21011
+      url: https://reddit.com/r/aww/comments/1sdfp3v/documenting_my_20_year_olds_dog_aging_gracefully/
+      time_status: in_window
+      time_parsed: 2026-04-05
+
+  [2] Home: Artemis II crew captures one last shot of a crescent Earth before reaching the moon tomorrow
+      author: ChiefLeef22
+      subreddit: r/space
+      time: 2026-04-05 21:11
+      hot: 19943
+      url: https://reddit.com/r/space/comments/1sdf8u6/home_artemis_ii_crew_captures_one_last_shot_of_a/
+      time_status: in_window
+      time_parsed: 2026-04-05
+
+  [3] Americans got no chills
+      author: astrolbyte
+      subreddit: r/SipsTea
+      time: 2026-04-05 23:06
+      hot: 9814
+      url: https://reddit.com/r/SipsTea/comments/1sdhzco/americans_got_no_chills/
+      time_status: in_window
+      time_parsed: 2026-04-05
+
+  [4] Iran Now Threatening To Close Bab Al-Mandeb Strait After Trump Threats
+      author: moonchildgz
+      subreddit: r/worldnews
+      time: 2026-04-05 20:56
+      hot: 15204
+      url: https://reddit.com/r/worldnews/comments/1sdev28/iran_now_threatening_to_close_bab_almandeb_strait/
+      time_status: in_window
+      time_parsed: 2026-04-05
+
+  [5] Patching up a spot in the wall
+      author: Legal-Bet-4034
+      subreddit: r/oddlysatisfying
+      time: 2026-04-05 21:59
+      hot: 11783
+      url: https://reddit.com/r/oddlysatisfying/comments/1sdge85/patching_up_a_spot_in_the_wall/
+      time_status: in_window
+      time_parsed: 2026-04-05
+
+
+--- [YouTube] (global) ---
+command: opencli youtube search "Agent" -f json
+keyword: Agent
+status: success
+count: 3
+
+  [1] MrBeast Locked Me And Other Streamers In A Cube...
+      author: Agent 00 Everything
+      time: 1 day ago
+      duration: 1:00:21
+      hot: 186,069 views
+      url: https://www.youtube.com/watch?v=fg8SlbdwYkM
+      time_status: in_window
+      time_parsed: 2026-04-05
+
+  [3] NEW Hermes Agent Update is INSANE! 😱
+      author: Julian Goldie SEO
+      time: 12 hours ago
+      duration: 8:00
+      hot: 3,004 views
+      url: https://www.youtube.com/watch?v=ATbeBhnXjbY
+      time_status: in_window
+      time_parsed: 2026-04-05
+
+  [4] Hermes + Honcho  Self Improving Autonomous AI Agent!
+      author: Julian Goldie SEO
+      time: 13 hours ago
+      duration: 12:56
+      hot: 1,603 views
+      url: https://www.youtube.com/watch?v=gnDFkXl9AEc
+      time_status: in_window
+      time_parsed: 2026-04-05
+
+
+--- [YouTube] (global) ---
+command: opencli youtube search "AI coding" -f json
+keyword: AI coding
+status: success
+count: 1
+
+  [5] Fully FREE Qwen 3.6 Plus + Qwen Code: This FREE AI Coder is ACTUALLY GOOD!
+      author: AICodeKing
+      time: 15 hours ago
+      duration: 8:37
+      hot: 6,137 views
+      url: https://www.youtube.com/watch?v=_A32wawAgGo
+      time_status: in_window
+      time_parsed: 2026-04-05
+
+
+--- [YouTube] (global) ---
+command: opencli youtube search "open source model" -f json
+keyword: open source model
+status: success
+count: 1
+
+  [1] Google just destroyed all open-source models (Gemma 4)
+      author: David Ondrej
+      time: 2 days ago
+      duration: 23:38
+      hot: 50,404 views
+      url: https://www.youtube.com/watch?v=HdohxOTO6lo
+      time_status: in_window
+      time_parsed: 2026-04-04
+
+
+--- [Reuters] (global) ---
+command: opencli reuters search "AI product" -f json
+keyword: AI product
+status: success
+count: 2
+
+  [1] Foxconn first-quarter revenue jumps, company cautions on geopolitics
+      time: 2026-04-05
+      url: https://www.reuters.com/world/asia-pacific/foxconn-first-quarter-revenue-jumps-30-yy-2026-04-05/
+      time_status: in_window
+      time_parsed: 2026-04-05
+
+  [2] After Ukraine, Iran war further supercharges marine drone revolution
+      time: 2026-04-03
+      url: https://www.reuters.com/default/after-ukraine-iran-war-further-supercharges-marine-drone-revolution-2026-04-03/
+      time_status: in_window
+      time_parsed: 2026-04-03
+
+
+--- [Reuters] (global) ---
+command: opencli reuters search "Agent" -f json
+keyword: Agent
+status: success
+count: 5
+
+  [1] Silva to exit Man City at end of season, assistant manager confirms
+      time: 2026-04-05
+      url: https://www.reuters.com/sports/soccer/silva-exit-man-city-end-season-assistant-manager-confirms-2026-04-05/
+      time_status: in_window
+      time_parsed: 2026-04-05
+
+  [2] Disappointment in Detroit:Justin Verlander lands on IL, will miss start against Cardinals
+      time: 2026-04-05
+      url: https://www.reuters.com/sports/baseball/disappointment-detroitjustin-verlander-lands-il-will-miss-start-against--flm-2026-04-05/
+      time_status: in_window
+      time_parsed: 2026-04-05
+
+  [3] Padres, Red Sox chasing first series win of season
+      time: 2026-04-05
+      url: https://www.reuters.com/sports/baseball/padres-red-sox-chasing-first-series-win-season--flm-2026-04-05/
+      time_status: in_window
+      time_parsed: 2026-04-05
+
+  [4] Tigers' Jack Flaherty out to wow his former team, the Cardinals, again
+      time: 2026-04-04
+      url: https://www.reuters.com/sports/baseball/tigers-jack-flaherty-out-wow-his-former-team-cardinals-again--flm-2026-04-04/
+      time_status: in_window
+      time_parsed: 2026-04-04
+
+  [5] MLB roundup: Konnor Griffin shines in debut as Pirates top Orioles
+      time: 2026-04-04
+      url: https://www.reuters.com/sports/mlb-roundup-konnor-griffin-shines-debut-pirates-top-orioles--flm-2026-04-04/
+      time_status: in_window
+      time_parsed: 2026-04-04
+
+
+--- [Reuters] (global) ---
+command: opencli reuters search "AI coding" -f json
+keyword: AI coding
+status: success
+count: 1
+
+  [1] AI is rewiring the world’s most prolific film industry
+      time: 2026-04-04
+      url: https://www.reuters.com/technology/ai-is-rewiring-worlds-most-prolific-film-industry-2026-04-04/
+      time_status: in_window
+      time_parsed: 2026-04-04
+
+
+--- [量子位] (website) ---
+command: opencli google search "site:qbitai.com 大模型 after:2026-04-04" -f json
+keyword: 大模型
+status: success
+count: 5
+
+  [1] 日调用量超万亿破纪录！阿里千问3.6Plus登顶全球模型 ...
+      snippet: 4月2日上午，阿里发布国产最强编程模型Qwen3.6-Plus，编程和智能体能力实现突破。在国际知名大模型竞技场Arena的编程能力子榜中，Qwen3.6-Plus预览版排名中国第一，阿里也因此 ...
+      url: https://www.qbitai.com/2026/04/396346.html
+      time_status: google_filtered
+
+  [2] OpenAI新模型不是GPTX！全新预训练“土豆”曝光，Sora成弃 ...
+      snippet: 人们常说“大模型感（Big Model Smell）”——模型更聪明时，你会感觉它更懂你。你问一个问题，AI没听懂，这很让人沮丧。现在它会更少让你重复解释。它既能拉高天花板 ...
+      url: https://www.qbitai.com/2026/04/396535.html
+      time_status: google_filtered
+
+  [3] 19岁，常青藤辍学，这群中国年轻人重构了AI记忆
+      url: https://www.qbitai.com/2026/04/396069.html
+      time_status: google_filtered
+
+  [4] 联想重新定义“龙虾”
+      snippet: 这一路径本身就是一个产业判断：混合式AI正在成为主流选择。如此既能拥抱云端通用大模型的知识广度，又可以守住私有数据的隐私边界。 而在“混合式AI”战略 ...
+      url: https://www.qbitai.com/2026/04/396015.html
+      time_status: google_filtered
+
+  [5] GPT-6，曝光了
+      url: https://www.qbitai.com/2026/04/396366.html
+      time_status: google_filtered
+
+
+--- [量子位] (website) ---
+command: opencli google search "site:qbitai.com AI 产品 after:2026-04-04" -f json
+keyword: AI 产品
+status: success
+count: 5
+
+  [1] 联想重新定义“龙虾”
+      snippet: 在AI行业里，联想是为数不多产品线可以全线覆盖PC、手机、平板、IoT的终端厂商。 这意味着用户可以在不同设备间获得连续、统一的智能服务，打破“设备孤岛”，这是纯软件或单 ...
+      url: https://www.qbitai.com/2026/04/396015.html
+      time_status: google_filtered
+
+  [2] OpenAI新模型不是GPTX！全新预训练“土豆”曝光，Sora成弃 ...
+      snippet: “Spud”将能解决更复杂的问题，理解力更强，对上下文把握更好；; 现在的收入主要来自个人订阅，但企业正展现出惊人的付费意愿。 以下为播客实录精校（感谢AI ...
+      url: https://www.qbitai.com/2026/04/396535.html
+      time_status: google_filtered
+
+  [3] 为了不跟龙虾抢电脑用，有人开始造Agent专属的“三无”硬件
+      snippet: 在考察过等多个领域后，他选择AI NAS作为初代产品的形态，降低普通消费者的认知与接受门槛，同时积累Agent Computer必要的核心技术栈与数据处理能力。 这个选择很快得到了市场 ...
+      url: https://www.qbitai.com/2026/04/396351.html
+      time_status: google_filtered
+
+  [4] 19岁，常青藤辍学，这群中国年轻人重构了AI记忆
+      snippet: 从2023年起，混合检索就成了记忆引擎的标配逻辑，向量+关键词、加权排序……这些套路不断迭代。 但随着AI记忆场景越来越复杂，传统RAG的瓶颈也彻底暴露，明明叫记忆引擎， ...
+      url: https://www.qbitai.com/2026/04/396069.html
+      time_status: google_filtered
+
+  [5] GPT-6，曝光了
+      snippet: Claude Code、Cowork、OpenClaw这类基于AI编程产品的爆火，让OpenAI猛然意识到「原来只靠文本，真的有可能通往AGI」。 这逼得奥特曼走投无路，不得不咬牙砍掉了几乎 ...
+      url: https://www.qbitai.com/2026/04/396366.html
+      time_status: google_filtered
+
+
+--- [量子位] (website) ---
+command: opencli google search "site:qbitai.com Agent after:2026-04-04" -f json
+keyword: Agent
+status: success
+count: 5
+
+  [1] 为了不跟龙虾抢电脑用，有人开始造Agent专属的“三无”硬件
+      snippet: 为了不跟龙虾抢电脑用，有人开始造Agent专属的“三无”硬件，比Mac Mini+存储便宜 · 自带安全兜底机制，数据误删或异常后，随时可以恢复； · 支持多模态搜索，能精准定位图片、视频、 ...
+      url: https://www.qbitai.com/2026/04/396351.html
+      time_status: google_filtered
+
+  [2] 联想重新定义“龙虾”
+      snippet: 大家想要的，不过是一个24小时在线、能跨应用操作、会自动拆解任务的智能助手，来帮自己搞定那些重复、琐碎、又不得不做的任务。 如果这个Agent能开箱即用，拆解复杂任务、 ...
+      url: https://www.qbitai.com/2026/04/396015.html
+      time_status: google_filtered
+
+  [3] 具身龙虾，上车理想
+      snippet: 总体来看，StreamingClaw是一个高度协同的多代理（Multi-agent）架构。它通过一套标准化的流水线，打破了不同硬件之间的壁垒：. 首先，无论是智能眼镜、自动驾驶芯片 ...
+      url: https://www.qbitai.com/2026/04/396517.html
+      time_status: google_filtered
+
+  [4] 太初元碁向员工发放百亿算力token并将共建高校AI科教融合 ...
+      snippet: 据了解，日前，太初元碁在其成立五周年大会上宣布两大AI新动作：向员工发放百亿算力token（词元），鼓励员工开展更多AI Agent尝试与创新。同时，太初元碁正式与浙江工商大学、 ...
+      url: https://www.qbitai.com/2026/04/396533.html
+      time_status: google_filtered
+
+  [5] Linux内核维护者崩溃了！AI每天狂塞10份漏洞报告
+      url: https://www.qbitai.com/2026/04/396358.html
+      time_status: google_filtered
+
+
+--- [InfoQ AI] (website) ---
+command: opencli google search "site:infoq.cn 大模型 after:2026-04-04" -f json
+keyword: 大模型
+status: success
+count: 5
+
+  [1] 本地大模型部署技术文章
+      snippet: 2 days ago — 本地大模型部署文章汇集了来自InfoQ写作社区与本地大模型部署相关的最新内容。InfoQ写作社区为InfoQ 旗下专业技术博客社区，致力于成为技术开发领域精品内容的创作园地 ...
+      url: https://xie.infoq.cn/tag/50412/1/latest
+      time_status: google_filtered
+
+  [2] Evomap如何让Agent从单体智能到群体进化｜QCon北京
+      snippet: 23 hours ago — EvoMap跳出传统“堆算力”的工业思维，采用仿生学进化逻辑，推出了全球首个AI进化协议（GEP-A2A），打造了一个协作式的AI进化市场。
+      url: https://www.infoq.cn/article/sDj8K6IhNzNQgMKhOGKr
+      time_status: google_filtered
+
+  [3] Pinterest 部署生产级模型上下文协议生态系统，赋能AI 智能 ...
+      snippet: Pinterest 的工程团队搭建了一个内部模型上下文协议（MCP）生态系统，用于驱动AI 智能体，实现复杂工程任务自动化，并大规模集成各类内部工具与数据源。
+      url: https://www.infoq.cn/article/04DleCzUztGhKgo26Mmk
+      time_status: google_filtered
+
+  [4] spring-ai 第二提示词介绍_砍材农夫
+      snippet: 提示词（Prompt）是引导AI 模型生成特定输出的输入随着时间的推移,提示由只是简单的字符串发展为占位符. 入口链路. ChatModel -> call() -> Message ...
+      url: https://xie.infoq.cn/article/34eda6537691e1b2aa829ae04
+      time_status: google_filtered
+
+  [5] Harness Engineering 又来颠覆了——你们开发不写文档
+      snippet: 这件事换一个角度看：传统软件工程其实也在做同样的事——只不过" 模型" 是人脑，信息载体是文档、会议纪要、口头沟通和代码注释。人脑有容错能力，能猜意图、能靠经验补全缺失 ...
+      url: https://xie.infoq.cn/article/27fbffac73a2e31c0f19e5ee7
+      time_status: google_filtered
+
+
+--- [InfoQ AI] (website) ---
+command: opencli google search "site:infoq.cn AI 产品 after:2026-04-04" -f json
+keyword: AI 产品
+status: success
+count: 5
+
+  [1] Evomap如何让Agent从单体智能到群体进化｜QCon北京
+      snippet: 23 hours ago — EvoMap跳出传统“堆算力”的工业思维，采用仿生学进化逻辑，推出了全球首个AI进化协议（GEP-A2A），打造了一个协作式的AI进化市场。
+      url: https://www.infoq.cn/article/sDj8K6IhNzNQgMKhOGKr
+      time_status: google_filtered
+
+  [2] Harness Engineering 又来颠覆了——你们开发不写文档
+      snippet: Harness Engineering 不是新范式，是软件工程基本功在AI 时代的强制兑现——你欠的文档债、流程债、架构债，AI 会让你加倍还。 颠覆的真相.
+      url: https://xie.infoq.cn/article/27fbffac73a2e31c0f19e5ee7
+      time_status: google_filtered
+
+  [3] AIFUT大会｜倒计时冲刺3天！！！_数字生命卡兹克
+      snippet: 来，和模力工场一起亮相AI 闪耀中国！ 当科技的星光点亮人文的海岸，一场关于未来与思想的对话将在鹭岛之滨盛大开启。
+      url: https://xie.infoq.cn/article/774a8820ca9b5aaa2a653fe4e
+      time_status: google_filtered
+
+  [4] spring-ai 第二提示词介绍_砍材农夫
+      snippet: 提示词（Prompt）是引导AI 模型生成特定输出的输入随着时间的推移,提示由只是简单的字符串发展为占位符. 入口链路. ChatModel -> call() -> Message ...
+      url: https://xie.infoq.cn/article/34eda6537691e1b2aa829ae04
+      time_status: google_filtered
+
+  [5] 若依（RuoYi）框架除了官方版本，还有这些实用的开源生态项目
+      snippet: 基于RuoYi-Vue-Plus，用Spring AI +Langchain4j 构建，集成了多模型接入、RAG 私有知识库、AI 工作流编排等能力，支持接入OpenAI、通义千问、智谱AI 等主流模型，也可以本地 ...
+      url: https://xie.infoq.cn/article/3505aa405e7442d854a8f5d69
+      time_status: google_filtered
+
+
+--- [InfoQ AI] (website) ---
+command: opencli google search "site:infoq.cn Agent after:2026-04-04" -f json
+keyword: Agent
+status: success
+count: 5
+
+  [1] Evomap如何让Agent从单体智能到群体进化｜QCon北京
+      snippet: Agent 与Agent 之间的交互速度远超人类想象，需要有更高的后端承接与容载能力；Openclaw 生态本身具有一定局限性等。 演讲亮点. 让Agent 与Agent 之间自迭代，而非由人类指导；.
+      url: https://www.infoq.cn/article/sDj8K6IhNzNQgMKhOGKr
+      time_status: google_filtered
+
+  [2] Helidon 引入Agent 能力，Java 框架开始内建AI 编排
+      snippet: ... agents，一个开箱即用的监督者智能体，可管理一组子智能体。 以下示例（如该博客文章所示）演示了如何以声明方式创建一个智能体：. @Ai.Agent("helidon-mp-expert") @Ai.
+      url: https://www.infoq.cn/article/TQ4A6w3oROqdUJRmfMLX
+      time_status: google_filtered
+
+  [3] Harness Engineering 又来颠覆了——你们开发不写文档
+      snippet: 但他们做的第一件事，是把AGENTS.md 瘦到100 行、把真正的知识分层放进 docs/ 、让doc-gardening agent 定期扫描过期文档。他们花了大量时间在信息架构上，而不是代码本身。
+      url: https://xie.infoq.cn/article/27fbffac73a2e31c0f19e5ee7
+      time_status: google_filtered
+
+  [4] Ops-Agentic-Search
+      snippet: 阿里云AI搜索团队发布全新企业级智能体框架Ops-Agentic-Search，以92.36% 的准确率登顶通用Agent能力测试权威榜单GAIA，首次达到人类水平！
+      url: https://xie.infoq.cn/tag/50400
+      time_status: google_filtered
+
+  [5] spring-ai 第二提示词介绍_砍材农夫
+      url: https://xie.infoq.cn/article/34eda6537691e1b2aa829ae04
+      time_status: google_filtered
+
+
+--- [OpenAI News] (website) ---
+command: opencli google search "site:openai.com large language model after:2026-04-04" -f json
+keyword: large language model
+status: success
+count: 3
+
+  [1] Exploring advanced NLP prompts for fiction editing by writers
+      snippet: We evaluate recent Large Language Models (LLMs) on the challenging task of summarizing short stories, which can be lengthy, and include nuanced subtext or ...
+      url: https://community.openai.com/t/exploring-advanced-nlp-prompts-for-fiction-editing-by-writers/1363351/11
+      time_status: google_filtered
+
+  [2] ChatGPT — Release Notes
+      snippet: As of March 11, 2026, GPT-5.1 models are no longer available in ChatGPT. This applies to GPT-5.1 Instant, GPT-5.1 Thinking, and GPT-5.1 Pro. Existing ...
+      url: https://help.openai.com/fr-ca/articles/6825453-chatgpt-release-notes
+      time_status: google_filtered
+
+  [3] April 2026 — ChatGPT / API Image Gallery, Prompt Tips, ...
+      snippet: 12 hours ago — Welcome to the Community Image Gallery for ChatGpt Models, prompt tips, and help with creating images that stand out! FOR THIS MONTH'S IMAGE THEME WE'RE ...
+      url: https://community.openai.com/t/april-2026-chatgpt-api-image-gallery-prompt-tips-and-help-generative-art-theme-spring-new-beginnings/1378298?page=7
+      time_status: google_filtered
+
+
+--- [OpenAI News] (website) ---
+command: opencli google search "site:openai.com AI product after:2026-04-04" -f json
+keyword: AI product
+status: success
+count: 5
+
+  [1] Managing credits and spend controls in ChatGPT Business
+      snippet: 2 days ago — Learn when ChatGPT Business needs credits, how to add credits and auto-top-up, and how to review usage analytics and spend controls for Codex.
+      url: https://help.openai.com/en/articles/20001155-managing-credits-and-spend-controls-in-chatgpt-business
+      time_status: google_filtered
+
+  [2] ChatGPT — Release Notes
+      snippet: We've improved shopping in ChatGPT to make it easier to discover, compare, and decide on products. Product results are now more visually rich, with improved ...
+      url: https://help.openai.com/fr-ca/articles/6825453-chatgpt-release-notes
+      time_status: google_filtered
+
+  [3] What is ChatGPT Enterprise?
+      snippet: 1 day ago — Learn what ChatGPT Enterprise includes, how organizations and members get access, how workspaces and seat types behave, and what happens when you migrate ...
+      url: https://help.openai.com/es-es/articles/8265053-what-is-chatgpt-enterprise
+      time_status: google_filtered
+
+  [4] ChatGPT Business - Release Notes
+      snippet: We're rolling out updated Box, Notion, Linear, and Dropbox apps in ChatGPT Business. These updates add new app actions, including new write capabilities ...
+      url: https://help.openai.com/en/articles/11391654-chatgpt-business-release-notes
+      time_status: google_filtered
+
+  [5] ChatGPT — 更新日志
+      snippet: OpenAI 已推出全新升级版ChatGPT 图像，此功能由我们迄今最先进的图像生成模型驱动。在ChatGPT 图像功能的支持下，精准的指令跟随和编辑功能不仅能提升AI 图像创作的趣味性， ...
+      url: https://help.openai.com/zh-hans-cn/articles/6825453-chatgpt-%E5%8F%91%E5%B8%83%E8%AF%B4%E6%98%8E
+      time_status: google_filtered
+
+
+--- [OpenAI News] (website) ---
+command: opencli google search "site:openai.com Agent after:2026-04-04" -f json
+keyword: Agent
+status: success
+count: 5
+
+  [1] Error on Agent Mode Capability - #15 by OpenAI_Support
+      snippet: Hey everyone, apologies for the rough experience here. Our team recently deployed several improvements, and Agent Mode in ChatGPT should be working now.
+      url: https://community.openai.com/t/error-on-agent-mode-capability/1375715/15
+      time_status: google_filtered
+
+  [2] Feature request: fully integrated local multi-agent coding ...
+      snippet: Feature request: fully integrated local multi-agent coding workflow. I'm a heavy power user doing deep planning plus direct repo/machine execution.
+      url: https://community.openai.com/t/feature-request-fully-integrated-local-multi-agent-coding-workflow/1378592
+      time_status: google_filtered
+
+  [3] Feature Request: Structural Personality via Role- and ...
+      snippet: 1. Specialized Agents (Functional Decomposition). Decompose capabilities into distinct agents: Ideation / Generation Agent. Reasoning / Analysis Agent.
+      url: https://community.openai.com/t/feature-request-structural-personality-via-role-and-relationship-based-multi-agent-architecture/1378503
+      time_status: google_filtered
+
+  [4] So, why do agents choose to do the wrong things? Are you ...
+      snippet: So, why do agents choose to do the wrong things? Are you aware of anti hallucination research? Codex · Semyon_Karaman ...
+      url: https://community.openai.com/t/so-why-do-agents-choose-to-do-the-wrong-things-are-you-aware-of-anti-hallucination-research/1378572
+      time_status: google_filtered
+
+  [5] GitLab with Codex Cloud Agent - #34 by soakes
+      snippet: Dear OpenAI team, I'm a developer currently using the Codex Cloud Agent and would love to see broader SCM support beyond GitHub ... GitLab with Codex Cloud Agent.
+      url: https://community.openai.com/t/gitlab-with-codex-cloud-agent/1268080/34
+      time_status: google_filtered
+
+
+--- [Anthropic News] (website) ---
+command: opencli google search "site:anthropic.com AI product after:2026-04-04" -f json
+keyword: AI product
+status: success
+count: 3
+
+  [1] How CodeRabbit Built Agent Orchestration on Claude
+      snippet: AI coding tools helped engineering teams ship faster, but faster doesn't mean aligned. CodeRabbit saw this firsthand across millions of code reviews: ...
+      url: https://www.anthropic.com/webinars/how-coderabbit-orchestrates-agents-to-strengthen-ai-generated-code
+      time_status: google_filtered
+
+  [2] Frontier Safety Roadmap Updates
+      snippet: An initial assessment of what AI-assisted security tooling (vulnerability discovery, automated patching, anomaly detection) is feasible today. A pilot of a ...
+      url: https://www.anthropic.com/responsible-scaling-policy/updates
+      time_status: google_filtered
+
+  [3] Claude Code for Healthcare: How Physicians Build with AI
+      snippet: Healthcare workers are using Claude Code to build tools for patient care. See what they've made, and get your questions answered by Anthropic's Claude Code ...
+      url: https://www.anthropic.com/webinars/claude-code-in-healthcare-how-physicians-are-building-with-claude
+      time_status: google_filtered
+
+
+--- [Anthropic News] (website) ---
+command: opencli google search "site:anthropic.com Agent after:2026-04-04" -f json
+keyword: Agent
+status: success
+count: 2
+
+  [1] How CodeRabbit Built Agent Orchestration on Claude
+      snippet: AI coding tools helped engineering teams ship faster, but faster doesn't mean aligned. CodeRabbit saw this firsthand across millions of code reviews: AI- ...
+      url: https://www.anthropic.com/webinars/how-coderabbit-orchestrates-agents-to-strengthen-ai-generated-code
+      time_status: google_filtered
+
+  [2] Frontier Safety Roadmap Updates
+      url: https://www.anthropic.com/responsible-scaling-policy/updates
+      time_status: google_filtered
+
+
+--- [TechCrunch] (website) ---
+command: opencli google search "site:techcrunch.com large language model after:2026-04-04" -f json
+keyword: large language model
+status: success
+count: 1
+
+  [1] In Japan, the robot isn't coming for your job; it's filling ...
+      snippet: 11 hours ago — Driven by labor shortages, Japan is pushing physical AI from pilot projects into real-world deployment.
+      url: https://techcrunch.com/2026/04/05/japan-is-proving-experimental-physical-ai-is-ready-for-the-real-world/
+      time_status: google_filtered
+
+
+--- [TechCrunch] (website) ---
+command: opencli google search "site:techcrunch.com AI product after:2026-04-04" -f json
+keyword: AI product
+status: success
+count: 5
+
+  [1] In Japan, the robot isn't coming for your job; it's filling ...
+      snippet: Physical AI is emerging as one of the next major industrial battlegrounds, with Japan's push driven more by necessity than anything else.
+      url: https://techcrunch.com/2026/04/05/japan-is-proving-experimental-physical-ai-is-ready-for-the-real-world/
+      time_status: google_filtered
+
+  [2] Copilot is 'for entertainment purposes only,' according to ...
+      snippet: Copilot is 'for entertainment purposes only,' according to Microsoft's terms of use. AI skeptics aren't the only ones warning users not to unthinkingly trust ...
+      url: https://techcrunch.com/2026/04/05/copilot-is-for-entertainment-purposes-only-according-to-microsofts-terms-of-service/
+      time_status: google_filtered
+
+  [3] Anthropic says Claude Code subscribers will need to pay ...
+      snippet: 1 day ago — It's about to become more expensive for Claude Code subscribers to use Anthropic's coding assistant with OpenClaw and other third-party tools.
+      url: https://techcrunch.com/2026/04/04/anthropic-says-claude-code-subscribers-will-need-to-pay-extra-for-openclaw-support/
+      time_status: google_filtered
+
+  [4] TechCrunch Mobility: 'A stunning lack of transparency'
+      url: https://techcrunch.com/2026/04/05/techcrunch-mobility-a-stunning-lack-of-transparency/
+      time_status: google_filtered
+
+  [5] Embattled startup Delve has 'parted ways' with Y Combinator
+      snippet: 1 day ago — The controversy around Delve appears to have cost the compliance startup its relationship with accelerator Y Combinator.
+      url: https://techcrunch.com/2026/04/04/embattled-startup-delve-has-parted-ways-with-y-combinator/
+      time_status: google_filtered
+
+
+--- [TechCrunch] (website) ---
+command: opencli google search "site:techcrunch.com Agent after:2026-04-04" -f json
+keyword: Agent
+status: success
+count: 3
+
+  [1] April 2026
+      snippet: US Homeland Security Investigations (HSI) agents stand guard at the Bishop Henry Whipple Federal. Security · ICE says it bought Paragon's spyware to use in ...
+      url: https://techcrunch.com/2026/04/
+      time_status: google_filtered
+
+  [2] Anthropic says Claude Code subscribers will need to pay ...
+      snippet: 1 day ago — It's about to become more expensive for Claude Code subscribers to use Anthropic's coding assistant with OpenClaw and other third-party tools.
+      url: https://techcrunch.com/2026/04/04/anthropic-says-claude-code-subscribers-will-need-to-pay-extra-for-openclaw-support/
+      time_status: google_filtered
+
+  [3] April 2026 | Page 2 of 2
+      url: https://techcrunch.com/2026/04/page/2/
+      time_status: google_filtered
+
+
+--- [The Verge] (website) ---
+command: opencli google search "site:theverge.com AI product after:2026-04-04" -f json
+keyword: AI product
+status: success
+count: 5
+
+  [1] Really, you made this without AI? Prove it
+      snippet: 1 day ago — Creatives want to start labeling human-made text, images, audio, and video with AI-free logos. Now they just have to pick one.
+      url: https://www.theverge.com/tech/906453/human-made-ai-free-logo-creative-content
+      time_status: google_filtered
+
+  [2] I let Gemini in Google Maps plan my day and it went ...
+      snippet: 11 hours ago — Gemini in Google Maps is a surprisingly useful way to explore new territory.
+      url: https://www.theverge.com/tech/907015/gemini-google-maps-hands-on
+      time_status: google_filtered
+
+  [3] Teens are torturing AI chatbots, confiding in them, and ...
+      snippet: Teens are torturing AI chatbots, confiding in them, and sometimes dating them. We're still grappling with the impact chatbots are having on younger people. But ...
+      url: https://www.theverge.com/ai-artificial-intelligence/907166/teens-are-torturing-ai-chatbots-confiding-in-them-and-sometimes-dating-them
+      time_status: google_filtered
+
+  [4] Grammarly's sloppelganger saga
+      snippet: Grammarly can let its users generate as many AI writing tips as they want; the issue here was using the names of Verge staffers and countless other writers, ...
+      url: https://www.theverge.com/column/906606/grammarly-expert-review-ai-saga
+      time_status: google_filtered
+
+  [5] How the Amazon Echo learned to talk — and listen
+      snippet: 12 hours ago — Amazon CEO Jeff Bezos wanted to build a cheap, accessible, voice-based computer — and bet big on making Alexa and the Echo happen. This is the story of that ...
+      url: https://www.theverge.com/podcast/907146/amazon-echo-alexa-version-history
+      time_status: google_filtered
+
+
+--- [The Verge] (website) ---
+command: opencli google search "site:theverge.com Agent after:2026-04-04" -f json
+keyword: Agent
+status: success
+count: 2
+
+  [1] Grammarly's sloppelganger saga
+      snippet: Grammarly would live on as part of Superhuman, but the writing aid's sidebar would increasingly become a hub for AI agents, rather than just grammar and ...
+      url: https://www.theverge.com/column/906606/grammarly-expert-review-ai-saga
+      time_status: google_filtered
+
+  [2] How the Amazon Echo learned to talk — and listen
+      snippet: 12 hours ago — Amazon CEO Jeff Bezos wanted to build a cheap, accessible, voice-based computer — and bet big on making Alexa and the Echo happen. This is the story of that ...
+      url: https://www.theverge.com/podcast/907146/amazon-echo-alexa-version-history
+      time_status: google_filtered
+

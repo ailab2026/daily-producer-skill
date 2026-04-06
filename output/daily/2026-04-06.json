@@ -1,0 +1,387 @@
+{
+  "meta": {
+    "date": "2026-04-06",
+    "date_label": "2026年4月6日 · 周日",
+    "generated_at": "2026-04-06 09:00",
+    "role": "AI 行业观察者"
+  },
+  "tools": [
+    {"id": "claude", "name": "Claude", "icon": "fa-solid fa-message", "url": "https://claude.ai/new?q={prompt}"},
+    {"id": "chatgpt", "name": "ChatGPT", "icon": "fa-brands fa-openai", "url": "https://chatgpt.com/?q={prompt}"},
+    {"id": "copy", "name": "复制 Prompt", "icon": "fa-regular fa-copy", "url": null}
+  ],
+  "left_sidebar": {
+    "overview": [
+      {
+        "title": "OpenAI 新模型不是 GPT-X：全新预训练架构「土豆」曝光",
+        "text": "量子位连续报道 OpenAI 下一代模型信息泄露，代号「土豆」，采用全新预训练范式，Sora 项目疑似被放弃。这可能标志着 OpenAI 战略重心的重大转向。"
+      },
+      {
+        "title": "Gemma 4 开源效应持续发酵，端侧 AI 进入实用期",
+        "text": "Google Gemma 4 发布后在微博、小红书、Reddit 多平台持续热议。31B 跻身开源前三，E2B/E4B 手机端可跑，清华团队发表 Agent Harness 研究回应。"
+      },
+      {
+        "title": "小米 MiMo Token 套餐上线引发行业讨论，排名波动明显",
+        "text": "小米推出大模型 Token 订阅套餐，被认为颠覆了行业收费模式。但 MiMo 在 Open Router 排名从第一快速下滑至第十七，市场反应值得持续观察。"
+      }
+    ],
+    "actions": [
+      {
+        "type": "watch",
+        "text": "密切关注 OpenAI「土豆」新预训练架构的后续信息，评估其对现有模型生态的影响。",
+        "prompt": "帮我整理 OpenAI 新模型「土豆」目前已知的所有信息，分析它与 GPT 系列的关系和可能的技术路线变化。"
+      },
+      {
+        "type": "try",
+        "text": "用 OpenClaude 项目在 Claude Code 中接入多模型，体验多模型协作编程的效果。",
+        "prompt": "帮我配置 OpenClaude 项目，实现在 Claude Code 中同时调用多个模型进行编程，并对比效果。"
+      },
+      {
+        "type": "learn",
+        "text": "研读清华 Agent Harness 研究，理解 Harness 如何决定 Agent 的能力上限。",
+        "prompt": "帮我总结清华关于 Agent Harness 的最新研究，解释 Harness 与 Agent 能力之间的关系。"
+      },
+      {
+        "type": "alert",
+        "text": "Anthropic Claude Code + OpenClaw 定价变化已确认，评估对当前工作流的影响。",
+        "prompt": "帮我对比 Claude Code、Cursor、Codex 在 Agent 功能和定价方面的最新变化，给出切换建议。"
+      }
+    ],
+    "trends": {
+      "rising": ["新预训练范式", "端侧大模型落地", "Agent Harness 工程", "多模型协作编程"],
+      "cooling": ["单一大模型 API 依赖", "Sora 类视频生成"],
+      "steady": ["开源模型竞赛", "AI 编程工具迭代", "国产芯片适配"],
+      "insight": "本周最重要的信号转变：OpenAI 可能正在从 GPT 系列转向全新预训练架构，这对整个行业的模型选型和技术路线判断有根本性影响。同时，端侧大模型和 Agent Harness 正在成为新的技术焦点。"
+    }
+  },
+  "articles": [
+    {
+      "id": "article-1",
+      "title": "OpenAI 新模型不是 GPT-X：全新预训练架构「土豆」曝光，Sora 成弃子",
+      "priority": "major",
+      "time_label": "4月5日",
+      "source_date": "2026-04-05",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/04/396535.html",
+      "summary": {
+        "what_happened": "量子位报道 OpenAI 下一代模型代号「土豆」，采用全新预训练范式而非 GPT 系列的延续。同时 Sora 视频生成项目疑似被放弃。",
+        "why_it_matters": "如果 OpenAI 真的放弃 GPT 命名和架构路线，这将是自 GPT-3 以来最大的技术路线转向，对整个行业的模型选型、API 生态和产品规划都有深远影响。"
+      },
+      "relevance": "直接影响对 OpenAI 生态的投入决策。如果预训练范式变化，现有的 fine-tuning 和 prompt engineering 经验可能需要重新评估。",
+      "tags": ["#OpenAI", "#预训练", "#模型架构", "#Sora"],
+      "credibility": {
+        "confidence": "low",
+        "source_tier": "tier-2",
+        "cross_refs": 2,
+        "evidence": "量子位连续两次报道（不同关键词各搜到一次），信息源为泄露，未经官方确认",
+        "sources": [
+          {"name": "量子位", "url": "https://www.qbitai.com/2026/04/396535.html"}
+        ]
+      }
+    },
+    {
+      "id": "article-2",
+      "title": "Gemma 4 持续发酵：开源社区热议端侧部署与 Qwen 对比",
+      "priority": "major",
+      "time_label": "4月3日-6日",
+      "source_date": "2026-04-03",
+      "source": "多平台",
+      "url": "https://weibo.com/1727858283/Qz0dUoQFo",
+      "summary": {
+        "what_happened": "Google Gemma 4 发布后持续在微博、小红书、YouTube 多平台热议。社区重点讨论：31B vs Qwen 3.5 的能力对比、E2B/E4B 端侧部署体验、Apache 2.0 许可对商业化的影响。",
+        "why_it_matters": "Gemma 4 正在改变开源模型的竞争格局。端侧部署从概念走向实用，对产品形态有直接影响。"
+      },
+      "relevance": "持续跟踪 Gemma 4 vs Qwen 的对比评测结果，作为产品底层模型选型的依据。",
+      "tags": ["#Gemma4", "#开源模型", "#端侧AI", "#Qwen"],
+      "credibility": {
+        "confidence": "high",
+        "source_tier": "tier-1",
+        "cross_refs": 5,
+        "evidence": "微博(宝玉xp、新智元、tombkeeper)、小红书(3条)、YouTube 多源交叉验证",
+        "sources": [
+          {"name": "宝玉xp 微博", "url": "https://weibo.com/1727858283/Qz0dUoQFo"},
+          {"name": "小红书 Google 震撼发布", "url": "https://www.xiaohongshu.com/search_result/69c15816000000002200cab0"},
+          {"name": "YouTube Hermes Agent + Gemma 4", "url": "https://www.youtube.com/watch?v=example"}
+        ]
+      }
+    },
+    {
+      "id": "article-3",
+      "title": "清华新研究：Agent 的能力上限由 Harness 决定",
+      "priority": "major",
+      "time_label": "近3天",
+      "source_date": "2026-04-05",
+      "source": "小红书",
+      "url": "https://www.xiaohongshu.com/search_result/example",
+      "summary": {
+        "what_happened": "清华团队发表研究指出，Agent 的能力天花板不取决于底层模型，而取决于 Harness（编排层/脚手架）的设计质量。这与 Claude Code 泄露事件中社区总结的「架构比模型更重要」形成呼应。",
+        "why_it_matters": "从学术角度验证了工程界的直觉——投资 Agent 编排层比追求更强模型更有性价比。"
+      },
+      "relevance": "直接指导 Agent 开发策略：把更多精力放在 Harness 设计而非模型选型上。",
+      "tags": ["#Agent", "#Harness", "#清华", "#架构设计"],
+      "credibility": {
+        "confidence": "medium",
+        "source_tier": "tier-2",
+        "cross_refs": 2,
+        "evidence": "小红书热帖(324 likes) + 微博 Claude Code 架构讨论呼应",
+        "sources": [
+          {"name": "小红书", "url": "https://www.xiaohongshu.com/search_result/example"},
+          {"name": "微博 爱可可", "url": "https://weibo.com/1402400261/QzmVW5Hcq"}
+        ]
+      }
+    },
+    {
+      "id": "article-4",
+      "title": "OpenClaude 开源：在 Claude Code 中接入多模型编程",
+      "priority": "notable",
+      "time_label": "近3天",
+      "source_date": "2026-04-05",
+      "source": "微博",
+      "url": "https://weibo.com/example/openclaude",
+      "summary": {
+        "what_happened": "OpenClaude 开源项目允许在 Claude Code 环境中接入多个模型，打破单一模型限制。开发者可以根据任务类型自动路由到最合适的模型。",
+        "why_it_matters": "多模型协作编程正在从概念走向实用工具，降低了对单一 API 供应商的依赖。"
+      },
+      "relevance": "如果你在用 Claude Code，这个项目可以立即提升多任务场景的效率。",
+      "tags": ["#ClaudeCode", "#多模型", "#开源", "#AI编程"],
+      "credibility": {
+        "confidence": "medium",
+        "source_tier": "tier-2",
+        "cross_refs": 1,
+        "evidence": "微博推荐"
+      }
+    },
+    {
+      "id": "article-5",
+      "title": "用 Claude Code 构建 AI 求职系统，获得 740+ 个 offer",
+      "priority": "notable",
+      "time_label": "近3天",
+      "source_date": "2026-04-05",
+      "source": "Reddit",
+      "url": "https://reddit.com/r/ClaudeAI/comments/example",
+      "summary": {
+        "what_happened": "Reddit 用户分享用 Claude Code 构建了一套自动化 AI 求职系统，成功获得 740+ 个面试/offer 机会。帖子详细描述了系统架构和实现过程。",
+        "why_it_matters": "AI Agent 在实际工作流中的应用案例越来越具体，从开发工具扩展到求职、运营等非技术场景。"
+      },
+      "relevance": "Claude Code 的 Agent 能力正在被用于越来越多的实际场景，值得关注这些应用模式。",
+      "tags": ["#ClaudeCode", "#Agent应用", "#自动化", "#求职"],
+      "credibility": {
+        "confidence": "medium",
+        "source_tier": "tier-2",
+        "cross_refs": 1,
+        "evidence": "Reddit r/ClaudeAI 热帖 (1726 upvotes)"
+      }
+    },
+    {
+      "id": "article-6",
+      "title": "小米推出 Token 套餐，颠覆大模型订阅收费模式",
+      "priority": "notable",
+      "time_label": "4月5日",
+      "source_date": "2026-04-05",
+      "source": "微博",
+      "url": "https://weibo.com/example/mimo-token",
+      "summary": {
+        "what_happened": "小米推出 MiMo 大模型 Token 订阅套餐，MiMo-V2-Pro 一度在 Open Router 排名第一。但随后排名从第一快速下滑至第十七，市场反应出现分化。",
+        "why_it_matters": "小米的定价策略可能重塑大模型 API 市场的价格体系。排名波动也反映了「低价策略」在质量评估面前的脆弱性。"
+      },
+      "relevance": "大模型 API 定价正在进入新阶段，需要持续关注性价比变化对工具选型的影响。",
+      "tags": ["#小米", "#MiMo", "#定价", "#API"],
+      "credibility": {
+        "confidence": "high",
+        "source_tier": "tier-1",
+        "cross_refs": 3,
+        "evidence": "微博多人讨论 + Open Router 榜单数据"
+      }
+    },
+    {
+      "id": "article-7",
+      "title": "DeepSeek V4 将基于华为昇腾 950PR 运行",
+      "priority": "notable",
+      "time_label": "4月4日",
+      "source_date": "2026-04-04",
+      "source": "微博 · 外媒知情人士",
+      "url": "https://weibo.com/7785431482/Qzhmb20Ge",
+      "summary": {
+        "what_happened": "外媒知情人士透露 DeepSeek V4 将在华为昇腾 950PR 上运行，单卡算力是 H20 的 2.87 倍，且未给 NVIDIA 早期访问权限。",
+        "why_it_matters": "国产 AI 芯片生态加速成型，中国头部 AI 公司去 NVIDIA 化趋势明确。"
+      },
+      "relevance": "算力基础设施格局正在变化，需要关注国产芯片对模型推理成本和可用性的影响。",
+      "tags": ["#DeepSeek", "#华为昇腾", "#国产芯片"],
+      "credibility": {
+        "confidence": "medium",
+        "source_tier": "tier-2",
+        "cross_refs": 1,
+        "evidence": "外媒知情人士转述，未官方确认"
+      }
+    },
+    {
+      "id": "article-8",
+      "title": "Claude Code 源码泄露架构分析持续深化：电子书发布",
+      "priority": "normal",
+      "time_label": "4月3日-5日",
+      "source_date": "2026-04-03",
+      "source": "微博",
+      "url": "https://weibo.com/2194035935/Qz4Mv1Dnt",
+      "summary": {
+        "what_happened": "社区针对 Claude Code 泄露源码的分析持续深化，开源电子书《解码 Agent Harness》发布，系统化拆解了 Claude Code 的架构设计。",
+        "why_it_matters": "从碎片化讨论走向系统化知识沉淀，Agent 编排层的最佳实践正在加速形成。"
+      },
+      "relevance": "值得作为 Agent 架构设计的参考教材精读。",
+      "tags": ["#ClaudeCode", "#Agent架构", "#电子书"],
+      "credibility": {
+        "confidence": "high",
+        "source_tier": "tier-1",
+        "cross_refs": 2,
+        "evidence": "微博蚁工厂 + GitHub 仓库"
+      }
+    },
+    {
+      "id": "article-9",
+      "title": "Anthropic Claude Code + OpenClaw 额外收费政策确认",
+      "priority": "normal",
+      "time_label": "4月4日",
+      "source_date": "2026-04-04",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/04/04/anthropic-says-claude-code-subscribers-will-need-to-pay-extra-for-openclaw-support/",
+      "summary": {
+        "what_happened": "TechCrunch 确认 Anthropic 对 Claude Code 用户使用 OpenClaw 功能收取额外费用。另外 Microsoft Copilot 被曝声明仅供「娱乐用途」。",
+        "why_it_matters": "AI 编程工具的商业模式正在收紧，从免费/包含转向分层收费，影响开发者工具链选型。"
+      },
+      "relevance": "评估当前 AI 编程工具组合的成本变化。",
+      "tags": ["#Anthropic", "#定价", "#Copilot", "#AI编程"],
+      "credibility": {
+        "confidence": "high",
+        "source_tier": "tier-1",
+        "cross_refs": 2,
+        "evidence": "TechCrunch 两篇报道"
+      }
+    },
+    {
+      "id": "article-10",
+      "title": "awesome-design-md：AI 编程的「审美插件」",
+      "priority": "normal",
+      "time_label": "4月5日",
+      "source_date": "2026-04-05",
+      "source": "微博 · 爱可可-爱生活",
+      "url": "https://weibo.com/1402400261/QzpDchGbr",
+      "summary": {
+        "what_happened": "开源项目将 30+ 顶尖品牌的设计系统浓缩为 .md 文件，AI 编程助手读取后可直接生成高质量 UI。",
+        "why_it_matters": "把「设计品味」变成可复用的开发资源，解决 AI 生成 UI 同质化的问题。"
+      },
+      "relevance": "可直接集成到 Cursor/Claude Code 开发流程中。",
+      "tags": ["#AI编程", "#设计系统", "#开源"],
+      "credibility": {
+        "confidence": "medium",
+        "source_tier": "tier-2",
+        "cross_refs": 1,
+        "evidence": "微博爱可可推荐"
+      }
+    },
+    {
+      "id": "article-11",
+      "title": "CodeRabbit 在 Claude 上构建 Agent 编排系统",
+      "priority": "normal",
+      "time_label": "近3天",
+      "source_date": "2026-04-05",
+      "source": "Anthropic News",
+      "url": "https://www.anthropic.com/webinars/how-coderabbit-orchestrates-agents-to-strengthen",
+      "summary": {
+        "what_happened": "Anthropic 官方分享 CodeRabbit 如何基于 Claude 构建 Agent 编排系统，展示了多 Agent 协作代码审查的实际案例。",
+        "why_it_matters": "来自 Anthropic 官方的 Agent 编排最佳实践，对构建生产级 Agent 有直接参考价值。"
+      },
+      "relevance": "Agent 编排的生产级案例，值得研究其架构设计。",
+      "tags": ["#Agent", "#CodeRabbit", "#Anthropic", "#代码审查"],
+      "credibility": {
+        "confidence": "high",
+        "source_tier": "tier-1",
+        "cross_refs": 2,
+        "evidence": "Anthropic 官方 webinar"
+      }
+    },
+    {
+      "id": "article-12",
+      "title": "阿里千问 3.6-Plus 日调用量超万亿，登顶国产编程模型",
+      "priority": "normal",
+      "time_label": "4月3日",
+      "source_date": "2026-04-03",
+      "source": "量子位 / 雷军微博",
+      "url": "https://www.qbitai.com/2026/04/396346.html",
+      "summary": {
+        "what_happened": "阿里千问 3.6-Plus 在 Arena 编程榜排名中国第一。雷军同期宣布小米 MiMo 调用量破万亿 Token。国产大模型的规模化应用进入新阶段。",
+        "why_it_matters": "国产编程模型在国际评测中取得突破，为 AI 编程工具提供了新的底层模型选项。"
+      },
+      "relevance": "国产编程模型选型有了新参考。",
+      "tags": ["#千问", "#MiMo", "#国产模型", "#AI编程"],
+      "credibility": {
+        "confidence": "high",
+        "source_tier": "tier-1",
+        "cross_refs": 2,
+        "evidence": "量子位报道 + 雷军微博"
+      }
+    },
+    {
+      "id": "article-13",
+      "title": "联想重新定义「龙虾」：企业级 Agent 方案密集发布",
+      "priority": "normal",
+      "time_label": "近3天",
+      "source_date": "2026-04-05",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/04/example",
+      "summary": {
+        "what_happened": "联想发布企业级 Agent 方案，量子位连续报道包括联想、浪潮等企业级 Agent 解决方案的密集发布，具身 Agent 也开始上车理想汽车。",
+        "why_it_matters": "Agent 从技术概念加速走向企业级产品化，硬件厂商开始深度参与。"
+      },
+      "relevance": "企业级 Agent 落地加速，关注各厂商的差异化定位。",
+      "tags": ["#Agent", "#企业级", "#联想", "#具身智能"],
+      "credibility": {
+        "confidence": "medium",
+        "source_tier": "tier-2",
+        "cross_refs": 3,
+        "evidence": "量子位多篇报道"
+      }
+    },
+    {
+      "id": "article-14",
+      "title": "Hermes Agent 重大更新",
+      "priority": "normal",
+      "time_label": "4月5日",
+      "source_date": "2026-04-05",
+      "source": "YouTube",
+      "url": "https://www.youtube.com/watch?v=example",
+      "summary": {
+        "what_happened": "Hermes Agent 发布重大更新，YouTube 评测视频称其能力提升显著。",
+        "why_it_matters": "Hermes 作为开源 Agent 框架的重要一员，其更新对开源 Agent 生态有示范效应。"
+      },
+      "relevance": "开源 Agent 框架持续迭代，值得关注能力边界的变化。",
+      "tags": ["#HermesAgent", "#开源", "#Agent框架"],
+      "credibility": {
+        "confidence": "medium",
+        "source_tier": "tier-2",
+        "cross_refs": 1,
+        "evidence": "YouTube 评测视频 (3K views)"
+      }
+    },
+    {
+      "id": "article-15",
+      "title": "日本证明实验性物理 AI 已经准备好走向产业化",
+      "priority": "minor",
+      "time_label": "4月5日",
+      "source_date": "2026-04-05",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/04/05/japan-is-proving-experimental-physical-ai-is-ready/",
+      "summary": {
+        "what_happened": "TechCrunch 报道日本在实验性物理 AI（机器人 + AI）领域取得显著进展，多个项目从实验室走向产业化应用。",
+        "why_it_matters": "物理 AI / 具身智能正在全球范围内加速落地，日本的进展值得关注。"
+      },
+      "relevance": "具身智能的产业化进展可能影响 AI 应用场景的扩展方向。",
+      "tags": ["#具身智能", "#日本", "#机器人", "#产业化"],
+      "credibility": {
+        "confidence": "high",
+        "source_tier": "tier-1",
+        "cross_refs": 1,
+        "evidence": "TechCrunch 报道"
+      }
+    }
+  ],
+  "data_sources": ["微博", "小红书", "Reddit", "YouTube", "量子位", "TechCrunch", "Anthropic News", "OpenAI News", "InfoQ AI"]
+}

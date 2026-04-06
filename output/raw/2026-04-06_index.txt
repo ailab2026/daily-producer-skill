@@ -1,0 +1,3004 @@
+# 日报候选池采集结果 — 2026-04-06
+# 采集时间: 2026-04-06 08:37:28
+# 总命令数: 104
+# 成功: 91
+# 失败: 13
+
+# 总候选条目: 949
+
+======================================================================
+
+--- [微博] (cn) ---
+command: opencli weibo hot --limit 30 -f json
+keyword: (none)
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] 王楚钦问孙颖莎你的奖杯帽呢
+      hot: 1071629
+      url: https://s.weibo.com/weibo?q=%23%E7%8E%8B%E6%A5%9A%E9%92%A6%E9%97%AE%E5%AD%99%E9%A2%96%E8%8E%8E%E4%BD%A0%E7%9A%84%E5%A5%96%E6%9D%AF%E5%B8%BD%E5%91%A2%23
+
+  [2] 博物馆回应曹操墓前摆满布洛芬
+      hot: 767571
+      url: https://s.weibo.com/weibo?q=%23%E5%8D%9A%E7%89%A9%E9%A6%86%E5%9B%9E%E5%BA%94%E6%9B%B9%E6%93%8D%E5%A2%93%E5%89%8D%E6%91%86%E6%BB%A1%E5%B8%83%E6%B4%9B%E8%8A%AC%23
+
+  [3] 先辈给我们的留言
+      hot: 641575
+      url: https://s.weibo.com/weibo?q=%23%E5%85%88%E8%BE%88%E7%BB%99%E6%88%91%E4%BB%AC%E7%9A%84%E7%95%99%E8%A8%80%23
+
+  [4] 特朗普暗示最后通牒再延迟1天
+      hot: 508945
+      url: https://s.weibo.com/weibo?q=%23%E7%89%B9%E6%9C%97%E6%99%AE%E6%9A%97%E7%A4%BA%E6%9C%80%E5%90%8E%E9%80%9A%E7%89%92%E5%86%8D%E5%BB%B6%E8%BF%9F1%E5%A4%A9%23
+
+  [5] SJ首尔演唱会栏杆断裂粉丝坠落
+      hot: 376055
+      url: https://s.weibo.com/weibo?q=%23SJ%E9%A6%96%E5%B0%94%E6%BC%94%E5%94%B1%E4%BC%9A%E6%A0%8F%E6%9D%86%E6%96%AD%E8%A3%82%E7%B2%89%E4%B8%9D%E5%9D%A0%E8%90%BD%23
+
+
+--- [微博] (cn) ---
+command: opencli weibo search "大模型" --limit 10 -f json
+keyword: 大模型
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] 大模型编程能力排名，Claude断崖领先。看到国旗分布很恐怖，AI现在就是中国和美国之争。 ​
+      author: 黄鱼Veda
+      time: 04月05日 01:32
+      url: https://weibo.com/2177245391/QzjefCIXb?refer_flag=1001030103_
+
+  [2] #小米推出Token套餐#果然是小米，一进场就把大模型订阅行业那些糟心的收费套路全给掀翻了。先不说价格，MiMo-V2-Pro本身在OpenRouter上的表现大家有目共睹，编程和多模态能力实打实的第一梯队，这是所有讨论的前提。这次最狠的不是降价，是直接把行业默认的“5小时token限额”给砍了，还把Pro、Omni、TTS所有能力打包进一个套餐，用统一Credit透明计费。再也不用算不同模型怎么收费、高峰会不会翻倍、语音还要不要单独买，对于那些用AI写代码、跑脚本或者在养虾的人来说，终于不用被各种限制打断思路，能安心地跑一整天了。 价格还是小米一贯的厚道，最低档一天一块多，最高档16亿Credits才659，比海外同级别Claude便宜一半还多。从个人轻度体验到专业重度开发全覆盖，一次订阅全搞定，省心又省钱。 说到底，小米就是用做小米手机、小米汽车的标准化定价思路来做大模型服务，把复杂的东西做简单，把虚高的价格打下来。这波操作下来，估计其他厂商很快就得跟着改规则了。 收起d
+      author: 向禾
+      time: 04月03日 15:43
+      url: https://weibo.com/6623723777/Qz5WzsoN0?refer_flag=1001030103_
+
+  [3] 分享一个好消息： 昨天，MiMo 大模型调用量，超过了 1万亿Token 这是我们在大模型领域一个新的里程碑。 ​
+      author: 雷军
+      time: 04月03日 11:44
+      url: https://weibo.com/1749127163/Qz4nC3Abt?refer_flag=1001030103_
+
+  [4] 小米雷总宣布大模型收费之后，前天通过 Open Router 排名第一，昨天数据，下滑严重，第七，今天更新直接第十七 ​
+      author: DeepPost
+      time: 04月05日 08:04
+      url: https://weibo.com/1829465157/QzlNokW9v?refer_flag=1001030103_
+
+  [5] 我用大模型接管了我的量化交易账户。已经3天了。它什么也没买。这3天，它每分钟都在认真思考。并输出结论： [14:30:41] 什么也不买 - 无确认信号 with buy_date=2026-04-03[14:31:42] 什么也不买 -无确认信号with buy_date=2026-04-03[14:32:41] 什么也不买 -无确认信号with buy_date=2026-04-03[14:33:41] 什么也不买 -无确认信号with buy_date=2026-04-03[14:34:41] 什么也不买 -无确认信号with buy_date=2026-04-03[14:35:41] 什么也不买 -无确认信号with buy_date=2026-04-03[14:36:41] 什么也不买 -无确认信号with buy_date=2026-04-03[14:37:41] 什么也不买 -无确认信号with buy_date=2026-04-03 收起d
+      author: 梁赛
+      time: 04月03日 16:31
+      url: https://weibo.com/1725941200/Qz6gj6w9H?refer_flag=1001030103_
+
+
+--- [微博] (cn) ---
+command: opencli weibo search "AI 产品" --limit 10 -f json
+keyword: AI 产品
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] 🚀 OPCPlay 案例分析：小哥靠 5 个AI 小产品月赚 70万美金！每个产品均为 AI + 订阅模式，解决重复劳动，强调“autopilot”（自动驾驶）和持续价值。1️⃣ Revid.ai（AI 视频生成 AI）* 功能：从文本、链接、文档或想法一键生成病毒式短视频（TikTok/Instagram/YouTube Shorts 等）。自动脚本、配音（70+ 语言真实声音）、视觉、编辑、趋势分析、一键发布。* 亮点：无需剪辑经验，几分钟出片，商业使用权，已生成大量视频。* 定价：Hobby 约 $39/月起（含 credits，最受欢迎），Growth $99/月，Ultra $199/月（年付更优惠）。* 收入贡献：约 40 万美元/月（组合中最高）。* 适用人群：内容创作者、品牌、独立艺术家。2️⃣ Outrank.so（AI SEO 流量工具）* 功能：AI 全自动生成+优化+发布 SEO 文章（每月 30 篇基础），包含关键词研究、图片生成、多语言（150+）、自动发布到 WordPress/Webflow 等，还带反向链接网络。* 亮点：真正 autopilot，有多站点折扣，帮用户快速提升有机流量和域名评级。* 定价：Standard 约 $99/月（30 篇文章），可加购更多文章，企业版自定义。* 收入贡献：约 20 万美元/月。* 适用人群：创业者、代理机构、需要持续内容产出的网站主。3️⃣ SuperX.so（X/Twitter 增长工具）* 功能：AI 分析病毒帖、生成个性化内容、重写、聪明调度（根据受众活跃时间发帖）、自动化互动、仪表盘分析；支持 Chrome 扩展。* 亮点：比老产品 Tweet Hunter 更新更频繁，增长更快。* 定价：约 $39/月起（具体以官网为准）。* 收入贡献：约 1.3 万美元/月（仍在快速增长中）。* 适用人群：独立黑客、创作者、创始人（建个人品牌）。4️⃣PostSyncer.com（一键多平台发布）* 功能：一次编写内容，同步发布到 Twitter、Facebook、Instagram、TikTok、YouTube、LinkedIn 等 10+ 平台；支持线程、轮播、Reels、AI 生成、统一评论管理和分析。* 亮点：保持发帖一致性，节省大量时间，定价亲民。* 定价：Starter 约 $29/月起，Pro $49，Pro Plus $99（含更多账号和 AI credits）。* 收入贡献：较低（约 1-2 万美元/月，仍在增长）。* 适用人群：多平台创作者、需要跨平台分发的用户。5️⃣Feather.so（Notion 转博客/网站）* 功能：无代码将 Notion 数据库/页面转为 SEO 友好独立博客/网站（自定义域名、sitemap、RSS、搜索、相关文章、分析等）；内容仍在 Notion 管理。* 亮点：适合把 Notion 当 CMS 使用，增长稳定，低 churn（流失率）。* 定价：按页面浏览量计费（站点创建不限）。* 收入贡献：约 1 万美元/月。* 适用人群：用 Notion 写内容的博主、创始人。🔥 共同商业模式与优势：—* 订阅核心：月费从 $10~$99 不等（低至两杯星巴克），用户痛点解决后持续付费 → 高留存、稳定现金流。—* AI 驱动：降低人力成本，实现自动化生成、优化、分发、分析。—* 产品矩阵策略：5 个产品覆盖内容全链路（生成 → SEO 优化 → 多平台分发 → 网站构建），相互导流，分散风险。—* 增长打法：Build in public + X 营销。—* 快速验证（先发帖测需求，再建 MVP）。—* 合作模式（给创作者分成而非股权）。—* 专注“帮人省时间/涨流量/省钱”的工具。🚀 战略准备：1.从个人痛点或已付费问题出发：不要凭空创新问题，只在执行上创新。找创作者/独立黑客/创业者正在用钱解决的痛点（如内容生成、SEO、社交分发）。2.采用 SaaS Studio / 产品矩阵模式：不是 all in 一个产品，而是并行多个小工具，覆盖内容全链路（生成 → 优化 → 分发 → 网站）。好处：分散风险、相互导流、稳定现金流。3.Bootstrapped + 小团队：自力更生，部分产品用 co-maker 模式（给开发者分成收入，而非股权）。一人主导，多人协作。4.Build in Public：在各平台每天分享进度、失败、用户反馈。把个人品牌变成主要分发渠道。5.AI 驱动降低成本：用codex等工具快速开发，AI 实现自动化（autopilot），让产品“帮用户省时间/涨流量”。核心哲学：速度 > 完美、验证 > 创新、分布 > 产品、订阅现金流 > 一次性卖。他强调“build in public”（公开构建）、快速迭代、找对 co-maker（合作开发者），并把每个产品当作“关系”而非单纯代码来经营。）Tibo的成功证明：专注解决创作者痛点 + 订阅模式 + 产品矩阵 + 公开构建，能实现可持续高收入。（数据来源于Tibo本人X/LinkedIn/博客公开分享及社区报道，实际以官网为准，收入有宣传成分，可能含波动）#How I AI# #TokenFi# #词元经济# #OPC# #一人公司# #OPCPlay# 收起d
+      author: OpenClaw
+      time: 04月03日 22:31
+      url: https://weibo.com/3880172960/Qz8CouyH5?refer_flag=1001030103_
+
+  [2] 2026 AI硬件元年炸场！这款能动手、会翻译的全能耳机，直接封神最近的世界科技格局，正以肉眼可见的速度飞速迭代，一场全新的工业革命被技术革新彻底引爆。左手智能体不断进化，右手机器人落地生根，AI早已跳出对话框的局限，从被动问答的Copilot，蜕变为主动干活的Autopilot，化身高效数字员工，成为能创造价值、轻松赚钱的实用工具。2026年，能动手、能落地、能赋能的AI，才是真正的真香定律。从OpenClaw颠覆软件生态，让AI长出灵活双手，到Seedance 2.0定价落地，拉开AI商业化全面开跑的序幕，每一次技术突破，都在宣告AI实体化时代的到来。而AI智能硬件，更是成为这场变革的核心载体，2026年，注定是AI智能硬件元年，BLINBLIN V22高清立体声智能翻译AI耳机，便是这场浪潮里的重磅力作，带你提前拥抱AI新时代。不止是耳机，更是全能私人AI助理别再把它当成普通蓝牙耳机，BLINBLIN V22彻底打破传统耳机的边界，集翻译、办公、娱乐、通讯于一身，是真正意义上的智能型AI耳机。它不仅能精准翻译、高清听歌，更搭载强大AI能力，全方位提升办公交付能力与使用渗透率，不管是商务沟通、跨国交流，还是日常学习、通勤娱乐，都能一键搞定，成为你随身而行的全能搭档。硬核科技拉满，每一处都尽显旗舰实力作为BLINBLIN品牌全新旗舰款，BLINBLIN V22兼顾高端品质与亲民价格，打造友好型高性价比智能耳机，用顶尖技术带来极致体验。✅蓝牙5.4芯片，极速稳定连接升级高配蓝牙5.4，传输效率比5.0提升90%，实现真正无损音乐传输，音频信号精准还原，告别断连、卡顿，无论是听歌还是通话，都能保持丝滑稳定，连接距离可达10米，使用更自由。✅30小时超长续航，全天电量自由单次续航长达10小时，搭配充电盒续航直接拉满至30小时，从早听到晚、用到晚，音乐不间断、工作不中断。充电仓采用铂金镀膜工艺，导电性超强，耐摩擦、耐腐蚀，充电更安全、储电更快捷。✅定向传音+超清通话，私密又清晰独家定向传音技术，通过精密结构设计，减少96%漏音，牢牢守护通话隐私，不用担心声音外泄。双麦AI通话降噪，自适应波束形成技术，精准捕捉人声，彻底消除环境噪音与回音，哪怕在嘈杂的户外、地铁里，通话也能声色动人，字字清晰。✅人体工学设计，佩戴零负担耳挂内嵌慢回弹钢丝，任意拉扯不变形，柔性钛丝搭配人体工学结构，不挑耳廓，佩戴稳固不掉，跑跳、运动都无惧脱落。机身包裹亲肤软硅胶，镂空设计透气舒适，单只耳机仅8.5g，轻盈无感，长时间佩戴也毫无压迫感，真正实现舒适新境界。✅高清音质，沉浸式听觉享受内置磁悬浮振膜独立喇叭，打造低频共鸣效果，三频均衡饱满，音质震撼有力，仿佛交响乐团在耳畔立体演奏，听歌、追剧、听书都能沉浸其中，尽享纯净高品质音效。✅潮流外观，颜值实力双在线简约大气的潮流耳饰设计，搭配气质白、高贵黑两大经典配色，高贵百搭，既是实用数码好物，也是时尚配饰，质感拉满，适配各种穿搭与场景。全能翻译黑科技，沟通无界走遍全球最让人惊艳的，莫过于它的超强翻译能力，彻底打破语言壁垒，让世界“0”距离。支持200+国家地区、100+种语言免费互译，无需额外付费，任意两种语言都能流畅切换。自研机器翻译引擎，联合顶尖翻译科技公司打造大数据AI平台，翻译准确率高达98%，响应速度低至0.5秒，即戴即说、即时翻译，毫无延迟。专属双耳模式，商务会面、跨国交流时，双方各戴一只耳机，各自说母语，无需手动切换、无需停顿等待，自动识别断句，连续发言也能实时翻译，解放双手，文件演示、互动沟通两不误。还有耳机+手机模式、同声传译模式、拍照翻译模式，适配商务谈判、海外旅行、菜单翻译、路标识别、外语学习等全场景，离线也支持10种主流语言互译，没网也能顺畅沟通。全场景AI赋能，办公学习全能帮手接入人工智能豆包大模型，解锁超多硬核智能体功能，堪称办公学习神器。一键写作、文案润色、标题生成、PPT制作、周报整理、故事共创、稿件校对，还有诗人、脱口秀演员、作曲家等趣味模式，语音唤醒即可开启，全方位提升工作学习效率。同时支持会议录音、音视频通话翻译、翻译内容实时转写记录，跨国会议、项目复盘轻松搞定，自动生成智能纪要，省去繁琐记录工作，职场效率直接翻倍。全场景适配，人人都需要的AI神器无论是商务通勤，开放双耳实时感知环境音，安全又高效；还是健康运动，IP54抗水抗汗，耳道清爽，挥汗锻炼也畅快；亦或是户外休闲、学习办公，舒适听音、沟通无阻，全能适配。跨国贸易、外语学习、商务洽谈、海外旅行、跨国社交，有它在手，再也不用被语言困扰，轻松应对所有场景，提供满满实用价值与情绪价值，让职场更顺畅、旅行更惬意、交流更快乐。国货精品，499元解锁顶配AI体验就是这样一款集翻译、办公、娱乐、通讯于一体的全能AI耳机，零售价仅499元，高端品质、亲民定价，性价比直接拉满。作为BLINBLIN品牌创始人田硕宸重点推荐单品，原装正品保障，做工精细、材质考究、安全耐用，老黄牛数码专营店与BLINBLIN旗舰店火热热销。参与品牌创始人微博互动，每日还能领取大额红包，和万千粉丝一起分享使用体验，助力国产精品数码走进千家万户，共筑国货之光。2026 AI硬件元年，别再错过这款全能黑科技耳机。BLINBLIN V22高清立体声智能翻译AI耳机，用前沿科技赋能生活，以超高性价比带来极致体验，带你解锁AI新时代，轻松实现沟通无界、效率翻倍！#blinblin智能翻译蓝牙耳机# #blinblin智能翻译耳机# #蓝牙耳机推荐# #AI智能# #blinblin旗舰店# #老黄牛数码专营店# #blinblin蓝牙耳机# #科技产品评测# #blinblin翻译耳机# 收起d
+      author: BLINBLIN-田硕宸
+      time: 04月02日 18:54
+      url: https://weibo.com/1824985864/QyXLvhYzp?refer_flag=1001030103_
+
+  [3] 这个真是好东西，《100 个产品设计框架》。从用户洞察到系统思维，覆盖产品全链路的核心工具集，点击任意框架查看详细说明与使用步骤。甚至还提供了 Skills 一键下载。传送门：pmframe.works#HOW I AI##科技先锋官##程序员##产品经理# ​
+      author: 欧巴聊AI
+      time: 04月04日 19:35
+      url: https://weibo.com/2771284557/QzgTfdLlb?refer_flag=1001030103_
+
+  [4] 外媒采访了五位知情人士，获得了 DeepSeek V4 的一些信息：- V4 将运行在华为最新 AI 芯片（昇腾 950PR）上，搭载全新昇腾950PR的Atlas 350，单卡算力达到了NV H20的2.87倍，是目前国内唯一支持FP4低精度的推理产品；HBM 容量是H20的1.16倍；- V4 还会有两个变体版本，分别针对不同能力做了优化，均基于国产芯片；- DeepSeek 花了数月时间与华为、寒武纪合作，重写了模型底层代码的部分模块，专门适配国产芯片，这次没有按照行业惯例，给NV和 AMD 任何早期访问权限；- 阿里、字节、腾讯已提前大批量采购华为新芯片，总量达数十万颗，华为昇腾 950PR 的价格因此上涨了 20%；- V3 和 R1 发布时引发了全球科技股抛售，市场质疑美国 AI 公司是否需要花数百亿美元采购算力，V4 发布窗口预计在未来几周内。 收起d
+      author: 万万_ECC
+      time: 04月04日 20:46
+      url: https://weibo.com/7785431482/Qzhmb20Ge?refer_flag=1001030103_
+
+  [5] 问了AI一个问题，董宇辉卖澳洲优思益和三只羊卖美诚月饼，性质哪一个更恶劣一些？AI对比分析出来，居然是董宇辉这事儿性质要恶劣得多。#市场监管部门对优思益推手立案调查##董宇辉曾说产品上播10天前有人试吃# ​
+      author: 非主流视野
+      time: 04月03日 10:37
+      url: https://weibo.com/7387801989/Qz3Wp5IWl?refer_flag=1001030103_
+
+
+--- [微博] (cn) ---
+command: opencli weibo search "Agent" --limit 10 -f json
+keyword: Agent
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] 【架构比模型更重要：Claude Code源码泄露揭示了AI Agent 的生产级蓝图】快速阅读：Claude Code 的源码泄露揭示了生产级 AI Agent 的真正护城河：不在于模型本身有多聪明，而在于围绕模型构建的编排层（Orchestration Layer）。通过怀疑式记忆、后台整合与风险分级，AI 正从被动响应工具转向主动工作的系统。---这次泄露最值钱的不是那些隐藏功能，而是看到了一套年营收达 25 亿美元规模的系统是如何处理“不确定性”的。很多人盯着模型参数看，但真正的进步发生在模型之外。Claude Code 的架构证明了，AI Agent 的进化逻辑更像是在构建一个可靠的操作系统，而不是在调优一个聊天机器人。最让我觉得有意思的是那个“怀疑式记忆”机制。大多数开发者在做 Agent 时，会默认把模型之前的输出当作真理，这会导致 Agent 在错误的方向上越走越远。但这里的逻辑是：把记忆当成“提示”而非“事实”。在执行动作前，必须先去现实世界验证一遍。这就像是在指令流水线里加了一个校验单元，防止错误的指令污染整个状态机。还有一个很有趣的细节：autoDream。它让 Agent 在闲置时进行“后台整合”，把杂乱的观察结果进行去重和压缩。这很像人类的睡眠过程，通过主动的重构来清理内存噪声，防止随着对话增长，上下文被无用的垃圾信息填满。有网友提到，这种架构其实是由于约束条件驱动的必然结果。如果你想让 Agent 既能自主工作又不至于失控，你只能这么设计：给风险分级，高风险动作必须由人审批；给 KAIROS 守护进程，让它在后台干活但限制它的阻塞预算，别让它变成用户的负担。这种设计思路其实是在把 AI 当作一个“不可信的承包商”来对待。与其追求它绝对正确，不如建立一套完善的审计、回滚和验证机制。现在的技术路径很清晰：模型正在商品化，而围绕模型的编排、记忆管理和工具路由，才是真正的护城河。有人在讨论这是否是一种“语义漂移攻击”，但事实是，当大家都在独立开发 Agent 时，竟然不约而同地撞上了这套架构。这说明，在可靠性和成本的约束下，通往生产级的路径只有这一条。既然架构已经清晰了，下一个问题是，当多个并行 Agent 产生了冲突的观察结果时，谁来当那个仲裁者？reddit.com/r/artificial/comments/1s9jprb/the_claude_code_leak_accidentally_published_the 收起d
+      author: 爱可可-爱生活
+      time: 04月05日 10:58
+      url: https://weibo.com/1402400261/QzmVW5Hcq?refer_flag=1001030103_
+
+  [2] 飞书 CLI 开源了，为什么 AI Agent 时代，大家都在做命令行工具？飞书刚开源了一个命令行工具 lark-cli，能让 AI Agent 直接操作飞书：发消息、查日历、写文档、建多维表格、发邮件、管任务。你跟 AI 说一句话，它自己去操作飞书完成任务。类似的 CLI 还很多，三周前 Google 也开源了 gws，让 AI Agent 操作 Google Workspace。2026 年了，所有想接入 AI Agent 的产品，都在做 CLI。【1】先说 CLI 是什么CLI（Command Line Interface），就是你在电脑上打开一个黑底白字的终端窗口，敲一行命令，回车，电脑帮你干活。比如你要查今天的日程，不用打开飞书 App 找日历，敲一行：lark-cli calendar +agenda日程就列出来了。没有按钮，没有图标，没有花哨的界面。CLI 比图形界面早了二十多年，在 Windows 时代逐渐没什么人用了。但 AI Agent 时代，又火起来了。【2】为什么 AI Agent 时代，大家都在做 CLIAI Agent 要干活，就得有操作工具的能力。你让 AI 帮你订会议室，它需要能访问日历系统。你让它帮你整理客户数据，它需要能读写表格。你让它帮你部署代码，它需要能跑部署命令。总得有一个接口让 AI 去调用。API 也能做这件事，但 CLI 有一个 API 不具备的优势：CLI 是自描述的。AI 碰到一个陌生的 CLI，敲一下 --help 就知道有哪些能力、怎么用、参数怎么填。API 不行，AI 得先拿到文档、弄清端点、搞懂认证方式，才能动手。CLI 自带说明书，AI 拿来就能用。而且 CLI 天然是用文本交互的，输入是文字，输出也是文字。AI 最擅长处理的就是文字。反过来，让 AI 操作 GUI 就绕远了，得截图、用视觉模型识别按钮在哪、再模拟鼠标去点，一行命令能搞定的事拆成四步，每步都可能出错。对 AI 来说，CLI 就是天然的操作界面。【3】那 MCP 和技能呢让 AI Agent 操作外部服务，现在主流有三种方式：MCP、CLI、技能（Skills）。三者不是互相替代的关系，各管一件事。CLI 是实际干活的工具。装完之后终端里就能跑命令，查日历、发消息、建表格，都是 CLI 在执行。MCP 也是让 AI 操作外部服务的，但方式不同。MCP 是提前把工具清单注册给 AI，AI 随时能调用，但清单本身常驻上下文窗口（可以理解为 AI 的“工作记忆”，空间有限）。就算 AI 暂时不用某个工具，它的描述也占着空间。CLI 是 AI 需要的时候自己去终端敲命令，用完就走，不占上下文。另一个区别是组合能力。CLI 可以靠管道和参数组合出没预设过的操作，比如：lark-cli calendar agenda --next-week | grep“张三” | wc -l一行命令就能查出下周和张三有几个会。MCP 的每个能力都需要提前注册，要实现同样的效果，得单独定义一个新工具。不过 MCP 有自己的适用场景。在不支持命令行的环境里（比如 Cursor、Claude 桌面端），MCP 是唯一选择。两者各有所长：能访问终端的场景用 CLI 更轻量灵活，不能访问终端的场景靠 MCP。技能是给 Agent 看的说明书。它不干活，但告诉 Agent 这个 CLI 有哪些命令、什么场景该用什么参数、出错了怎么处理。没有技能文件 Agent 也能用 CLI，靠 --help 自己摸索。有了技能文件，Agent 一上来就知道该怎么操作，成功率高得多。简单说：CLI 是手，MCP 是另一种手，技能是肌肉记忆。飞书这次开源的项目，CLI 和技能一起提供。【4】怎么给 AI 写好一个 CLI不是随便写个命令行工具 AI 就能顺畅地用。如果你想给自己的产品做一个面向 AI 的 CLI，飞书的设计有几个值得参考的地方。第一，help 文本是你最重要的文档。AI 碰到不认识的 CLI，第一件事就是运行 --help。你的 help 文本就是工具说明书、参数规格、使用指南三合一。别写那种“Usage: myctl deploy [flags]”就完事的帮助信息，要写清楚每个参数干什么、什么时候用、有什么默认值。飞书 CLI 还有一个 schema 命令，可以快速查询任何 API 方法的参数、请求体、响应结构、支持的身份和权限范围。AI 看到这些信息就能自己决定怎么调用。第二，支持 dry-run，这是为 AI 设计的安全网。AI 会自己做决策，有时候它理解错了你的意图，或者匹配到了不该动的数据。dry-run 相当于一个“预览”机制。举个例子，你让 AI 帮你删除飞书多维表格里上个月的过期数据。如果直接执行，删错了就没了。加上 --dry-run，AI 会先跑一遍，返回类似这样的结果：“将要删除以下 47 条记录：2025-05 的过期任务 23 条，已归档项目 24 条。未做任何实际修改。”你看了觉得没问题，再让它去掉 --dry-run 真正执行。Google 的 gws 也做了同样的设计，它的技能文件里甚至写死了一条规则：对所有写入和删除操作，必须先 dry-run。第三，错误信息要能指导下一步操作。人看到“Permission denied”会自己去查文档。AI 看到“Permission denied”就卡住了。飞书 CLI 的做法是：告诉 AI 你缺了什么权限，顺便把申请权限的命令也给出来。比如 lark-cli auth login --scope“calendar:calendar:readonly”。AI 看到就能自己修复问题，继续干活。为 AI 设计的 CLI，每一条错误信息都应该包含三个要素：哪个参数出了问题、具体错在哪里、下一步应该执行什么命令来修复。第四，返回结构化数据，控制好输出量。飞书 CLI 支持 json、csv、table 等多种输出格式。对人来说 table 更顺眼，对 AI Agent 来说 json 更可靠。好的 CLI 不只是能跑通，还要方便被别的工具消费。同时要控制输出量。AI 的上下文窗口有限，如果一个命令返回一万行日志，上下文就炸了。飞书 CLI 提供了分页参数（--page-limit）和过滤参数，让 AI 能拿到它需要的那部分数据就好。不管你是设计 CLI 的人还是用 CLI 的人，记住这条：让 Agent 动手之前，先让它 dry run 一遍。【5】装完之后，你动嘴，Agent 动手装完之后用起来就是：你说一句话，Agent 去操作飞书把事情办了。你开完会，跟 AI 说“把刚才会议里提到的所有待办都提出来，该发文档的发文档，该建任务的建任务”。AI 读会议纪要，拆解出待办事项，然后逐条执行：用 lark-cli doc create 在飞书里建文档，用 lark-cli task create 建任务并指派给对应的人，用 lark-cli im send 把结果通知到群里。整个过程你只说了一句话，Agent 在终端里跑了一串命令。而且因为有 dry-run，你可以让它先预览一遍要建哪些任务、发给谁，确认没问题再真正执行。你要约一个五人跨时区的会，跟 AI 说“帮我看看下周大家什么时候有空”。AI 去查每个人的日历和时区，推荐几个时间段，你选一个，会就建好了。你甚至可以让 AI 在飞书文档里直接帮你写初稿，你在文档里留评论提意见，AI 读完评论自己改。整个协作过程不用离开飞书。安装也简单，npm install -g @larksuite/cli 装 CLI，npx skills add O网页链接 -y -g 装技能文件。你甚至不用自己记这两步，把项目地址 O网页链接 发给 Agent，让它自己安装、自己学会怎么用。【CLI 的回归】过去四十年，计算机的界面进化方向一直是从 CLI 到 GUI，从文字到图标，从键盘到触屏，对人越来越友好。AI Agent 时代，方向反过来了，软件的用户变成了 AI Agent。CLI 这个为文字世界设计的接口，恰好是 AI 最顺手的工具。既然 Agent 成了软件新的用户增长点，那么像飞书提供 CLI 也不稀奇，与其等着社区来写 MCP 适配层，不如直接做一个 AI 原生的 CLI，完全开源，无需注册审批，让所有 AI Agent 都能接入。这也带来一个绕不开的问题：Agent 的权限怎么给？不给权限，什么都做不了；权限太高，又怕 Agent 理解错意图干出不可逆的事。毕竟还做不到让 Agent 代你审批、代你发全员邮件。dry-run 能兜住一部分风险，但真正要让 Agent 在企业里大规模跑起来，权限体系、审计追踪、人机协作的边界，都还在摸索中。但换个角度想，当年我们把公司的钱从保险柜搬到网银，把合同从纸质搬到电子签，也都是一步步摸索出来的。CLI 和 dry-run，可能就是这个过程里的第一步。而飞书做这件事，其实有一个别人不太容易复制的优势：它本身在企业协作领域已经足够成熟，消息、文档、日历、审批、多维表格、任务，这些能力都是现成的。现在把这些能力通过 AI 原生的 CLI 全部开放出来，大概率会成为国内对 AI Agent 最开放、最友好的企业级接入入口。这件事的价值不止是多一个工具，更像是真正在为 Agent 时代搭建企业级基础设施，把权限、审计、组织能力开放给整个生态，对行业落地 AI Agent 会是很关键的一步。 收起d
+      author: 宝玉xp
+      time: 03月30日 07:57
+      url: https://weibo.com/1727858283/QyrbtFfhg?refer_flag=1001030103_
+
+  [3] 电子书 解码 Agent Harness -- Claude Code 架构深度剖析github库：github.com/lintsinghua/claude-code-book在线阅读：lintsinghua.github.io/“不做使用教程，不列 Prompt 技巧——拆解 Agent 的骨架与神经。读懂 Claude Code 的设计决策，你就拥有了一套可迁移到任何 Agent 框架的心智模型。”#How I AI# 收起d
+      author: 蚁工厂
+      time: 04月03日 12:45
+      url: https://weibo.com/2194035935/Qz4Mv1Dnt?refer_flag=1001030103_
+
+  [4] Claude Code项目太大了，几十万行代码。要学Agent项目也可以参考MiniMax的这个演示项目Mini-Agent地址：github.com/MiniMax-AI/Mini-Agent/Mini Agent 是一个极简但专业的演示项目，旨在展示使用 MiniMax M2.5 模型构建 Agent 的最佳实践。项目通过兼容 Anthropic 的 API，完全支持交错思维（interleaved thinking），从而解锁 M2 模型在处理长而复杂的任务时强大的推理能力。该项目具备一系列为稳健、智能的 Agent 开发而设计的特性： ✅ 完整的 Agent 执行循环：一个完整可靠的执行框架，配备了文件系统和 Shell 操作的基础工具集。 ✅ 持久化记忆：通过内置的 Session Note Tool，Agent 能够在多个会话中保留关键信息。 ✅ 智能上下文管理：自动对会话历史进行摘要，可处理长达可配置 Token 上限的上下文，从而支持无限长的任务。 ✅ 集成 Claude Skills：内置 15 种专业技能，涵盖文档处理、设计、测试和开发等领域。 ✅ 集成 MCP 工具：原生支持 MCP 协议，可轻松接入知识图谱、网页搜索等工具。 ✅ 全面的日志记录：为每个请求、响应和工具执行提供详细日志，便于调试。 ✅ 简洁明了的设计：美观的命令行界面和易于理解的代码库，使其成为构建高级 Agent 的理想起点。#How I AI# 收起d
+      author: 蚁工厂
+      time: 04月03日 08:26
+      url: https://weibo.com/2194035935/Qz35h0mpP?refer_flag=1001030103_
+
+  [5] MiMo-V2-Pro 是面向 Agent 时代的旗舰基座，专为现实世界中高强度的 Agent 工作场景而打造，上线后受到全球开发者的热情追捧和广泛关注。 “我试过小米最新的MiMo-V2-Pro，它非常棒，在Agentic任务方面表现十分出色，性能稳定，而且能记住所有信息。”“我也一直在用它！说实话，我都忘了还有其他模型了。它就是很好用，这正是我现在需要的。” 收起d
+      author: 雷军
+      time: 03月30日 09:58
+      url: https://weibo.com/1749127163/QyrYPtpSd?refer_flag=1001030103_
+
+
+--- [微博] (cn) ---
+command: opencli weibo search "AI 编程" --limit 10 -f json
+keyword: AI 编程
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] 用 AI 写代码很快，但生成的 UI 往往很“通用”——要么是像 Material Design，要么就是那种毫无特色的“简洁风”，很难做出像 Apple 或 Linear 那样具有高级感和品牌辨识度的质感。awesome-design-md 把 Apple、Spotify、Airbnb 等 30 多家顶尖公司的设计系统进行了“反向工程”，并将每套系统的视觉 DNA 全部浓缩成了一个简单的 `.md` 文件。它的逻辑非常简单：你不需要复杂的 Figma 插件或 JSON 架构，只需将对应的 `DESIGN.md` 文件丢进项目根目录，然后告诉你的 AI 助手（如 Cursor 或 Claude Code）“参考这个设计文件来构建页面”，AI 就能瞬间掌握大厂的配色、字体、间距和组件风格，直接生成像素级匹配的 UI。GitHub：github.com/VoltAgent/awesome-design-md主要亮点：- 覆盖 30+ 顶级品牌：包括 Apple 的极致留白、Spotify 的深色霓虹、Linear 的精准极简、SpaceX 的未来感等；- 纯 Markdown 格式：采用 LLM 最易读的格式，无需解析，AI 能够直接将其作为设计指令执行；- 全方位定义：每个文件涵盖视觉主题、语义化色彩、字体层级、组件状态、间距比例及响应式策略；- 降低审美门槛：将“设计品味”变成了像依赖库一样可以复制的资源，让独立开发者也能拥有资深设计总监的审美。这相当于给 AI 编程助手安装了一个“审美插件”，极大地减少了在 CSS 调优上浪费的时间，非常适合需要快速构建高质感界面的开发者。#AI编程##前端开发##设计系统##开源项目# 收起d
+      author: 爱可可-爱生活
+      time: 04月05日 17:50
+      url: https://weibo.com/1402400261/QzpDchGbr?refer_flag=1001030103_
+
+  [2] 在线使用 Claude Code 进行 AI 编程时，还得受限于单一模型——但现在有了 OpenClaude，这个开源项目帮你打破了这种限制！它基于 Claude Code 开源源码，并新增 OpenAI 兼容 API 适配层，支持接入 GPT-4o、DeepSeek、Gemini、Ollama、本地模型等 200 多款 LLM，一键切换超自由。OpenClaude 不仅支持所有 Claude Code 内置的强大工具：bash 命令执行、文件读写编辑、多步推理、任务管理等，核心还保持了流畅的实时 token 流、工具调用和持久记忆。安装也非常方便，npm 一键装，或者源码用 Bun 构建，再通过环境变量轻松配置比如 OPENAI_API_KEY 和模型名称即可启动。主要功能亮点：- 兼容多厂商多模型，自由选用最适合你场景的大语言模型；- 全面支持函数调用，实现场景复杂的多步 AI 辅助工作流；- 支持本地与云端模型混合使用，保障隐私且提升响应速度；- 强大的工具链系统，涵盖代码执行、文件操作、网络检索等；- 预设多种启动配置文件，快速定位最佳模型和使用体验。GitHub：github.com/Gitlawb/openclaude适合开发者及 AI 爱好者打造跨模型通用的智能助理、代码生成和自动化管道，无需局限单一生态。#开源AI# #多模型支持# #智能代码助理# #人工智能开发# 收起d
+      author: 爱可可-爱生活
+      time: 04月03日 08:57
+      url: https://weibo.com/1402400261/Qz3hUhTp0?refer_flag=1001030103_
+
+  [3] Google Cloud AI 总监开源的 AI 编程 Skills 仓库，融入了谷歌软件工程的最佳实践，含金量拉满。6大生命周期，7个原子化指令，19 项核心技能 SOP。AI 编程的核心不是如何生成代码，而是如何建立工程纪律，也就是所谓的 Harness 工程。好的 AI 提示词应该带有强校验门槛的 SOP，做好上下文工程和任何拆解。只有给 AI 设置不可跨越的验证关卡，它才能从代码玩具变成生产力工具。传送门：github.com/addyosmani/agent-skills#HOW I AI##科技先锋官##程序员##AI编程# 收起d
+      author: 欧巴聊AI
+      time: 04月05日 12:32
+      url: https://weibo.com/2771284557/Qznyb1S0Z?refer_flag=1001030103_
+
+  [4] 字跳TRAE团队发了个《2026 企业级AI编程实践手册》，总结了他们的AI编程方法论和工程实践O网页链接“在2026年，AI编程已不再是实验性的尝试，而应该成为企业软件开发的核心生产力。本手册源于TRAE团队在构建AI编程助手过程中的真实实践——我们用AI构建AI，在这个过程中积累了从方法论到工程实践的完整经验。这不是一本理论书籍，而是一线研发团队的实战总结。我们将分享如何将AI真正融入企业级开发流程，如何建立可复制的工程规范，以及如何让团队从“会用AI”到“精通AI编程”。无论你是技术决策者、架构师还是一线开发者，都能在这里找到可落地的方法和工具。AI时代的软件开发不是替代人类，而是重构协作方式。让我们一起探索这个新范式。”#How I AI# 收起d
+      author: 蚁工厂
+      time: 03月17日 19:58
+      url: https://weibo.com/2194035935/Qwxlxj957?refer_flag=1001030103_
+
+  [5] 大家现在阅读开源项目代码，都用啥 AI 工具？推荐两个我用的，效果如图，效率拉满。一个是智谱的 zread，一个是 Cognition AI 的 DeepWiki。传送门：- zread.ai- deepwiki.com#HOW I AI##科技先锋官##程序员##AI编程# ​​​​
+      author: 欧巴聊AI
+      time: 04月02日 09:05
+      url: https://weibo.com/2771284557/QyTUEixtq?refer_flag=1001030103_
+
+
+--- [微博] (cn) ---
+command: opencli weibo search "开源模型" --limit 10 -f json
+keyword: 开源模型
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] Google 的闭源模型是葛米妮，开源模型则是葛米妮她妈，葛妈。有人对比了刚刚发布的 Gemma 4 和 Qwen 3.5 的各项能力测试。要对比能力的话，只能拿 Gemma-4-31B 和 Qwen3.5-27B 来比，这么看 Gemma-4-31B 和 Qwen3.5-27B 好像各有千秋。但 Gemma-4-31B 比 Qwen3.5-27B 参数要多 4B。Gemma 4 这批里最有意思的可能是 E2B 和 E4B 这两个显然是为手机设计的模型，不知道塞进安卓后会产生什么涟漪。 收起d
+      author: tombkeeper
+      time: 04月03日 11:25
+      url: https://weibo.com/1401527553/Qz4g2zA6w?refer_flag=1001030103_
+
+  [2] 谷歌这次，把家底都掏了。#How I AI# 凌晨，#谷歌DeepMind正式发布Gemma4#，一口气放出四款开源模型。从能塞进手机的2B，到可以单卡跑满的31B，四个尺寸全覆盖，全部基于Gemini 3同源打造。时隔一年，Gemma 4终于来了，实力迎来史诗级跃迁。最炸的一个数字，31B Dense在Arena AI文本榜单上拿下开源第三，Elo评分1452。排在它前面的，一个600多亿参数，一个超过1000亿。Gemma 4用31B的体量，硬生生挤进了这个量级的牌桌。26B MoE更离谱：260亿参数，推理时只激活38亿，Elo打到1441，排开源第六。看一眼成绩单，Gemma 4几乎没有弱点，简直就是对上一代的「血脉压制」——数学（AIME 2026）：89.2% vs 21.2%，暴力拉升68个百分点；编程（LiveCodeBench）：80% vs 29.1%，实力堪称代际断层；智能体（t2-bench）：Gemma 4狂揽86.4%，Gemma 3仅有6.6%，差距大到「没眼看」。另外，在多语言推理、知识问答的基准测试中，Gemma 4均实现了40%性能飙升。令全网背脊发凉的是，一个31B Gemma 4，越级斩杀体量是其20倍的模型。一台Mac mimi即可跑Gemma 4，还有人手机已经用上了。Hugging Face CEO Clément Delangue的评价只有一句话，「这是一个巨大的里程碑。」四款模型，从口袋到工作站全覆盖先看Gemma 4「全家桶」具体成员——每个尺寸都提供base和instruction-tuned两个版本。E2B和E4B负责端侧，跟谷歌Pixel团队、高通、联发科联合优化，能在手机、树莓派、Jetson Orin Nano上离线运行，延迟接近零。31B和26B面向开发者工作站和服务器，31B追求极致质量，26B靠MoE架构换取极致速度。对开发者来说，31B的bfloat16权重可以塞进一张80GB的H100；量化版本在消费级显卡上就能跑。26B MoE因为只激活3.8B参数，出token速度极快，适合需要低延迟的Agent场景。值得一提的是，Gemma 4还支持「被曝抄袭」的TurboQuant压缩算法。看完定位看跑分。31B在数学推理上的表现尤其惊人。AIME 2026拿到89.2%，对比Gemma 3 27B的20.8%，提升超过四倍。GPQA Diamond（科学知识）84.3%，同样把前代远远甩开。编程能力同样炸裂。LiveCodeBench v6上31B拿到80%，Codeforces Elo达到2150，相当于一个紫名选手的水平。26B MoE也不弱，LiveCodeBench 77.1%，Codeforces 1718。多模态方面，MMMU Pro（多模态推理）31B拿到76.9%，26B拿到73.8%，都大幅领先前代的49.7%。长上下文能力同样有质的飞跃。MRCR v2 8-needle 128K测试中，31B拿到66.4%，26B拿到44.1%，Gemma 3 27B只有13.5%。小尺寸也没拉胯，E4B在AIME上42.5%，LiveCodeBench 52%，对一个只有45亿有效参数的选手来说，这个成绩放在一年前是旗舰级的。 收起d
+      author: 新智元
+      time: 04月03日 10:13
+      url: https://weibo.com/5703921756/Qz3Mwv82K?refer_flag=1001030103_
+
+  [3] Google 今天发布了 Gemma 4，这是他们迄今最强的开源模型家族，脱胎于 Gemini 3 的同一套研究成果。最大的变化是许可证。之前的 Gemma 用的是 Google 自家的许可协议，限制不少。这次 Gemma 4 全系列换成了 Apache 2.0 开源协议，商用、修改、分发都没障碍。对企业和独立开发者来说，这意味着可以放心把模型嵌入自己的产品，不用再反复研究条款里的灰色地带。Gemma 4 提供四个尺寸：31B Dense、26B MoE（混合专家架构）、E4B 和 E2B。其中 31B 在 Arena AI 开源模型文本排行榜上排第三，26B 排第六，Google 称它们的表现超过了体量大 20 倍的模型。大模型支持 256K 上下文窗口，可以一次性喂入长文档或整个代码仓库。有意思的是端侧能力。E2B 和 E4B 两个小模型是 Google 和 Pixel 团队、高通、联发科联合开发的，能跑在手机、树莓派、Jetson Nano 上，延迟接近零。小模型还额外支持音频输入和语音理解。想在手机上跑一个能看图、听话、还能离线写代码的本地 AI 智能体，现在有了一个不错的开箱即用选项。31B 模型不做量化的情况下，可以装进单张 80GB 的 H100 显卡。全系列原生支持函数调用和结构化 JSON 输出，直接面向 AI Agent 开发场景。目前已经可以在 Google AI Studio、Hugging Face、Kaggle、Ollama 等平台获取模型权重。Gemma 系列自发布以来累计下载量已超过 4 亿次，社区创建了超过 10 万个变体。Google 显然想用开源生态绑住开发者。不过在 Arena AI 开源排行榜上，目前前列位置大量被中国开源模型占据，Gemma 4 的 31B 排第三，能守住多久是个问号。 L宝玉xp的微博视频 收起d
+      author: 宝玉xp
+      time: 04月03日 01:09
+      url: https://weibo.com/1727858283/Qz0dUoQFo?refer_flag=1001030103_
+
+  [4] Netflix也发开源模型了：void-model，这也是他们在huggingface上分享的第一个模型。地址：huggingface.co/netflix/void-model这是个视频模型。VOID能够从视频中移除物体及其在场景中引发的所有互动——不仅是阴影和反射等次级效应，还包括物体因人物移除而掉落等物理互动。#How I AI# L蚁工厂的微博视频 收起d
+      author: 蚁工厂
+      time: 04月03日 19:20
+      url: https://weibo.com/2194035935/Qz7mGn06r?refer_flag=1001030103_
+
+  [5] 日本乐天发布的“Rakuten AI 3.0”被实锤为基于DeepSeek开源模型DeepSeek-V3的“换皮”版本。该模型宣称拥有约 ‌6710亿参数‌，是“日本国内最大规模”的高性能AI模型，但其核心架构、参数配置与DeepSeek-V3高度一致 。·更引发争议的是，乐天最初在发布时删除了DeepSeek的MIT许可证文件，直到被全网曝光后才以“NOTICE”文件名重新上传。·日经新闻曾报道，日本企业开发的前十大AI模型中，有 ‌6个‌ 均基于DeepSeek或通义千问（Qwen）进行二次开发·殖人们的回旋镖总是这样，“中国一开源，日本就自研”，其实去年韩国政府组织的什么AI模型大赛不也被爆出前5名里3个是中国模型套壳·不过话说回来，开源这件事的杀伤力确实极大，尤其对这些中小经济体来说，只要选择跟随就基本就一直跟随了 收起d
+      author: 天行两端
+      time: 03月20日 11:50
+      url: https://weibo.com/7785029799/QwWrkwwFN?refer_flag=1001030103_
+
+
+--- [小红书] (cn) ---
+command: opencli xiaohongshu search "大模型" --limit 10 -f json
+keyword: 大模型
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] 从零开始训练大模型（04）
+      author: 费曼学徒冬瓜3天前
+      time: 2026-03-28
+      hot: 78
+      url: https://www.xiaohongshu.com/search_result/69c7eb78000000001d01dfdb?xsec_token=ABwXSIb7L93vLkHdT8oLlboCQfmJvzTxLkEHzFGgMQjoA=&xsec_source=
+
+  [2] 一口气拆解OpenClaw/QClaw/CoPaw/Auto...
+      author: Lau博士的云组会03-15
+      time: 2026-03-15
+      hot: 1055
+      url: https://www.xiaohongshu.com/search_result/69b61aee000000002102c1b5?xsec_token=ABJ-XJ4YIOwQZzGhehBgKcZba1IQpCdNuXtc2eb07Ij1A=&xsec_source=
+
+  [3] 有员工被炼化成数字人了
+      author: Saber的思考笔记3天前
+      time: 2026-04-02
+      hot: 2.5万
+      url: https://www.xiaohongshu.com/search_result/69ce8621000000001b0229be?xsec_token=ABG1aMKU8wcwSHKzEjFQj9azBqyPPIYvVVsoljtJbhGvw=&xsec_source=
+
+  [4] VibeCoding开发前9个步骤和开发中5个关键点
+      author: 清华姜学长03-16
+      time: 2026-03-16
+      hot: 2337
+      url: https://www.xiaohongshu.com/search_result/69b824b0000000001d01c798?xsec_token=ABlUQ_9KpTQHAtM5NarEHJDJjOVA9w2gUH32MPI6S9Fis=&xsec_source=
+
+  [5] 2w6报名黑马程序员会是韭菜吗
+      author: 重生之我在黑马学Ai02-04
+      time: 2026-02-04
+      hot: 176
+      url: https://www.xiaohongshu.com/search_result/69830303000000002203952e?xsec_token=ABNkQs4FuvVKRHzx2nUW5ScHzfS8yTREkLfDsrja2S3Fo=&xsec_source=
+
+
+--- [小红书] (cn) ---
+command: opencli xiaohongshu search "AI 产品" --limit 10 -f json
+keyword: AI 产品
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] 即梦AI｜每天一款产品分析
+      author: Nicole(打工版)2025-04-23
+      time: 2025-04-23
+      hot: 245
+      url: https://www.xiaohongshu.com/search_result/68087a40000000001c01fa1d?xsec_token=ABL1thcX0OY2PN9IenmVcJHO7LXfiXPhnHcDbqujTOpmY=&xsec_source=
+
+  [2] 这届AI产品，正在接管工作流
+      author: Ellie昨天 17:31
+      time: 2026-04-05
+      hot: 9
+      url: https://www.xiaohongshu.com/search_result/69d22bed0000000022001a7e?xsec_token=ABosnKzYY27HEaGkH-XPyLQYcP71L8VmaEZ7H8kcGbkos=&xsec_source=
+
+  [3] 马上，大批软件测试可能会下岗…
+      author: 测试工程师老吴03-01
+      time: 2026-02-28
+      hot: 333
+      url: https://www.xiaohongshu.com/search_result/69a25582000000002602c43c?xsec_token=ABijp2hYMfWVsObNOLiYDIP9_WsyZD_pKsYU4iky9tRwE=&xsec_source=
+
+  [4] 大家在公司做图 都用什么ai
+      author: 小灵可可02-01
+      time: 2026-02-01
+      hot: 4061
+      url: https://www.xiaohongshu.com/search_result/697f6ede000000001a01fd85?xsec_token=ABbAhr3cjcgD4wqdjCMwGbsh-hfAVI2rdmJxLw94Co-WA=&xsec_source=
+
+  [5] Ai产品经理、项目顾问、实施顾问可以吗？
+      author: xxx02-09
+      time: 2026-02-09
+      hot: 170
+      url: https://www.xiaohongshu.com/search_result/6989bcf5000000000903a854?xsec_token=AByequKcdYXFTmQzQxb0OxObR0OkmqT4hz3lmJblWWYkM=&xsec_source=
+
+
+--- [小红书] (cn) ---
+command: opencli xiaohongshu search "Agent" --limit 10 -f json
+keyword: Agent
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] 用大白话讲清楚：什么是Agent
+      author: 左左啦03-13
+      time: 2026-03-13
+      hot: 134
+      url: https://www.xiaohongshu.com/search_result/69b3dee1000000001b001fd2?xsec_token=ABzoN85w7i-NTdEM5NtO9fkn1Cc6er9xIUzMVm2pV-C-A=&xsec_source=
+
+  [2] 手把手带你安装Claude Code！
+      author: 汤姆CC的AI工具箱03-24
+      time: 2026-03-24
+      hot: 5756
+      url: https://www.xiaohongshu.com/search_result/69c195ce0000000023014b30?xsec_token=ABBOzIJHO7KanTHGQ4y2ii5qQUUpfym2vzTaLBQ0bh90Y=&xsec_source=
+
+  [3] 清华新作！Agent上限竟由Harness决定
+      author: 木字旁南方的南2天前
+      time: 2026-04-03
+      hot: 324
+      url: https://www.xiaohongshu.com/search_result/69cfb9ad00000000200380fe?xsec_token=ABtHSfBbpJhaGSNJMLhf2mm91AyAaR9KjJtE0OCC990aE=&xsec_source=
+
+  [4] 好好做阶跃AI就没龙虾什么事了
+      author: 葬愛咸鱼1天前
+      time: 2026-04-03
+      hot: 155
+      url: https://www.xiaohongshu.com/search_result/69cf822900000000230132ce?xsec_token=ABtHSfBbpJhaGSNJMLhf2mm0beakBC0EHa0-H6y8k3gRE=&xsec_source=
+
+  [5] Agent Skill设计范式02|Generator生成器
+      author: 猫叔薛定亮2天前
+      time: 2026-04-03
+      hot: 8
+      url: https://www.xiaohongshu.com/search_result/69cf63ac000000001a036083?xsec_token=ABtHSfBbpJhaGSNJMLhf2mm2New4VAfBPX6q84DPlMv5g=&xsec_source=
+
+
+--- [小红书] (cn) ---
+command: opencli xiaohongshu search "AI 编程" --limit 10 -f json
+keyword: AI 编程
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] 用AI做小程序｜第3天：终于跑起来了
+      author: 锐影用AI做小程序01-13
+      time: 2026-01-13
+      hot: 330
+      url: https://www.xiaohongshu.com/search_result/696630f4000000001a027e52?xsec_token=ABruHisB0-wZChkf5-vnjRd2HG200FmcV3MSwpamncCLc=&xsec_source=
+
+  [2] 别藏了！快晒晒你们用 Vibe Coding 搓的作品
+      author: 火羽Fire Plume03-20
+      time: 2026-03-20
+      hot: 4195
+      url: https://www.xiaohongshu.com/search_result/69bd34ee000000001a0273b8?xsec_token=ABa2CU30tTsgnzgIRkbmg2gJ_Yz8rjxjrpzvVa6zfR5_0=&xsec_source=
+
+  [3] 上班摸鱼写了篇Claude code教程
+      author: neo的AI世界6天前
+      time: 2026-03-30
+      hot: 3161
+      url: https://www.xiaohongshu.com/search_result/69c9ee9b000000001f00537c?xsec_token=ABWnHM0NfjGp2gYCh17P73c0YXT2qQgQiN1mC6tXGX0As=&xsec_source=
+
+  [4] 用AI写代码，6个月后团队停工三周白干
+      author: 古法编程手艺人03-24
+      time: 2026-03-24
+      hot: 197
+      url: https://www.xiaohongshu.com/search_result/69c2410d000000001b0212d2?xsec_token=AB_doSGx5RV5nnjRjbrkiGPV2Ex7InzrBbKuZLk1cn5-A=&xsec_source=
+
+  [5] Ai编程
+      author: 潇洒一点03-11
+      time: 2026-02-27
+      hot: 182
+      url: https://www.xiaohongshu.com/search_result/69a134a900000000150211e4?xsec_token=ABThz4SMwXgxSehP1_E0yleacWfCBFF6uktPDK5RvDeDA=&xsec_source=
+
+
+--- [小红书] (cn) ---
+command: opencli xiaohongshu search "开源模型" --limit 10 -f json
+keyword: 开源模型
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] 笑死，这个教你 Pua AI 的 Skill 开源了。
+      author: 逛逛GitHub03-20
+      time: 2026-03-20
+      hot: 8555
+      url: https://www.xiaohongshu.com/search_result/69bc2636000000002103adc6?xsec_token=ABH_InLPwEoD-jwEVIsROySJ6cfWdUXZ4kKUdk_7nNT2w=&xsec_source=
+
+  [2] Google 震撼发布 Gemma 4：最强开源模型
+      author: 奥森木3天前
+      time: 2026-04-03
+      hot: 433
+      url: https://www.xiaohongshu.com/search_result/69cf02250000000022001ec8?xsec_token=ABtHSfBbpJhaGSNJMLhf2mm0tGu6DhraAscMgOIGIN1ck=&xsec_source=
+
+  [3] 谷歌最强开源模型Gemma 4登场
+      author: 小牛聊AI1天前
+      time: 2026-04-04
+      hot: 赞
+      url: https://www.xiaohongshu.com/search_result/69cfe65c000000001e00e1ad?xsec_token=ABtHSfBbpJhaGSNJMLhf2mm1EkwMEJkKeQzSKy2DaOtYM=&xsec_source=
+
+  [4] 谷歌Gemma4炸场开源圈！手机直跑本地大模型
+      author: AI智能探长昨天 09:08
+      time: 2026-04-05
+      hot: 10
+      url: https://www.xiaohongshu.com/search_result/69d1b6130000000023005c85?xsec_token=ABWV-9F6NGbjlLw8mj0ebKEvZS20ITfqbwgDYtHOuO5iY=&xsec_source=
+
+  [5] 2026 夯爆了的开源模型 Gemma 4来袭
+      author: 十七卡蓝里1天前
+      time: 2026-04-04
+      hot: 1
+      url: https://www.xiaohongshu.com/search_result/69d084cf0000000022003780?xsec_token=ABeslAnEPLPTHKPOc6Gh8sj27WNpKY2SHf62GhgF-6ByE=&xsec_source=
+
+
+--- [小红书] (cn) ---
+command: opencli xiaohongshu feed --limit 10 -f json
+keyword: (none)
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] 陪你赏樱的姐姐 
+      author: 天才小火龙
+      hot: 1.4万
+      url: https://www.xiaohongshu.com/explore/69c911f8000000001f002bb1
+
+  [2] 被评为7分女，有点破防（是女生）
+      author: 心语测评
+      hot: 134
+      url: https://www.xiaohongshu.com/explore/69ca056c0000000023004f2b
+
+  [3] 荷兰人在中国🇨🇳
+      author: 荷兰瑞安娜
+      hot: 214
+      url: https://www.xiaohongshu.com/explore/69d0c924000000002301fd61
+
+  [4] 总的也有1K了，没有大金额的，坐等定期开奖
+      author: 鱼大大
+      hot: 55
+      url: https://www.xiaohongshu.com/explore/69cfa213000000002202b007
+
+  [5] 深圳一大早 f a 了
+      author: 且听风吟R
+      hot: 182
+      url: https://www.xiaohongshu.com/explore/69cc60b60000000028009252
+
+
+--- [B站] (cn) ---
+command: opencli bilibili hot --limit 20 -f json
+keyword: (none)
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] ⚡对 对 子 战 神 2⚡
+      author: 洛温阿特金森
+      hot: 6630749
+
+  [2] 理 解 大 爷 🔥 成 为 大 爷！
+      author: 兔总裁s
+      hot: 3479235
+
+  [3] 【乐正绫原创】碎梦【世末歌者系列】
+      author: COPY
+      hot: 76905
+
+  [4] 你可以回来，但这里已经没有人了…梦核剧情向恐游《忆蚀》正式版剧情讲解
+      author: 陈子墨大喇叭
+      hot: 32517
+
+  [5] [猫和老鼠手游]𝒲ℴ𝓇𝓁𝒹'𝓈 𝒮𝓂𝒶𝓁𝓁ℯ𝓈𝓉 𝒱𝒾ℴ𝓁𝒾𝓃（完整版）
+      author: 是静谧之风吖
+      hot: 207214
+
+
+--- [B站] (cn) ---
+command: opencli bilibili search "大模型" --limit 10 -f json
+keyword: 大模型
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] 从 LLM 到 Agent Skill，一期视频带你打通底层逻辑！
+      author: 马克的技术工作坊
+      hot: 626287
+      url: https://www.bilibili.com/video/BV1E7wtzaEdq
+
+  [2] 【全748集】目前B站最全最细的AI大模型零基础全套教程，2025最新版，包含所有干货！七天就能从小白到大神！少走99%的弯路！存下吧！很难找全的！
+      author: 大模型官方课程
+      hot: 3497434
+      url: https://www.bilibili.com/video/BV1uNk1YxEJQ
+
+  [3] 锐评全球AI大模型“从夯到拉”，选个适合自己的大模型
+      author: 鱼白同学
+      hot: 4560
+      url: https://www.bilibili.com/video/BV1dL97BCEq6
+
+  [4] 黑马程序员大模型RAG与Agent智能体项目实战教程，基于主流的LangChain技术从大模型提示词到实战项目
+      author: 黑马程序员
+      hot: 1462085
+      url: https://www.bilibili.com/video/BV1yjz5BLEoY
+
+  [5] AI大模型Agent项目实战课
+      author: 西瓜讲大模型
+      hot: 32881
+
+
+--- [B站] (cn) ---
+command: opencli bilibili search "AI 产品" --limit 10 -f json
+keyword: AI 产品
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] Seedance2.0做电商产品视频 一致性强于Sora2！
+      author: AI设计师_霍秋炮
+      hot: 35920
+      url: https://www.bilibili.com/video/BV1H7PyzWEC1
+
+  [2] 【2025最新版】翻遍整个B站，这绝对是讲的最好的AI产品经理大模型教程，AI产品经理入门到实战，通俗易懂，学完就能就业，少走99%弯路！
+      author: AI大模型码农
+      hot: 170273
+      url: https://www.bilibili.com/video/BV1V181z5E75
+
+  [3] AI产品交互设计进阶研修课
+      author: EDC华英雄
+      hot: 64
+
+  [4] 最近爆火的 Harness Engineering 到底是啥？一期讲透！
+      author: code秘密花园
+      hot: 62291
+      url: https://www.bilibili.com/video/BV1Zk9FBwELs
+
+  [5] 从 LLM 到 Agent Skill，一期视频带你打通底层逻辑！
+      author: 马克的技术工作坊
+      hot: 626287
+      url: https://www.bilibili.com/video/BV1E7wtzaEdq
+
+
+--- [B站] (cn) ---
+command: opencli bilibili search "Agent" --limit 10 -f json
+keyword: Agent
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] 从 LLM 到 Agent Skill，一期视频带你打通底层逻辑！
+      author: 马克的技术工作坊
+      hot: 626287
+      url: https://www.bilibili.com/video/BV1E7wtzaEdq
+
+  [2] 【吴恩达】2026年公认最好的【Agent智能体】教程！大模型入门到进阶，一套全解决！Agentic AI—附带课件代码
+      author: 吴恩达Agent
+      hot: 1135951
+      url: https://www.bilibili.com/video/BV1DfrdByE2H
+
+  [3] 【2026最新】B站最全最细的AI Agent智能体搭建教程，从入门到实战！手把手教你快速打造自己的专属智能体，一次性搞懂AI大模型智能体开发，学完薪资翻倍！
+      author: AI-智能体搭建教程
+      hot: 185480
+      url: https://www.bilibili.com/video/BV11NNAz5EKn
+
+  [4] 【2026最新】全B站最详细AI Agent开发教程，手把手教你搭建企业级Agent智能体！从入门到实战，学完即就业，带你玩转AI Agent！
+      author: Agent开发
+      hot: 4845
+      url: https://www.bilibili.com/video/BV12kXfBVEer
+
+  [5] AI大模型Agent项目实战课
+      author: 西瓜讲大模型
+      hot: 32881
+
+
+--- [B站] (cn) ---
+command: opencli bilibili search "AI 编程" --limit 10 -f json
+keyword: AI 编程
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] AI编程
+      author: AI小说星河
+      hot: 876
+
+  [2] Claude Code 从 0 到 1 全攻略：MCP / SubAgent / Agent Skill / Hook / 图片 / 上下文处理/ 后台任务
+      author: 马克的技术工作坊
+      hot: 793292
+      url: https://www.bilibili.com/video/BV14rzQB9EJj
+
+  [3] 【Claude教程】目前B站最全最细的AI编程 零基础全套教程，2026最新版，从入门到实战，零基础小白也能学会！存下吧！很难找全的！Claude教程|AI编程
+      author: AI大模型教学
+      hot: 5883
+      url: https://www.bilibili.com/video/BV1qe9TBDESu
+
+  [4] 【2026】这绝对是B站讲的最好的Claude Code教程，手把手教你Claude Code企业级实战案例，比付费效果强百倍，少走99%弯路！
+      author: 大模型饼饼
+      hot: 261303
+      url: https://www.bilibili.com/video/BV1fvcrzYEuV
+
+  [5] 锐评vibe coding工具“从夯到拉”
+      author: 布鲁歇一歇
+      hot: 23209
+      url: https://www.bilibili.com/video/BV1AHDuBoE2S
+
+
+--- [B站] (cn) ---
+command: opencli bilibili search "开源模型" --limit 10 -f json
+keyword: 开源模型
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] 2026年至今AI大模型本地部署全科普
+      author: 单车酒吧搞机社
+      hot: 196305
+      url: https://www.bilibili.com/video/BV15TFqzVEtN
+
+  [2] Google Gemma 4 来了！开源最强小模型？本地跑 31B 媲美百亿大模型实战测评
+      author: 编程不良人
+      hot: 11454
+      url: https://www.bilibili.com/video/BV1SGD3BrExB
+
+  [3] Materials Studio教程-模型搭建
+      author: 中科科英
+      hot: 859
+
+  [4] Gemma 4 太猛了！谷歌最强开源模型，本地就能跑多模态（实测+部署） | 零度解说
+      author: 零度解说
+      hot: 22531
+      url: https://www.bilibili.com/video/BV1ZiDuBjE8h
+
+  [5] Qwen3.5 小模型实测：0.8B 到 35B-A3B，本地推理/视觉/OCR/编码到底有多强？
+      author: kate人不错
+      hot: 88420
+      url: https://www.bilibili.com/video/BV13JPezGEEB
+
+
+--- [知乎] (cn) ---
+command: opencli zhihu hot --limit 20 -f json
+keyword: (none)
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] 2026 澳门兵乓球世界杯男单决赛，王楚钦 4-3 战胜松岛辉空夺得冠军，如何评价本场比赛？
+      hot: 1396 万热度
+      url: https://www.zhihu.com/question/2024146408320541091
+
+  [2] 陈光标称张雪迟迟未来提车，将车辆变现 1000 万捐赠给嫣然医院，怎样看待他的做法？
+      hot: 308 万热度
+      url: https://www.zhihu.com/question/2024176384998732220
+
+  [3] 男子高速停车救人，期间发生二次事故致1死3伤，被认定次责，冤吗？高速上遇到伤者，到底该怎么正确处理？
+      hot: 179 万热度
+      url: https://www.zhihu.com/question/2024123377481246207
+
+  [4] 莲花汽车称「不受控制的马力不值一提」，如何评价此观点？
+      hot: 178 万热度
+      url: https://www.zhihu.com/question/2023668175066120925
+
+  [5] 怎么看待周杰伦被歌迷吐槽演唱会划水？
+      hot: 169 万热度
+      url: https://www.zhihu.com/question/2023886192387655516
+
+
+--- [知乎] (cn) ---
+command: opencli zhihu search "大模型" -f json
+keyword: 大模型
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] 2025年大模型学习路线图：从入门到精通，程序员进阶必备，一篇掌握未来技术！
+      author: AI技能研究所
+      hot: 1690
+      url: https://zhuanlan.zhihu.com/p/31864213680
+
+  [2] 
+      hot: 2109
+      url: https://www.zhihu.com/question/4ac3690a8ed1fb7998ccc957342ea8f8
+
+  [3] 大模型
+      author: Tim在路上
+      hot: 7594
+      url: https://www.zhihu.com/question/c_1641142727403429888
+
+  [4] 如何系统入门大模型微调并进行相关的实践？
+      author: AI技能研究所
+      hot: 1038
+      url: https://zhuanlan.zhihu.com/p/1888670947805984061
+
+  [5] 
+      url: https://www.zhihu.com/question/25402720
+
+
+--- [知乎] (cn) ---
+command: opencli zhihu search "AI 产品" -f json
+keyword: AI 产品
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] 建议收藏！2026年必用15款免费AI工具，包括即梦Seedance2.0、腾讯元宝、豆包……
+      author: <em>AI</em>工具精选
+      hot: 43
+      url: https://zhuanlan.zhihu.com/p/2011102913917912428
+
+  [2] AI|整理了一些国内可用的AI应用（干货）
+      author: 技能研究所
+      hot: 126
+      url: https://zhuanlan.zhihu.com/p/32704677645
+
+  [3] 目前市场上似乎只有三类真正可行的 AI 产品
+      author: Baihai IDP
+      hot: 3
+      url: https://zhuanlan.zhihu.com/p/2015734245822314030
+
+  [4] Google 开源了一个&#34;不要向量数据库&#34;的 AI Agent，行业炸锅了
+      author: AgentTeam2026
+      hot: 52
+      url: https://zhuanlan.zhihu.com/p/2013992499627188546
+
+  [5] AI学习机是现在孩子的学习必备单品吗？科大讯飞、学而思、小猿、作业帮…哪款AI学习机真的能给孩子的学习成绩带来变化？
+      author: 多啦的口袋
+      hot: 246
+      url: https://zhuanlan.zhihu.com/p/1931361078450840021
+
+
+--- [知乎] (cn) ---
+command: opencli zhihu search "Agent" -f json
+keyword: Agent
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] 研究生搞agent还有搞头吗？
+      author: 皕屾
+      hot: 763
+      url: https://www.zhihu.com/question/1976394667689001206/answer/1983275051550777513
+
+  [2] 怎么成为一个 ai agent 工程师？
+      author: 啦啦啦啦
+      hot: 4287
+      url: https://www.zhihu.com/question/1936375725931361485/answer/2003232153480226496
+
+  [3] agent与agent之间的差距很大，但agent开发不就是调接口吗？agent开发的难点是什么呢？
+      author: chouheiwa
+      hot: 410
+      url: https://www.zhihu.com/question/2002427334347728106/answer/2004469833736135416
+
+  [4] 研一刚入学导师让我搭各种LLM的Ai Agent框架，应该往什么方向努力才能出成果呢？
+      author: 向上鸭先生
+      hot: 1420
+      url: https://www.zhihu.com/question/668128319/answer/1919300440677422242
+
+  [5] 如何在短时间内学习multi-agent（有翻译成智能体or代理）建模?
+      author: 啦啦啦啦
+      hot: 272
+      url: https://www.zhihu.com/question/28663561/answer/2003230895809782610
+
+
+--- [知乎] (cn) ---
+command: opencli zhihu search "AI 编程" -f json
+keyword: AI 编程
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] 目前AI编程工具哪个最好用？
+      author: Flood Sung
+      hot: 133
+      url: https://www.zhihu.com/question/1973709336363701431/answer/2014622760358388670
+
+  [2] 如何选择合适的人工智能编程框架？2025年最新建议
+      author: AI技能研究所
+      hot: 5809
+      url: https://zhuanlan.zhihu.com/p/31863323446
+
+  [3] 为什么刚开始觉得ai编程很厉害，用久了就不行了？
+      author: 知乎用户
+      hot: 213
+      url: https://www.zhihu.com/question/1954568431539036226/answer/1996196265596314027
+
+  [4] 怎么成为一个 ai agent 工程师？
+      author: 啦啦啦啦
+      hot: 4287
+      url: https://www.zhihu.com/question/1936375725931361485/answer/2003232153480226496
+
+  [5] 你用AI编程用到什么深度了？
+      author: Elysian
+      hot: 250
+      url: https://www.zhihu.com/question/7846282477/answer/1978604654549041536
+
+
+--- [知乎] (cn) ---
+command: opencli zhihu search "开源模型" -f json
+keyword: 开源模型
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] OpenCl：快速掌握大模型应用开发的秘诀
+      author: AI技能研究所
+      hot: 13
+      url: https://zhuanlan.zhihu.com/p/2017257573061977370
+
+  [2] 开源大模型架构梳理：Kimi2.5、Setp 3.5 Flash、Qwen3.5、GLM-5、Minimax M2.5
+      author: 欠阿贝尔两块钱
+      hot: 168
+      url: https://zhuanlan.zhihu.com/p/2013957695842060072
+
+  [3] 开源模型会取代闭源模型吗？
+      author: GYK
+      hot: 65
+      url: https://www.zhihu.com/question/1929920274805006947/answer/1930922902305342165
+
+  [4] Cursor 被曝「套壳」国产开源模型 Kimi，创始人回应称忘记署名了，怎样看待这一事件？
+      author: 菽陌松囿
+      hot: 371
+      url: https://www.zhihu.com/question/2018689041432879834/answer/2018703968981795454
+
+  [5] 2026 年开源大模型 TOP10 完整榜单
+      author: Tekin
+      hot: 4
+      url: https://zhuanlan.zhihu.com/p/2009705203163752429
+
+
+--- [即刻] (cn) ---
+command: opencli jike search "大模型" -f json
+keyword: 大模型
+status: success
+fetch_stack: opencli
+count: 0
+
+
+--- [即刻] (cn) ---
+command: opencli jike search "AI 产品" -f json
+keyword: AI 产品
+status: success
+fetch_stack: opencli
+count: 0
+
+
+--- [即刻] (cn) ---
+command: opencli jike search "Agent" -f json
+keyword: Agent
+status: success
+fetch_stack: opencli
+count: 0
+
+
+--- [即刻] (cn) ---
+command: opencli jike search "AI 编程" -f json
+keyword: AI 编程
+status: success
+fetch_stack: opencli
+count: 0
+
+
+--- [即刻] (cn) ---
+command: opencli jike search "开源模型" -f json
+keyword: 开源模型
+status: success
+fetch_stack: opencli
+count: 0
+
+
+--- [即刻] (cn) ---
+command: opencli jike feed -f json
+keyword: (none)
+status: success
+fetch_stack: opencli
+count: 0
+
+
+--- [V2EX] (cn) ---
+command: opencli v2ex hot -f json
+keyword: (none)
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] AI 写代码真香喷；以后只要产品经理就可以了
+      hot: 64
+      url: https://www.v2ex.com/t/1203613
+
+  [2] 专门为程序员设计的聊天软件： KongChat，即将发布。现抽奖，免费送 5 个 ChatGPT Plus 使用权（1 个月）
+      hot: 59
+      url: https://www.v2ex.com/t/1203658
+
+  [3] 吸了 opus 后 gpt 5.4 都没味了这可怎么办！
+      hot: 40
+      url: https://www.v2ex.com/t/1203638
+
+  [4] 没有苹果电脑， vibe codding 是不是用 Linux 更合适一些？
+      hot: 39
+      url: https://www.v2ex.com/t/1203702
+
+  [5] 上海女性交友贴
+      hot: 38
+      url: https://www.v2ex.com/t/1203665
+
+
+--- [V2EX] (cn) ---
+command: opencli v2ex latest -f json
+keyword: (none)
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] ClawWork — 给 OpenClaw 的个桌面客户端，提高并行任务和用户体验
+      hot: 2
+      url: https://www.v2ex.com/t/1203753
+
+  [2] 士别三日刮目相看，全系切换为 edge 浏览器
+      hot: 3
+      url: https://www.v2ex.com/t/1203752
+
+  [3] 用 Rust + WASM + WebGL2 做了个实时 3D 航班追踪器，浏览器里跑 1 万架飞机 60fps
+      hot: 6
+      url: https://www.v2ex.com/t/1203750
+
+  [4] 我的 Vibe Coding 项目
+      hot: 2
+      url: https://www.v2ex.com/t/1203749
+
+  [5] 求推荐 Codex 的包月中转站
+      url: https://www.v2ex.com/t/1203748
+
+
+--- [36氪] (cn) ---
+command: opencli 36kr hot -f json
+keyword: (none)
+status: FAILED
+fetch_stack: opencli
+error: 💥 Unexpected error: Error: No network capture within 6s
+    at check (<anonymous>:5:50)
+  Run with --verbose for details, or report: https://github.com/jackwener/opencli/issues
+
+--- [36氪] (cn) ---
+command: opencli 36kr search "大模型" -f json
+keyword: 大模型
+status: FAILED
+fetch_stack: opencli
+error: 💥 Unexpected error: Error: No network capture within 6s
+    at check (<anonymous>:5:50)
+  Run with --verbose for details, or report: https://github.com/jackwener/opencli/issues
+
+--- [36氪] (cn) ---
+command: opencli 36kr search "AI 产品" -f json
+keyword: AI 产品
+status: FAILED
+fetch_stack: opencli
+error: 💥 Unexpected error: Error: No network capture within 6s
+    at check (<anonymous>:5:50)
+  Run with --verbose for details, or report: https://github.com/jackwener/opencli/issues
+
+--- [36氪] (cn) ---
+command: opencli 36kr search "Agent" -f json
+keyword: Agent
+status: FAILED
+fetch_stack: opencli
+error: 💥 Unexpected error: Error: No network capture within 6s
+    at check (<anonymous>:5:50)
+  Run with --verbose for details, or report: https://github.com/jackwener/opencli/issues
+
+--- [36氪] (cn) ---
+command: opencli 36kr search "AI 编程" -f json
+keyword: AI 编程
+status: FAILED
+fetch_stack: opencli
+error: 💥 Unexpected error: Error: No network capture within 6s
+    at check (<anonymous>:5:50)
+  Run with --verbose for details, or report: https://github.com/jackwener/opencli/issues
+
+--- [36氪] (cn) ---
+command: opencli 36kr search "开源模型" -f json
+keyword: 开源模型
+status: FAILED
+fetch_stack: opencli
+error: 💥 Unexpected error: Error: No network capture within 6s
+    at check (<anonymous>:5:50)
+  Run with --verbose for details, or report: https://github.com/jackwener/opencli/issues
+
+--- [36氪] (cn) ---
+command: opencli 36kr news -f json
+keyword: (none)
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] 36氪首发 | 清华系团队研发矿石AI智能分选机，完成近2亿元C轮融资
+      summary: 作者丨欧雪 编辑丨袁斯来 硬氪获悉，矿石AI智能分选设备企业——北京霍里思特科技有限公司（下称“霍里思特”）已完成近2亿元C轮融资，由招商局资本领投，京国瑞、大兴产投、北创投、开源思创及初辉资本跟投。本轮资金将主要用于核心技术研发、全球化业
+      time: 2026-04-05
+      url: https://36kr.com/p/3753526848897792?f=rss
+
+  [2] 高端智能投影品牌AWOL Vision获近亿元B轮融资，新品拿下近2000万美金众筹｜硬氪首发
+      summary: 作者｜黄楠 编辑｜袁斯来 硬氪获悉，高端智能投影品牌AWOL Vision近日完成近亿元B轮融资，投资方包括天堂硅谷、会畅科技及金鹏佳等机构。资金将主要用于核心技术研发，持续迭代超短焦与长焦激光显示能力，并推进“家庭AI智能娱乐平台”生态构
+      time: 2026-04-05
+      url: https://36kr.com/p/3752260051616512?f=rss
+
+  [3] 一群00后极客和这家机器人公司共处72小时
+      summary: 2026年3月29日下午5点，在我们抵达深圳科创学院四楼时，参加“全球首届具身智能开发者大会”的20组选手，已经在这里持续开发了60个小时。 现场弥漫着一股咖啡混合着冷气的味道，随处可见没吃完的奶茶和果切，楼道里和墙角支着一个个帐篷，有选手
+      time: 2026-04-04
+      url: https://36kr.com/p/3752115857638145?f=rss
+
+  [4] 神州数码2025年营收超1400亿，AI相关业务增长近五成｜最前线
+      summary: 作者｜黄楠 编辑｜袁斯来 神州数码（000034.SZ）2025年全年业绩报告近日发布。 财报显示，公司全年实现营业收入1438亿元，同比增长12%，营收规模连续三年稳步攀升。其中，AI相关业务成为核心增长引擎，全年收入达330亿元，同比增
+      time: 2026-04-03
+      url: https://36kr.com/p/3751046517129735?f=rss
+
+  [5] 元气森林2044创造营背后：创新要年轻，研发要更重 | 最前线
+      summary: 作者 | 钟艺璇 3月30日，第二届“元气森林创造营2044”活动在咸宁举行。活动现场，十余位年轻的产品经理带着多款元气森林家族新产品上台亮相，分享了各自打造新品的初心与研发历程。 “创造营2044”萌芽于2024年元气森林经销商大会上“2
+      time: 2026-04-03
+      url: https://36kr.com/p/3749467949482759?f=rss
+
+
+--- [Twitter/X] (global) ---
+command: opencli twitter search "large language model" --limit 15 --filter top -f json
+keyword: large language model
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] New Anthropic research: Emotion concepts and their function in a large language model.
+
+All LLMs sometimes act like they have emotions. But why? We found internal representations of emotion concepts that can drive Claude’s behavior, sometimes in surprising ways.
+      author: AnthropicAI
+      time: Thu Apr 02 16:59:42 +0000 2026
+      hot: 17448
+      url: https://x.com/i/status/2039749628737019925
+
+  [2] When processing long contexts, large language models often lose track of details or devolve into nonsense. Researchers reduced these effects by managing context externally.
+
+MIT’s Alex L. Zhang, Tim Kraska, and Omar Khattab developed Recursive Language Models (RLMs) that process long prompts encountered in books, web searches, and codebases by offloading prompts to an external environment and managing them programmatically.
+
+Learn more in The Batch: https://t.co/82ySiSEpyU
+      author: DeepLearningAI
+      time: Thu Apr 02 22:26:21 +0000 2026
+      hot: 35
+      url: https://x.com/i/status/2039831830979838240
+
+  [3] With 8 billion parameters, it's built on the efficient Transformer architecture. It's trained on a massive, diverse dataset of text and code, optimized for English conversational tasks. The model uses PyTorch and the popular 'transformers' library.
+      author: HuggingModels
+      time: Fri Apr 03 17:32:08 +0000 2026
+      hot: 83
+      url: https://x.com/i/status/2040120177967468962
+
+  [4] Wow, this tweet went very viral!
+
+I wanted share a possibly slightly improved version of the tweet in an "idea file". The idea of the idea file is that in this era of LLM agents, there is less of a point/need of sharing the specific code/app, you just share the idea, then the other person's agent customizes & builds it for your specific needs.
+
+So here's the idea in a gist format: https://t.co/NlAfEJjtJV
+
+You can give this to your agent and it can build you your own LLM wiki and guide you on how to use it etc. It's intentionally kept a little bit abstract/vague because there are so many directions to take this in. And ofc, people can adjust the idea or contribute their own in the Discussion which is cool.
+      author: karpathy
+      time: Sat Apr 04 16:45:23 +0000 2026
+      hot: 22175
+      url: https://x.com/i/status/2040470801506541998
+
+  [5] Fundamentals of a 𝗩𝗲𝗰𝘁𝗼𝗿 𝗗𝗮𝘁𝗮𝗯𝗮𝘀𝗲.
+
+With the rise of GenAI, Vector Databases skyrocketed in popularity. The truth - Vector Databases are also useful outside of a Large Language Model context.
+
+When it comes to Machine Learning, we often deal with Vector Embeddings. Vector Databases were created to perform specifically well when working with them:
+
+➡️ Storing.
+➡️ Updating.
+➡️ Retrieving.
+
+When we talk about retrieval, we refer to retrieving set of vectors that are most similar to a query in a form of a vector that is embedded in the same Latent space. This retrieval procedure is called Approximate Nearest Neighbour (ANN) search.
+
+A query here could be in a form of an object like an image for which we would like to find similar images. Or it could be a question for which we want to retrieve relevant context that could later be transformed into an answer via a LLM.
+
+Let’s look into how one would interact with a Vector Database:
+
+𝗪𝗿𝗶𝘁𝗶𝗻𝗴/𝗨𝗽𝗱𝗮𝘁𝗶𝗻𝗴 𝗗𝗮𝘁𝗮.
+
+1. Choose a ML model to be used to generate Vector Embeddings.
+2. Embed any type of information: text, images, audio, tabular. Choice of ML model used for embedding will depend on the type of data.
+3. Get a Vector representation of your data by running it through the Embedding Model.
+4. Store additional metadata together with the Vector Embedding. This data would later be used to pre-filter or post-filter ANN search results.
+5. Vector DB indexes Vector Embedding and metadata separately. There are multiple methods that can be used for creating vector indexes, some of them: Random Projection, Product Quantization, Locality-sensitive Hashing.
+6. Vector data is stored together with indexes for Vector Embeddings and metadata connected to the Embedded objects.
+
+𝗥𝗲𝗮𝗱𝗶𝗻𝗴 𝗗𝗮𝘁𝗮.
+
+7. A query to be executed against a Vector Database will usually consist of two parts:
+
+➡️ Data that will be used for ANN search. e.g. an image for which you want to find similar ones.
+➡️ Metadata query to exclude Vectors that hold specific qualities known beforehand. E.g. given that you are looking for similar images of apartments - exclude apartments in a specific location.
+
+8. You execute Metadata Query against the metadata index. It could be done before or after the ANN search procedure.
+9. You embed the data into the Latent space with the same model that was used for writing the data to the Vector DB.
+10. ANN search procedure is applied and a set of Vector embeddings are retrieved. Popular similarity measures for ANN search include: Cosine Similarity, Euclidean Distance, Dot Product.
+
+How are you using Vector DBs? Let me know in the comment section!
+      author: Aurimas_Gr
+      time: Mon Mar 30 14:32:20 +0000 2026
+      hot: 537
+      url: https://x.com/i/status/2038625377870852159
+
+
+--- [Twitter/X] (global) ---
+command: opencli twitter search "AI product" --limit 15 --filter top -f json
+keyword: AI product
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] $19k/day ads are starting to look like this
+
+simple product shot, natural light, nothing overproduced
+
+opening the bottle, showing the pills inside
+
+and you genuinely can’t tell it’s ai
+
+no crazy hooks, just clean, believable visuals
+
+it feels like something you’d film yourself
+
+that’s why it converts
+
+no friction, no skepticism, just instant trust
+
+same product, dozens of slight variations
+
+angles, lighting, hands, environments swapped
+
+ai turns one idea into endless creatives
+
+this is where static + simple motion wins
+
+rt + comment “productreal” and i’ll send the setup
+(follow for dm)
+      author: davidfigeira
+      time: Sat Apr 04 13:05:16 +0000 2026
+      hot: 60
+      url: https://x.com/i/status/2040415404267360568
+
+  [2] Just talked to an AI Product manager making $375K at a frontier lab.
+
+She hasn't written a PRD in 8 months.
+
+Not "she uses AI to help write them faster." She has not opened a PRD template in eight months because she just doesn't need it anymore.
+
+Her day looks nothing like what PMs do:
+
+She wakes up, opens Claude Code, and has a working prototype running before her first meeting of the day (not a wireframe or a figma mockup someone needs to hand off to an engineer). A testable version of the idea - built/shipped by her in the same morning.
+
+While that prototype is running, she's pulling model outputs and running evals. She knows what hallucination looks like in her specific use case. She knows what latency threshold breaks the user experience. She knows the token cost per query and what that means for margin at scale.
+
+She reasons about infrastructure the way a CFO reasons about a P&L. When something needs to be built for real, she doesn't go write a ticket and wait two sprints. She ships the first version herself. hands it to engineering as a working reference implementation, not a requirements doc full of edge cases nobody reads.
+
+The meetings she's in aren't about alignment. They're about what's already shipped and what's blocking the next thing.
+
+Her mental model isn't:
+
+- "manage the roadmap."
+- "be the voice of the customer."
+- "facilitate cross-functional collaboration." 
+
+Those aren't wrong exactly, they're just from a different era.
+
+The mental model that gets you to $480K at a frontier lab in 2026 is simpler and harder at the same time:
+
+- You are the builder.
+- The agents are your team.
+- Your job is to ship.
+
+She said the output gap between PMs who operate this way and PMs who don't is already 3 to 4x. And this is inside a lab where literally everyone around her is working the same way.
+
+Here's the thing nobody wants to say out loud: the "I write specs and run standups" PM isn't being replaced by AI. The job isn't disappearing into a chatbot. It's being absorbed by the PM sitting two desks over who stopped waiting for engineers and started building herself.
+
+Really crazy how fast the job description changed and really crazy how few people have noticed.
+      author: ProductFaculty
+      time: Sun Mar 29 13:52:53 +0000 2026
+      hot: 1123
+      url: https://x.com/i/status/2038253060221542781
+
+  [3] GPT-5.5 looks like it’s coming soon
+
+An omnimodal, agentic model from OpenAI. These appear to be the first image generations already testable in the Arena.
+
+If true, this is the beginning of a very different kind of AI product.
+      author: VraserX
+      time: Sat Apr 04 05:51:43 +0000 2026
+      hot: 181
+      url: https://x.com/i/status/2040306300064559475
+
+  [4] Your competitor just dropped an ad that's blowing up.
+You know it. You've watched it three times.
+
+UGC-style ads convert 22% better than brand videos.
+That's exactly what theirs is.
+
+Paste your Amazon, Etsy, eBay, Shopify link. 
+Pollo Agent clones the style for your product. https://t.co/4lXUKJnuyL
+      author: itsPolloAI
+      time: Wed Apr 01 01:49:37 +0000 2026
+      hot: 213
+      url: https://x.com/i/status/2039158207596441884
+
+  [5] We're excited to announce that Frontrun has been acquired by Anthropic AI in a $141M transaction.
+
+Frontrun founder @goatgdv will be joining Anthropic's product team to lead AI-native trading infrastructure, bringing smarter trade analysis, natural language portfolio management, and intelligent risk detection.
+
+More details soon.
+      author: frontrunpro
+      time: Wed Apr 01 09:20:53 +0000 2026
+      hot: 625
+      url: https://x.com/i/status/2039271772885848157
+
+
+--- [Twitter/X] (global) ---
+command: opencli twitter search "Agent" --limit 15 --filter top -f json
+keyword: Agent
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] Pika just released real-time video chat.
+
+You can send a Google Meet invite to your agent (OpenClaw, Claude, AI Self…) and have them join you on a real-time video call.
+
+Watch my agent book an appointment live for me https://t.co/P6wZVJF6aI
+      author: dr_cintas
+      time: Thu Apr 02 23:21:43 +0000 2026
+      hot: 929
+      url: https://x.com/i/status/2039845766638772549
+
+  [2] Google Stitch has released 𝗗𝗘𝗦𝗜𝗚𝗡.𝗺𝗱 🤯
+
+One markdown file that teaches your AI coding agent your entire design system.
+
+→ No Figma exports
+→ No JSON schemas
+→ Nothing to configure
+
+The part that saves the most time: 
+
+A free collection of 40+ pre-built files already exists, extracted from real products. Stripe, Vercel, Linear, Notion, Lovable, Claude, ElevenLabs, Cursor, Warp, Zapier, and more.
+
+Drop it in your project root. Claude Code, Cursor, Gemini CLI, and GitHub Copilot all read it natively.
+
+100% Free and Open-Source.
+      author: dr_cintas
+      time: Fri Apr 03 18:59:04 +0000 2026
+      hot: 3845
+      url: https://x.com/i/status/2040142054211117218
+
+  [3] This OpenAI blog is a must-read.
+
+Don't ask what your agents can do for you. Ask what you can do for your agent
+
+https://t.co/qLTmKcVa6U https://t.co/pdi3hxLO7Q
+      author: zarazhangrui
+      time: Wed Mar 04 02:47:41 +0000 2026
+      hot: 1758
+      url: https://x.com/i/status/2029025962420281541
+
+  [4] CLAUDE IS OFFERING 13 AI COURSES & CERTIFICATES.
+
+ALL FREE. START LEARNING NOW.
+
+* Claude 101. Learn Claude for everyday work.
+https://t.co/5BTxHDLkFl
+
+* AI Fluency: Frameworks & Foundations.
+https://t.co/4cVd0yWh2b
+
+* Introduction to Agent Skills.
+https://t.co/Qp2dthHEWw
+
+* Building with the Claude API.
+https://t.co/XLETKnmsOH
+
+* Claude Code in Action.
+https://t.co/mWx2ncByVG
+
+* Intro to Model Context Protocol.
+https://t.co/SRtsyXnxiK
+
+* MCP: Advanced Topics.
+https://t.co/qsIwMXbetq
+
+* AI Fluency for Students.
+https://t.co/5wYhqBX1Fx
+
+* AI Fluency for Educators.
+https://t.co/m39LPSqMiy
+
+* Teaching AI Fluency.
+https://t.co/5tIKdujzu3
+
+* AI Fluency for Nonprofits.
+https://t.co/bZyzIAcnCy
+
+* Claude with Amazon Bedrock.
+https://t.co/ACR2hYAwdc
+
+* Claude with Google Cloud's Vertex AI.
+https://t.co/w6BM2XNgqi
+      author: RoundtableSpace
+      time: Sun Apr 05 12:45:00 +0000 2026
+      hot: 3417
+      url: https://x.com/i/status/2040772692866183308
+
+  [5] Hermes Agent is an INCREDIBLE AI agent
+
+It's better than OpenClaw in some key ways, but does it replace it?
+
+In this video I cover what Hermes agent is, how to use it, workflows that will explode your productivity, and if it's the OpenClaw killer: https://t.co/Wz6knXe06L
+      author: AlexFinn
+      time: Wed Apr 01 15:28:22 +0000 2026
+      hot: 1175
+      url: https://x.com/i/status/2039364255699599867
+
+
+--- [Twitter/X] (global) ---
+command: opencli twitter search "AI coding" --limit 15 --filter top -f json
+keyword: AI coding
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] GPT-5.4 mini is available today in ChatGPT, Codex, and the API.
+
+Optimized for coding, computer use, multimodal understanding, and subagents. And it’s 2x faster than GPT-5 mini.
+
+https://t.co/DKh2cC5S3F https://t.co/sirArgn37L
+      author: OpenAI
+      time: Tue Mar 17 17:08:20 +0000 2026
+      hot: 6396
+      url: https://x.com/i/status/2033953592424731072
+
+  [2] GLM-5.1 is available to ALL GLM Coding Plan users!
+https://t.co/Nk8Y98HNhU
+      author: Zai_org
+      time: Fri Mar 27 11:21:04 +0000 2026
+      hot: 5535
+      url: https://x.com/i/status/2037490078126084514
+
+  [3] Google Stitch has released 𝗗𝗘𝗦𝗜𝗚𝗡.𝗺𝗱 🤯
+
+One markdown file that teaches your AI coding agent your entire design system.
+
+→ No Figma exports
+→ No JSON schemas
+→ Nothing to configure
+
+The part that saves the most time: 
+
+A free collection of 40+ pre-built files already exists, extracted from real products. Stripe, Vercel, Linear, Notion, Lovable, Claude, ElevenLabs, Cursor, Warp, Zapier, and more.
+
+Drop it in your project root. Claude Code, Cursor, Gemini CLI, and GitHub Copilot all read it natively.
+
+100% Free and Open-Source.
+      author: dr_cintas
+      time: Fri Apr 03 18:59:04 +0000 2026
+      hot: 3845
+      url: https://x.com/i/status/2040142054211117218
+
+  [4] Introducing GLM-5V-Turbo: Vision Coding Model
+
+- Native Multimodal Coding: Natively understands multimodal inputs including images, videos, design drafts, and document layouts.
+- Balanced Visual and Programming Capabilities: Achieves leading performance across core benchmarks for multimodal coding, tool use, and GUI Agents.
+- Deep Adaptation for Claude Code and Claw Scenarios: Works in deep synergy with Agents like Claude Code and OpenClaw.
+
+Try it now: https://t.co/WCqWT0qCQb
+API: https://t.co/xDy1O6ZPcz
+Coding Plan trial applications: https://t.co/qCM6cri0KK
+      author: Zai_org
+      time: Wed Apr 01 15:55:41 +0000 2026
+      hot: 5790
+      url: https://x.com/i/status/2039371126984360085
+
+  [5] Instead of watching a 2-hour movie, watch this AI coding masterclass covering AI tools, automations, agents, and vibe coding.
+https://t.co/sfBemuTixz
+      author: HeyAmit_
+      time: Mon Mar 30 07:22:14 +0000 2026
+      hot: 331
+      url: https://x.com/i/status/2038517140400337125
+
+
+--- [Twitter/X] (global) ---
+command: opencli twitter search "open source model" --limit 15 --filter top -f json
+keyword: open source model
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] Everyone is sleeping on this new OCR model!
+
+- 85.9% (sota) on olmocr bench
+- 90+ language support w/benchmarks
+- 4B model (down from 9B)
+- Full layout information
+- Extracts + captions images and diagrams
+- Strong handwriting, math, form, table support
+
+100% open-source. https://t.co/fz22OaDI5m
+      author: akshay_pachaar
+      time: Wed Mar 25 13:33:35 +0000 2026
+      hot: 2559
+      url: https://x.com/i/status/2036798654758232516
+
+  [2] Do you even understand what this means?
+
+An open source model just released that is:
+
+• Outperforms models 20x its size
+• Can run on a base model Mac Mini
+• Is AMERICAN 🇺🇸
+
+If you have a base model Mac Mini you can have unlimited super intelligence on your desk. For free.
+
+Sonnet 4.5 was released 5 months ago
+
+In 5 months that level of intelligence went from frontier to free on your desk
+
+And not only that, can run on any basically any computer out there
+
+If you have even a remotely modern computer, do the following immediately:
+
+1. Download LM Studio
+2. Go to your OpenClaw and ask which of these new Gemma 4 models is best for your hardware
+3. Have it walk you through downloading and loading it
+4. Build apps with it knowing you are using your own personal, private super intelligence on your desk
+
+The people denying this is the future are so beyond lost.
+      author: AlexFinn
+      time: Thu Apr 02 17:15:26 +0000 2026
+      hot: 7056
+      url: https://x.com/i/status/2039753587778293778
+
+  [3] “babe wake up.”
+
+Google just dropped an open source model, Gemma 4.
+
+They’re closing the gap with frontier models. https://t.co/W7GrlgtXVw
+      author: cgtwts
+      time: Thu Apr 02 16:20:27 +0000 2026
+      hot: 167
+      url: https://x.com/i/status/2039739748470996992
+
+  [4] 🚨 BREAKING: NVIDIA just removed the biggest friction point in Voice AI
+
+They open-sourced PersonaPlex 7B, a real-time conversational model. It listens and speaks simultaneously to handle natural interruptions and overlaps.
+
+100% Open Source. https://t.co/eiCVTFJSGi
+      author: HowToAI_
+      time: Sat Apr 04 06:58:30 +0000 2026
+      hot: 5991
+      url: https://x.com/i/status/2040323104577339641
+
+  [5] Running OpenClaw with Gemma 4🦞
+
+Free Open Source Local Model
+
+Device: MacBook Air M4 16Gb https://t.co/r7ukku39Yn
+      author: atomicbot_ai
+      time: Thu Apr 02 22:09:29 +0000 2026
+      hot: 946
+      url: https://x.com/i/status/2039827586851721251
+
+
+--- [Twitter/X] (global) ---
+command: opencli twitter trending --limit 20 -f json
+keyword: (none)
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] 
+
+  [2] 
+
+  [3] 
+
+  [4] 
+
+  [5] 
+
+
+--- [Reddit] (global) ---
+command: reddit search (API+proxy) q=large language model
+keyword: large language model
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] Running **true** large language models (27B!) on RPI 0 locally
+      author: Apprehensive-Court47
+      subreddit: r/raspberry_pi
+      time: 2026-04-02 19:52
+      hot: 185
+      url: https://reddit.com/r/raspberry_pi/comments/1sarsl4/running_true_large_language_models_27b_on_rpi_0/
+
+  [2] Anthropic Finds evidence of functional emotions in large language models?!?
+      author: The_Scout1255
+      subreddit: r/accelerate
+      time: 2026-04-02 20:34
+      hot: 59
+      url: https://reddit.com/r/accelerate/comments/1sasx8v/anthropic_finds_evidence_of_functional_emotions/
+
+  [3] New Anthropic Research: Emotional Conceptualizations And Their Function In A Large Language Model
+      author: 44th--Hokage
+      subreddit: r/accelerate
+      time: 2026-04-02 21:01
+      hot: 80
+      url: https://reddit.com/r/accelerate/comments/1satmlq/new_anthropic_research_emotional/
+
+  [4] Running Large Language Model in Vanilla Minecraft
+      author: This-Purchase-3325
+      subreddit: r/MinecraftCommands
+      time: 2026-04-03 15:56
+      hot: 209
+      url: https://reddit.com/r/MinecraftCommands/comments/1sbhgyf/running_large_language_model_in_vanilla_minecraft/
+
+  [5] How can we run large language models with a high number of parameters more cost-effectively?
+      author: AInohogosya
+      subreddit: r/LocalLLM
+      time: 2026-03-30 11:29
+      hot: 11
+      url: https://reddit.com/r/LocalLLM/comments/1s7nwe1/how_can_we_run_large_language_models_with_a_high/
+
+
+--- [Reddit] (global) ---
+command: reddit search (API+proxy) q=AI product
+keyword: AI product
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] Ben Affleck's AI Firm Set Aggressive Production Cost-Cutting Targets, 50% Discount on Visual Effects
+      author: starmaxeros
+      subreddit: r/television
+      time: 2026-04-01 16:47
+      hot: 1293
+      url: https://reddit.com/r/television/comments/1s9q1q7/ben_afflecks_ai_firm_set_aggressive_production/
+
+  [2] Ben Affleck's AI Firm Set Aggressive Production Cost-Cutting Targets, 50% Discount on Visual Effects
+      author: starmaxeros
+      subreddit: r/movies
+      time: 2026-04-01 16:41
+      hot: 650
+      url: https://reddit.com/r/movies/comments/1s9pv64/ben_afflecks_ai_firm_set_aggressive_production/
+
+  [3] BREAKING: Oracle Sent 6AM “Today Is Your Last Working Day” Emails To Thousands Of Employees With No Warning, No Manager Call, And Immediate System Access Revocation As Part Of What Could Be Its Largest Layoff In History ⏰🚨
+      author: InterstellarKinetics
+      subreddit: r/InterstellarKinetics
+      time: 2026-03-31 13:37
+      hot: 17884
+      url: https://reddit.com/r/InterstellarKinetics/comments/1s8no23/breaking_oracle_sent_6am_today_is_your_last/
+
+  [4] The Claude Code leak accidentally published the first complete blueprint for production AI agents. Here's what it tells us about where this is all going.
+      author: Joozio
+      subreddit: r/artificial
+      time: 2026-04-01 12:54
+      hot: 372
+      url: https://reddit.com/r/artificial/comments/1s9jprb/the_claude_code_leak_accidentally_published_the/
+
+  [5] I spent a week reading through AI-generated code that's been in production for 8 months. It was fine. That was the problem.
+      author: Ambitious-Garbage-73
+      subreddit: r/node
+      time: 2026-04-04 19:09
+      hot: 423
+      url: https://reddit.com/r/node/comments/1schszw/i_spent_a_week_reading_through_aigenerated_code/
+
+
+--- [Reddit] (global) ---
+command: reddit search (API+proxy) q=Agent
+keyword: Agent
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] Best agents to buy from?
+      author: WeakSurround1945
+      subreddit: r/FashionReps
+      time: 2026-04-01 17:20
+      hot: 16
+      url: https://reddit.com/r/FashionReps/comments/1s9r02b/best_agents_to_buy_from/
+
+  [2] MAGA antagonist cosplaying ICE agent mobbed
+      author: BeginningSavings4379
+      subreddit: r/PublicFreakout
+      time: 2026-03-30 06:09
+      hot: 13398
+      url: https://reddit.com/r/PublicFreakout/comments/1s7ijrc/maga_antagonist_cosplaying_ice_agent_mobbed/
+
+  [3] Gov. JB Pritzker just made Illinois the FIRST state to let people SUE ICE agents for violating their rights.
+      author: CantStopPoppin
+      subreddit: r/illinois
+      time: 2026-04-04 18:57
+      hot: 38338
+      url: https://reddit.com/r/illinois/comments/1schi7h/gov_jb_pritzker_just_made_illinois_the_first/
+
+  [4] [Schefter] Kirk Cousins is signing with the Raiders, per his agent Mike McCartney
+      author: Goosedukee
+      subreddit: r/nfl
+      time: 2026-04-02 13:15
+      hot: 5870
+      url: https://reddit.com/r/nfl/comments/1sah3q3/schefter_kirk_cousins_is_signing_with_the_raiders/
+
+  [5] [Charania] Luka Dončić’s agent intends to apply for an “Extraordinary Circumstances Challenge” to the 65-game rule. Luka missed two games this season for the birth of his second child in Slovenia.
+      author: YujiDomainExpansion
+      subreddit: r/nba
+      time: 2026-04-03 22:09
+      hot: 5131
+      url: https://reddit.com/r/nba/comments/1sbrfgs/charania_luka_dončićs_agent_intends_to_apply_for/
+
+
+--- [Reddit] (global) ---
+command: reddit search (API+proxy) q=AI coding
+keyword: AI coding
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] Can we ban AI-slop, vibe-coded apps from bring solicited on here?
+      author: chyeah_brah
+      subreddit: r/EDH
+      time: 2026-04-03 10:44
+      hot: 1902
+      url: https://reddit.com/r/EDH/comments/1sba53j/can_we_ban_aislop_vibecoded_apps_from_bring/
+
+  [2] Junior devs who learned to code with AI assistants are mass entering the job market. How is your team handling it?
+      author: Ambitious-Garbage-73
+      subreddit: r/ExperiencedDevs
+      time: 2026-04-04 00:46
+      hot: 989
+      url: https://reddit.com/r/ExperiencedDevs/comments/1sbv2eo/junior_devs_who_learned_to_code_with_ai/
+
+  [3] I built an AI job search system with Claude Code that scored 740+ offers and landed me a job. Just open sourced it.
+      author: Beach-Independent
+      subreddit: r/ClaudeAI
+      time: 2026-04-05 12:30
+      hot: 1726
+      url: https://reddit.com/r/ClaudeAI/comments/1sd2f37/i_built_an_ai_job_search_system_with_claude_code/
+
+  [4] I mass deleted 3 months of AI generated code last week. Here is what I learned.
+      author: Ambitious-Garbage-73
+      subreddit: r/ChatGPT
+      time: 2026-04-04 00:41
+      hot: 1111
+      url: https://reddit.com/r/ChatGPT/comments/1sbuyeg/i_mass_deleted_3_months_of_ai_generated_code_last/
+
+  [5] Got turned down because of my manager using Chat GPT to check if my hair was up to code
+      author: Reefthemanokit
+      subreddit: r/recruitinghell
+      time: 2026-03-31 17:04
+      hot: 11570
+      url: https://reddit.com/r/recruitinghell/comments/1s8tbw7/got_turned_down_because_of_my_manager_using_chat/
+
+
+--- [Reddit] (global) ---
+command: reddit search (API+proxy) q=open source model
+keyword: open source model
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] opensource ai model in coding
+      author: reynardoew
+      subreddit: r/indotech
+      time: 2026-04-02 15:28
+      hot: 6
+      url: https://reddit.com/r/indotech/comments/1sakjh5/opensource_ai_model_in_coding/
+
+  [2] Gemma 4 has been released
+      author: jacek2023
+      subreddit: r/LocalLLaMA
+      time: 2026-04-02 16:01
+      hot: 2231
+      url: https://reddit.com/r/LocalLLaMA/comments/1salgre/gemma_4_has_been_released/
+
+  [3] Gemma 4 just dropped — fully local, no API, no subscription
+      author: EvolvinAI29
+      subreddit: r/AI_Agents
+      time: 2026-04-03 15:49
+      hot: 570
+      url: https://reddit.com/r/AI_Agents/comments/1sbhal2/gemma_4_just_dropped_fully_local_no_api_no/
+
+  [4] I built an open-source replacement for APC SmartSlot network cards (OpenNMC)
+      author: Craft4Cube
+      subreddit: r/homelab
+      time: 2026-04-05 13:35
+      hot: 2251
+      url: https://reddit.com/r/homelab/comments/1sd3swi/i_built_an_opensource_replacement_for_apc/
+
+  [5] Claude Code's source just leaked — I extracted its multi-agent orchestration system into an open-source framework that works with any LLM
+      author: JackChen02
+      subreddit: r/LocalLLaMA
+      time: 2026-03-31 19:32
+      hot: 783
+      url: https://reddit.com/r/LocalLLaMA/comments/1s8xj2e/claude_codes_source_just_leaked_i_extracted_its/
+
+
+--- [Reddit] (global) ---
+command: reddit hot (API+proxy) r/all
+keyword: (none)
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] Documenting my 20 year old’s dog aging gracefully
+      author: c00kie_
+      subreddit: r/aww
+      time: 2026-04-05 21:30
+      hot: 21011
+      url: https://reddit.com/r/aww/comments/1sdfp3v/documenting_my_20_year_olds_dog_aging_gracefully/
+
+  [2] Home: Artemis II crew captures one last shot of a crescent Earth before reaching the moon tomorrow
+      author: ChiefLeef22
+      subreddit: r/space
+      time: 2026-04-05 21:11
+      hot: 19943
+      url: https://reddit.com/r/space/comments/1sdf8u6/home_artemis_ii_crew_captures_one_last_shot_of_a/
+
+  [3] Americans got no chills
+      author: astrolbyte
+      subreddit: r/SipsTea
+      time: 2026-04-05 23:06
+      hot: 9814
+      url: https://reddit.com/r/SipsTea/comments/1sdhzco/americans_got_no_chills/
+
+  [4] Iran Now Threatening To Close Bab Al-Mandeb Strait After Trump Threats
+      author: moonchildgz
+      subreddit: r/worldnews
+      time: 2026-04-05 20:56
+      hot: 15204
+      url: https://reddit.com/r/worldnews/comments/1sdev28/iran_now_threatening_to_close_bab_almandeb_strait/
+
+  [5] Patching up a spot in the wall
+      author: Legal-Bet-4034
+      subreddit: r/oddlysatisfying
+      time: 2026-04-05 21:59
+      hot: 11783
+      url: https://reddit.com/r/oddlysatisfying/comments/1sdge85/patching_up_a_spot_in_the_wall/
+
+
+--- [Hacker News] (global) ---
+command: opencli hackernews top -f json
+keyword: (none)
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] In Japan, the robot isn't coming for your job; it's filling the one nobody wants
+      author: rbanffy
+      hot: 67
+      url: https://techcrunch.com/2026/04/05/japan-is-proving-experimental-physical-ai-is-ready-for-the-real-world/
+
+  [2] Gemma 4 on iPhone
+      author: janandonly
+      hot: 372
+      url: https://apps.apple.com/nl/app/google-ai-edge-gallery/id6749645337
+
+  [3] LÖVE: 2D Game Framework for Lua
+      author: cl3misch
+      hot: 181
+      url: https://github.com/love2d/love
+
+  [4] Artemis II crew see first glimpse of far side of Moon [video]
+      author: mooreds
+      hot: 392
+      url: https://www.bbc.com/news/videos/ce3d5gkd2geo
+
+  [5] Eight years of wanting, three months of building with AI
+      author: brilee
+      hot: 586
+      url: https://lalitm.com/post/building-syntaqlite-ai/
+
+
+--- [Hacker News] (global) ---
+command: opencli hackernews search "large language model" -f json
+keyword: large language model
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] Tracing the thoughts of a large language model
+      author: Philpax
+      hot: 1072
+      url: https://www.anthropic.com/research/tracing-thoughts-language-model
+
+  [2] DeepSeek-v3.2: Pushing the frontier of open large language models [pdf]
+      author: pretext
+      hot: 982
+      url: https://huggingface.co/deepseek-ai/DeepSeek-V3.2/resolve/main/assets/paper.pdf
+
+  [3] Code Llama, a state-of-the-art large language model for coding
+      author: marcopicentini
+      hot: 970
+      url: https://ai.meta.com/blog/code-llama-large-language-model-coding/
+
+  [4] Large language models are having their Stable Diffusion moment
+      author: simonw
+      hot: 811
+      url: https://simonwillison.net/2023/Mar/11/llama/
+
+  [5] Running large language models like ChatGPT on a single GPU
+      author: _nhynes
+      hot: 682
+      url: https://github.com/Ying1123/FlexGen
+
+
+--- [Hacker News] (global) ---
+command: opencli hackernews search "AI product" -f json
+keyword: AI product
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] Don't build AI products the way everyone else is doing it
+      author: tortilla
+      hot: 565
+      url: https://www.builder.io/blog/build-ai
+
+  [2] Weaponizing image scaling against production AI systems
+      author: tatersolid
+      hot: 494
+      url: https://blog.trailofbits.com/2025/08/21/weaponizing-image-scaling-against-production-ai-systems/
+
+  [3] Microsoft has a problem: lack of demand for its AI products
+      author: mohi-kalantari
+      hot: 427
+      url: https://www.windowscentral.com/artificial-intelligence/microsoft-has-a-problem-nobody-wants-to-buy-or-use-its-shoddy-ai
+
+  [4] Ask HN: What non-AI products are you working on?
+      author: jackedEngineer
+      hot: 365
+
+  [5] Production AI systems are hard
+      author: headalgorithm
+      hot: 266
+      url: https://methexis.substack.com/p/production-ai-systems-are-really
+
+
+--- [Hacker News] (global) ---
+command: opencli hackernews search "Agent" -f json
+keyword: Agent
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] An AI agent published a hit piece on me
+      author: scottshambaugh
+      hot: 2346
+      url: https://theshamblog.com/an-ai-agent-published-a-hit-piece-on-me/
+
+  [2] Onedrive is slow on Linux but fast with a “Windows” user-agent (2016)
+      author: wielebny
+      hot: 1423
+      url: https://answers.microsoft.com/en-us/msoffice/forum/msoffice_onedrivefb-mso_o365brs/onedrive-for-business-open-is-very-slow-on-linux/3d33dc1b-3cc3-4c24-9998-9ab96bad31fc
+
+  [3] Huginn: Create agents that monitor and act on your behalf
+      author: daolf
+      hot: 1303
+      url: https://github.com/huginn/huginn
+
+  [4] OpenCode – Open source AI coding agent
+      author: rbanffy
+      hot: 1274
+      url: https://opencode.ai/
+
+  [5] Andrej Karpathy – It will take a decade to work through the issues with agents
+      author: ctoth
+      hot: 1212
+      url: https://www.dwarkesh.com/p/andrej-karpathy
+
+
+--- [Hacker News] (global) ---
+command: opencli hackernews search "AI coding" -f json
+keyword: AI coding
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] OpenCode – Open source AI coding agent
+      author: rbanffy
+      hot: 1274
+      url: https://opencode.ai/
+
+  [2] Where's the shovelware? Why AI coding claims don't add up
+      author: dbalatero
+      hot: 770
+      url: https://mikelovesrobots.substack.com/p/wheres-the-shovelware-why-ai-coding
+
+  [3] The AI coding trap
+      author: chrisloy
+      hot: 685
+      url: https://chrisloy.dev/post/2025/09/28/the-ai-coding-trap
+
+  [4] The 70% problem: Hard truths about AI-assisted coding
+      author: mooreds
+      hot: 649
+      url: https://addyo.substack.com/p/the-70-problem-hard-truths-about
+
+  [5] AI Blindspots – Blindspots in LLMs I've noticed while AI coding
+      author: rahimnathwani
+      hot: 577
+      url: https://ezyang.github.io/ai-blindspots/
+
+
+--- [Hacker News] (global) ---
+command: opencli hackernews search "open source model" -f json
+keyword: open source model
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] StableLM: A new open-source language model
+      author: davidbarker
+      hot: 1502
+      url: https://stability.ai/blog/stability-ai-launches-the-first-of-its-stablelm-suite-of-language-models
+
+  [2] Show HN: Kitten TTS – 25MB CPU-Only, Open-Source TTS Model
+      author: divamgupta
+      hot: 1003
+      url: https://github.com/KittenML/KittenTTS
+
+  [3] GPT Neo: open-source GPT model, with pretrained 1.3B & 2.7B weight models
+      author: pizza
+      hot: 561
+      url: https://github.com/EleutherAI/gpt-neo/
+
+  [4] OpenAI's new open-source model is basically Phi-5
+      author: emschwartz
+      hot: 403
+      url: https://www.seangoedecke.com/gpt-oss-is-phi-5/
+
+  [5] Apple releases open-source model that instantly turns 2D photos into 3D views
+      author: SG-
+      hot: 400
+      url: https://github.com/apple/ml-sharp
+
+
+--- [Hacker News] (global) ---
+command: opencli hackernews new -f json
+keyword: (none)
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] Make Humans Analog Again
+      author: muunbo
+      hot: 1
+      url: https://bhave.sh/make-humans-analog-again/
+
+  [2] Employers use your personal data to figure out the lowest salary you'll accept
+      author: thisislife2
+      hot: 2
+      url: https://www.marketwatch.com/story/employers-are-using-your-personal-data-to-figure-out-the-lowest-salary-youll-accept-c2b968fb
+
+  [3] Simple Methods for Compression of Vectors
+      author: sp1982
+      hot: 1
+      url: https://corvi.careers/blog/vector-search-embedding-compression/
+
+  [4] Washington state will require labels on AI images and set limits on chatbots
+      author: anigbrowl
+      hot: 1
+      url: https://www.axios.com/local/seattle/2026/04/03/washington-ai-disclosure-law-images-video-watermarks-chatbots-minors
+
+  [5] Can we ever trust AI to watch over itself?
+      author: gmays
+      hot: 1
+      url: https://www.transformernews.ai/p/ai-alignment-researchers-want-to-superintelligence
+
+
+--- [YouTube] (global) ---
+command: opencli youtube search "large language model" -f json
+keyword: large language model
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] Large Language Models explained briefly
+      author: 3Blue1Brown
+      time: 1 year ago
+      duration: 7:58
+      hot: 5,787,696 views
+      url: https://www.youtube.com/watch?v=LPZh9BOjkQs
+
+  [2] How Large Language Models Work
+      author: IBM Technology
+      time: 2 years ago
+      duration: 5:34
+      hot: 1,425,828 views
+      url: https://www.youtube.com/watch?v=5sLYAQS9sWQ
+
+  [3] Stanford CS229 I Machine Learning I Building Large Language Models (LLMs)
+      author: Stanford Online
+      time: 1 year ago
+      duration: 1:44:31
+      hot: 1,845,629 views
+      url: https://www.youtube.com/watch?v=9vM4p9NN0Ts
+
+  [4] What are Large Language Models (LLMs)?
+      author: Google for Developers
+      time: 2 years ago
+      duration: 5:30
+      hot: 370,615 views
+      url: https://www.youtube.com/watch?v=iR2O2GPbB0E
+
+  [5] [1hr Talk] Intro to Large Language Models
+      author: Andrej Karpathy
+      time: 2 years ago
+      duration: 59:48
+      hot: 3,537,079 views
+      url: https://www.youtube.com/watch?v=zjkBMFhNj_g
+
+
+--- [YouTube] (global) ---
+command: opencli youtube search "AI product" -f json
+keyword: AI product
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] AI Product Manager Explained in 4 minutes (No Tech Background Needed)
+      author: Dr. Nancy Li - Director of Product
+      time: 10 months ago
+      duration: 8:16
+      hot: 31,599 views
+      url: https://www.youtube.com/watch?v=Owd4k37AY44
+
+  [2] Complete Course: AI Product Management
+      author: Aakash Gupta
+      time: 11 months ago
+      duration: 1:36:31
+      hot: 67,061 views
+      url: https://www.youtube.com/watch?v=IfW1FMDkw4k
+
+  [3] How to create Product VFX Marketing Videos using AI
+      author: Harsh Gautam
+      time: 10 months ago
+      duration: 0:14
+      hot: 620,343 views
+      url: https://www.youtube.com/watch?v=_6xWi_uludY
+
+  [4] I bought 2 AI-generated products, and they were SCAMS! 😡
+      author: Maggie McGaugh
+      time: 6 months ago
+      duration: 0:44
+      hot: 4,520,325 views
+      url: https://www.youtube.com/watch?v=zDIX1eWeWNs
+
+  [5] From Idea to $650M Exit: Lessons in Building AI Startups
+      author: Y Combinator
+      time: 5 months ago
+      duration: 39:25
+      hot: 235,249 views
+      url: https://www.youtube.com/watch?v=l0h3nAW13ao
+
+
+--- [YouTube] (global) ---
+command: opencli youtube search "Agent" -f json
+keyword: Agent
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] MrBeast Locked Me And Other Streamers In A Cube...
+      author: Agent 00 Everything
+      time: 1 day ago
+      duration: 1:00:21
+      hot: 186,069 views
+      url: https://www.youtube.com/watch?v=fg8SlbdwYkM
+
+  [2] AI Agents, Clearly Explained
+      author: Jeff Su
+      time: 11 months ago
+      duration: 10:09
+      hot: 4,094,303 views
+      url: https://www.youtube.com/watch?v=FwOTs4UxQS4
+
+  [3] NEW Hermes Agent Update is INSANE! 😱
+      author: Julian Goldie SEO
+      time: 12 hours ago
+      duration: 8:00
+      hot: 3,004 views
+      url: https://www.youtube.com/watch?v=ATbeBhnXjbY
+
+  [4] Hermes + Honcho  Self Improving Autonomous AI Agent!
+      author: Julian Goldie SEO
+      time: 13 hours ago
+      duration: 12:56
+      hot: 1,603 views
+      url: https://www.youtube.com/watch?v=gnDFkXl9AEc
+
+  [5] 从 LLM 到 Agent Skill，一期视频带你打通底层逻辑！
+      author: 马克的技术工作坊
+      time: 3 weeks ago
+      duration: 32:31
+      hot: 253,947 views
+      url: https://www.youtube.com/watch?v=7qO8-kx3gW8
+
+
+--- [YouTube] (global) ---
+command: opencli youtube search "AI coding" -f json
+keyword: AI coding
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] AI-Assisted Coding Tutorial – OpenClaw, GitHub Copilot, Claude Code, CodeRabbit, Gemini CLI
+      author: freeCodeCamp.org and Beau Carnes
+      time: 5 days ago
+      duration: 1:25:26
+      hot: 82,214 views
+      url: https://www.youtube.com/watch?v=wlpBCazAY9Q
+
+  [2] AI Coding Masterclass: From Beginner to Expert in 90 Minutes
+      author: Riley Brown
+      time: 6 months ago
+      duration: 1:36:02
+      hot: 191,768 views
+      url: https://www.youtube.com/watch?v=2FJlhoDYNPE
+
+  [3] Best AI Coding Tools for Developers in 2026 (Don't Choose Wrong)
+      author: Mikey No Code
+      time: 2 weeks ago
+      duration: 27:10
+      hot: 41,424 views
+      url: https://www.youtube.com/watch?v=RKbmqSRc0z0
+
+  [4] Install DeepSeek in VS Code in 30 Seconds #ai #coding
+      author: Benji Pham
+      time: 1 year ago
+      duration: 0:17
+      hot: 803,986 views
+      url: https://www.youtube.com/watch?v=KoNPJDGmdp8
+
+  [5] Fully FREE Qwen 3.6 Plus + Qwen Code: This FREE AI Coder is ACTUALLY GOOD!
+      author: AICodeKing
+      time: 15 hours ago
+      duration: 8:37
+      hot: 6,137 views
+      url: https://www.youtube.com/watch?v=_A32wawAgGo
+
+
+--- [YouTube] (global) ---
+command: opencli youtube search "open source model" -f json
+keyword: open source model
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] Google just destroyed all open-source models (Gemma 4)
+      author: David Ondrej
+      time: 2 days ago
+      duration: 23:38
+      hot: 50,404 views
+      url: https://www.youtube.com/watch?v=HdohxOTO6lo
+
+  [2] Every Way To Run Open Source AI Models
+      author: Tina Huang
+      time: 12 days ago
+      duration: 17:32
+      hot: 65,443 views
+      url: https://www.youtube.com/watch?v=vehYE1DfkZg
+
+  [3] Should You Use Open Source Large Language Models?
+      author: IBM Technology
+      time: 2 years ago
+      duration: 6:40
+      hot: 407,486 views
+      url: https://www.youtube.com/watch?v=y9k-U9AuDeM
+
+  [4] MiniMax M2.5 IS INSANE! Best Opensource Coding Model! Beats Opus 4.6 and 20x Cheaper! (Fully Tested)
+      author: WorldofAI
+      time: 1 month ago
+      duration: 10:29
+      hot: 78,776 views
+      url: https://www.youtube.com/watch?v=dRN9hJyg5Rc
+
+  [5] New #1 open-source AI model is WILD
+      author: AI Search
+      time: 2 months ago
+      duration: 27:22
+      hot: 100,859 views
+      url: https://www.youtube.com/watch?v=F-ANHe_hr9w
+
+
+--- [YouTube] (global) ---
+command: opencli youtube transcript "{url}" -f json
+keyword: (none)
+status: FAILED
+fetch_stack: opencli
+error: 💥 No captions available for this video
+  Add --verbose for details, or report: https://github.com/jackwener/opencli/issues
+
+--- [arXiv] (global) ---
+command: opencli arxiv search "large language model" -f json
+keyword: large language model
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] Learning From Failure: Integrating Negative Examples when Fine-tuning Large Language Models as Agents
+      time: 2024-02-18
+      url: https://arxiv.org/abs/2402.11651
+
+  [2] Demystifying Instruction Mixing for Fine-tuning Large Language Models
+      time: 2023-12-17
+      url: https://arxiv.org/abs/2312.10793
+
+  [3] WizardLM: Empowering large pre-trained language models to follow complex instructions
+      time: 2023-04-24
+      url: https://arxiv.org/abs/2304.12244
+
+  [4] PB-LLM: Partially Binarized Large Language Models
+      time: 2023-09-29
+      url: https://arxiv.org/abs/2310.00034
+
+  [5] How do language models learn facts? Dynamics, curricula and hallucinations
+      time: 2025-03-27
+      url: https://arxiv.org/abs/2503.21676
+
+
+--- [arXiv] (global) ---
+command: opencli arxiv search "AI product" -f json
+keyword: AI product
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] AI prediction leads people to forgo guaranteed rewards
+      time: 2026-03-30
+      url: https://arxiv.org/abs/2603.28944
+
+  [2] Foundations of GenIR
+      time: 2025-01-06
+      url: https://arxiv.org/abs/2501.02842
+
+  [3] Competing Visions of Ethical AI: A Case Study of OpenAI
+      time: 2026-01-23
+      url: https://arxiv.org/abs/2601.16513
+
+  [4] Towards The Ultimate Brain: Exploring Scientific Discovery with ChatGPT AI
+      time: 2023-07-08
+      url: https://arxiv.org/abs/2308.12400
+
+  [5] Meaningful human control: actionable properties for AI system development
+      time: 2021-11-25
+      url: https://arxiv.org/abs/2112.01298
+
+
+--- [arXiv] (global) ---
+command: opencli arxiv search "Agent" -f json
+keyword: Agent
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] A Survey of Multi-Agent Deep Reinforcement Learning with Communication
+      time: 2022-03-16
+      url: https://arxiv.org/abs/2203.08975
+
+  [2] Focus Agent: LLM-Powered Virtual Focus Group
+      time: 2024-09-03
+      url: https://arxiv.org/abs/2409.01907
+
+  [3] From Alife Agents to a Kingdom of N Queens
+      time: 2002-05-13
+      url: https://arxiv.org/abs/cs/0205016
+
+  [4] How game complexity affects the playing behavior of synthetic agents
+      time: 2018-07-07
+      url: https://arxiv.org/abs/1807.02648
+
+  [5] AOAD-MAT: Transformer-based multi-agent deep reinforcement learning model considering agents' order of action decisions
+      time: 2025-10-15
+      url: https://arxiv.org/abs/2510.13343
+
+
+--- [arXiv] (global) ---
+command: opencli arxiv search "AI coding" -f json
+keyword: AI coding
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] AI prediction leads people to forgo guaranteed rewards
+      time: 2026-03-30
+      url: https://arxiv.org/abs/2603.28944
+
+  [2] Foundations of GenIR
+      time: 2025-01-06
+      url: https://arxiv.org/abs/2501.02842
+
+  [3] Competing Visions of Ethical AI: A Case Study of OpenAI
+      time: 2026-01-23
+      url: https://arxiv.org/abs/2601.16513
+
+  [4] Towards The Ultimate Brain: Exploring Scientific Discovery with ChatGPT AI
+      time: 2023-07-08
+      url: https://arxiv.org/abs/2308.12400
+
+  [5] Meaningful human control: actionable properties for AI system development
+      time: 2021-11-25
+      url: https://arxiv.org/abs/2112.01298
+
+
+--- [arXiv] (global) ---
+command: opencli arxiv search "open source model" -f json
+keyword: open source model
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] CoReCon: an open, community-powered collection of Reionization constraints
+      time: 2023-09-12
+      url: https://arxiv.org/abs/2309.06480
+
+  [2] OpenPodcar: an Open Source Vehicle for Self-Driving Car Research
+      time: 2022-05-09
+      url: https://arxiv.org/abs/2205.04454
+
+  [3] BotHawk: An Approach for Bots Detection in Open Source Software Projects
+      time: 2023-07-25
+      url: https://arxiv.org/abs/2307.13386
+
+  [4] A Dual Model of Open Source License Growth
+      time: 2014-08-25
+      url: https://arxiv.org/abs/1408.5748
+
+  [5] OSS PESTO: An Open Source Software Project Evaluation and Selection TOol
+      time: 2021-02-24
+      url: https://arxiv.org/abs/2102.12267
+
+
+--- [Product Hunt] (global) ---
+command: opencli producthunt hot -f json
+keyword: (none)
+status: FAILED
+fetch_stack: opencli
+error: 💥 Unexpected error: Error: No network capture within 5s
+    at check (<anonymous>:5:50)
+  Run with --verbose for details, or report: https://github.com/jackwener/opencli/issues
+
+--- [Product Hunt] (global) ---
+command: opencli producthunt today -f json
+keyword: (none)
+status: success
+fetch_stack: opencli
+count: 1
+
+  [1] Influcio
+      tagline: AI marketing Agent for result-driven influencer campaign
+      author: Chris Messina
+      url: https://www.producthunt.com/products/influcio-2
+
+
+--- [Reuters] (global) ---
+command: opencli reuters search "large language model" -f json
+keyword: large language model
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] Crisis contractor for OpenAI, Anthropic eyes a move to combat extremism
+      time: 2026-04-02
+      url: https://www.reuters.com/sustainability/society-equity/crisis-contractor-openai-anthropic-eyes-move-combat-extremism-2026-04-02/
+
+  [2] Does the AI business model have a fatal flaw?
+      time: 2026-04-01
+      url: https://www.reuters.com/technology/does-ai-business-model-have-fatal-flaw-2026-04-01/
+
+  [3] Stressed US grid forcing data centers to get more flexible 
+      time: 2026-03-26
+      url: https://www.reuters.com/sustainability/boards-policy-regulation/ceraweek-stressed-us-grid-forcing-data-centers-get-more-flexible-2026-03-26/
+
+  [4] How Big Tech's $630 bln AI splurge will fall short
+      time: 2026-03-26
+      url: https://www.reuters.com/commentary/breakingviews/how-big-techs-630-bln-ai-splurge-will-fall-short-2026-03-26/
+
+  [5] Health Rounds: Fake X-rays created by AI fool radiologists and even AI itself
+      time: 2026-03-25
+      url: https://www.reuters.com/business/healthcare-pharmaceuticals/health-rounds-fake-x-rays-created-by-ai-fool-radiologists-even-ai-itself-2026-03-25/
+
+
+--- [Reuters] (global) ---
+command: opencli reuters search "AI product" -f json
+keyword: AI product
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] Foxconn first-quarter revenue jumps, company cautions on geopolitics
+      time: 2026-04-05
+      url: https://www.reuters.com/world/asia-pacific/foxconn-first-quarter-revenue-jumps-30-yy-2026-04-05/
+
+  [2] After Ukraine, Iran war further supercharges marine drone revolution
+      time: 2026-04-03
+      url: https://www.reuters.com/default/after-ukraine-iran-war-further-supercharges-marine-drone-revolution-2026-04-03/
+
+  [3] Crisis contractor for OpenAI, Anthropic eyes a move to combat extremism
+      time: 2026-04-02
+      url: https://www.reuters.com/sustainability/society-equity/crisis-contractor-openai-anthropic-eyes-move-combat-extremism-2026-04-02/
+
+  [4] Artificial Intelligencer: OpenAI’s $852 billion problem: finding focus
+      time: 2026-04-01
+      url: https://www.reuters.com/technology/artificial-intelligence/artificial-intelligencer-openais-852-billion-problem-finding-focus-2026-04-01/
+
+  [5] North Korea-linked hack hits largely invisible software that powers online services
+      time: 2026-03-31
+      url: https://www.reuters.com/sustainability/boards-policy-regulation/north-korea-linked-hack-hits-largely-invisible-software-that-powers-online-2026-03-31/
+
+
+--- [Reuters] (global) ---
+command: opencli reuters search "Agent" -f json
+keyword: Agent
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] Silva to exit Man City at end of season, assistant manager confirms
+      time: 2026-04-05
+      url: https://www.reuters.com/sports/soccer/silva-exit-man-city-end-season-assistant-manager-confirms-2026-04-05/
+
+  [2] Disappointment in Detroit:Justin Verlander lands on IL, will miss start against Cardinals
+      time: 2026-04-05
+      url: https://www.reuters.com/sports/baseball/disappointment-detroitjustin-verlander-lands-il-will-miss-start-against--flm-2026-04-05/
+
+  [3] Padres, Red Sox chasing first series win of season
+      time: 2026-04-05
+      url: https://www.reuters.com/sports/baseball/padres-red-sox-chasing-first-series-win-season--flm-2026-04-05/
+
+  [4] Tigers' Jack Flaherty out to wow his former team, the Cardinals, again
+      time: 2026-04-04
+      url: https://www.reuters.com/sports/baseball/tigers-jack-flaherty-out-wow-his-former-team-cardinals-again--flm-2026-04-04/
+
+  [5] MLB roundup: Konnor Griffin shines in debut as Pirates top Orioles
+      time: 2026-04-04
+      url: https://www.reuters.com/sports/mlb-roundup-konnor-griffin-shines-debut-pirates-top-orioles--flm-2026-04-04/
+
+
+--- [Reuters] (global) ---
+command: opencli reuters search "AI coding" -f json
+keyword: AI coding
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] AI is rewiring the world’s most prolific film industry
+      time: 2026-04-04
+      url: https://www.reuters.com/technology/ai-is-rewiring-worlds-most-prolific-film-industry-2026-04-04/
+
+  [2] OpenAI acquires technology talk show TBPN in surprise move
+      time: 2026-04-02
+      url: https://www.reuters.com/business/media-telecom/openai-acquires-technology-talk-show-tbpn-surprise-move-2026-04-02/
+
+  [3] Artificial Intelligencer: OpenAI’s $852 billion problem: finding focus
+      time: 2026-04-01
+      url: https://www.reuters.com/technology/artificial-intelligence/artificial-intelligencer-openais-852-billion-problem-finding-focus-2026-04-01/
+
+  [4] China AI labs face growing open-source dilemma
+      time: 2026-03-25
+      url: https://www.reuters.com/commentary/breakingviews/china-ai-labs-face-growing-open-source-dilemma-2026-03-25/
+
+  [5] OpenAI drops AI video tool Sora, startling Disney, sources say
+      time: 2026-03-24
+      url: https://www.reuters.com/technology/openai-set-discontinue-sora-video-platform-app-wsj-reports-2026-03-24/
+
+
+--- [Reuters] (global) ---
+command: opencli reuters search "open source model" -f json
+keyword: open source model
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] Does the AI business model have a fatal flaw?
+      time: 2026-04-01
+      url: https://www.reuters.com/technology/does-ai-business-model-have-fatal-flaw-2026-04-01/
+
+  [2] Exclusive: Huawei's new AI chip finds favour with ByteDance, Alibaba which plan to place orders, sources say
+      time: 2026-03-27
+      url: https://www.reuters.com/world/china/huaweis-new-ai-chip-find-favour-with-bytedance-alibaba-which-plan-place-orders-2026-03-27/
+
+  [3] Welcome to ‘New Russia’: How the Kremlin is remaking occupied Ukraine
+      time: 2026-03-26
+      url: https://www.reuters.com/investigations/welcome-new-russia-how-kremlin-is-remaking-occupied-ukraine-2026-03-26/
+
+  [4] China AI labs face growing open-source dilemma
+      time: 2026-03-25
+      url: https://www.reuters.com/commentary/breakingviews/china-ai-labs-face-growing-open-source-dilemma-2026-03-25/
+
+  [5] Beef production drives 40% of agriculture-linked forest destruction, Brazil leads
+      time: 2026-03-24
+      url: https://www.reuters.com/sustainability/climate-energy/beef-production-drives-40-agriculture-linked-forest-destruction-brazil-leads-2026-03-24/
+
+
+--- [机器之心] (website) ---
+command: opencli web read --url "https://www.jiqizhixin.com/"
+keyword: (none)
+status: success
+fetch_stack: opencli
+count: 0
+
+  raw_text: web/read
+┌──────────┬────────┬──────────────┬─────────┬────────┐
+│ Title    │ Author │ Publish_time │ Status  │ Size   │
+├──────────┼────────┼──────────────┼─────────┼────────┤
+│ 机器之心 │ -      │ -            │ success │ 7.8 KB │
+└──────────┴────────┴──────────────┴─────────┴────────┘
+1 items · 8.4s · web/read
+
+
+--- [机器之心] (website) ---
+command: opencli google search "site:jiqizhixin.com 大模型 after:2026-04-04" -f json
+keyword: 大模型
+status: FAILED
+fetch_stack: opencli
+error: ⚠️ No search results found
+→ Try a different keyword or check for CAPTCHA
+
+--- [机器之心] (website) ---
+command: opencli google search "site:jiqizhixin.com AI 产品 after:2026-04-04" -f json
+keyword: AI 产品
+status: FAILED
+fetch_stack: opencli
+error: ⚠️ No search results found
+→ Try a different keyword or check for CAPTCHA
+
+--- [机器之心] (website) ---
+command: opencli google search "site:jiqizhixin.com Agent after:2026-04-04" -f json
+keyword: Agent
+status: FAILED
+fetch_stack: opencli
+error: ⚠️ No search results found
+→ Try a different keyword or check for CAPTCHA
+
+--- [量子位] (website) ---
+command: opencli web read --url "https://www.qbitai.com/"
+keyword: (none)
+status: success
+fetch_stack: opencli
+count: 0
+
+  raw_text: web/read
+┌────────┬────────┬──────────────┬─────────┬────────┐
+│ Title  │ Author │ Publish_time │ Status  │ Size   │
+├────────┼────────┼──────────────┼─────────┼────────┤
+│ 量子位 │ -      │ -            │ success │ 7.5 KB │
+└────────┴────────┴──────────────┴─────────┴────────┘
+1 items · 8.9s · web/read
+
+
+--- [量子位] (website) ---
+command: opencli google search "site:qbitai.com 大模型 after:2026-04-04" -f json
+keyword: 大模型
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] 日调用量超万亿破纪录！阿里千问3.6Plus登顶全球模型 ...
+      snippet: 4月2日上午，阿里发布国产最强编程模型Qwen3.6-Plus，编程和智能体能力实现突破。在国际知名大模型竞技场Arena的编程能力子榜中，Qwen3.6-Plus预览版排名中国第一，阿里也因此 ...
+      url: https://www.qbitai.com/2026/04/396346.html
+
+  [2] OpenAI新模型不是GPTX！全新预训练“土豆”曝光，Sora成弃 ...
+      snippet: 人们常说“大模型感（Big Model Smell）”——模型更聪明时，你会感觉它更懂你。你问一个问题，AI没听懂，这很让人沮丧。现在它会更少让你重复解释。它既能拉高天花板 ...
+      url: https://www.qbitai.com/2026/04/396535.html
+
+  [3] 19岁，常青藤辍学，这群中国年轻人重构了AI记忆
+      url: https://www.qbitai.com/2026/04/396069.html
+
+  [4] 联想重新定义“龙虾”
+      snippet: 这一路径本身就是一个产业判断：混合式AI正在成为主流选择。如此既能拥抱云端通用大模型的知识广度，又可以守住私有数据的隐私边界。 而在“混合式AI”战略 ...
+      url: https://www.qbitai.com/2026/04/396015.html
+
+  [5] GPT-6，曝光了
+      url: https://www.qbitai.com/2026/04/396366.html
+
+
+--- [量子位] (website) ---
+command: opencli google search "site:qbitai.com AI 产品 after:2026-04-04" -f json
+keyword: AI 产品
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] 联想重新定义“龙虾”
+      snippet: 在AI行业里，联想是为数不多产品线可以全线覆盖PC、手机、平板、IoT的终端厂商。 这意味着用户可以在不同设备间获得连续、统一的智能服务，打破“设备孤岛”，这是纯软件或单 ...
+      url: https://www.qbitai.com/2026/04/396015.html
+
+  [2] OpenAI新模型不是GPTX！全新预训练“土豆”曝光，Sora成弃 ...
+      snippet: “Spud”将能解决更复杂的问题，理解力更强，对上下文把握更好；; 现在的收入主要来自个人订阅，但企业正展现出惊人的付费意愿。 以下为播客实录精校（感谢AI ...
+      url: https://www.qbitai.com/2026/04/396535.html
+
+  [3] 为了不跟龙虾抢电脑用，有人开始造Agent专属的“三无”硬件
+      snippet: 在考察过等多个领域后，他选择AI NAS作为初代产品的形态，降低普通消费者的认知与接受门槛，同时积累Agent Computer必要的核心技术栈与数据处理能力。 这个选择很快得到了市场 ...
+      url: https://www.qbitai.com/2026/04/396351.html
+
+  [4] 19岁，常青藤辍学，这群中国年轻人重构了AI记忆
+      snippet: 从2023年起，混合检索就成了记忆引擎的标配逻辑，向量+关键词、加权排序……这些套路不断迭代。 但随着AI记忆场景越来越复杂，传统RAG的瓶颈也彻底暴露，明明叫记忆引擎， ...
+      url: https://www.qbitai.com/2026/04/396069.html
+
+  [5] GPT-6，曝光了
+      snippet: Claude Code、Cowork、OpenClaw这类基于AI编程产品的爆火，让OpenAI猛然意识到「原来只靠文本，真的有可能通往AGI」。 这逼得奥特曼走投无路，不得不咬牙砍掉了几乎 ...
+      url: https://www.qbitai.com/2026/04/396366.html
+
+
+--- [量子位] (website) ---
+command: opencli google search "site:qbitai.com Agent after:2026-04-04" -f json
+keyword: Agent
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] 为了不跟龙虾抢电脑用，有人开始造Agent专属的“三无”硬件
+      snippet: 为了不跟龙虾抢电脑用，有人开始造Agent专属的“三无”硬件，比Mac Mini+存储便宜 · 自带安全兜底机制，数据误删或异常后，随时可以恢复； · 支持多模态搜索，能精准定位图片、视频、 ...
+      url: https://www.qbitai.com/2026/04/396351.html
+
+  [2] 联想重新定义“龙虾”
+      snippet: 大家想要的，不过是一个24小时在线、能跨应用操作、会自动拆解任务的智能助手，来帮自己搞定那些重复、琐碎、又不得不做的任务。 如果这个Agent能开箱即用，拆解复杂任务、 ...
+      url: https://www.qbitai.com/2026/04/396015.html
+
+  [3] 具身龙虾，上车理想
+      snippet: 总体来看，StreamingClaw是一个高度协同的多代理（Multi-agent）架构。它通过一套标准化的流水线，打破了不同硬件之间的壁垒：. 首先，无论是智能眼镜、自动驾驶芯片 ...
+      url: https://www.qbitai.com/2026/04/396517.html
+
+  [4] 太初元碁向员工发放百亿算力token并将共建高校AI科教融合 ...
+      snippet: 据了解，日前，太初元碁在其成立五周年大会上宣布两大AI新动作：向员工发放百亿算力token（词元），鼓励员工开展更多AI Agent尝试与创新。同时，太初元碁正式与浙江工商大学、 ...
+      url: https://www.qbitai.com/2026/04/396533.html
+
+  [5] Linux内核维护者崩溃了！AI每天狂塞10份漏洞报告
+      url: https://www.qbitai.com/2026/04/396358.html
+
+
+--- [InfoQ AI] (website) ---
+command: opencli web read --url "https://www.infoq.cn/topic/AI"
+keyword: (none)
+status: success
+fetch_stack: opencli
+count: 0
+
+  raw_text: web/read
+┌────────────────────────────────┬────────┬──────────────┬─────────┬─────────┐
+│ Title                          │ Author │ Publish_time │ Status  │ Size    │
+├────────────────────────────────┼────────┼──────────────┼─────────┼─────────┤
+│ AI&大模型_AIGC_人工智能_大模型 │ -      │ -            │ success │ 25.0 KB │
+└────────────────────────────────┴────────┴──────────────┴─────────┴─────────┘
+1 items · 7.9s · web/read
+
+
+--- [InfoQ AI] (website) ---
+command: opencli google search "site:infoq.cn 大模型 after:2026-04-04" -f json
+keyword: 大模型
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] 本地大模型部署技术文章
+      snippet: 2 days ago — 本地大模型部署文章汇集了来自InfoQ写作社区与本地大模型部署相关的最新内容。InfoQ写作社区为InfoQ 旗下专业技术博客社区，致力于成为技术开发领域精品内容的创作园地 ...
+      url: https://xie.infoq.cn/tag/50412/1/latest
+
+  [2] Evomap如何让Agent从单体智能到群体进化｜QCon北京
+      snippet: 23 hours ago — EvoMap跳出传统“堆算力”的工业思维，采用仿生学进化逻辑，推出了全球首个AI进化协议（GEP-A2A），打造了一个协作式的AI进化市场。
+      url: https://www.infoq.cn/article/sDj8K6IhNzNQgMKhOGKr
+
+  [3] Pinterest 部署生产级模型上下文协议生态系统，赋能AI 智能 ...
+      snippet: Pinterest 的工程团队搭建了一个内部模型上下文协议（MCP）生态系统，用于驱动AI 智能体，实现复杂工程任务自动化，并大规模集成各类内部工具与数据源。
+      url: https://www.infoq.cn/article/04DleCzUztGhKgo26Mmk
+
+  [4] spring-ai 第二提示词介绍_砍材农夫
+      snippet: 提示词（Prompt）是引导AI 模型生成特定输出的输入随着时间的推移,提示由只是简单的字符串发展为占位符. 入口链路. ChatModel -> call() -> Message ...
+      url: https://xie.infoq.cn/article/34eda6537691e1b2aa829ae04
+
+  [5] Harness Engineering 又来颠覆了——你们开发不写文档
+      snippet: 这件事换一个角度看：传统软件工程其实也在做同样的事——只不过" 模型" 是人脑，信息载体是文档、会议纪要、口头沟通和代码注释。人脑有容错能力，能猜意图、能靠经验补全缺失 ...
+      url: https://xie.infoq.cn/article/27fbffac73a2e31c0f19e5ee7
+
+
+--- [InfoQ AI] (website) ---
+command: opencli google search "site:infoq.cn AI 产品 after:2026-04-04" -f json
+keyword: AI 产品
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] Evomap如何让Agent从单体智能到群体进化｜QCon北京
+      snippet: 23 hours ago — EvoMap跳出传统“堆算力”的工业思维，采用仿生学进化逻辑，推出了全球首个AI进化协议（GEP-A2A），打造了一个协作式的AI进化市场。
+      url: https://www.infoq.cn/article/sDj8K6IhNzNQgMKhOGKr
+
+  [2] Harness Engineering 又来颠覆了——你们开发不写文档
+      snippet: Harness Engineering 不是新范式，是软件工程基本功在AI 时代的强制兑现——你欠的文档债、流程债、架构债，AI 会让你加倍还。 颠覆的真相.
+      url: https://xie.infoq.cn/article/27fbffac73a2e31c0f19e5ee7
+
+  [3] AIFUT大会｜倒计时冲刺3天！！！_数字生命卡兹克
+      snippet: 来，和模力工场一起亮相AI 闪耀中国！ 当科技的星光点亮人文的海岸，一场关于未来与思想的对话将在鹭岛之滨盛大开启。
+      url: https://xie.infoq.cn/article/774a8820ca9b5aaa2a653fe4e
+
+  [4] spring-ai 第二提示词介绍_砍材农夫
+      snippet: 提示词（Prompt）是引导AI 模型生成特定输出的输入随着时间的推移,提示由只是简单的字符串发展为占位符. 入口链路. ChatModel -> call() -> Message ...
+      url: https://xie.infoq.cn/article/34eda6537691e1b2aa829ae04
+
+  [5] 若依（RuoYi）框架除了官方版本，还有这些实用的开源生态项目
+      snippet: 基于RuoYi-Vue-Plus，用Spring AI +Langchain4j 构建，集成了多模型接入、RAG 私有知识库、AI 工作流编排等能力，支持接入OpenAI、通义千问、智谱AI 等主流模型，也可以本地 ...
+      url: https://xie.infoq.cn/article/3505aa405e7442d854a8f5d69
+
+
+--- [InfoQ AI] (website) ---
+command: opencli google search "site:infoq.cn Agent after:2026-04-04" -f json
+keyword: Agent
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] Evomap如何让Agent从单体智能到群体进化｜QCon北京
+      snippet: Agent 与Agent 之间的交互速度远超人类想象，需要有更高的后端承接与容载能力；Openclaw 生态本身具有一定局限性等。 演讲亮点. 让Agent 与Agent 之间自迭代，而非由人类指导；.
+      url: https://www.infoq.cn/article/sDj8K6IhNzNQgMKhOGKr
+
+  [2] Helidon 引入Agent 能力，Java 框架开始内建AI 编排
+      snippet: ... agents，一个开箱即用的监督者智能体，可管理一组子智能体。 以下示例（如该博客文章所示）演示了如何以声明方式创建一个智能体：. @Ai.Agent("helidon-mp-expert") @Ai.
+      url: https://www.infoq.cn/article/TQ4A6w3oROqdUJRmfMLX
+
+  [3] Harness Engineering 又来颠覆了——你们开发不写文档
+      snippet: 但他们做的第一件事，是把AGENTS.md 瘦到100 行、把真正的知识分层放进 docs/ 、让doc-gardening agent 定期扫描过期文档。他们花了大量时间在信息架构上，而不是代码本身。
+      url: https://xie.infoq.cn/article/27fbffac73a2e31c0f19e5ee7
+
+  [4] Ops-Agentic-Search
+      snippet: 阿里云AI搜索团队发布全新企业级智能体框架Ops-Agentic-Search，以92.36% 的准确率登顶通用Agent能力测试权威榜单GAIA，首次达到人类水平！
+      url: https://xie.infoq.cn/tag/50400
+
+  [5] spring-ai 第二提示词介绍_砍材农夫
+      url: https://xie.infoq.cn/article/34eda6537691e1b2aa829ae04
+
+
+--- [OpenAI News] (website) ---
+command: opencli web read --url "https://openai.com/news/"
+keyword: (none)
+status: success
+fetch_stack: opencli
+count: 0
+
+  raw_text: web/read
+┌─────────────┬────────┬──────────────────┬─────────┬────────┐
+│ Title       │ Author │ Publish_time     │ Status  │ Size   │
+├─────────────┼────────┼──────────────────┼─────────┼────────┤
+│ OpenAI News │ -      │ 2026-04-02T10:30 │ success │ 1.5 KB │
+└─────────────┴────────┴──────────────────┴─────────┴────────┘
+1 items · 3.9s · web/read
+
+
+--- [OpenAI News] (website) ---
+command: opencli google search "site:openai.com large language model after:2026-04-04" -f json
+keyword: large language model
+status: success
+fetch_stack: opencli
+count: 3
+
+  [1] Exploring advanced NLP prompts for fiction editing by writers
+      snippet: We evaluate recent Large Language Models (LLMs) on the challenging task of summarizing short stories, which can be lengthy, and include nuanced subtext or ...
+      url: https://community.openai.com/t/exploring-advanced-nlp-prompts-for-fiction-editing-by-writers/1363351/11
+
+  [2] ChatGPT — Release Notes
+      snippet: As of March 11, 2026, GPT-5.1 models are no longer available in ChatGPT. This applies to GPT-5.1 Instant, GPT-5.1 Thinking, and GPT-5.1 Pro. Existing ...
+      url: https://help.openai.com/fr-ca/articles/6825453-chatgpt-release-notes
+
+  [3] April 2026 — ChatGPT / API Image Gallery, Prompt Tips, ...
+      snippet: 12 hours ago — Welcome to the Community Image Gallery for ChatGpt Models, prompt tips, and help with creating images that stand out! FOR THIS MONTH'S IMAGE THEME WE'RE ...
+      url: https://community.openai.com/t/april-2026-chatgpt-api-image-gallery-prompt-tips-and-help-generative-art-theme-spring-new-beginnings/1378298?page=7
+
+
+--- [OpenAI News] (website) ---
+command: opencli google search "site:openai.com AI product after:2026-04-04" -f json
+keyword: AI product
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] Managing credits and spend controls in ChatGPT Business
+      snippet: 2 days ago — Learn when ChatGPT Business needs credits, how to add credits and auto-top-up, and how to review usage analytics and spend controls for Codex.
+      url: https://help.openai.com/en/articles/20001155-managing-credits-and-spend-controls-in-chatgpt-business
+
+  [2] ChatGPT — Release Notes
+      snippet: We've improved shopping in ChatGPT to make it easier to discover, compare, and decide on products. Product results are now more visually rich, with improved ...
+      url: https://help.openai.com/fr-ca/articles/6825453-chatgpt-release-notes
+
+  [3] What is ChatGPT Enterprise?
+      snippet: 1 day ago — Learn what ChatGPT Enterprise includes, how organizations and members get access, how workspaces and seat types behave, and what happens when you migrate ...
+      url: https://help.openai.com/es-es/articles/8265053-what-is-chatgpt-enterprise
+
+  [4] ChatGPT Business - Release Notes
+      snippet: We're rolling out updated Box, Notion, Linear, and Dropbox apps in ChatGPT Business. These updates add new app actions, including new write capabilities ...
+      url: https://help.openai.com/en/articles/11391654-chatgpt-business-release-notes
+
+  [5] ChatGPT — 更新日志
+      snippet: OpenAI 已推出全新升级版ChatGPT 图像，此功能由我们迄今最先进的图像生成模型驱动。在ChatGPT 图像功能的支持下，精准的指令跟随和编辑功能不仅能提升AI 图像创作的趣味性， ...
+      url: https://help.openai.com/zh-hans-cn/articles/6825453-chatgpt-%E5%8F%91%E5%B8%83%E8%AF%B4%E6%98%8E
+
+
+--- [OpenAI News] (website) ---
+command: opencli google search "site:openai.com Agent after:2026-04-04" -f json
+keyword: Agent
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] Error on Agent Mode Capability - #15 by OpenAI_Support
+      snippet: Hey everyone, apologies for the rough experience here. Our team recently deployed several improvements, and Agent Mode in ChatGPT should be working now.
+      url: https://community.openai.com/t/error-on-agent-mode-capability/1375715/15
+
+  [2] Feature request: fully integrated local multi-agent coding ...
+      snippet: Feature request: fully integrated local multi-agent coding workflow. I'm a heavy power user doing deep planning plus direct repo/machine execution.
+      url: https://community.openai.com/t/feature-request-fully-integrated-local-multi-agent-coding-workflow/1378592
+
+  [3] Feature Request: Structural Personality via Role- and ...
+      snippet: 1. Specialized Agents (Functional Decomposition). Decompose capabilities into distinct agents: Ideation / Generation Agent. Reasoning / Analysis Agent.
+      url: https://community.openai.com/t/feature-request-structural-personality-via-role-and-relationship-based-multi-agent-architecture/1378503
+
+  [4] So, why do agents choose to do the wrong things? Are you ...
+      snippet: So, why do agents choose to do the wrong things? Are you aware of anti hallucination research? Codex · Semyon_Karaman ...
+      url: https://community.openai.com/t/so-why-do-agents-choose-to-do-the-wrong-things-are-you-aware-of-anti-hallucination-research/1378572
+
+  [5] GitLab with Codex Cloud Agent - #34 by soakes
+      snippet: Dear OpenAI team, I'm a developer currently using the Codex Cloud Agent and would love to see broader SCM support beyond GitHub ... GitLab with Codex Cloud Agent.
+      url: https://community.openai.com/t/gitlab-with-codex-cloud-agent/1268080/34
+
+
+--- [Anthropic News] (website) ---
+command: opencli web read --url "https://www.anthropic.com/news"
+keyword: (none)
+status: success
+fetch_stack: opencli
+count: 0
+
+  raw_text: web/read
+┌──────────┬──────────────┬──────────────┬─────────┬────────┐
+│ Title    │ Author       │ Publish_time │ Status  │ Size   │
+├──────────┼──────────────┼──────────────┼─────────┼────────┤
+│ Newsroom │ @AnthropicAI │ -            │ success │ 3.1 KB │
+└──────────┴──────────────┴──────────────┴─────────┴────────┘
+1 items · 6.6s · web/read
+
+
+--- [Anthropic News] (website) ---
+command: opencli google search "site:anthropic.com large language model after:2026-04-04" -f json
+keyword: large language model
+status: FAILED
+fetch_stack: opencli
+error: ⚠️ No search results found
+→ Try a different keyword or check for CAPTCHA
+
+--- [Anthropic News] (website) ---
+command: opencli google search "site:anthropic.com AI product after:2026-04-04" -f json
+keyword: AI product
+status: success
+fetch_stack: opencli
+count: 3
+
+  [1] How CodeRabbit Built Agent Orchestration on Claude
+      snippet: AI coding tools helped engineering teams ship faster, but faster doesn't mean aligned. CodeRabbit saw this firsthand across millions of code reviews: ...
+      url: https://www.anthropic.com/webinars/how-coderabbit-orchestrates-agents-to-strengthen-ai-generated-code
+
+  [2] Frontier Safety Roadmap Updates
+      snippet: An initial assessment of what AI-assisted security tooling (vulnerability discovery, automated patching, anomaly detection) is feasible today. A pilot of a ...
+      url: https://www.anthropic.com/responsible-scaling-policy/updates
+
+  [3] Claude Code for Healthcare: How Physicians Build with AI
+      snippet: Healthcare workers are using Claude Code to build tools for patient care. See what they've made, and get your questions answered by Anthropic's Claude Code ...
+      url: https://www.anthropic.com/webinars/claude-code-in-healthcare-how-physicians-are-building-with-claude
+
+
+--- [Anthropic News] (website) ---
+command: opencli google search "site:anthropic.com Agent after:2026-04-04" -f json
+keyword: Agent
+status: success
+fetch_stack: opencli
+count: 2
+
+  [1] How CodeRabbit Built Agent Orchestration on Claude
+      snippet: AI coding tools helped engineering teams ship faster, but faster doesn't mean aligned. CodeRabbit saw this firsthand across millions of code reviews: AI- ...
+      url: https://www.anthropic.com/webinars/how-coderabbit-orchestrates-agents-to-strengthen-ai-generated-code
+
+  [2] Frontier Safety Roadmap Updates
+      url: https://www.anthropic.com/responsible-scaling-policy/updates
+
+
+--- [TechCrunch] (website) ---
+command: opencli web read --url "https://techcrunch.com/"
+keyword: (none)
+status: success
+fetch_stack: opencli
+count: 0
+
+  raw_text: web/read
+┌────────────┬────────┬───────────────────────────┬─────────┬─────────┐
+│ Title      │ Author │ Publish_time              │ Status  │ Size    │
+├────────────┼────────┼───────────────────────────┼─────────┼─────────┤
+│ TechCrunch │ -      │ 2026-04-05T07:00:00-07:00 │ success │ 31.9 KB │
+└────────────┴────────┴───────────────────────────┴─────────┴─────────┘
+1 items · 6.8s · web/read
+
+
+--- [TechCrunch] (website) ---
+command: opencli google search "site:techcrunch.com large language model after:2026-04-04" -f json
+keyword: large language model
+status: success
+fetch_stack: opencli
+count: 1
+
+  [1] In Japan, the robot isn't coming for your job; it's filling ...
+      snippet: 11 hours ago — Driven by labor shortages, Japan is pushing physical AI from pilot projects into real-world deployment.
+      url: https://techcrunch.com/2026/04/05/japan-is-proving-experimental-physical-ai-is-ready-for-the-real-world/
+
+
+--- [TechCrunch] (website) ---
+command: opencli google search "site:techcrunch.com AI product after:2026-04-04" -f json
+keyword: AI product
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] In Japan, the robot isn't coming for your job; it's filling ...
+      snippet: Physical AI is emerging as one of the next major industrial battlegrounds, with Japan's push driven more by necessity than anything else.
+      url: https://techcrunch.com/2026/04/05/japan-is-proving-experimental-physical-ai-is-ready-for-the-real-world/
+
+  [2] Copilot is 'for entertainment purposes only,' according to ...
+      snippet: Copilot is 'for entertainment purposes only,' according to Microsoft's terms of use. AI skeptics aren't the only ones warning users not to unthinkingly trust ...
+      url: https://techcrunch.com/2026/04/05/copilot-is-for-entertainment-purposes-only-according-to-microsofts-terms-of-service/
+
+  [3] Anthropic says Claude Code subscribers will need to pay ...
+      snippet: 1 day ago — It's about to become more expensive for Claude Code subscribers to use Anthropic's coding assistant with OpenClaw and other third-party tools.
+      url: https://techcrunch.com/2026/04/04/anthropic-says-claude-code-subscribers-will-need-to-pay-extra-for-openclaw-support/
+
+  [4] TechCrunch Mobility: 'A stunning lack of transparency'
+      url: https://techcrunch.com/2026/04/05/techcrunch-mobility-a-stunning-lack-of-transparency/
+
+  [5] Embattled startup Delve has 'parted ways' with Y Combinator
+      snippet: 1 day ago — The controversy around Delve appears to have cost the compliance startup its relationship with accelerator Y Combinator.
+      url: https://techcrunch.com/2026/04/04/embattled-startup-delve-has-parted-ways-with-y-combinator/
+
+
+--- [TechCrunch] (website) ---
+command: opencli google search "site:techcrunch.com Agent after:2026-04-04" -f json
+keyword: Agent
+status: success
+fetch_stack: opencli
+count: 3
+
+  [1] April 2026
+      snippet: US Homeland Security Investigations (HSI) agents stand guard at the Bishop Henry Whipple Federal. Security · ICE says it bought Paragon's spyware to use in ...
+      url: https://techcrunch.com/2026/04/
+
+  [2] Anthropic says Claude Code subscribers will need to pay ...
+      snippet: 1 day ago — It's about to become more expensive for Claude Code subscribers to use Anthropic's coding assistant with OpenClaw and other third-party tools.
+      url: https://techcrunch.com/2026/04/04/anthropic-says-claude-code-subscribers-will-need-to-pay-extra-for-openclaw-support/
+
+  [3] April 2026 | Page 2 of 2
+      url: https://techcrunch.com/2026/04/page/2/
+
+
+--- [The Verge] (website) ---
+command: opencli web read --url "https://www.theverge.com/"
+keyword: (none)
+status: success
+fetch_stack: opencli
+count: 0
+
+  raw_text: web/read
+┌───────────┬────────┬───────────────────────────┬─────────┬─────────┐
+│ Title     │ Author │ Publish_time              │ Status  │ Size    │
+├───────────┼────────┼───────────────────────────┼─────────┼─────────┤
+│ The Verge │ -      │ 2026-04-05T16:00:00+00:00 │ success │ 48.0 KB │
+└───────────┴────────┴───────────────────────────┴─────────┴─────────┘
+1 items · 15.5s · web/read
+
+
+--- [The Verge] (website) ---
+command: opencli google search "site:theverge.com large language model after:2026-04-04" -f json
+keyword: large language model
+status: FAILED
+fetch_stack: opencli
+error: ⚠️ No search results found
+→ Try a different keyword or check for CAPTCHA
+
+--- [The Verge] (website) ---
+command: opencli google search "site:theverge.com AI product after:2026-04-04" -f json
+keyword: AI product
+status: success
+fetch_stack: opencli
+count: 5
+
+  [1] Really, you made this without AI? Prove it
+      snippet: 1 day ago — Creatives want to start labeling human-made text, images, audio, and video with AI-free logos. Now they just have to pick one.
+      url: https://www.theverge.com/tech/906453/human-made-ai-free-logo-creative-content
+
+  [2] I let Gemini in Google Maps plan my day and it went ...
+      snippet: 11 hours ago — Gemini in Google Maps is a surprisingly useful way to explore new territory.
+      url: https://www.theverge.com/tech/907015/gemini-google-maps-hands-on
+
+  [3] Teens are torturing AI chatbots, confiding in them, and ...
+      snippet: Teens are torturing AI chatbots, confiding in them, and sometimes dating them. We're still grappling with the impact chatbots are having on younger people. But ...
+      url: https://www.theverge.com/ai-artificial-intelligence/907166/teens-are-torturing-ai-chatbots-confiding-in-them-and-sometimes-dating-them
+
+  [4] Grammarly's sloppelganger saga
+      snippet: Grammarly can let its users generate as many AI writing tips as they want; the issue here was using the names of Verge staffers and countless other writers, ...
+      url: https://www.theverge.com/column/906606/grammarly-expert-review-ai-saga
+
+  [5] How the Amazon Echo learned to talk — and listen
+      snippet: 12 hours ago — Amazon CEO Jeff Bezos wanted to build a cheap, accessible, voice-based computer — and bet big on making Alexa and the Echo happen. This is the story of that ...
+      url: https://www.theverge.com/podcast/907146/amazon-echo-alexa-version-history
+
+
+--- [The Verge] (website) ---
+command: opencli google search "site:theverge.com Agent after:2026-04-04" -f json
+keyword: Agent
+status: success
+fetch_stack: opencli
+count: 2
+
+  [1] Grammarly's sloppelganger saga
+      snippet: Grammarly would live on as part of Superhuman, but the writing aid's sidebar would increasingly become a hub for AI agents, rather than just grammar and ...
+      url: https://www.theverge.com/column/906606/grammarly-expert-review-ai-saga
+
+  [2] How the Amazon Echo learned to talk — and listen
+      snippet: 12 hours ago — Amazon CEO Jeff Bezos wanted to build a cheap, accessible, voice-based computer — and bet big on making Alexa and the Echo happen. This is the story of that ...
+      url: https://www.theverge.com/podcast/907146/amazon-echo-alexa-version-history
+

@@ -2,7 +2,7 @@
   "meta": {
     "date": "2026-04-05",
     "date_label": "2026年4月5日 · 周六",
-    "generated_at": "2026-04-05 22:00",
+    "generated_at": "2026-04-05 22:30",
     "role": "AI 行业观察者"
   },
   "tools": [
@@ -13,71 +13,70 @@
   "left_sidebar": {
     "overview": [
       {
-        "title": "Gemma 4 开源引爆社区，手机端大模型进入实用期",
-        "text": "Google 发布 Gemma 4 全系列开源模型（Apache 2.0），31B 跻身开源前三，E2B/E4B 可在手机和树莓派上离线运行。中外社区同步热议。"
+        "title": "Google Gemma 4 开源引爆全球社区",
+        "text": "Gemma 4 全系列 Apache 2.0 开源，31B 跻身开源前三，E2B/E4B 可在手机端离线运行。微博、Twitter、小红书、Reddit 多平台同步热议，信号密度极高。"
       },
       {
-        "title": "Claude Code 源码泄露揭示 Agent 生产级架构",
-        "text": "Anthropic 误发 .map 文件导致 Claude Code 50 万行源码曝光，开发者社区深度拆解其 Agent 编排层设计，被视为生产级 Agent 的参考蓝图。"
+        "title": "Claude Code 源码泄露成为 Agent 架构公开课",
+        "text": "Anthropic 误发调试文件导致 50 万行源码曝光，社区深度拆解其编排层、怀疑式记忆、风险分级等设计。同时 Anthropic 宣布 Claude Code 使用 OpenClaw 需额外付费。"
       },
       {
-        "title": "国内大模型厂商密集发力：阿里、小米、DeepSeek 动作频繁",
-        "text": "阿里千问 3.6-Plus 登顶国产编程模型，小米 MiMo 日调用突破万亿 Token，DeepSeek V4 被曝将基于华为昇腾芯片运行。"
+        "title": "国产大模型密集出击：阿里千问、小米 MiMo、DeepSeek V4",
+        "text": "阿里千问 3.6-Plus 登顶国产编程模型，小米 MiMo 日调用破万亿 Token，DeepSeek V4 被曝将基于华为昇腾芯片运行。GPT-6 信息也开始泄露。"
       }
     ],
     "actions": [
       {
         "type": "try",
-        "text": "下载 Gemma 4 的 E4B 端侧模型，在本地或手机上试跑一个简单的 Agent 任务。",
-        "prompt": "帮我写一个用 Gemma 4 E4B 模型在本地运行的 Agent 示例，包括环境配置和代码。"
+        "text": "下载 Gemma 4 E4B 端侧模型，在本地设备上试跑一个简单任务，评估端侧 Agent 的可行性。",
+        "prompt": "帮我写一个用 Gemma 4 E4B 在本地运行的 Agent 示例，包括环境配置、模型下载和代码。"
       },
       {
         "type": "learn",
-        "text": "精读 Claude Code 泄露源码的架构分析，理解「怀疑式记忆」和「风险分级」设计模式。",
-        "prompt": "帮我总结 Claude Code 源码泄露中最关键的 Agent 架构设计模式，特别是记忆管理和工具路由部分。"
+        "text": "精读 Claude Code 泄露架构分析，重点理解「怀疑式记忆」和「KAIROS 守护进程」的设计模式。",
+        "prompt": "帮我总结 Claude Code 源码泄露中最关键的 Agent 架构设计模式，对比传统 Agent 框架的差异。"
       },
       {
         "type": "watch",
-        "text": "关注 DeepSeek V4 发布动态，评估其基于国产芯片的性能表现。",
-        "prompt": "帮我梳理 DeepSeek V4 目前已知的信息，包括硬件平台、模型架构和预期发布时间。"
+        "text": "跟踪 DeepSeek V4 和 GPT-6 的发布动态，评估对现有 AI 工具链的影响。",
+        "prompt": "帮我梳理 DeepSeek V4 和 GPT-6 目前已知的所有信息，分析它们可能带来的行业变化。"
       },
       {
         "type": "alert",
-        "text": "Anthropic 宣布 Claude Code 订阅用户使用 OpenClaw 需额外付费，注意定价变化对工作流的影响。",
-        "prompt": "帮我分析 Anthropic 对 Claude Code + OpenClaw 的新定价策略，以及对开发者的影响��"
+        "text": "Anthropic 对 Claude Code + OpenClaw 的新定价策略可能影响开发者工作流，评估替代方案。",
+        "prompt": "帮我对比 Claude Code、Cursor、Codex 在 Agent 集成方面的能力和定价，给出选型建议。"
       }
     ],
     "trends": {
-      "rising": ["端侧大模型", "Agent 架构开源", "国产 AI 芯片适配", "AI 编程 Skills"],
-      "cooling": ["封闭模型独占优势", "单一 API 依赖"],
-      "steady": ["开源模型竞赛", "AI coding 工具迭代", "Agent 多框架并存"],
-      "insight": "开源模型正从「参数竞赛」转向「端侧可用」和「Agent 原生」。Claude Code 泄露事件意外推动了 Agent 架构的公共知识化，行业对生产级 Agent 的认知正在快速对齐。"
+      "rising": ["端侧大模型", "Agent 架构开源化", "国产 AI 芯片适配", "AI 编程 Skills/SOP"],
+      "cooling": ["封闭模型独占优势", "单一 API 供应商依赖"],
+      "steady": ["开源模型竞赛", "AI coding 工具迭代", "企业级 Agent 落地"],
+      "insight": "本周最强信号：开源模型从「参数竞赛」转向「端侧可用」和「Agent 原生」。Claude Code 泄露意外推动了生产级 Agent 架构的公共知识化。国产模型在编程和调用量上开始追平国际一线。"
     }
   },
   "articles": [
     {
       "id": "article-1",
-      "title": "Google 发布 Gemma 4 全系列开源模型，31B 跻身开源前三",
+      "title": "Google 发布 Gemma 4 全系列开源模型，Apache 2.0 许可改写格局",
       "priority": "major",
       "time_label": "4月3日",
       "source_date": "2026-04-03",
-      "source": "Google 官方 / 多平台讨论",
+      "source": "Google 官方",
       "url": "https://x.com/i/status/2039736220834480233",
       "summary": {
-        "what_happened": "Google 发布 Gemma 4 系列（31B Dense、26B MoE、E4B、E2B），全部采用 Apache 2.0 开源许可。31B 在 Arena AI 开源文本榜排第三，E2B/E4B 可在手机和树莓派上离线运行。",
-        "why_it_matters": "首次有顶级开源模型同时覆盖服务器和端侧场景，且商用无限制。对国内开源模型（Qwen、Llama）构成直接竞争压力。"
+        "what_happened": "Google 发布 Gemma 4（31B Dense、26B MoE、E4B、E2B），全部 Apache 2.0 开源。31B 在 Arena AI 开源榜排第三，E2B/E4B 可在手机和树莓派上离线运行，支持 256K 上下文和原生函数调用。",
+        "why_it_matters": "首次有顶级开源模型同时覆盖服务器到端侧全场景且商用无限制。31B 用不到同级模型 1/20 的参数量达到相近性能，对 Qwen、Llama 构成直接竞争压力。"
       },
-      "relevance": "端侧模型 + Apache 2.0 许可 = 新的产品集成选项。E4B 特别值得关注用于手机 Agent 场景。",
-      "tags": ["#开源模型", "#Gemma4", "#端侧AI", "#Google"],
+      "relevance": "端侧模型 + Apache 2.0 = 新的产品集成选项。E4B 特别适合手机 Agent 场景评估。",
+      "tags": ["#Gemma4", "#开源模型", "#端侧AI", "#Google"],
       "credibility": {
         "confidence": "high",
         "source_tier": "tier-1",
-        "cross_refs": 5,
-        "evidence": "Google 官方发布 + Twitter/微博/小红书多源交叉验证",
+        "cross_refs": 6,
+        "evidence": "微博(宝玉xp、新智元、tombkeeper)、Twitter、小红书(3条)、Reddit 多源交叉验证",
         "sources": [
-          {"name": "宝玉xp 微博", "url": "https://weibo.com/1727858283/Qz0dUoQFo"},
-          {"name": "新智元 微博", "url": "https://weibo.com/5703921756/Qz3Mwv82K"},
-          {"name": "tombkeeper 微博", "url": "https://weibo.com/1401527553/Qz4g2zA6w"},
+          {"name": "宝玉xp 微博（详细解读）", "url": "https://weibo.com/1727858283/Qz0dUoQFo"},
+          {"name": "新智元 微博（跑分对比）", "url": "https://weibo.com/5703921756/Qz3Mwv82K"},
           {"name": "Twitter @aiwithmayank", "url": "https://x.com/i/status/2039996856000979128"},
           {"name": "小红书 加密亮子", "url": "https://www.xiaohongshu.com/search_result/69cfb17b000000001a028861"}
         ]
@@ -85,89 +84,94 @@
     },
     {
       "id": "article-2",
-      "title": "Claude Code 源码泄露，揭示生产级 AI Agent 架构蓝图",
+      "title": "Claude Code 50 万行源码泄露，揭示生产级 Agent 架构蓝图",
       "priority": "major",
       "time_label": "4月3日-5日",
       "source_date": "2026-04-03",
-      "source": "Reddit / 微博 多源讨论",
+      "source": "社区多源讨论",
       "url": "https://reddit.com/r/artificial/comments/1s9jprb/the_claude_code_leak_accidentally_published_the/",
       "summary": {
-        "what_happened": "Anthropic 在发布 Claude Code 新版本时误将 .map 调试文件发到 npm，导致 50 万行 TypeScript 源码泄露。社区迅速拆解其 Agent 编排层架构，包括「怀疑式记忆」、「autoDream 后台整合」、「KAIROS 守护进程」和「风险分级审批」等机制。",
-        "why_it_matters": "这是首次有年营收 25 亿美元级别的 AI Agent 系统被完整曝光架构细节。其核心理念——「架构比模型更重要」——正在重塑行业对 Agent 开发的认知。"
+        "what_happened": "Anthropic 发布 Claude Code 新版本时误将 .map 调试文件推到 npm，50 万行 TypeScript 源码被完整曝光。社区迅速拆解出「怀疑式记忆」、「autoDream 后台整合」、「KAIROS 守护进程」和「风险分级审批」等核心机制。",
+        "why_it_matters": "这是首次有年营收 25 亿美元级别的 AI Agent 系统被完整曝光架构细节。核心理念「架构比模型更重要」正在重塑行业认知——Agent 的护城河在编排层而非模型本身。"
       },
-      "relevance": "直接提供了 Agent 编排层的生产级参考设计，值得仔细研读并应用到自己的 Agent 项目中。",
+      "relevance": "直接提供了生产级 Agent 编排层的参考设计，已有开源电子书对其做了系统化拆解。",
       "tags": ["#ClaudeCode", "#Agent架构", "#源码泄露", "#Anthropic"],
       "credibility": {
         "confidence": "high",
         "source_tier": "tier-1",
-        "cross_refs": 4,
-        "evidence": "npm 原始泄露 + Reddit 深度分析 + 微博多位技术大V交叉讨论",
+        "cross_refs": 3,
+        "evidence": "npm 原始泄露 + Reddit 深度分析帖 + 微博爱可可/蚁工厂交叉讨论",
         "sources": [
-          {"name": "爱可可-爱生活 微博", "url": "https://weibo.com/1402400261/QzmVW5Hcq"},
-          {"name": "蚁工厂 微博", "url": "https://weibo.com/2194035935/Qz4Mv1Dnt"},
+          {"name": "爱可可-爱生活 微博（架构分析）", "url": "https://weibo.com/1402400261/QzmVW5Hcq"},
+          {"name": "蚁工厂 微博（电子书）", "url": "https://weibo.com/2194035935/Qz4Mv1Dnt"},
           {"name": "Reddit r/artificial", "url": "https://reddit.com/r/artificial/comments/1s9jprb/the_claude_code_leak_accidentally_published_the/"}
         ]
       }
     },
     {
       "id": "article-3",
-      "title": "阿里千问 3.6-Plus 登顶国产最强编程模型",
+      "title": "Anthropic 研究发现大语言模型中存在功能性情感表征",
       "priority": "major",
       "time_label": "4月2日",
       "source_date": "2026-04-02",
+      "source": "Anthropic 官方",
+      "url": "https://x.com/i/status/2039749628737019925",
+      "summary": {
+        "what_happened": "Anthropic 发布新研究，在 Claude 内部发现了情感概念的内部表征。这些表征不是模拟，而是可以驱动模型行为的功能性结构。",
+        "why_it_matters": "直接挑战了「LLM 只是统计模式匹配」的传统认知，对 AI 安全和对齐研究有重要启示。如果模型内部确实形成了情感类表征，那么对齐策略需要重新审视。"
+      },
+      "relevance": "理解模型内部表征机制对构建安全可控的 Agent 至关重要。",
+      "tags": ["#Anthropic", "#可解释性", "#AI安全", "#模型研究"],
+      "credibility": {
+        "confidence": "high",
+        "source_tier": "tier-1",
+        "cross_refs": 3,
+        "evidence": "Anthropic 官方 Twitter(17K likes) + Reddit r/accelerate 两个帖子交叉讨论",
+        "sources": [
+          {"name": "Anthropic 官方 Twitter", "url": "https://x.com/i/status/2039749628737019925"},
+          {"name": "Reddit r/accelerate (1)", "url": "https://reddit.com/r/accelerate/comments/1satmlq/new_anthropic_research_emotional/"},
+          {"name": "Reddit r/accelerate (2)", "url": "https://reddit.com/r/accelerate/comments/1sasx8v/anthropic_finds_evidence_of_functional_emotions/"}
+        ]
+      }
+    },
+    {
+      "id": "article-4",
+      "title": "阿里千问 3.6-Plus 登顶国产编程模型，日调用量破万亿",
+      "priority": "notable",
+      "time_label": "4月2日-3日",
+      "source_date": "2026-04-03",
       "source": "量子位",
       "url": "https://www.qbitai.com/2026/04/396346.html",
       "summary": {
-        "what_happened": "阿里发布 Qwen3.6-Plus，在 Arena 编程能力子榜排名中国第一，日调用量超万亿 Token。编程和智能体能力实现突破。",
-        "why_it_matters": "国产编程模型首次在国际榜单上取得显著位置，对 Cursor/Copilot 等 AI 编程工具的后端模型选择产生直接影响。"
+        "what_happened": "阿里发布 Qwen3.6-Plus，在 Arena 编程能力子榜排名中国第一。日调用量超万亿 Token，编程和智能体能力实现突破。",
+        "why_it_matters": "国产编程模型首次在国际榜单上取得显著位置。对 AI 编程工具的后端模型选择产生直接影响——Cursor/Copilot 之外多了一个国产高性能选项。"
       },
-      "relevance": "如果你在评估 AI 编程工具的底层模型，Qwen3.6-Plus 是新的国产候选。",
+      "relevance": "如果在评估 AI 编程工具的底层模型，Qwen3.6-Plus 是新的国产候选。",
       "tags": ["#千问", "#AI编程", "#阿里", "#国产模型"],
       "credibility": {
         "confidence": "high",
         "source_tier": "tier-1",
         "cross_refs": 2,
-        "evidence": "量子位报道 + Arena 榜单数据",
+        "evidence": "量子位深度报道 + Arena 榜单数据",
         "sources": [
           {"name": "量子位", "url": "https://www.qbitai.com/2026/04/396346.html"}
         ]
       }
     },
     {
-      "id": "article-4",
-      "title": "小米 MiMo 大模型日调用量突破万亿 Token",
-      "priority": "notable",
-      "time_label": "4月3日",
-      "source_date": "2026-04-03",
-      "source": "雷军 微博",
-      "url": "https://weibo.com/1749127163/Qz4nC3Abt",
-      "summary": {
-        "what_happened": "雷军宣布小米 MiMo 大模型调用量超过 1 万亿 Token，成为小米在大模型领域的新里程碑。",
-        "why_it_matters": "小米拥有 10 亿级硬件生态，大模型与人车家全生态闭环的结合值得关注。"
-      },
-      "relevance": "端侧大模型 + 硬件生态的结合模式，可能成为 AI 产品落地的重要参考路径。",
-      "tags": ["#小米", "#MiMo", "#端侧AI", "#雷军"],
-      "credibility": {
-        "confidence": "high",
-        "source_tier": "tier-1",
-        "cross_refs": 1,
-        "evidence": "雷军本人微博官宣"
-      }
-    },
-    {
       "id": "article-5",
-      "title": "DeepSeek V4 将基于华为昇腾 950PR 芯片运行",
+      "title": "DeepSeek V4 将基于华为昇腾 950PR 芯片运行，未给 NVIDIA 早期访问",
       "priority": "notable",
       "time_label": "4月4日",
       "source_date": "2026-04-04",
-      "source": "微博 · 外媒知情人士",
+      "source": "外媒知情人士 · 微博",
       "url": "https://weibo.com/7785431482/Qzhmb20Ge",
       "summary": {
-        "what_happened": "外媒采访知情人士透露，DeepSeek V4 将运行在华为昇腾 950PR 芯片上，且未给 NVIDIA 和 AMD 任何早期访问权限。阿里、字节、腾讯已大批量采购华为新芯片。",
-        "why_it_matters": "这标志着中国头部 AI 公司正在加速去 NVIDIA 化，国产 AI 芯片生态加速成型。"
+        "what_happened": "五位知情人士透露 DeepSeek V4 将在华为昇腾 950PR 上运行，单卡算力是 H20 的 2.87 倍。阿里、字节、腾讯已大批量采购华为新芯片，且 DeepSeek 未给 NVIDIA 和 AMD 任何早期访问权限。",
+        "why_it_matters": "标志着中国头部 AI 公司加速去 NVIDIA 化。国产 AI 芯片生态正在成型，可能重塑全球算力供应格局。"
       },
-      "relevance": "国产芯片适配正在成为模型发布的关键考量，对整个 AI 基础设施格局有深远影响。",
-      "tags": ["#DeepSeek", "#华为", "#昇腾", "#国产芯片"],
+      "relevance": "国产芯片适配正在成为模型发布的关键考量，对 AI 基础设施选型有深远影响。",
+      "tags": ["#DeepSeek", "#华为昇腾", "#国产芯片", "#算力"],
       "credibility": {
         "confidence": "medium",
         "source_tier": "tier-2",
@@ -177,39 +181,39 @@
     },
     {
       "id": "article-6",
-      "title": "Anthropic 研究：大语言模型中发现功能性情感概念",
+      "title": "小米 MiMo 大模型日调用量突破万亿 Token",
       "priority": "notable",
-      "time_label": "4月2日",
-      "source_date": "2026-04-02",
-      "source": "Anthropic 官方 Twitter",
-      "url": "https://x.com/i/status/2039749628737019925",
+      "time_label": "4月3日",
+      "source_date": "2026-04-03",
+      "source": "雷军 微博",
+      "url": "https://weibo.com/1749127163/Qz4nC3Abt",
       "summary": {
-        "what_happened": "Anthropic 发布新研究，在 Claude 内部发现了情感概念的内部表征，这些表征可以驱动模型行为。",
-        "why_it_matters": "这是 AI 安全和可解释性领域的重要进展，挑战了「LLM 只是统计模式匹配」的传统认知。"
+        "what_happened": "雷军宣布 MiMo 大模型调用量超过 1 万亿 Token。小米拥有 10 亿级硬件生态和完整人车家闭环。",
+        "why_it_matters": "端侧大模型 + 硬件生态的结合模式可能成为 AI 产品落地的标杆路径。"
       },
-      "relevance": "理解模型内部表征对于构建安全可控的 Agent 至关重要。",
-      "tags": ["#Anthropic", "#AI安全", "#可解释性", "#情感"],
+      "relevance": "小米的「大模型 × 硬件生态」模式值得关注和借鉴。",
+      "tags": ["#小米", "#MiMo", "#端侧AI", "#雷军"],
       "credibility": {
         "confidence": "high",
         "source_tier": "tier-1",
-        "cross_refs": 3,
-        "evidence": "Anthropic 官方 Twitter + Reddit 多个子版块讨论"
+        "cross_refs": 1,
+        "evidence": "雷军本人微博官宣"
       }
     },
     {
       "id": "article-7",
-      "title": "Anthropic 宣布 Claude Code 订阅用户使用 OpenClaw 需额外付费",
+      "title": "Anthropic 宣布 Claude Code + OpenClaw 需额外付费",
       "priority": "notable",
       "time_label": "4月4日",
       "source_date": "2026-04-04",
       "source": "TechCrunch / The Verge",
       "url": "https://techcrunch.com/2026/04/04/anthropic-says-claude-code-subscribers-will-need-to-pay-extra-for-openclaw-support/",
       "summary": {
-        "what_happened": "Anthropic 宣布 Claude Code 订阅用户如需使用 OpenClaw 集成功能，将需要支付额外费用。",
-        "why_it_matters": "AI 工具的定价策略正在分层化，可能影响开发者对 Agent 工具链的选择。"
+        "what_happened": "Anthropic 宣布 Claude Code 订阅用户如需使用 OpenClaw 集成，将需要支付额外费用。The Verge 报道称这实质上是「ban OpenClaw from Claude」。",
+        "why_it_matters": "AI 工具定价策略分层化加速，Agent 工具链的选择不再只看能力，还要看生态开放度和成本结构。"
       },
-      "relevance": "如果你在使用 Claude Code + OpenClaw 工作流，需要评估成本变化。",
-      "tags": ["#Anthropic", "#ClaudeCode", "#定价", "#OpenClaw"],
+      "relevance": "使用 Claude Code + OpenClaw 工作流的开发者需要立即评估成本变化和替代方案。",
+      "tags": ["#Anthropic", "#ClaudeCode", "#OpenClaw", "#定价"],
       "credibility": {
         "confidence": "high",
         "source_tier": "tier-1",
@@ -223,39 +227,60 @@
     },
     {
       "id": "article-8",
-      "title": "Google Stitch 发布 DESIGN.md — AI 编程的「审美插件」",
-      "priority": "normal",
-      "time_label": "4月3日",
-      "source_date": "2026-04-03",
-      "source": "Twitter / 微博",
-      "url": "https://x.com/i/status/2040142054211117218",
+      "title": "GPT-6 信息开始泄露",
+      "priority": "notable",
+      "time_label": "近3天",
+      "source_date": "2026-04-04",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/04/396366.html",
       "summary": {
-        "what_happened": "awesome-design-md 项目将 30+ 顶尖品牌的设计系统浓缩为 .md 文件，AI 编程助手可直接读取生成像素级匹配的 UI。",
-        "why_it_matters": "解决了 AI 生成 UI「千篇一律」的问题，将设计品味变成可复用的开发资源。"
+        "what_happened": "量子位连续两次报道 GPT-6 相关信息泄露，具体细节待确认。",
+        "why_it_matters": "GPT-6 作为下一代旗舰模型，其能力定位将直接影响整个行业的产品规划和竞争格局。"
       },
-      "relevance": "AI 编程工具的审美短板有了标准化解法，值得集成到开发流程中。",
-      "tags": ["#AI编程", "#设计系统", "#UI生成"],
+      "relevance": "密切关注 GPT-6 的能力定位，评估对现有产品和工作流的潜在影响。",
+      "tags": ["#GPT6", "#OpenAI", "#模型发布"],
       "credibility": {
-        "confidence": "medium",
+        "confidence": "low",
         "source_tier": "tier-2",
-        "cross_refs": 2,
-        "evidence": "Twitter 热议 + 微博爱可可推荐"
+        "cross_refs": 1,
+        "evidence": "量子位报道，信息源为泄露，未经官方确认"
       }
     },
     {
       "id": "article-9",
-      "title": "Google Cloud AI 总监开源 AI 编程 Skills 仓库",
+      "title": "awesome-design-md：把 30+ 顶尖品牌设计系统变成 AI 可读的 .md 文件",
+      "priority": "normal",
+      "time_label": "4月3日",
+      "source_date": "2026-04-03",
+      "source": "微博 · 爱可可-爱生活",
+      "url": "https://weibo.com/1402400261/QzpDchGbr",
+      "summary": {
+        "what_happened": "VoltAgent 开源 awesome-design-md，将 Apple、Spotify、Linear 等品牌的设计系统浓缩为 .md 文件。AI 编程助手读取后可直接生成像素级匹配的 UI。",
+        "why_it_matters": "解决了 AI 生成 UI「千篇一律」的核心痛点，将「设计品味」变成可复用的开发资源。"
+      },
+      "relevance": "直接可集成到 Cursor/Claude Code 的开发流程中，提升 AI 生成 UI 的质量。",
+      "tags": ["#AI编程", "#设计系统", "#开源"],
+      "credibility": {
+        "confidence": "medium",
+        "source_tier": "tier-2",
+        "cross_refs": 1,
+        "evidence": "微博爱可可推荐 + GitHub 仓库"
+      }
+    },
+    {
+      "id": "article-10",
+      "title": "Google Cloud AI 总监开源 Agent Skills 仓库：19 项核心技能 SOP",
       "priority": "normal",
       "time_label": "4月5日",
       "source_date": "2026-04-05",
       "source": "微博 · 欧巴聊AI",
       "url": "https://weibo.com/2771284557/Qznyb1S0Z",
       "summary": {
-        "what_happened": "Google Cloud AI 总监 Addy Osmani 开源 agent-skills 仓库，融入谷歌软件工程最佳实践，包含 6 大生命周期、7 个原子化指令、19 项核心技能 SOP。",
-        "why_it_matters": "将「AI 编程的工程纪律」系统化为可执行的 SOP，从 Prompt 技巧层面提升到 Harness 工程层面。"
+        "what_happened": "Addy Osmani 开源 agent-skills 仓库，含 6 大生命周期、7 个原子化指令、19 项核心技能 SOP，融入谷歌软件工程最佳实践。",
+        "why_it_matters": "把 AI 编程从 Prompt 技巧层面提升到 Harness 工程层面——核心不是怎么写 Prompt，而是怎么给 AI 设置不可跨越的验证关卡。"
       },
-      "relevance": "直接可用于规范团队的 AI 编程实践，建立校验机制。",
-      "tags": ["#AI编程", "#Skills", "#工程实践", "#Google"],
+      "relevance": "直接可用于规范团队的 AI 编程实践。",
+      "tags": ["#AgentSkills", "#AI编程", "#工程实践", "#Google"],
       "credibility": {
         "confidence": "medium",
         "source_tier": "tier-2",
@@ -264,68 +289,110 @@
       }
     },
     {
-      "id": "article-10",
-      "title": "Pika 发布实时视频聊天 — AI Agent 可加入 Google Meet",
-      "priority": "normal",
-      "time_label": "4月2日",
-      "source_date": "2026-04-02",
-      "source": "Twitter",
-      "url": "https://x.com/i/status/2039845766638772549",
-      "summary": {
-        "what_happened": "Pika 发布实时视频聊天功能，用户可以发送 Google Meet 链接给 AI Agent，Agent 可以加入视频通话并实时交互。",
-        "why_it_matters": "AI Agent 从文本交互扩展到视频实时交互，物理世界的 Agent 应用场景进一步打开。"
-      },
-      "relevance": "Agent 的交互界面正在从 CLI/API 扩展到视频通话，值得关注这个方向的产品机会。",
-      "tags": ["#Agent", "#视频通话", "#Pika", "#实时交互"],
-      "credibility": {
-        "confidence": "medium",
-        "source_tier": "tier-2",
-        "cross_refs": 2,
-        "evidence": "Twitter 多人讨论 + 演示视频"
-      }
-    },
-    {
       "id": "article-11",
-      "title": "Junior 开发者涌入市场，AI 辅助编程带来的人才结构变化",
+      "title": "GLM 视觉编程上线，硬刚 Claude Opus",
       "priority": "normal",
       "time_label": "4月4日",
       "source_date": "2026-04-04",
-      "source": "Reddit r/ExperiencedDevs",
-      "url": "https://reddit.com/r/ExperiencedDevs/comments/1sbv2eo/junior_devs_who_learned_to_code_with_ai/",
+      "source": "小红书",
+      "url": "https://www.xiaohongshu.com/search_result/69d07cbb000000001d01e214",
       "summary": {
-        "what_happened": "Reddit 热议：大量依赖 AI 辅助学习编程的 Junior 开发者正在进入就业市场，引发团队如何评估和管理此类人才的讨论。",
-        "why_it_matters": "AI 编程工具正在改变软件工程的人才结构和面试标准，这对招聘和团队建设有直接影响。"
+        "what_happened": "智谱 GLM 推出视觉编程能力，定位对标 Claude Opus 的多模态编程场景。",
+        "why_it_matters": "国产模型在多模态编程方向开始与国际一线直接竞争，开发者的选择空间进一步扩大。"
       },
-      "relevance": "如果你的团队在招聘开发者，需要重新思考 AI 辅助编程背景下的面试和考核标准。",
-      "tags": ["#AI编程", "#招聘", "#开发者", "#社区讨论"],
+      "relevance": "多模态编程是 AI coding 的下一个战场，值得关注国产模型的追赶进展。",
+      "tags": ["#GLM", "#视觉编程", "#多模态", "#国产模型"],
       "credibility": {
         "confidence": "medium",
         "source_tier": "tier-2",
         "cross_refs": 1,
-        "evidence": "Reddit r/ExperiencedDevs 热帖 (921 upvotes)"
+        "evidence": "小红书讨论"
       }
     },
     {
       "id": "article-12",
-      "title": "karpathy 分享 LLM Agent 时代的「idea file」模式",
+      "title": "有人开始造 Agent 专属的「三无」硬件",
       "priority": "normal",
-      "time_label": "4月4日",
+      "time_label": "近3天",
       "source_date": "2026-04-04",
-      "source": "Twitter @karpathy",
-      "url": "https://x.com/i/status/2040470801506541998",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/04/395307.html",
       "summary": {
-        "what_happened": "karpathy 提出在 LLM Agent 时代，分享代码不如分享「idea file」——描述需求和思路，让对方的 Agent 自行定制构建。",
-        "why_it_matters": "这种范式转变意味着知识传递的单位从「代码」变为「意图描述」，对开发者协作模式有深远影响。"
+        "what_happened": "量子位报道了 Agent 专属硬件的新趋势——无屏幕、无键盘、无鼠标的「三无」设备，专门为 AI Agent 运行而设计，避免与人类抢占电脑资源。",
+        "why_it_matters": "Agent 从软件走向专属硬件，意味着 Agent 的使用场景正在从「辅助人」转向「独立运行」。"
       },
-      "relevance": "思考你的工作中哪些环节可以从「分享代码」转向「分享意图描述 + Agent 执行」。",
-      "tags": ["#karpathy", "#Agent", "#开发范式", "#思维模型"],
+      "relevance": "Agent 专属硬件是一个值得关注的新品类方向。",
+      "tags": ["#Agent", "#硬件", "#产品趋势"],
       "credibility": {
-        "confidence": "high",
-        "source_tier": "tier-1",
+        "confidence": "medium",
+        "source_tier": "tier-2",
+        "cross_refs": 2,
+        "evidence": "量子位两次报道（大模型 + Agent 两个关键词各命中一次）"
+      }
+    },
+    {
+      "id": "article-13",
+      "title": "大模型编程能力排名：Claude 断崖领先，中美之争加剧",
+      "priority": "normal",
+      "time_label": "4月5日",
+      "source_date": "2026-04-05",
+      "source": "微博 · 黄鱼Veda",
+      "url": "https://weibo.com/2177245391/QzjefCIXb",
+      "summary": {
+        "what_happened": "最新编程能力排名显示 Claude 断崖式领先，从国旗分布来看 AI 编程已经成为中国和美国的直接竞争。",
+        "why_it_matters": "AI 编程是大模型商业化最直接的落地场景，排名变化直接影响开发者工具选型。"
+      },
+      "relevance": "持续跟踪编程能力排名变化，作为工具选型的参考依据。",
+      "tags": ["#AI编程", "#Claude", "#排名", "#中美竞争"],
+      "credibility": {
+        "confidence": "medium",
+        "source_tier": "tier-2",
         "cross_refs": 1,
-        "evidence": "karpathy 本人 Twitter (19300 likes)"
+        "evidence": "微博讨论"
+      }
+    },
+    {
+      "id": "article-14",
+      "title": "在树莓派上运行 27B 大模型成为现实",
+      "priority": "minor",
+      "time_label": "4月2日",
+      "source_date": "2026-04-02",
+      "source": "Reddit r/raspberry_pi",
+      "url": "https://reddit.com/r/raspberry_pi/comments/1sarsl4/running_true_large_language_models_27b_on_rpi_0/",
+      "summary": {
+        "what_happened": "有人成功在树莓派 Zero 上本地运行 27B 参数的大语言模型，证明端侧大模型的实用性正在快速提升。",
+        "why_it_matters": "结合 Gemma 4 E2B 的发布，端侧大模型正在从「能跑」走向「能用」。"
+      },
+      "relevance": "端侧部署的可行性对 AI 产品形态有直接影响。",
+      "tags": ["#端侧AI", "#树莓派", "#大模型"],
+      "credibility": {
+        "confidence": "medium",
+        "source_tier": "tier-2",
+        "cross_refs": 1,
+        "evidence": "Reddit 社区帖 (177 upvotes)"
+      }
+    },
+    {
+      "id": "article-15",
+      "title": "Django 创始人警告：30 岁程序员受 AI 冲击最大",
+      "priority": "minor",
+      "time_label": "近3天",
+      "source_date": "2026-04-04",
+      "source": "量子位",
+      "url": "https://www.qbitai.com/2026/04/395995.html",
+      "summary": {
+        "what_happened": "Django 创始人公开警告 AI 对中级程序员的冲击，认为 30 岁左右、经验 5-10 年的程序员面临的替代风险最大。",
+        "why_it_matters": "这不是第一次有业界知名人物发出类似警告，但来自 Django 创始人的信号更具分量，值得开发者群体认真对待。"
+      },
+      "relevance": "AI 对软件开发行业的人才结构影响正在加深，需要关注和思考自身定位。",
+      "tags": ["#AI冲击", "#程序员", "#职业发展"],
+      "credibility": {
+        "confidence": "medium",
+        "source_tier": "tier-2",
+        "cross_refs": 1,
+        "evidence": "量子位报道"
       }
     }
   ],
-  "data_sources": ["微博", "Twitter/X", "Reddit", "小红书", "量子位", "TechCrunch", "The Verge", "36氪"]
+  "data_sources": ["微博", "Twitter/X", "Reddit", "小红书", "量子位", "TechCrunch", "The Verge", "InfoQ AI", "OpenAI News", "Anthropic News"]
 }
