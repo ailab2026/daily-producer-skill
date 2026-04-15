@@ -77,6 +77,24 @@ def get_exclude_patterns(profile: dict) -> list[str]:
 
 # ━━ 解析 detail.txt ━━
 
+_INJECTION_PATTERNS = re.compile(
+    r"(Read HEARTBEAT\.md|assistant to=functions\.|"
+    r"to=functions\.exec|to=functions\.read|"
+    r"\bHEARTBEAT_OK\b|\"workdir\":\s*\"/root/\.openclaw)",
+    re.IGNORECASE,
+)
+
+def _strip_injected_content(text: str) -> str:
+    """移除疑似 prompt injection 的内容行。"""
+    if not _INJECTION_PATTERNS.search(text):
+        return text
+    clean_lines = [
+        line for line in text.splitlines()
+        if not _INJECTION_PATTERNS.search(line)
+    ]
+    return "\n".join(clean_lines)
+
+
 def parse_detail(text: str) -> list[dict]:
     """解析 detail.txt 为结构化列表。"""
     items = []
@@ -112,9 +130,12 @@ def parse_detail(text: str) -> list[dict]:
             elif line.startswith("fetched_content:"):
                 current["fields"]["has_fetched_content"] = True
             elif current.get("fields", {}).get("has_fetched_content"):
-                current["content"] += line + "\n"
+                if not _INJECTION_PATTERNS.search(line):
+                    current["content"] += line + "\n"
             # 正文续行（多行推文等，不匹配任何已知格式的非空行）
             elif line.strip() and not line.startswith("---") and not line.startswith("#") and not line.startswith("="):
+                if _INJECTION_PATTERNS.search(line):
+                    continue
                 # 追加到 text 字段
                 existing_text = current["fields"].get("text", "")
                 if existing_text:
