@@ -106,10 +106,15 @@ _PRIORITY_ICON = {"major": "🔥", "notable": "🚀", "normal": "📌", "minor":
 def _load_top_articles(date_str: str) -> list[dict]:
     """
     Load the top 3 articles from output/daily/{date}.json.
+    Searches skill-level output first, then workspace-level output as fallback.
     Returns list of dicts with 'title', 'priority', 'source'.
     """
-    json_path = SKILL_ROOT / "output" / "daily" / f"{date_str}.json"
-    if not json_path.exists():
+    candidates = [
+        SKILL_ROOT / "output" / "daily" / f"{date_str}.json",
+        SKILL_ROOT.parent.parent / "output" / "daily" / f"{date_str}.json",
+    ]
+    json_path = next((p for p in candidates if p.exists()), None)
+    if json_path is None:
         return []
     try:
         data = json.loads(json_path.read_text(encoding="utf-8"))
