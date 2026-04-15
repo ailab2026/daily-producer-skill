@@ -79,7 +79,7 @@ python3 scripts/prepare_payload.py --date {date}
   ],
   "ai_todo": {
     "instruction": "请为每条候选填写 ai_summary、ai_relevance、ai_priority、ai_tags...",
-    "max_items": 15
+    "target_items": 15
   }
 }
 ```

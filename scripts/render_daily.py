@@ -26,6 +26,27 @@ ROOT_DIR = Path(__file__).resolve().parent.parent
 OUTPUT_DIR = ROOT_DIR / "output" / "daily"
 ARCHIVE_DIR = ROOT_DIR / "output" / "archive"
 
+
+def load_profile_window_days(default: int = 3) -> int:
+    """从 profile.yaml 读取 collection.window_days，读取失败时返回默认值。"""
+    config_path = ROOT_DIR / "config" / "profile.yaml"
+    if not config_path.exists():
+        return default
+    try:
+        import yaml
+        with open(config_path, encoding="utf-8") as f:
+            cfg = yaml.safe_load(f) or {}
+        return int(cfg.get("collection", {}).get("window_days", default))
+    except Exception:
+        # pyyaml 不可用或解析失败，简单正则提取
+        try:
+            import re
+            text = config_path.read_text(encoding="utf-8")
+            m = re.search(r"window_days\s*:\s*(\d+)", text)
+            return int(m.group(1)) if m else default
+        except Exception:
+            return default
+
 PRIORITY_ICON = {
     "major": '<i class="fa-solid fa-fire text-red-500 mr-1.5 text-xs"></i>',
     "notable": '<i class="fa-solid fa-thumbtack text-amber-500 mr-1.5 text-xs"></i>',
@@ -362,8 +383,18 @@ def render_article(article: dict[str, Any], index: int) -> str:
 
     cred_badges = render_credibility_badges(article.get("credibility"))
 
+    raw_summary = article.get("summary", "")
+    if isinstance(raw_summary, dict):
+        summary_text = raw_summary.get("what_happened", "") or raw_summary.get("why_it_matters", "")
+    else:
+        summary_text = str(raw_summary)
+    summary_snippet = h(summary_text[:120])
+    source_url = h(article.get("url", ""))
+    article_date = h(article.get("source_date", ""))
+
     return f"""        <article class="bg-white rounded-xl shadow-sm p-4 card-hover{border}"
-                 data-article-id="{h(article_id)}" data-title="{title}" data-tags="{h(serialize_tags_attr(tags))}">
+                 data-article-id="{h(article_id)}" data-title="{title}" data-tags="{h(serialize_tags_attr(tags))}"
+                 data-summary="{summary_snippet}" data-url="{source_url}" data-priority="{h(priority)}" data-date="{article_date}">
           <div class="flex items-start justify-between">
             <h3 class="text-[15px] font-semibold text-primary leading-snug">{title_prefix}{title}</h3>
             <span class="text-xs text-gray-400 whitespace-nowrap ml-3">{time_label}</span>
@@ -373,11 +404,17 @@ def render_article(article: dict[str, Any], index: int) -> str:
             {render_summary(article.get("summary", ""))}
           </div>
           {relevance_block}
-          <div class="flex items-center justify-between mt-2">
+          <div class="mt-2 sm:flex sm:items-center sm:justify-between">
             <div class="flex gap-1.5 flex-wrap">{render_tags(tags, exploration=exploration)}</div>
-            <a href="{url}" target="_blank" class="text-accent text-xs hover:underline">
-              <i class="fa-solid fa-arrow-up-right-from-square mr-1"></i>原文
-            </a>
+            <div class="article-action-bar flex items-center mt-1.5 sm:mt-0 sm:ml-3">
+              <a href="{url}" target="_blank" class="text-accent text-xs hover:underline whitespace-nowrap sm:hidden">
+                <i class="fa-solid fa-arrow-up-right-from-square mr-1"></i>原文
+              </a>
+              <span class="btn-group flex items-center gap-2 ml-auto sm:ml-0"></span>
+              <a href="{url}" target="_blank" class="text-accent text-xs hover:underline whitespace-nowrap hidden sm:inline ml-3">
+                <i class="fa-solid fa-arrow-up-right-from-square mr-1"></i>原文
+              </a>
+            </div>
           </div>
         </article>"""
 
@@ -452,6 +489,7 @@ def render_html(payload: dict[str, Any]) -> str:
     item_count = len(articles)
     generated_at = h(meta.get("generated_at", ""))
     role = h(meta.get("role", ""))
+    site_title = h(f"{role}日报" if role else "每日情报")
     generated_time = h(meta.get("generated_time", ""))
 
     default_tools = [
@@ -463,12 +501,67 @@ def render_html(payload: dict[str, Any]) -> str:
     tools_data = payload.get("tools", default_tools)
     tools_js = json.dumps(tools_data, ensure_ascii=False)
 
+    # OG 标签：取前3条 major/notable 文章标题作为摘要
+    top_articles = [
+        a for a in articles if a.get("priority") in ("major", "notable")
+    ][:3]
+    if not top_articles:
+        top_articles = articles[:3]
+
+    _icons = ["🔥", "🚀", "📌"]
+
+    def _display_width(s: str) -> int:
+        """计算显示宽度：CJK 字符 = 2，其他 = 1。"""
+        w = 0
+        for c in s:
+            cp = ord(c)
+            if (0x1100 <= cp <= 0x115F or 0x2E80 <= cp <= 0xA4CF or
+                    0xAC00 <= cp <= 0xD7A3 or 0xF900 <= cp <= 0xFAFF or
+                    0xFE10 <= cp <= 0xFE6F or 0xFF00 <= cp <= 0xFF60 or
+                    0xFFE0 <= cp <= 0xFFE6):
+                w += 2
+            else:
+                w += 1
+        return w
+
+    def _shorten_by_width(title: str, max_width: int) -> str:
+        """先提取冒号前主干，再按显示宽度在词边界截断（不在词中间截断）。"""
+        for sep in ("：", ":", "——", "—", " - "):
+            if sep in title:
+                title = title.split(sep)[0].strip()
+                break
+        if _display_width(title) <= max_width:
+            return title
+        # 逐词累加，找到加下一个词后超出 max_width-1（留省略号位）时停止
+        words = title.split(" ")
+        result = ""
+        for word in words:
+            candidate = (result + " " + word).strip()
+            if _display_width(candidate) > max_width - 1:
+                break
+            result = candidate
+        return (result + "…") if result else title[:max_width - 1] + "…"
+
+    # og:title：第一条头条（显示宽度 24，词边界截断）
+    # og:description：后两条头条（每条显示宽度 18，用 · 分隔）
+    og_title = h(f"{_icons[0]} {_shorten_by_width(top_articles[0].get('title', ''), 24)}" if top_articles else site_title)
+    og_desc_parts = [
+        f"{_icons[i + 1]} {_shorten_by_width(a.get('title', ''), 18)}"
+        for i, a in enumerate(top_articles[1:3])
+    ]
+    og_description = h(" · ".join(og_desc_parts)) if og_desc_parts else h(site_title)
+
     return f"""<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>日报 · {title_date}</title>
+  <meta property="og:title" content="{og_title}">
+  <meta property="og:description" content="{og_description}">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="{site_title}">
+  <meta name="description" content="{og_description}">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {{
@@ -497,11 +590,15 @@ def render_html(payload: dict[str, Any]) -> str:
     .feed-scroll::-webkit-scrollbar-track {{ background: transparent; }}
     .feed-scroll::-webkit-scrollbar-thumb {{ background: #E5E7EB; border-radius: 3px; }}
 
-    .vote-btn, .bookmark-btn {{ cursor: pointer; user-select: none; transition: all 0.2s ease; }}
-    .vote-btn:hover {{ color: #6C5CE7; }}
-    .vote-btn.voted {{ color: #6C5CE7; font-weight: 600; }}
-    .bookmark-btn:hover {{ color: #F59E0B; }}
-    .bookmark-btn.bookmarked {{ color: #F59E0B; }}
+    .vote-btn {{ cursor: pointer; user-select: none; transition: all 0.2s ease; display: inline-flex; align-items: center; gap: 4px; padding: 3px 8px; border-radius: 12px; border: 1px solid #E5E7EB; background: #F9FAFB; color: #6B7280; font-size: 12px; }}
+    .vote-btn:hover {{ border-color: #6C5CE7; color: #6C5CE7; background: #F5F3FF; }}
+    .vote-btn.voted {{ border-color: #6C5CE7; color: #6C5CE7; background: #EDE9FE; font-weight: 600; }}
+    .bookmark-btn {{ cursor: pointer; user-select: none; transition: all 0.2s ease; display: inline-flex; align-items: center; gap: 4px; padding: 3px 8px; border-radius: 12px; border: 1px solid #E5E7EB; background: #F9FAFB; color: #6B7280; font-size: 12px; }}
+    .bookmark-btn:hover {{ border-color: #F59E0B; color: #F59E0B; background: #FFFBEB; }}
+    .bookmark-btn.bookmarked {{ border-color: #F59E0B; color: #D97706; background: #FEF3C7; font-weight: 600; }}
+    @media (max-width: 639px) {{
+      .vote-btn, .bookmark-btn {{ font-size: 14px; padding: 6px 14px; border-radius: 14px; gap: 5px; }}
+    }}
     .tag-clickable {{ cursor: pointer; transition: all 0.15s ease; }}
     .tag-clickable:hover {{ transform: scale(1.05); box-shadow: 0 1px 4px rgba(108,92,231,0.2); }}
     .tag-clickable.tag-clicked {{ background: #6C5CE7 !important; color: white !important; }}
@@ -585,7 +682,7 @@ def render_html(payload: dict[str, Any]) -> str:
   <header class="flex-shrink-0 bg-white border-b border-gray-100 px-4 lg:px-8 py-3 lg:py-4">
     <div class="max-w-[1600px] mx-auto">
       <div class="flex items-center justify-between">
-        <h1 class="text-lg lg:text-2xl font-bold text-primary"><i class="fa-solid fa-newspaper text-accent mr-1.5 lg:mr-2"></i>AI情报站</h1>
+        <h1 class="text-lg lg:text-2xl font-bold text-primary"><i class="fa-solid fa-newspaper text-accent mr-1.5 lg:mr-2"></i>{site_title}</h1>
         <div class="flex items-center gap-2">
           <span class="text-gray-400 text-xs hidden lg:inline"><i class="fa-regular fa-clock mr-1"></i>生成于 {generated_time}</span>
           <span class="inline-block bg-[#F3F0FF] text-accent text-xs font-medium px-2 lg:px-3 py-1 lg:py-1.5 rounded-full"><i class="fa-solid fa-user mr-1"></i>{role}</span>
@@ -728,20 +825,38 @@ def render_html(payload: dict[str, Any]) -> str:
       }}
     }});
     card.dataset.tags = card.dataset.tags || '';
-    const actionBar = card.querySelector('.flex.items-center.justify-between.mt-2');
+    const actionBar = card.querySelector('.article-action-bar');
     if (actionBar) {{
-      const btnGroup = document.createElement('span'); btnGroup.className = 'flex items-center gap-3 ml-auto mr-3';
-      btnGroup.innerHTML = '<span class=\"vote-btn flex items-center gap-1 text-gray-400 text-xs\" data-voted=\"false\"><i class=\"fa-solid fa-caret-up text-sm\"></i><span class=\"vote-count\">0</span></span><span class=\"bookmark-btn text-gray-300 text-sm\" data-bookmarked=\"false\"><i class=\"fa-regular fa-bookmark\"></i></span>';
-      const sourceLink = actionBar.querySelector('a');
-      if (sourceLink) actionBar.insertBefore(btnGroup, sourceLink);
+      const btnGroup = actionBar.querySelector('.btn-group');
+      btnGroup.innerHTML = '<span class=\"bookmark-btn\" data-bookmarked=\"false\"><i class=\"fa-regular fa-bookmark\"></i> 收藏</span><span class=\"vote-btn\" data-voted=\"false\"><i class=\"fa-regular fa-thumbs-up\"></i> 有用</span>';
+      // 恢复 localStorage 收藏状态
+      const lsKey = 'bookmark:' + DATE + ':' + id;
+      if (localStorage.getItem(lsKey) === '1') {{
+        const b = btnGroup.querySelector('.bookmark-btn');
+        b.dataset.bookmarked = 'true'; b.classList.add('bookmarked');
+        b.innerHTML = '<i class=\"fa-solid fa-bookmark\"></i> 已收藏';
+      }}
       btnGroup.querySelector('.vote-btn').addEventListener('click', function() {{
-        const v = this.dataset.voted === 'true'; this.dataset.voted = v ? 'false' : 'true'; this.classList.toggle('voted'); this.querySelector('.vote-count').textContent = v ? '0' : '1';
+        const v = this.dataset.voted === 'true'; this.dataset.voted = v ? 'false' : 'true'; this.classList.toggle('voted');
+        this.innerHTML = v ? '<i class=\"fa-regular fa-thumbs-up\"></i> 有用' : '<i class=\"fa-solid fa-thumbs-up\"></i> 有用';
         log({{ type: v ? 'unvote' : 'vote', articleId: id, title, tags, timestamp: ts() }});
       }});
       btnGroup.querySelector('.bookmark-btn').addEventListener('click', function() {{
-        const m = this.dataset.bookmarked === 'true'; this.dataset.bookmarked = m ? 'false' : 'true'; this.classList.toggle('bookmarked');
-        this.querySelector('i').className = m ? 'fa-regular fa-bookmark' : 'fa-solid fa-bookmark';
-        log({{ type: m ? 'unbookmark' : 'bookmark', articleId: id, title, tags, timestamp: ts() }});
+        const b = this.dataset.bookmarked === 'true';
+        this.dataset.bookmarked = b ? 'false' : 'true'; this.classList.toggle('bookmarked');
+        this.innerHTML = b ? '<i class=\"fa-regular fa-bookmark\"></i> 收藏' : '<i class=\"fa-solid fa-bookmark\"></i> 已收藏';
+        if (!b) {{
+          localStorage.setItem(lsKey, '1');
+          const card = this.closest('article[data-article-id]');
+          const payload = {{ id, title, tags, summary: card ? card.dataset.summary : '', source_url: card ? card.dataset.url : '', priority: card ? card.dataset.priority : '', date: card ? card.dataset.date : DATE }};
+          if (IS_HTTP) fetch('/api/bookmark', {{ method: 'POST', headers: {{ 'Content-Type': 'application/json' }}, body: JSON.stringify(payload) }})
+            .then(r => r.json()).then(j => {{ if (j.graphify === 'disabled') console.warn('[daily] Graphify 未启用，收藏不会写入知识图谱。在 profile.yaml 中设置 graphify.enabled: true 可开启。'); }})
+            .catch(() => {{}});
+          log({{ type: 'bookmark', articleId: id, title, tags, timestamp: ts() }});
+        }} else {{
+          localStorage.removeItem(lsKey);
+          log({{ type: 'unbookmark', articleId: id, title, tags, timestamp: ts() }});
+        }}
       }});
     }}
   }});
@@ -825,15 +940,12 @@ def render_html(payload: dict[str, Any]) -> str:
     Object.keys(cardTimers).forEach(id => {{ cardDwellTime[id] = (cardDwellTime[id] || 0) + (Date.now() - cardTimers[id]); }});
     const totalTime = Math.round((Date.now() - pageLoadTime) / 1000);
     const voteState = new Map();
-    const bookmarkState = new Map();
     const tagState = new Map();
     events.forEach(e => {{
       if ((e.type === 'vote' || e.type === 'unvote') && e.articleId) voteState.set(e.articleId, e);
-      if ((e.type === 'bookmark' || e.type === 'unbookmark') && e.articleId) bookmarkState.set(e.articleId, e);
       if ((e.type === 'tag_follow' || e.type === 'tag_unfollow') && e.tag) tagState.set(e.tag, e.type === 'tag_follow');
     }});
     const voted = [...voteState.values()].filter(e => e.type === 'vote').map(e => ({{ id: e.articleId, title: e.title, tags: e.tags }}));
-    const bookmarked = [...bookmarkState.values()].filter(e => e.type === 'bookmark').map(e => ({{ id: e.articleId, title: e.title, tags: e.tags }}));
     const tagFollows = [...tagState.entries()].filter(([, followed]) => followed).map(([tag]) => tag);
     const tagUnfollows = [...tagState.entries()].filter(([, followed]) => !followed).map(([tag]) => tag);
     const clicked = events.filter(e => e.type === 'click_source').map(e => ({{ id: e.articleId, title: e.title, tags: e.tags || [] }}));
@@ -846,14 +958,14 @@ def render_html(payload: dict[str, Any]) -> str:
     }}).filter(d => d.dwell_seconds > 0).sort((a, b) => b.dwell_seconds - a.dwell_seconds);
     const tagScores = {{}};
     function addTS(tags, w) {{ (tags || []).forEach(t => {{ tagScores[t] = (tagScores[t] || 0) + w; }}); }}
-    voted.forEach(v => addTS(v.tags, 3)); bookmarked.forEach(b => addTS(b.tags, 3));
+    voted.forEach(v => addTS(v.tags, 3));
     tagFollows.forEach(t => {{ tagScores[t] = (tagScores[t] || 0) + 2; }});
     dwellRanking.forEach(d => {{ if (d.dwell_seconds >= 5) addTS(d.tags, 1); }});
     const tagRanking = Object.entries(tagScores).sort((a, b) => b[1] - a[1]).map(([tag, score]) => ({{ tag, score }}));
     return {{
       date: DATE,
       session: {{ session_id: sessionId, total_time_seconds: totalTime, total_events: events.length, page_load: new Date(pageLoadTime).toISOString() }},
-      explicit_feedback: {{ voted, bookmarked, tags_followed: tagFollows, tags_unfollowed: tagUnfollows }},
+      explicit_feedback: {{ voted, tags_followed: tagFollows, tags_unfollowed: tagUnfollows }},
       implicit_feedback: {{ dwell_ranking: dwellRanking, articles_clicked: clicked, articles_copied: copied }},
       ai_interaction: {{ tools_used: aiCounts, detail: aiUsage.map(u => ({{ tool: u.tool, prompt_preview: u.prompt }})) }},
       interest_profile: {{ tag_scores: tagRanking, top_interests: tagRanking.slice(0, 5).map(t => t.tag) }},
@@ -1023,7 +1135,8 @@ def main() -> None:
     except ValueError as exc:
         raise SystemExit(f"ERROR: payload 契约校验失败: {exc}") from exc
 
-    time_warnings = check_time_window(payload)
+    window_days = load_profile_window_days()
+    time_warnings = check_time_window(payload, window_days=window_days)
     # 区分严重警告（超窗/不一致）和轻度警告（缺少 source_date）
     severe = [w for w in time_warnings if "超出" in w or "不一致" in w]
     if time_warnings:

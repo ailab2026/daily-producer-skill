@@ -3,16 +3,21 @@
 日报反馈收集服务
 - 静态文件服务：serve output/ 目录
 - 反馈接收：POST /api/feedback → 写入 data/feedback/{date}.json
-- 自动超时退出（默认 2 小时）
-- 端口冲突自动 +1（默认 17890 起）
+- 自动超时退出（profile.yaml server.timeout_hours，默认 24 小时）
+- 端口冲突时明确报错，不静默漂移
+- 忽略 SIGHUP，后台运行时不被终端关闭杀死
 """
 import fcntl
 import http.server
 import hashlib
 import json
 import os
+import re
+import signal
+import subprocess
 import sys
 import socket
+import threading
 import time
 from pathlib import Path
 from functools import partial
@@ -262,6 +267,8 @@ class FeedbackHandler(http.server.SimpleHTTPRequestHandler):
     def do_POST(self):
         if self.path == "/api/feedback":
             self._handle_feedback()
+        elif self.path == "/api/bookmark":
+            self._handle_bookmark()
         else:
             self.send_error(404)
 
@@ -362,6 +369,92 @@ class FeedbackHandler(http.server.SimpleHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(b'{"ok":true}')
 
+    def _handle_bookmark(self):
+        length = int(self.headers.get("Content-Length", 0))
+        if length > 64 * 1024:
+            self.send_response(413)
+            self.send_header("Content-Type", "application/json")
+            self._cors_headers()
+            self.end_headers()
+            self.wfile.write(b'{"ok":false,"error":"payload_too_large"}')
+            return
+        try:
+            body = json.loads(self.rfile.read(length)) if length else {}
+        except json.JSONDecodeError:
+            self.send_response(400)
+            self.send_header("Content-Type", "application/json")
+            self._cors_headers()
+            self.end_headers()
+            self.wfile.write(b'{"ok":false,"error":"invalid_json"}')
+            return
+
+        article_id = str(body.get("id", "")).strip()
+        title = str(body.get("title", "")).strip()
+        if not article_id or not title:
+            self.send_response(400)
+            self.send_header("Content-Type", "application/json")
+            self._cors_headers()
+            self.end_headers()
+            self.wfile.write(b'{"ok":false,"error":"missing_id_or_title"}')
+            return
+
+        graphify_cfg = load_graphify_config()
+        if not graphify_cfg.get("enabled", False):
+            self.send_response(200)
+            self.send_header("Content-Type", "application/json")
+            self._cors_headers()
+            self.end_headers()
+            self.wfile.write(b'{"ok":true,"graphify":"disabled"}')
+            return
+
+        data_dir = Path(graphify_cfg.get("data_dir", "~/graphify-data")).expanduser()
+        raw_dir = data_dir / "raw"
+        raw_dir.mkdir(parents=True, exist_ok=True)
+
+        safe_id = re.sub(r"[^\w-]", "-", article_id)[:30]
+        id_hash = hashlib.md5(article_id.encode()).hexdigest()[:8]
+        date = str(body.get("date", time.strftime("%Y-%m-%d"))).strip() or time.strftime("%Y-%m-%d")
+        filename = f"{date}-{safe_id}-{id_hash}.md"
+        filepath = raw_dir / filename
+
+        tags = body.get("tags", [])
+        if not isinstance(tags, list):
+            tags = []
+        summary = str(body.get("summary", "")).strip()
+        source_url = str(body.get("source_url", "")).strip()
+        priority = str(body.get("priority", "normal")).strip()
+
+        lines = ["---"]
+        lines.append(f'title: "{title}"')
+        lines.append(f'source_url: "{source_url}"')
+        lines.append(f'date: "{date}"')
+        lines.append(f'priority: "{priority}"')
+        lines.append(f'bookmarked_at: "{time.strftime("%Y-%m-%dT%H:%M:%S")}"')
+        lines.append('from: "daily-producer-skill"')
+        if tags:
+            lines.append("tags:")
+            for tag in tags:
+                lines.append(f"  - {tag}")
+        lines.append("---")
+        lines.append("")
+        lines.append(f"# {title}")
+        lines.append("")
+        if summary:
+            lines.append(summary)
+            lines.append("")
+        if source_url:
+            lines.append(f"来源：{source_url}")
+
+        filepath.write_text("\n".join(lines), encoding="utf-8")
+
+        self.send_response(200)
+        self.send_header("Content-Type", "application/json")
+        self._cors_headers()
+        self.end_headers()
+        self.wfile.write(
+            json.dumps({"ok": True, "file": filename}, ensure_ascii=False).encode("utf-8")
+        )
+
     def _cors_headers(self):
         self.send_header("Access-Control-Allow-Origin", "*")
         self.send_header("Access-Control-Allow-Methods", "POST, OPTIONS")
@@ -371,19 +464,62 @@ class FeedbackHandler(http.server.SimpleHTTPRequestHandler):
         pass  # 静默
 
 
-def find_port(base, host, max_try=10):
-    """从 base 开始找一个可绑定到 host 的可用端口。"""
-    last_error = None
-    for i in range(max_try):
-        port = base + i
-        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-            s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-            try:
-                s.bind((host, port))
-                return port, None
-            except OSError as exc:
-                last_error = exc
-    return None, last_error
+def find_port(base, host):
+    """尝试绑定 base 端口。被占用时直接报错，不静默漂移。"""
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+        s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+        try:
+            s.bind((host, base))
+            return base, None
+        except OSError as exc:
+            return None, exc
+
+
+def start_graphify_watch_if_enabled():
+    """如果 graphify.enabled=true，检查并启动 graphify watch 进程。"""
+    graphify_cfg = load_graphify_config()
+    if not graphify_cfg.get("enabled", False):
+        return
+    data_dir = Path(graphify_cfg.get("data_dir", "~/graphify-data")).expanduser()
+    data_dir.mkdir(parents=True, exist_ok=True)
+    # 检查是否已在运行
+    try:
+        result = subprocess.run(
+            ["pgrep", "-f", f"graphify.*--watch"],
+            capture_output=True, text=True, timeout=2
+        )
+        if result.returncode == 0:
+            print(f"   Graphify watch 已运行 (PID {result.stdout.strip().split()[0]})")
+            return
+    except Exception:
+        pass
+    # 启动 watch
+    try:
+        proc = subprocess.Popen(
+            ["graphify", str(data_dir), "--watch"],
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+            start_new_session=True,
+        )
+        print(f"   Graphify watch 已启动 (PID {proc.pid}，数据目录: {data_dir})")
+    except FileNotFoundError:
+        print("   ⚠️  graphify 命令未找到，请先安装: pip install graphifyy", file=sys.stderr)
+    except Exception as e:
+        print(f"   ⚠️  启动 graphify watch 失败: {e}", file=sys.stderr)
+
+
+def load_graphify_config():
+    """从 profile.yaml 读取 graphify 配置"""
+    config_path = ROOT_DIR / "config" / "profile.yaml"
+    if not config_path.exists():
+        return {}
+    try:
+        import yaml
+        with open(config_path, encoding="utf-8") as f:
+            cfg = yaml.safe_load(f) or {}
+        return cfg.get("graphify", {})
+    except Exception:
+        return {}
 
 
 def load_server_config():
@@ -415,6 +551,13 @@ def load_server_config():
                         cfg["port"] = int(line.split(":")[1].strip())
                     except ValueError:
                         pass
+                elif line.startswith("timeout_hours:"):
+                    try:
+                        cfg["timeout_hours"] = float(line.split(":")[1].strip())
+                    except ValueError:
+                        pass
+                elif line.startswith("public_url:"):
+                    cfg["public_url"] = line.split(":", 1)[1].strip().strip("'\"")
             return cfg
     return {}
 
@@ -458,11 +601,17 @@ def stop_existing_server():
 
 
 def main():
+    # 忽略 SIGHUP，防止终端关闭时杀死后台进程
+    signal.signal(signal.SIGHUP, signal.SIG_IGN)
+
     stop_existing_server()
+    start_graphify_watch_if_enabled()
 
     cfg = load_server_config()
     bind_host = cfg.get("host", DEFAULT_HOST)
     port_base = cfg.get("port", DEFAULT_PORT)
+    timeout_hours = cfg.get("timeout_hours", 24)
+    public_url = cfg.get("public_url", "").rstrip("/")
 
     port, port_error = find_port(port_base, bind_host)
     if not port:
@@ -471,43 +620,58 @@ def main():
                 "ERROR: 当前环境不允许监听本地端口，反馈服务未启动。",
                 file=sys.stderr,
             )
-            print(
-                f"       尝试绑定地址 {bind_host}，端口范围 {port_base}-{port_base + 9} 时被权限策略阻止。",
-                file=sys.stderr,
-            )
-            print(
-                "       这通常不是端口占用，而是沙箱、系统策略或权限限制导致。",
-                file=sys.stderr,
-            )
         else:
             print(
-                f"ERROR: 地址 {bind_host} 的端口 {port_base}-{port_base + 9} 全部不可用。",
+                f"ERROR: 端口 {port_base} 已被占用，反馈服务未启动。",
+                file=sys.stderr,
+            )
+            print(
+                f"       请先执行: kill $(lsof -ti:{port_base})",
                 file=sys.stderr,
             )
             if port_error is not None:
-                print(f"       最后一次错误: {port_error}", file=sys.stderr)
+                print(f"       错误详情: {port_error}", file=sys.stderr)
         sys.exit(1)
 
-    # 启动服务
+    # 启动服务（ThreadingHTTPServer 支持并发连接，避免单线程队列溢出）
     handler = partial(FeedbackHandler, directory=str(OUTPUT_DIR))
-    server = http.server.HTTPServer((bind_host, port), handler)
+    server = http.server.ThreadingHTTPServer((bind_host, port), handler)
 
     PORT_FILE.parent.mkdir(parents=True, exist_ok=True)
     PORT_FILE.write_text(str(port))
     PID_FILE.write_text(str(os.getpid()))
 
+    # 自动超时退出
+    def _auto_shutdown():
+        print(f"\n⏰ 服务已运行 {timeout_hours} 小时，自动退出", flush=True)
+        PORT_FILE.unlink(missing_ok=True)
+        PID_FILE.unlink(missing_ok=True)
+        server.shutdown()
+
+    timer = threading.Timer(timeout_hours * 3600, _auto_shutdown)
+    timer.daemon = True
+    timer.start()
+
+    today = time.strftime("%Y-%m-%d")
     print("✅ 日报服务已启动")
     print(f"   PID: {os.getpid()}")
     print(f"   监听地址: {bind_host}:{port}")
-    print(f"   本机访问: http://localhost:{port}")
-    if bind_host in {"0.0.0.0", ""}:
-        lan_ips = get_local_ip_addresses()
-        if lan_ips:
-            print("   局域网访问:")
-            for ip in lan_ips:
-                print(f"   - http://{ip}:{port}")
+    if public_url:
+        print(f"   🌐 公网地址: {public_url}")
+        print(f"   访问日报: {public_url}/daily/{{DATE}}.html  （DATE 为当次运行日期）")
+        print(f"   今日示例: {public_url}/daily/{today}.html")
+    else:
+        print(f"   本机访问: http://localhost:{port}/daily/{{DATE}}.html  （DATE 为当次运行日期）")
+        print(f"   今日示例: http://localhost:{port}/daily/{today}.html")
+        if bind_host in {"0.0.0.0", ""}:
+            lan_ips = get_local_ip_addresses()
+            if lan_ips:
+                print("   局域网访问:")
+                for ip in lan_ips:
+                    print(f"   - http://{ip}:{port}/daily/{today}.html")
     print(f"   静态目录: {OUTPUT_DIR}")
     print(f"   反馈写入: {FEEDBACK_DIR}")
+    print(f"   自动退出: {timeout_hours} 小时后")
     print(f"   按 Ctrl+C 手动停止")
     sys.stdout.flush()
 
@@ -516,6 +680,7 @@ def main():
     except KeyboardInterrupt:
         print("\n🛑 手动停止服务")
     finally:
+        timer.cancel()
         PORT_FILE.unlink(missing_ok=True)
         PID_FILE.unlink(missing_ok=True)
 

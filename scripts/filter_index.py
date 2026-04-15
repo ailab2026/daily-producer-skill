@@ -247,11 +247,25 @@ def filter_entries(
             stats["by_platform"][platform]["total"] += 1
 
             if is_website:
-                # 网站类直接保留，Google 已经做了时间过滤
-                item["fields"]["time_status"] = "google_filtered"
-                kept_items.append(item)
-                stats["kept"] += 1
-                stats["by_platform"][platform]["kept"] += 1
+                # 网站类优先用自身时间字段筛选；没有时间字段时信任 Google after: 过滤
+                time_str = item["fields"].get("time", "")
+                parsed = parse_time(time_str) if time_str else None
+                if parsed is not None:
+                    if parsed >= cutoff:
+                        item["fields"]["time_status"] = "in_window"
+                        item["fields"]["time_parsed"] = parsed.strftime("%Y-%m-%d")
+                        kept_items.append(item)
+                        stats["kept"] += 1
+                        stats["by_platform"][platform]["kept"] += 1
+                    else:
+                        stats["removed_old"] += 1
+                        stats["by_platform"][platform]["removed"] += 1
+                else:
+                    # 无时间字段，信任 Google site: after: 过滤
+                    item["fields"]["time_status"] = "google_filtered"
+                    kept_items.append(item)
+                    stats["kept"] += 1
+                    stats["by_platform"][platform]["kept"] += 1
                 continue
 
             # 提取时间
@@ -259,11 +273,13 @@ def filter_entries(
             parsed = parse_time(time_str)
 
             if parsed is None:
-                # 没有时间字段，过滤掉
+                # 平台类无时间字段：opencli 抓取的热榜/搜索结果本身即为当前内容，直接保留
+                item["fields"]["time_status"] = "no_time_kept"
+                kept_items.append(item)
+                stats["kept"] += 1
                 stats["no_time"] += 1
+                stats["by_platform"][platform]["kept"] += 1
                 stats["by_platform"][platform]["no_time"] += 1
-                stats["removed_old"] += 1
-                stats["by_platform"][platform]["removed"] += 1
             elif parsed >= cutoff:
                 # 在时间窗口内，保留
                 item["fields"]["time_status"] = "in_window"

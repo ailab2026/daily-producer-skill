@@ -98,6 +98,12 @@ sources:
       #   url: "https://openai.com/news/"
       #   type: "official"
 
+  # 直达 URL（跳过搜索，直接抓取指定页面，适合需要每日必看的固定来源）
+  # 这些 URL 会被 build_queries.py 直接输出，由 collect_detail.py 抓取
+  direct: []
+    # - "https://openai.com/news/"
+    # - "https://www.anthropic.com/news"
+
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 # 第三部分：采集规则
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -120,7 +126,7 @@ collection:
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 daily:
-  max_items: 15                  # 速览:10 | 标准:15 | 深度:20
+  target_items: 15               # 目标条数：速览 10 | 标准 15 | 深度 20
   summary_style: "detailed"      # brief | detailed | deep
   include_actions: true          # 是否生成行动建议
   include_trends: true           # 是否生成趋势雷达
@@ -135,8 +141,9 @@ pipeline:
 
 server:
   host: "0.0.0.0"
-  timeout_hours: 2
+  timeout_hours: 24
   port: 17890
+  public_url: ""      # 配置后服务启动时输出域名链接，如 "http://your-domain.com"
 
 feishu:
   group_id: ""
@@ -144,6 +151,19 @@ feishu:
     wiki_list: ""
     doc_read: ""
     chat_messages: ""
+  notification:
+    enabled: false        # 改为 true 并填写 chat_id / account_id 后启用飞书卡片通知
+    chat_id: ""           # 飞书群 chat_id（oc_xxx）
+    account_id: ""        # 使用的飞书 bot 账号 ID（在 ~/.openclaw/openclaw.json 中配置）
+    # 通知格式固定为交互卡片（msg_type: interactive），禁止改为纯文本。
+
+# Graphify 知识图谱集成（可选）
+# 开启后，日报中点击"收藏"的文章会自动写入 Graphify 的 raw/ 目录
+# 需要先安装：pip install graphifyy
+# 启动 watch 模式：graphify ~/graphify-data --watch
+graphify:
+  enabled: false                  # 改为 true 开启
+  data_dir: "~/graphify-data"     # graphify 监听的目录，与 graphify 命令保持一致
 
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 # 采集执行约束（不可删除）：

@@ -16,11 +16,14 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import os
 import re
+import shutil
 import subprocess
 import sys
+import tempfile
 import time
 from datetime import datetime
 from pathlib import Path
@@ -118,11 +121,28 @@ def _classify_item(item: dict, platform_items: list, website_items: list):
         platform_items.append(item)
 
 
+def _read_exported_markdown(output_dir: Path) -> str:
+    """读取 opencli web read --format md 导出的正文文件。"""
+    md_files = sorted(output_dir.rglob("*.md"))
+    if not md_files:
+        return ""
+    # 取最大文件，通常就是正文文件
+    best = max(md_files, key=lambda p: p.stat().st_size)
+    return best.read_text(encoding="utf-8", errors="ignore").strip()
+
+
+
 def fetch_url(url: str, timeout: int = 60) -> dict:
-    """用 opencli web read 抓取 URL 正文。"""
-    cmd = f'opencli web read --url "{url}"'
+    """用 opencli web read 抓取 URL 正文。使用 md 导出目录，再读回正文文件。"""
     env = os.environ.copy()
     env["DISPLAY"] = env.get("DISPLAY", ":99")
+
+    work_dir = Path(tempfile.gettempdir()) / "dailynew-opencli-web" / hashlib.md5(url.encode("utf-8")).hexdigest()
+    if work_dir.exists():
+        shutil.rmtree(work_dir, ignore_errors=True)
+    work_dir.mkdir(parents=True, exist_ok=True)
+
+    cmd = f'opencli web read --url "{url}" --format md --output "{work_dir}"'
 
     try:
         result = subprocess.run(
@@ -135,12 +155,23 @@ def fetch_url(url: str, timeout: int = 60) -> dict:
         if result.returncode != 0:
             return {"success": False, "url": url, "error": stderr or stdout}
 
-        return {"success": True, "url": url, "content": stdout}
+        content = _read_exported_markdown(work_dir)
+        if not content:
+            return {
+                "success": False,
+                "url": url,
+                "error": "markdown export missing or empty",
+                "stdout": stdout,
+            }
+
+        return {"success": True, "url": url, "content": content, "stdout": stdout}
 
     except subprocess.TimeoutExpired:
         return {"success": False, "url": url, "error": "timeout"}
     except Exception as e:
         return {"success": False, "url": url, "error": str(e)}
+    finally:
+        shutil.rmtree(work_dir, ignore_errors=True)
 
 
 def format_detail_output(

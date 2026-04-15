@@ -85,9 +85,11 @@ metadata:
 
 ```bash
 python3 --version
+python3 -c "import yaml; print('pyyaml ok')" 2>/dev/null || pip install pyyaml
 ```
 
-不可用 → 告知安装方式，**停止执行**。
+python3 不可用 → 告知安装方式，**停止执行**。
+pyyaml 不可用则自动安装，安装失败不阻断（脚本内有 fallback 解析器）。
 
 ### 1.2 opencli 检查
 
@@ -464,10 +466,122 @@ opencli twitter trending --limit 1 -f json  # 需要登录
 ### 固定配置保留
 
 以下段落直接从 `reference/profile_template.yaml` 复制默认值，不要删掉，不要改成占位符：
-- `daily`
+- `daily`（`target_items` 根据用户选择的深度填写：速览=10，标准=15，深度=20）
 - `pipeline`
-- `server`
-- `feishu`
+- `server`（`public_url` 见下方"可选功能配置"步骤填写）
+- `feishu`（`group_id` 已在第三步获取则填入；`feishu.notification` 见下方③步骤填写）
+- `graphify`（`enabled` 见下方"可选功能配置"步骤填写）
+
+### 可选功能配置
+
+在写入 profile.yaml 之前，逐步询问以下两项（每项等用户回复后再问下一项）：
+
+**① 公网访问域名**
+
+```
+你是否有域名用于公开访问日报？
+配置后日报链接会使用域名，方便分享（例如 http://your-domain.com）。
+留空则使用服务器 IP 地址。
+```
+
+根据用户回答，将 `server.public_url` 填写为域名（如 `http://your-domain.com`）或留空字符串。
+
+**② Graphify 知识图谱（可选）**
+
+```
+是否启用 Graphify 知识图谱收藏功能？
+启用后，在日报中点击"收藏"可将文章写入本地知识图谱，支持 AI 查询文章关联。
+
+需要额外安装：pip install graphifyy
+数据目录可自定义（默认 ~/graphify-data）。
+
+[Y] 启用  [N] 跳过
+```
+
+- 用户选 Y：设置 `graphify.enabled: true`，询问数据目录（默认 `~/graphify-data`），执行 `pip install graphifyy`
+- 用户选 N：设置 `graphify.enabled: false`，保留默认 `data_dir`
+
+**③ 飞书卡片通知（必做，不可跳过）**
+
+日报 HTML 渲染完成后，系统会自动向指定飞书群发送一条带标题的交互卡片通知。**格式固定为卡片，不使用纯文本。**
+
+**步骤：**
+
+1. **确定 chat_id**：如果第三步已绑定群聊，直接使用；否则询问：
+   ```
+   请提供飞书群的 chat_id（格式：oc_xxx）。
+   获取方式：飞书群设置 → 群信息 → 复制群链接，从链接中提取 oc_xxx 部分。
+   ```
+
+2. **自动检测可用账号**：读取 `~/.openclaw/openclaw.json` 中所有 Feishu 账号，逐个测试哪个账号可以发送到该群：
+
+   ```python
+   python3 -c "
+   import json, urllib.request, urllib.error
+   from pathlib import Path
+   cfg = json.loads((Path.home() / '.openclaw' / 'openclaw.json').read_text())
+   feishu = cfg.get('channels', {}).get('feishu', {})
+   accounts = feishu.get('accounts', {})
+   chat_id = '<chat_id>'
+   for acct_id, acct in accounts.items():
+       try:
+           payload = json.dumps({'app_id': acct['appId'], 'app_secret': acct['appSecret']}).encode()
+           req = urllib.request.Request('https://open.feishu.cn/open-apis/auth/v3/tenant_access_token/internal', data=payload, headers={'Content-Type': 'application/json'})
+           token = json.loads(urllib.request.urlopen(req, timeout=8).read())['tenant_access_token']
+           msg_data = json.dumps({'receive_id': chat_id, 'msg_type': 'text', 'content': json.dumps({'text': '【日报系统】通知账号配置测试'})}).encode()
+           send_req = urllib.request.Request('https://open.feishu.cn/open-apis/im/v1/messages?receive_id_type=chat_id', data=msg_data, headers={'Content-Type': 'application/json', 'Authorization': f'Bearer {token}'})
+           resp = json.loads(urllib.request.urlopen(send_req, timeout=8).read())
+           if resp.get('code') == 0:
+               print(f'OK:{acct_id}')
+           else:
+               print(f'FAIL:{acct_id}:code={resp.get(\"code\")}:{resp.get(\"msg\")}')
+       except Exception as e:
+           print(f'FAIL:{acct_id}:{e}')
+   "
+   ```
+
+3. **解读结果**：
+   - 有 `OK:xxx` → 使用该账号，写入 `feishu.notification.account_id: "xxx"`
+   - 全部 `FAIL` 且错误为 `230002`（Bot not in chat）→ 提示用户将对应 bot 加入飞书群，然后重新运行检测
+   - 全部 `FAIL` 且错误为网络/超时 → 跳过，但记录警告
+   - 找到多个 OK → 优先选 `defaultAccount` 对应的那个
+
+4. **写入 profile.yaml 的 notification 段**（补充到已有 `feishu` 块内，保留 `tools` 字段）：
+
+   ```yaml
+   feishu:
+     group_id: "oc_xxx"           # 第三步绑定的群聊 ID（用于 KB 读取）
+     tools:
+       wiki_list: ""
+       doc_read: ""
+       chat_messages: ""
+     notification:
+       enabled: true
+       chat_id: "oc_xxx"          # 接收日报通知的群 chat_id（可与 group_id 相同或不同）
+       account_id: "main"         # 第2步检测到的可用账号名
+       # 格式固定为交互卡片，禁止改为纯文本
+   ```
+
+5. **验证发送**：用 `send_feishu_card.py` 发一张今日日报卡片（若日报已生成）或测试卡片（若未生成）确认效果：
+
+   ```bash
+   # 测试：直接发一张带占位内容的卡片
+   python3 -c "
+   import sys; sys.path.insert(0, 'scripts')
+   from send_feishu_card import get_tenant_token, send_card, _load_credentials
+   app_id, app_secret = _load_credentials()
+   token = get_tenant_token(app_id, app_secret)
+   result = send_card(token, '<chat_id>', 'http://example.com', '初始化测试')
+   print('OK' if result.get('code') == 0 else f'ERROR:{result}')
+   "
+   ```
+
+   - 发送成功 → 告知用户"已向飞书群发送一条测试卡片，请确认"
+   - 失败 → 重新执行步骤 2-3 排查
+
+**边界情况：**
+- 用户没有飞书群 / 不想配置通知 → 允许跳过，在 profile.yaml 中设置 `feishu.notification.enabled: false`，后续不发通知
+- `~/.openclaw/openclaw.json` 不存在 → 告知"未找到 OpenClaw Feishu 凭据，跳过通知配置；如需启用可手动填写 profile.yaml 中 feishu.notification 部分"
 
 ### 动态配置生成
 
@@ -551,6 +665,9 @@ sources:
   来源：8 个直达页面，6 条种子搜索词
   群聊：已绑定（覆盖最近 6 天历史）
   opencli：可用（v1.6.1, 已登录平台：Twitter, 小红书, ...）
+  公网域名：http://your-domain.com（或"未配置，使用 IP 访问"）
+  Graphify：已启用（~/graphify-data）或 未启用
+  飞书通知：已配置（群 oc_xxx，账号 main，测试发送 ✅）或 未配置
 
 测试搜索：找到约 N 条与你相关的近期资讯
 
@@ -569,6 +686,10 @@ sources:
 - `sources.platforms.cn` 至少 3 个平台
 - `sources.platforms.global` 至少 2 个平台
 - 每个 platform 有对应的 opencli 命令
+- `server.public_url` 已配置或用户明确选择留空
+- `graphify.enabled` 字段存在（true 或 false，不能缺失）
+- 如果 `graphify.enabled: true`，`graphifyy` 已安装（`pip show graphifyy` 验证）
+- `feishu.notification.enabled` 字段存在；若为 true，`account_id` 已检测并填写，且测试发送成功
 - 不包含明显模板占位符
 
 ---
@@ -596,6 +717,8 @@ sources:
 | 第一步 | opencli 安装或连接失败 | Chrome 未运行或扩展未加载 | 检查 Chrome 进程、Browser Bridge 扩展，运行 `opencli doctor` |
 | 第二步 | KB 工具返回 403 | 飞书权限未开启 | 在飞书开放平台开启 `wiki:wiki:readonly` 和 `docx:document:readonly` |
 | 第二步 | KB 返回空列表 | space_id 错误或知识库为空 | 确认飞书知识库地址 |
+| 第六步③ | 所有账号均报 230002 | Bot 不在目标群 | 在飞书群中添加对应 bot，然后重新运行检测 |
+| 第六步③ | 账号检测成功但卡片发送失败 | 账号缺少 `im:message:send_as_bot` 权限 | 在飞书开放平台为该 app 开启此权限并重新发布 |
 | 第三步 | 不知道群聊 ID 怎么获取 | 飞书群聊 ID 不直观 | 飞书群设置 → 群信息 → 群链接中提取 |
 | 第三步 | 群聊连通性验证失败 | `im:message:readonly` 未开启 | 开启权限，或先跳过 |
 | 第四步 | 历史消息读取返回空 | 群聊 ID 错误或无历史消息 | 检查 group_id |

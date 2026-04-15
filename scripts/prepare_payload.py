@@ -14,11 +14,12 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 import os
 import re
 import sys
 from collections import defaultdict
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 
 
@@ -277,16 +278,28 @@ def parse_hot(hot_str: str) -> float:
         return 0
 
 
-def score_item(item: dict, all_keywords: set[str]) -> float:
+def get_tier1_sources(profile: dict) -> set[str]:
+    """从 profile 的 sources.websites 动态提取 tier-1 来源名，加上通用权威平台。"""
+    tier1: set[str] = {"Twitter/X", "微博"}  # 通用高质量社交信号
+    sources = profile.get("sources", {})
+    for group in (sources.get("websites", {}).get("cn", []),
+                  sources.get("websites", {}).get("global", [])):
+        for site in group:
+            name = site.get("name", "")
+            if name:
+                tier1.add(name)
+    return tier1
+
+
+def score_item(item: dict, all_keywords: set[str], tier1: set[str] | None = None) -> float:
     """
-    给条目打分。得分 = 热度分 + 关键词匹配分 + 多源分。
+    给条目打分。得分 = 热度分 + 关键词匹配分 + 多源分 + 来源可信度分。
     """
     score = 0.0
 
     # 1. 热度分（归一化到 0-50）
     hot = parse_hot(item["fields"].get("hot", "0"))
     if hot > 0:
-        import math
         score += min(50, math.log10(hot + 1) * 10)
 
     # 2. 关键词匹配分（每命中一个 +5，最高 30）
@@ -298,10 +311,8 @@ def score_item(item: dict, all_keywords: set[str]) -> float:
     cross_refs = item.get("cross_refs", 1)
     score += min(20, (cross_refs - 1) * 10)
 
-    # 4. 来源可信度加分
-    platform = item["platform"]
-    tier1 = {"Twitter/X", "微博", "量子位", "机器之心", "TechCrunch", "The Verge", "OpenAI News", "Anthropic News"}
-    if platform in tier1:
+    # 4. 来源可信度加分（从 profile 动态读取，非硬编码）
+    if tier1 and item["platform"] in tier1:
         score += 5
 
     return round(score, 1)
@@ -309,16 +320,59 @@ def score_item(item: dict, all_keywords: set[str]) -> float:
 
 # ━━ 聚合输出 ━━
 
+def _looks_like_web_read_wrapper(text: str) -> bool:
+    text = (text or "").strip()
+    if not text:
+        return False
+    return text.startswith("web/read") or "1 items ·" in text or "│ Title" in text
+
+
+def _clean_fetched_content(content: str) -> str:
+    """清洗 fetched_content，去掉 opencli 包装噪音，保留正文。"""
+    content = (content or "").strip()
+    if not content:
+        return ""
+
+    lines = []
+    for line in content.splitlines():
+        s = line.rstrip()
+        if not s.strip():
+            lines.append("")
+            continue
+        if s.strip().startswith("web/read"):
+            continue
+        if " items ·" in s and "web/read" in s:
+            continue
+        if "│ Title" in s or "┌" in s or "└" in s or "├" in s or "┬" in s or "┴" in s or "┼" in s:
+            continue
+        lines.append(s)
+
+    return "\n".join(lines).strip()
+
+
+
 def format_candidate(item: dict, rank: int) -> dict:
     """格式化单条候选为 JSON 结构。"""
     fields = item["fields"]
+    raw_fetched_content = item.get("content", "")
+    fetched_content = _clean_fetched_content(raw_fetched_content)
+    raw_text = fields.get("text", "")
+    text = raw_text
+    if _looks_like_web_read_wrapper(raw_text) and fetched_content:
+        text = fetched_content
+    elif _looks_like_web_read_wrapper(raw_text):
+        text = ""
+    elif not text and fetched_content:
+        text = fetched_content
+
+    has_fetched_content = bool(fetched_content or raw_fetched_content.strip())
 
     return {
         "id": f"candidate-{rank}",
         "rank": rank,
         "score": item.get("_score", 0),
         "title": fields.get("title", ""),
-        "text": fields.get("text", ""),
+        "text": text,
         "platform": item["platform"],
         "region": item["region"],
         "author": fields.get("author", ""),
@@ -330,7 +384,8 @@ def format_candidate(item: dict, rank: int) -> dict:
         "subreddit": fields.get("subreddit", ""),
         "snippet": fields.get("snippet", ""),
         "summary": fields.get("summary", ""),
-        "has_fetched_content": fields.get("has_fetched_content", False),
+        "has_fetched_content": has_fetched_content,
+        "fetched_content": fetched_content,
         # 以下字段留给 AI 填写
         "ai_summary": {"what_happened": "", "why_it_matters": ""},
         "ai_relevance": "",
@@ -341,11 +396,59 @@ def format_candidate(item: dict, rank: int) -> dict:
 
 # ━━ 主流程 ━━
 
+def _normalize_tag(tag: str) -> str:
+    """去掉 # 前缀并转小写，用于统一 feedback tag 匹配格式。"""
+    return tag.lstrip("#").lower()
+
+
+def load_feedback_boost(root: Path, date: str) -> dict[str, float]:
+    """
+    读取最近 3 天内最新的 feedback JSON，提取 voted 文章的 tags 和 top_interests，
+    返回 {keyword_lower: boost_score} 字典，用于在打分时加权。
+    """
+    try:
+        base = datetime.strptime(date, "%Y-%m-%d")
+    except ValueError:
+        return {}
+    fb_path = None
+    for days_back in range(1, 4):
+        candidate = root / "data" / "feedback" / f"{(base - timedelta(days=days_back)).strftime('%Y-%m-%d')}.json"
+        if candidate.exists():
+            fb_path = candidate
+            break
+    if fb_path is None:
+        return {}
+    try:
+        data = json.loads(fb_path.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+
+    boost: dict[str, float] = {}
+    for session in data.get("sessions", []):
+        explicit = session.get("explicit_feedback", {})
+        # voted 文章的 tags: +15
+        for article in explicit.get("voted", []):
+            for tag in article.get("tags", []):
+                key = _normalize_tag(tag)
+                boost[key] = boost.get(key, 0) + 15
+        # top_interests: +8
+        for tag in session.get("interest_profile", {}).get("top_interests", []):
+            key = _normalize_tag(tag)
+            boost[key] = boost.get(key, 0) + 8
+        # tags_followed: +10
+        for tag in explicit.get("tags_followed", []):
+            key = _normalize_tag(tag)
+            boost[key] = boost.get(key, 0) + 10
+
+    return boost
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="从 detail.txt 生成结构化候选 JSON")
     parser.add_argument("--date", default=datetime.now().strftime("%Y-%m-%d"), help="目标日期")
     parser.add_argument("--top", type=int, default=0, help="保留前 N 条候选，0=全部保留（默认全部）")
     parser.add_argument("--no-save", action="store_true", help="不保存结果")
+    parser.add_argument("--no-feedback", action="store_true", help="不读取历史 feedback 加权")
     args = parser.parse_args()
 
     root = resolve_root_dir()
@@ -360,6 +463,16 @@ def main() -> None:
     profile = load_profile(root)
     all_keywords = get_all_keywords(profile)
     exclude_patterns = get_exclude_patterns(profile)
+    tier1 = get_tier1_sources(profile)
+
+    # 读取历史 feedback boost
+    feedback_boost: dict[str, float] = {}
+    if not args.no_feedback:
+        feedback_boost = load_feedback_boost(root, args.date)
+        if feedback_boost:
+            print(f"Feedback boost: {len(feedback_boost)} 个标签加权（来自前一天反馈）", file=sys.stderr)
+        else:
+            print("Feedback boost: 无历史反馈数据", file=sys.stderr)
 
     # 1. 解析
     items = parse_detail(text)
@@ -372,7 +485,14 @@ def main() -> None:
 
     # 3. 打分排序（不去重，多源出现 = 更可靠）
     for item in items:
-        item["_score"] = score_item(item, all_keywords)
+        base_score = score_item(item, all_keywords, tier1)
+        # feedback boost：title/text 命中 boost 标签则加分
+        if feedback_boost:
+            title = (item["fields"].get("title", "") + " " + item["fields"].get("text", "")).lower()
+            fb_bonus = sum(v for k, v in feedback_boost.items() if k in title)
+            item["_score"] = round(base_score + min(fb_bonus, 30), 1)  # boost 上限 30
+        else:
+            item["_score"] = base_score
     items.sort(key=lambda x: x["_score"], reverse=True)
 
     # 4. 取 top N（0=全部保留）
@@ -395,8 +515,8 @@ def main() -> None:
         },
         "candidates": candidates,
         "ai_todo": {
-            "instruction": "请为每条候选填写 ai_summary、ai_relevance、ai_priority、ai_tags。然后从中选出 max_items 条生成最终日报 JSON。",
-            "max_items": profile.get("daily", {}).get("max_items", 15),
+            "instruction": "请为每条候选填写 ai_summary、ai_relevance、ai_priority、ai_tags。然后从中选出 target_items 条生成最终日报 JSON。",
+            "target_items": profile.get("daily", {}).get("target_items", 15),
             "profile_role": profile.get("role", ""),
             "profile_context": profile.get("role_context", ""),
         },

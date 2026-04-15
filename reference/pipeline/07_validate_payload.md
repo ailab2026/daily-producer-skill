@@ -10,13 +10,18 @@ python3 scripts/validate_payload.py output/daily/{date}.json
 
 校验 AI 生成的日报 JSON 是否符合渲染器契约。**必须在渲染 HTML 之前运行。**
 
+校验分两层：
+- **错误（error）**：结构、字段、URL 契约不合法，必须修改后重新校验
+- **告警（warning）**：结构合法，但来源质量不足（例如单源过多、多源合并不充分），应优先让模型回头补源后再进入渲染
+
 ## 输入
 
 - `output/daily/{date}.json` — AI 生成的日报 JSON
 
 ## 输出
 
-- 通过：`✅ 校验通过` + 统计信息
+- 完全通过：`✅ 校验通过` + 统计信息
+- 通过但有质量告警：`⚠️ 校验通过，但有多源告警` + 告警列表
 - 失败：`❌ 校验失败` + 具体错误列表
 
 ## 用法
@@ -66,6 +71,14 @@ python3 scripts/validate_payload.py output/daily/{date}.json --candidates output
 3. 重新运行校验
 4. 直到通过后才能进入渲染步骤
 
+如果只是出现多源告警：
+
+1. 阅读告警列表，定位哪些 article 只有单源或来源不足
+2. 回到 `candidates.json` 重新查找同事件的官方 / 媒体 / 社区来源
+3. 补全 `credibility.sources`、更新 `cross_refs`
+4. 再次运行校验，尽量消除高优先级条目的单源告警
+5. 若最终仍保留单源，应在 `evidence` 中说明是“未找到第二来源”，而不是遗漏合并
+
 示例错误输出：
 
 ```
@@ -86,5 +99,15 @@ python3 scripts/validate_payload.py output/daily/{date}.json --candidates output
 
 ### credibility 一致性
 
+**错误（会导致校验失败）：**
 - `cross_refs > 1` 时 `sources` 数组不能为空
 - `sources` 中每个 URL 不能含 `/example`
+- `cross_refs` 应与 `sources` 数组长度一致
+- 主 `url` 应出现在 `credibility.sources` 中
+- `sources` 中重复 URL 不能重复计数
+
+**告警（不会导致校验失败）：**
+- article 只有 1 个有效来源
+- `major` 条目只有 1 个有效来源
+- `notable` 条目只有 1 个有效来源
+- 可疑的“多源合并不足”情况，应提示模型回到 candidates 重新找同事件来源
