@@ -184,10 +184,17 @@ def build_card(report_url: str, date_str: str) -> dict:
     }
 
 
+def _normalize_chat_id(chat_id: str) -> str:
+    """Strip any type prefix (e.g. 'chat:oc_xxx' → 'oc_xxx')."""
+    if ":" in chat_id:
+        chat_id = chat_id.split(":", 1)[1]
+    return chat_id.strip()
+
+
 def send_card(token: str, chat_id: str, report_url: str, date_str: str) -> dict:
     card = build_card(report_url, date_str)
     payload = {
-        "receive_id": chat_id,
+        "receive_id": _normalize_chat_id(chat_id),
         "msg_type": "interactive",
         "content": json.dumps(card, ensure_ascii=False),
     }
@@ -201,7 +208,7 @@ def send_card(token: str, chat_id: str, report_url: str, date_str: str) -> dict:
 
 def send_text(token: str, chat_id: str, text: str) -> dict:
     payload = {
-        "receive_id": chat_id,
+        "receive_id": _normalize_chat_id(chat_id),
         "msg_type": "text",
         "content": json.dumps({"text": text}, ensure_ascii=False),
     }
