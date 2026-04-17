@@ -22,6 +22,8 @@ import time
 from pathlib import Path
 from functools import partial
 
+from publish_utils import build_public_report_url, get_publish_config
+
 DEFAULT_PORT = 17890
 DEFAULT_HOST = "0.0.0.0"
 
@@ -612,6 +614,8 @@ def main():
     port_base = cfg.get("port", DEFAULT_PORT)
     timeout_hours = cfg.get("timeout_hours", 24)
     public_url = cfg.get("public_url", "").rstrip("/")
+    publish_cfg = get_publish_config()
+    published_url = build_public_report_url(time.strftime("%Y-%m-%d"), publish_cfg)
 
     port, port_error = find_port(port_base, bind_host)
     if not port:
@@ -657,9 +661,9 @@ def main():
     print(f"   PID: {os.getpid()}")
     print(f"   监听地址: {bind_host}:{port}")
     if public_url:
-        print(f"   🌐 公网地址: {public_url}")
-        print(f"   访问日报: {public_url}/daily/{{DATE}}.html  （DATE 为当次运行日期）")
-        print(f"   今日示例: {public_url}/daily/{today}.html")
+        print(f"   🌐 预览地址: {public_url}")
+        print(f"   预览日报: {public_url}/daily/{{DATE}}.html  （DATE 为当次运行日期）")
+        print(f"   今日预览: {public_url}/daily/{today}.html")
     else:
         print(f"   本机访问: http://localhost:{port}/daily/{{DATE}}.html  （DATE 为当次运行日期）")
         print(f"   今日示例: http://localhost:{port}/daily/{today}.html")
@@ -669,6 +673,8 @@ def main():
                 print("   局域网访问:")
                 for ip in lan_ips:
                     print(f"   - http://{ip}:{port}/daily/{today}.html")
+    if published_url:
+        print(f"   🚀 发布日报: {published_url}")
     print(f"   静态目录: {OUTPUT_DIR}")
     print(f"   反馈写入: {FEEDBACK_DIR}")
     print(f"   自动退出: {timeout_hours} 小时后")

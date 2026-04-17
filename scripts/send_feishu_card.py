@@ -6,6 +6,9 @@ Usage:
     # Send a link card for the daily report:
     python3 send_feishu_card.py <report_url> [<chat_id>]
 
+    # Resolve the published URL for a given date, then send the card:
+    python3 send_feishu_card.py --date 2026-04-17 [<chat_id>]
+
     # Send a plain text missing-reminder:
     python3 send_feishu_card.py --text "今日日报尚未产出，请检查生成链路。" [<chat_id>]
 
@@ -18,6 +21,8 @@ import sys
 import urllib.request
 import urllib.error
 from pathlib import Path
+
+from publish_utils import resolve_notification_report_url
 
 OPENCLAW_CFG = Path.home() / ".openclaw" / "openclaw.json"
 FEISHU_API_BASE = "https://open.feishu.cn/open-apis"
@@ -69,11 +74,6 @@ def _profile_chat_id() -> str:
     if not v:
         v = _grep_profile("feishu.group_id")
     return v
-
-
-def _profile_public_url() -> str:
-    """Return server.public_url from profile.yaml."""
-    return _grep_profile("server.public_url")
 
 
 def _post(url: str, payload: dict, headers: dict | None = None) -> dict:
@@ -271,9 +271,36 @@ def main() -> None:
             sys.exit(1)
         return
 
+    if args and args[0] == "--date":
+        if len(args) < 2:
+            print("Usage: send_feishu_card.py --date <YYYY-MM-DD> [<chat_id>]", file=sys.stderr)
+            sys.exit(1)
+        date_str = args[1]
+        chat_id = args[2] if len(args) > 2 else default_chat_id
+        report_url = resolve_notification_report_url(date_str)
+        if not report_url:
+            print(
+                "ERROR: 未找到可通知的日报公开 URL。请先运行 publish_daily.py，或检查 publish 配置是否正确。",
+                file=sys.stderr,
+            )
+            sys.exit(1)
+
+        app_id, app_secret = _load_credentials()
+        token = get_tenant_token(app_id, app_secret)
+        result = send_card(token, chat_id, report_url, date_str)
+        if result.get("code") == 0:
+            msg_id = result.get("data", {}).get("message_id", "")
+            print(f"OK: message_id={msg_id}")
+            print(f"URL: {report_url}")
+        else:
+            print(f"ERROR: {json.dumps(result, ensure_ascii=False)}", file=sys.stderr)
+            sys.exit(1)
+        return
+
     # Default mode: send interactive card with report URL
     if not args:
         print("Usage: send_feishu_card.py <report_url> [<chat_id>]", file=sys.stderr)
+        print("   or: send_feishu_card.py --date <YYYY-MM-DD> [<chat_id>]", file=sys.stderr)
         sys.exit(1)
 
     report_url = args[0]

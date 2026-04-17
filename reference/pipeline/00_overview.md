@@ -21,9 +21,11 @@
         ↓
 08 render_daily.py               渲染 HTML
         ↓
-09 send_feishu_card.py           飞书卡片通知（msg_type: interactive，禁止降级为纯文本）
+09 publish_daily.py              发布到公开目录并写发布状态
         ↓
-10 feedback_server.py            启动反馈服务（后台，同时自动启动 graphify watch）
+10 send_feishu_card.py           飞书卡片通知（msg_type: interactive，禁止降级为纯文本）
+        ↓
+11 feedback_server.py            启动反馈服务（后台，同时自动启动 graphify watch）
 ```
 
 ## 一键执行
@@ -47,11 +49,13 @@ python3 scripts/prepare_payload.py --date $DATE
 python3 scripts/validate_payload.py output/daily/$DATE.json
 python3 scripts/render_daily.py output/daily/$DATE.json --output output/daily/$DATE.html --force
 
-# Step 09: 飞书卡片通知（必须用交互卡片，不得用纯文本）
-PUBLIC_URL=$(grep 'public_url' config/profile.yaml | head -1 | awk -F'"' '{print $2}')
-python3 scripts/send_feishu_card.py "${PUBLIC_URL}/daily/${DATE}.html"
+# Step 09: 发布到公开目录
+python3 scripts/publish_daily.py --date $DATE
 
-# Step 10: 启动反馈服务（同时自动启动 graphify watch，如果 profile 中已启用）
+# Step 10: 飞书卡片通知（必须用交互卡片，不得用纯文本）
+python3 scripts/send_feishu_card.py --date $DATE
+
+# Step 11: 启动反馈服务（同时自动启动 graphify watch，如果 profile 中已启用）
 nohup python3 scripts/feedback_server.py >> output/server.log 2>&1 &
 ```
 
@@ -69,8 +73,9 @@ nohup python3 scripts/feedback_server.py >> output/server.log 2>&1 &
 | 06 | `output/daily/{date}.json` | 最终日报 JSON |
 | 07 | （无文件，校验结果输出到 stdout） | — |
 | 08 | `output/daily/{date}.html` | 日报 HTML 页面 |
-| 09 | （Feishu API 响应，无本地文件） | 飞书卡片通知 |
-| 10 | `output/server.log` | 反馈服务日志 |
+| 09 | `output/publish/{date}.json` | 发布状态（公开 URL + 目标路径） |
+| 10 | （Feishu API 响应，无本地文件） | 飞书卡片通知 |
+| 11 | `output/server.log` | 反馈服务日志 |
 
 ## 数据量变化（典型，target_items=20）
 

@@ -15,6 +15,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import re
 import subprocess
 import sys
 import time
@@ -391,6 +392,19 @@ def collect_platform(platform: dict, keywords: list[str], region: str) -> list[d
                         res["fetch_stack"] = "reddit-api-proxy"
                         results.append(res)
                         time.sleep(REQUEST_DELAY)
+                elif cmd_template.startswith("subreddit "):
+                    m_name = re.search(r'subreddit\s+"([^"]+)"', cmd_template)
+                    m_limit = re.search(r'--limit\s+(\d+)', cmd_template)
+                    subreddit = m_name.group(1) if m_name else ""
+                    limit = int(m_limit.group(1)) if m_limit else 15
+                    print(f"  [{name}] reddit hot (API+proxy) r/{subreddit}", file=sys.stderr)
+                    res = reddit_hot(subreddit=subreddit, limit=limit)
+                    res["platform"] = name
+                    res["region"] = region
+                    res["keyword"] = subreddit or None
+                    res["fetch_stack"] = "reddit-api-proxy"
+                    results.append(res)
+                    time.sleep(REQUEST_DELAY)
                 elif "hot" in cmd_template:
                     print(f"  [{name}] reddit hot (API+proxy)", file=sys.stderr)
                     res = reddit_hot()

@@ -102,6 +102,13 @@ daily、pipeline、server、feishu 等固定参数。
 3. 群聊绑定（可选）
 4. 平台选择（展示 `reference/opencli_platforms.yaml` 全部 31 个平台供选择）
 5. 写入 `config/profile.yaml`（按 `reference/profile_template.yaml` 结构）
+6. 运行 `scripts/apply_detected_publish_config.py --json`，自动补全 publish 配置；只有 `status = "needs_confirmation"` 时才追问用户
+
+### agent 执行要求
+
+- 默认要替用户完成完整链路，而不是停在任一中间产物
+- 若用户说“生成日报”，完成标准至少包括：JSON、HTML、publish、notify、feedback server
+- 只有初始化文档明确要求、或 `apply_detected_publish_config.py --json` 返回 `status = "needs_confirmation"` 时，才继续向用户提问
 
 ---
 
@@ -446,6 +453,9 @@ opencli doctor
 | `scripts/prepare_payload.py` | 05 | `raw/{date}_detail.txt` + profile | `raw/{date}_candidates.json` |
 | `scripts/validate_payload.py` | 07 | `daily/{date}.json` | stdout |
 | `scripts/render_daily.py` | 08 | `daily/{date}.json` | `daily/{date}.html` |
+| `scripts/publish_daily.py` | 09 | `daily/{date}.html` + `daily/{date}.json` | `publish/{date}.json` + 公开目录产物 |
+| `scripts/send_feishu_card.py` | 10 | `publish/{date}.json` 或显式 URL | Feishu API 响应 |
+| `scripts/feedback_server.py` | 11 | profile.yaml | `output/server.log` |
 
 ### 流水线文档
 

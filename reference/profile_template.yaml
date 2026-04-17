@@ -143,7 +143,14 @@ server:
   host: "0.0.0.0"
   timeout_hours: 24
   port: 17890
-  public_url: ""      # 配置后服务启动时输出域名链接，如 "http://your-domain.com"
+  public_url: ""      # 预览服务域名，如 "http://your-domain.com"；用于 feedback_server 展示本地预览链接
+
+publish:
+  enabled: false
+  target_dir: ""           # 发布目录，如 "output/rwa/daily" 或 "/var/www/site/daily"；留空时会尝试自动识别常见目录
+  public_base_url: ""      # 公开站点域名，如 "http://your-domain.com"；留空时会回退到 server.public_url
+  public_daily_path: "/daily"   # 公开日报 URL 前缀；留空时会根据 target_dir 自动推断，如 "/rwa/daily"
+  status_dir: "output/publish"  # 发布状态文件目录；通知会读取这里确认公开链接
 
 feishu:
   group_id: ""
@@ -156,6 +163,7 @@ feishu:
     chat_id: ""           # 飞书群 chat_id（oc_xxx）
     account_id: ""        # 使用的飞书 bot 账号 ID（在 ~/.openclaw/openclaw.json 中配置）
     # 通知格式固定为交互卡片（msg_type: interactive），禁止改为纯文本。
+    # 通知链接优先读取 publish.status_dir 中的发布状态，避免“生成成功但未发布”导致 404。
 
 # Graphify 知识图谱集成（可选）
 # 开启后，日报中点击"收藏"的文章会自动写入 Graphify 的 raw/ 目录

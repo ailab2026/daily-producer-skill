@@ -26,6 +26,8 @@ metadata:
 3. 除非本文件某一步明确要求把多个确认项一起展示，否则不要一次性抛出多个开放问题。
 4. 在用户尚未回答当前问题前，不要提前询问下一步内容，不要把后续步骤折叠成表单。
 5. 若调用方已经提前问了不符合本文件节奏的问题，应立即回到本文件定义的当前步骤继续，不要沿用错误节奏。
+6. 初始化完成后，不要停在“profile 已写入”的状态；必须继续执行 `python3 scripts/apply_detected_publish_config.py --json`，先自动补齐 publish 配置，再向用户汇报初始化结果。
+7. 若 `apply_detected_publish_config.py --json` 返回 `status = "applied"` 或 `status = "no_change"`，不得继续追问公网目录；只有 `status = "needs_confirmation"` 时才允许继续追问。
 
 **推断方式有两种路径：**
 - **自动推断**：如果用户有飞书知识库和群聊，通过读取 KB 和聊天记录推断画像
@@ -468,7 +470,8 @@ opencli twitter trending --limit 1 -f json  # 需要登录
 以下段落直接从 `reference/profile_template.yaml` 复制默认值，不要删掉，不要改成占位符：
 - `daily`（`target_items` 根据用户选择的深度填写：速览=10，标准=15，深度=20）
 - `pipeline`
-- `server`（`public_url` 见下方"可选功能配置"步骤填写）
+- `server`（`public_url` 仅用于预览地址）
+- `publish`（`public_base_url` / `public_daily_path` 见下方"可选功能配置"步骤填写）
 - `feishu`（`group_id` 已在第三步获取则填入；`feishu.notification` 见下方③步骤填写）
 - `graphify`（`enabled` 见下方"可选功能配置"步骤填写）
 
@@ -484,7 +487,38 @@ opencli twitter trending --limit 1 -f json  # 需要登录
 留空则使用服务器 IP 地址。
 ```
 
-根据用户回答，将 `server.public_url` 填写为域名（如 `http://your-domain.com`）或留空字符串。
+根据用户回答：
+- 将 `server.public_url` 填写为预览域名（如 `http://your-domain.com`）或留空字符串
+- 若用户有公开站点路径，再填写 `publish.public_base_url`
+- `publish.public_daily_path` 默认保留 `/daily`；若用户明确有二级路径（如 `/rwa/daily`），按实际填写
+
+如果用户说不清楚，agent 应先根据环境自动推断再写入：
+- 发现 `output/rwa/daily` 等常见公开目录 → 自动填 `publish.target_dir`
+- 若 `server.public_url` 已有值 → 自动作为 `publish.public_base_url`
+- 若 `target_dir` 在 `output/` 下 → 自动按相对路径推断 `publish.public_daily_path`
+- 只有在存在多个候选目录、或推断结果明显冲突时，才需要继续追问用户
+
+建议先运行：
+
+```bash
+python3 scripts/detect_publish_config.py --json
+```
+
+建议在 profile 写入完成后，直接运行：
+
+```bash
+python3 scripts/apply_detected_publish_config.py --json
+```
+
+处理规则：
+- `status = "applied"`：说明 publish 配置已自动回写成功，继续后续初始化
+- `status = "no_change"`：说明当前 profile 已有可用 publish 配置，无需再问
+- `status = "needs_confirmation"`：向用户展示 `target_dir_candidates`，做一次简短确认
+- 若返回结果里的 `publish.public_base_url` 为空：说明环境里没有可推断的公网域名，再询问用户或保持留空
+
+补充规则：
+- `apply_detected_publish_config.py` 默认只补空值，不覆盖用户已经明确填写的 `publish.*`
+- 只有确认用户希望用当前环境重新覆盖发布配置时，才使用 `python3 scripts/apply_detected_publish_config.py --force`
 
 **② Graphify 知识图谱（可选）**
 
@@ -562,9 +596,15 @@ opencli twitter trending --limit 1 -f json  # 需要登录
        # 格式固定为交互卡片，禁止改为纯文本
    ```
 
-5. **验证发送**：用 `send_feishu_card.py` 发一张今日日报卡片（若日报已生成）或测试卡片（若未生成）确认效果：
+5. **验证发送**：若今日日报已生成，先执行发布再用 `send_feishu_card.py --date` 发卡；若日报尚未生成，再发送测试卡片确认权限：
 
    ```bash
+   DATE=$(date +%Y-%m-%d)
+
+   # 若日报已生成，优先走真实发布链路
+   python3 scripts/publish_daily.py --date "$DATE"
+   python3 scripts/send_feishu_card.py --date "$DATE"
+
    # 测试：直接发一张带占位内容的卡片
    python3 -c "
    import sys; sys.path.insert(0, 'scripts')
@@ -673,6 +713,17 @@ sources:
 
 配置文件：config/profile.yaml
 
+如需把发布配置也补齐，可直接执行：
+
+```bash
+python3 scripts/apply_detected_publish_config.py --json
+```
+
+返回结果解读：
+- `status = "applied"`：已自动补全 `publish.*`
+- `status = "no_change"`：现有发布配置可直接复用
+- `status = "needs_confirmation"`：仅此时需要继续问用户公开目录
+
 下一步：运行 /daily 生成今天的第一份日报
 ```
 
@@ -687,6 +738,7 @@ sources:
 - `sources.platforms.global` 至少 2 个平台
 - 每个 platform 有对应的 opencli 命令
 - `server.public_url` 已配置或用户明确选择留空
+- 若启用飞书通知并需要公网访问，`publish.public_base_url` 已配置
 - `graphify.enabled` 字段存在（true 或 false，不能缺失）
 - 如果 `graphify.enabled: true`，`graphifyy` 已安装（`pip show graphifyy` 验证）
 - `feishu.notification.enabled` 字段存在；若为 true，`account_id` 已检测并填写，且测试发送成功
