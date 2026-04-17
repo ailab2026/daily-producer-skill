@@ -24,6 +24,11 @@ from pathlib import Path
 # 每次 opencli 请求之间的间隔秒数（避免平台限流）
 REQUEST_DELAY = 3
 
+# newsnow 可直接采集的特殊来源（不走 opencli）
+NEWSNOW_SOURCES = {
+    "github-trending": "github-trending-today",
+}
+
 # 需要代理的平台及代理地址
 PROXY_CONFIG = {
     "reddit": "http://xb:xb20260330@123.58.210.235:62520",
@@ -244,6 +249,51 @@ def reddit_hot(subreddit: str = "", limit: int = 20) -> dict:
 
 # ━━ opencli 执行 ━━
 
+def run_newsnow(source: str, limit: int = 20, timeout: int = 30) -> dict:
+    """执行 newsnow 命令并返回结构化结果。"""
+    full_cmd = f"newsnow {source} --json --limit {limit}"
+    try:
+        result = subprocess.run(
+            full_cmd, shell=True, capture_output=True, text=True, timeout=timeout
+        )
+        stdout = result.stdout.strip()
+        stderr = result.stderr.strip()
+        if result.returncode != 0:
+            return {
+                "success": False,
+                "command": full_cmd,
+                "error": stderr or stdout,
+                "data": [],
+            }
+        payload = json.loads(stdout)
+        items = payload.get("items", []) if isinstance(payload, dict) else []
+        normalized = []
+        for item in items:
+            if not isinstance(item, dict):
+                continue
+            extra = item.get("extra") or {}
+            normalized.append({
+                "title": (item.get("title") or "").replace(" /      ", "/").strip(),
+                "url": item.get("url", ""),
+                "author": "GitHub Trending",
+                "summary": extra.get("hover", ""),
+                "hot_value": extra.get("info", ""),
+                "date": datetime.now().strftime("%Y-%m-%d"),
+                "source_id": item.get("id", ""),
+            })
+        return {
+            "success": True,
+            "command": full_cmd,
+            "data": normalized,
+            "count": len(normalized),
+            "fetch_stack": "newsnow",
+        }
+    except subprocess.TimeoutExpired:
+        return {"success": False, "command": full_cmd, "error": "timeout", "data": []}
+    except Exception as e:
+        return {"success": False, "command": full_cmd, "error": str(e), "data": []}
+
+
 def run_opencli(cmd: str, timeout: int = 30, platform: str = "") -> dict:
     """
     执行 opencli 命令，返回结构化结果。
@@ -356,6 +406,21 @@ def collect_platform(platform: dict, keywords: list[str], region: str) -> list[d
             # 继续走下面的通用 opencli 流程
 
     for cmd_template in commands:
+        if opencli_prefix in NEWSNOW_SOURCES:
+            source_name = NEWSNOW_SOURCES[opencli_prefix]
+            limit = 20
+            m = __import__('re').search(r'--limit\s+(\d+)', cmd_template)
+            if m:
+                limit = int(m.group(1))
+            print(f"  [{name}] newsnow {source_name} --json --limit {limit}", file=sys.stderr)
+            res = run_newsnow(source_name, limit=limit)
+            res["platform"] = name
+            res["region"] = region
+            res["keyword"] = None
+            results.append(res)
+            time.sleep(REQUEST_DELAY)
+            continue
+
         if "{keyword}" in cmd_template:
             # 关键词搜索：逐个关键词执行
             for kw in keywords:
@@ -458,7 +523,7 @@ def format_raw_output(all_results: list[dict], date_str: str, max_results: int =
         lines.append(f"command: {command}")
         lines.append(f"keyword: {keyword or '(none)'}")
         lines.append(f"status: {'success' if success else 'FAILED'}")
-        lines.append(f"fetch_stack: opencli")
+        lines.append(f"fetch_stack: {res.get('fetch_stack', 'opencli')}")
 
         if not success:
             lines.append(f"error: {res.get('error', 'unknown')}")
@@ -625,7 +690,7 @@ def main() -> None:
     # 过滤平台
     filter_platforms = set()
     if args.platform:
-        filter_platforms = set(args.platform.split(","))
+        filter_platforms = {p.strip() for p in args.platform.split(",") if p.strip()}
 
     sources = profile.get("sources", {})
 
@@ -642,13 +707,15 @@ def main() -> None:
 
     # 国内平台 + cn 关键词
     for platform in sources.get("platforms", {}).get("cn", []):
-        if filter_platforms and platform.get("opencli") not in filter_platforms:
+        platform_id = platform.get("opencli", "")
+        if filter_platforms and platform_id not in filter_platforms:
             continue
         tasks.append(("platform", platform, cn_keywords, "cn"))
 
     # 国外平台 + en 关键词
     for platform in sources.get("platforms", {}).get("global", []):
-        if filter_platforms and platform.get("opencli") not in filter_platforms:
+        platform_id = platform.get("opencli", "")
+        if filter_platforms and platform_id not in filter_platforms:
             continue
         tasks.append(("platform", platform, en_keywords, "global"))
 

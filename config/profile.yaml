@@ -1,0 +1,279 @@
+# 日报 — 用户兴趣配置
+# 生成时间：2026-04-11
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# 第一部分：用户画像
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+role: "AI 产品经理"
+role_context: "关注 AI 模型最新动态、行业新闻与前沿研究，用于产品规划与竞品感知"
+
+topics:
+  - name: "大模型新品与能力更新"
+    priority: high
+    keywords:
+      cn:
+        - "大模型"
+        - "模型发布"
+        - "GPT"
+        - "Claude"
+        - "Gemini"
+        - "DeepSeek"
+        - "Qwen"
+        - "通义千问"
+        - "多模态"
+        - "推理模型"
+      en:
+        - "LLM release"
+        - "model update"
+        - "GPT-5"
+        - "Claude"
+        - "Gemini"
+        - "DeepSeek"
+        - "Qwen"
+        - "multimodal"
+        - "reasoning model"
+        - "foundation model"
+
+  - name: "AI 行业新闻与动态"
+    priority: high
+    keywords:
+      cn:
+        - "OpenAI"
+        - "Anthropic"
+        - "Google AI"
+        - "Meta AI"
+        - "字节AI"
+        - "百度AI"
+        - "阿里AI"
+        - "AI融资"
+        - "AI监管"
+        - "AI政策"
+      en:
+        - "OpenAI"
+        - "Anthropic"
+        - "Google DeepMind"
+        - "Meta AI"
+        - "xAI"
+        - "AI funding"
+        - "AI regulation"
+        - "AI policy"
+        - "AI startup"
+        - "artificial intelligence news"
+
+  - name: "AI 前沿研究"
+    priority: high
+    keywords:
+      cn:
+        - "AI论文"
+        - "强化学习"
+        - "RLHF"
+        - "思维链"
+        - "Agent"
+        - "智能体"
+        - "RAG"
+        - "微调"
+        - "蒸馏"
+      en:
+        - "AI research"
+        - "reinforcement learning"
+        - "chain of thought"
+        - "AI agent"
+        - "RAG"
+        - "fine-tuning"
+        - "model distillation"
+        - "AI paper"
+        - "arxiv AI"
+        - "NeurIPS ICML ICLR"
+
+  - name: "AI 产品与应用生态"
+    priority: medium
+    keywords:
+      cn:
+        - "AI应用"
+        - "Cursor"
+        - "AI编程"
+        - "AI搜索"
+        - "Perplexity"
+        - "AI助手"
+        - "MCP"
+        - "工具调用"
+      en:
+        - "AI product"
+        - "Cursor"
+        - "AI coding"
+        - "AI search"
+        - "Perplexity"
+        - "AI assistant"
+        - "MCP protocol"
+        - "tool use"
+        - "agentic AI"
+
+  - name: "开源模型与开发者生态"
+    priority: medium
+    keywords:
+      cn:
+        - "开源模型"
+        - "Hugging Face"
+        - "LLaMA"
+        - "Mistral"
+        - "开发者工具"
+      en:
+        - "open source LLM"
+        - "Hugging Face"
+        - "LLaMA"
+        - "Mistral"
+        - "LangChain"
+        - "open source AI"
+
+exclude_topics:
+  - "无法验证的新闻"
+  - "无来源的传言"
+  - "纯营销稿"
+  - "旧闻翻炒"
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# 第二部分：信息来源
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+sources:
+  platforms:
+    cn:
+      - name: "微博"
+        opencli: "weibo"
+        commands:
+          - "hot --limit 30"
+          - "search \"{keyword}\" --limit 10"
+        login_required: partial
+
+      - name: "知乎"
+        opencli: "zhihu"
+        commands:
+          - "hot --limit 20"
+          - "search \"{keyword}\" -f json"
+        login_required: partial
+
+      - name: "即刻"
+        opencli: "jike"
+        commands:
+          - "search \"{keyword}\" -f json"
+          - "feed --limit 10 -f json"
+        login_required: yes
+
+      - name: "36氪"
+        opencli: "36kr"
+        commands:
+          - "hot -f json"
+          - "search \"{keyword}\" -f json"
+          - "news -f json"
+        login_required: no
+
+    global:
+      - name: "Twitter/X"
+        opencli: "twitter"
+        commands:
+          - "search \"{keyword}\" --limit 15 --filter top"
+          - "trending --limit 20"
+        login_required: yes
+
+      - name: "Reddit"
+        opencli: "reddit"
+        commands:
+          - "search \"{keyword}\" --sort relevance --time week --limit 15"
+          - "subreddit \"MachineLearning\" --limit 15"
+          - "subreddit \"artificial\" --limit 15"
+        login_required: no
+
+      - name: "Hacker News"
+        opencli: "hackernews"
+        commands:
+          - "top -f json"
+          - "search \"{keyword}\" -f json"
+        login_required: no
+
+      - name: "GitHub Trending"
+        opencli: "github-trending"
+        commands:
+          - "today --limit 20"
+        login_required: no
+
+  websites:
+    cn:
+      - name: "机器之心"
+        url: "https://www.jiqizhixin.com/"
+        type: "media"
+      - name: "量子位"
+        url: "https://www.qbitai.com/"
+        type: "media"
+    global:
+      - name: "OpenAI News"
+        url: "https://openai.com/news/"
+        type: "official"
+      - name: "Anthropic News"
+        url: "https://www.anthropic.com/news"
+        type: "official"
+      - name: "Google DeepMind Blog"
+        url: "https://deepmind.google/discover/blog/"
+        type: "official"
+      - name: "TechCrunch AI"
+        url: "https://techcrunch.com/category/artificial-intelligence/"
+        type: "media"
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# 第三部分：采集规则
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+collection:
+  window_days: 3
+  priority_order:
+    - "官方确认信息"
+    - "高讨论度社区信号"
+    - "开源与开发者实践"
+    - "背景性报道"
+  exclude_rules:
+    - "纯搬运无信息增量"
+    - "无来源的情绪内容"
+    - "弱相关泛热点"
+    - "旧闻翻炒"
+    - "无法验证的消息"
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# 第四部分：运行配置
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+daily:
+  target_items: 20
+  summary_style: "detailed"
+  include_actions: true
+  include_trends: true
+  language: "zh-CN"
+
+pipeline:
+  search_preference: "opencli-first"
+  fallback_search_tools:
+    - "web_search"
+    - "web_fetch"
+  fallback_requires_reason: true
+
+server:
+  host: "0.0.0.0"
+  port: 80
+  timeout_hours: 24
+  public_url: "http://intelligenceassistant.online"
+
+feishu:
+  group_id: ""
+  tools:
+    wiki_list: ""
+    doc_read: ""
+    chat_messages: ""
+  notification:
+    enabled: true          # 是否在日报 HTML 生成后向群发送卡片通知
+    chat_id: "oc_fbfb0a5e15e2487bac8ec64edd3443c9"  # 飞书群 chat_id（oc_xxx）
+    account_id: "main"     # 使用的飞书 bot 账号（必须是已加入该群的账号）
+    # 通知格式固定为交互卡片（msg_type: interactive），禁止改为纯文本。
+    # 卡片包含：标题（日报日期）+ 正文说明 + 「打开今日日报」按钮（链接到 server.public_url）。
+
+graphify:
+  enabled: true
+  data_dir: "~/graphify-data"   # graphify 监听的 raw/ 目录
