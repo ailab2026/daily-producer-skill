@@ -699,7 +699,7 @@ def render_html(payload: dict[str, Any]) -> str:
 
   <div class="flex-1 flex flex-col lg:flex-row lg:overflow-hidden max-w-[1600px] mx-auto w-full">
 
-    <aside class="w-full lg:w-[420px] flex-shrink-0 border-b lg:border-b-0 lg:border-r border-gray-100 bg-white lg:overflow-y-auto sidebar-scroll">
+    <aside class="order-2 lg:order-1 w-full lg:w-[420px] flex-shrink-0 border-b lg:border-b-0 lg:border-r border-gray-100 bg-white lg:overflow-y-auto sidebar-scroll">
       <div class="p-5 space-y-5">
 
         <section>
@@ -736,7 +736,7 @@ def render_html(payload: dict[str, Any]) -> str:
       </div>
     </aside>
 
-    <main class="flex-1 lg:overflow-y-auto feed-scroll px-4 lg:px-8 py-6 min-w-0">
+    <main class="order-1 lg:order-2 flex-1 lg:overflow-y-auto feed-scroll px-4 lg:px-8 py-6 min-w-0">
       <h2 class="text-lg font-semibold text-primary mb-4 flex items-center">
         <span class="w-7 h-7 rounded-lg bg-accent/10 flex items-center justify-center mr-2.5"><i class="fa-solid fa-newspaper text-accent text-xs"></i></span>
         今日资讯<span class="text-xs text-gray-400 font-normal ml-3">按相关度排序 · 共 {item_count} 条</span>
